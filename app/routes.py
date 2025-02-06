@@ -1,7 +1,7 @@
 from flask import render_template, request, flash
 from app import app
 from model.predict import predict_price  # Import the predict function
-import pandas as pd
+from config import Config  # Import the Config class to access config settings
 
 # Route to display the homepage and handle form submission
 @app.route('/', methods=['GET', 'POST'])
@@ -17,9 +17,12 @@ def index():
             house_age = int(request.form['house_age'])
             zipcode = request.form['zipcode']
 
-            # Validate the zipcode
-            if not (98001 <= int(zipcode) <= 99001):
-                flash("Invalid zipcode. It should be between 98001 and 99001.", "danger")
+            # Validate the zipcode against the range defined in config.py
+            min_zipcode = Config.ZIPCODE_RANGE[0]
+            max_zipcode = Config.ZIPCODE_RANGE[1]
+
+            if not (min_zipcode <= int(zipcode) <= max_zipcode):
+                flash(f"Invalid zipcode. It should be between {min_zipcode} and {max_zipcode}.", "danger")
                 return render_template('index.html')
 
             # Prepare the features for prediction

@@ -2,11 +2,17 @@ import joblib
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import OneHotEncoder, PolynomialFeatures
-from model.train_model import encoder, poly  # Import the same encoder and poly used in training
+from config import Config  # Import from the config file
 
-# Load the saved model
-model_path = 'model/saved_model/model.pkl'
+# Load the saved model using paths from the config
+model_path = Config.MODEL_PATH
+encoder_path = Config.ENCODER_PATH
+poly_path = Config.POLY_PATH
+
+# Load the saved model, encoder, and poly using joblib
 model = joblib.load(model_path)
+encoder = joblib.load(encoder_path)
+poly = joblib.load(poly_path)
 
 # Function to preprocess features for prediction
 def preprocess_features(features):
@@ -43,4 +49,3 @@ def predict_price(features):
     ci_max = predicted_price + (1.96 * std_dev)  # Confidence Interval Upper Bound
 
     return predicted_price[0], (ci_min[0], ci_max[0])
-
