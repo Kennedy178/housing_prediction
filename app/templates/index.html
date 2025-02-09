@@ -1,107 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Intelligent Housing Price Predictor</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Intelligent Housing - Predict Price</title>
+  <!-- Google Fonts for modern design -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Link to our custom CSS -->
+   
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-  <!-- Header with Dark/Light Toggle -->
   <header>
-    <div class="header-container">
-      <h1>Intelligent Housing Price Predictor</h1>
-      <div class="theme-toggle">
-        <label class="switch">
-          <input type="checkbox" id="themeToggle">
-          <span class="slider round"></span>
-        </label>
-        <span id="themeLabel">Light Mode</span>
-      </div>
-    </div>
+    <h1>Intelligent Housing Price Predictor</h1>
+    <p>Enter your home details below and receive a state-of-the-art price prediction.</p>
   </header>
-
+  
   <main>
-    <!-- User Input Form Section -->
-    <section id="input-section">
-      <h2>Enter Your Property Details</h2>
-      <form id="housingForm" method="POST" action="/">
+    <!-- Housing Input Form Section -->
+    <section id="form-section">
+      <form id="housing-form" novalidate>
         <div class="form-group">
-          <label for="sqft_living">Living Area (sqft):</label>
-          <input type="number" id="sqft_living" name="sqft_living" min="200" max="10000" required>
-          <small>Living area must be between 200 and 10,000 sqft.</small>
+          <label for="sqft_living">Living Area (sqft)</label>
+          <input type="number" id="sqft_living" name="sqft_living" required min="200" max="10000" placeholder="e.g., 1500">
+          <small class="error-message"></small>
         </div>
         <div class="form-group">
-          <label for="no_of_bedrooms">Number of Bedrooms:</label>
-          <input type="number" id="no_of_bedrooms" name="no_of_bedrooms" min="1" max="25" required>
-          <small>Number of bedrooms must be between 1 and 25.</small>
+          <label for="no_of_bedrooms">Bedrooms</label>
+          <input type="number" id="no_of_bedrooms" name="no_of_bedrooms" required min="1" max="25" placeholder="e.g., 3">
+          <small class="error-message"></small>
         </div>
         <div class="form-group">
-          <label for="no_of_bathrooms">Number of Bathrooms:</label>
-          <input type="number" id="no_of_bathrooms" name="no_of_bathrooms" min="1" max="15" step="0.5" required>
-          <small>Number of bathrooms must be between 1 and 15.</small>
+          <label for="no_of_bathrooms">Bathrooms</label>
+          <input type="number" id="no_of_bathrooms" name="no_of_bathrooms" required min="1" max="15" step="0.5" placeholder="e.g., 2.5">
+          <small class="error-message"></small>
         </div>
         <div class="form-group">
-          <label for="sqft_lot">Lot Size (sqft):</label>
-          <input type="number" id="sqft_lot" name="sqft_lot" min="500" max="50000" required>
-          <small>Lot size must be between 500 and 50,000 sqft.</small>
+          <label for="sqft_lot">Lot Size (sqft)</label>
+          <input type="number" id="sqft_lot" name="sqft_lot" required min="500" max="50000" placeholder="e.g., 3000">
+          <small class="error-message"></small>
         </div>
         <div class="form-group">
-          <label for="no_of_floors">Number of Floors:</label>
-          <input type="number" id="no_of_floors" name="no_of_floors" min="1" max="4" required>
-          <small>Floors must be between 1 and 4.</small>
+          <label for="no_of_floors">Floors</label>
+          <input type="number" id="no_of_floors" name="no_of_floors" required min="0" max="10" placeholder="e.g., 2">
+          <small class="error-message"></small>
         </div>
         <div class="form-group">
-          <label for="house_age">House Age (years):</label>
-          <input type="number" id="house_age" name="house_age" min="0" max="150" required>
-          <small>House age must be between 0 and 150 years.</small>
+          <label for="house_age">House Age (years)</label>
+          <input type="number" id="house_age" name="house_age" required min="0" max="150" placeholder="e.g., 20">
+          <small class="error-message"></small>
         </div>
         <div class="form-group">
-          <label for="zipcode">ZIP Code:</label>
-          <input type="number" id="zipcode" name="zipcode" min="98001" max="99001" required>
-          <small>Enter a valid ZIP code between 98001 and 99001.</small>
+          <label for="zipcode">
+            ZIP Code 
+            <span class="tooltip" title="Enter a valid ZIP code between 98001 and 99001">?</span>
+          </label>
+          <input type="number" id="zipcode" name="zipcode" required min="98001" max="99001" placeholder="e.g., 98105">
+          <small class="error-message"></small>
         </div>
-        <button type="submit" id="submitBtn">Predict Price</button>
+        <button type="submit" id="predict-btn" disabled>Predict Price</button>
       </form>
     </section>
 
+<section>
+  <div id="model-insights">
+    <div class="insight">
+      <img src="{{ url_for('static', filename='images/residual.png') }}" alt="Residual Analysis">
+      <p class="insight-description">
+        <strong>Residual Analysis:</strong> This image shows the residuals of our model's predictions, helping identify potential biases.
+      </p>
+    </div>
+    <div class="insight">
+      <img src="{{ url_for('static', filename='images/feature_importance.png') }}" alt="Feature Importance">
+      <p class="insight-description">
+        <strong>Feature Importance:</strong> This pie chart highlights the impact of each feature on the final prediction.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+    
     <!-- Prediction Result Section -->
-    <section id="result-section">
-      {% if predicted_price %}
-      <div class="result-message">
-        <h2>Prediction Result</h2>
-        <p>Your property's predicted price is <strong>${{ predicted_price }}</strong>.</p>
-        <p>The confidence interval is between <strong>${{ confidence_interval[0] }}</strong> and <strong>${{ confidence_interval[1] }}</strong>.</p>
-      </div>
-      {% endif %}
-    </section>
-
-    <!-- Static Images Section for Analysis -->
-    <section id="analysis-section">
-      <h2>Model Analysis</h2>
-      <div class="analysis-cards">
-        <div class="card">
-          <img src="{{ url_for('static', filename='images/residual_placeholder.png') }}" alt="Residual Analysis">
-          <div class="card-description">
-            <h3>Residual Analysis</h3>
-            <p>This image shows the distribution of prediction errors, which helps evaluate model accuracy and detect bias.</p>
-          </div>
+    <section id="result-section" class="hidden">
+      <h2>Prediction Result</h2>
+      <p id="prediction-message"></p>
+      <div id="model-insights">
+        <div class="insight">
+          <img src="{{ url_for('static', filename='images/residual.png') }}" alt="Residual Analysis">
+          <p class="insight-description">
+            <strong>Residual Analysis:</strong> This image shows the residuals of our model's predictions, helping identify potential biases.
+          </p>
         </div>
-        <div class="card">
-          <img src="{{ url_for('static', filename='images/feature_importance_placeholder.png') }}" alt="Feature Importance">
-          <div class="card-description">
-            <h3>Feature Importance</h3>
-            <p>This image displays how each feature contributes to the predicted price, highlighting key factors.</p>
-          </div>
+        <div class="insight">
+          <img src="{{ url_for('static', filename='images/feature_importance.png') }}" alt="Feature Importance">
+          <p class="insight-description">
+            <strong>Feature Importance:</strong> This pie chart highlights the impact of each feature on the final prediction.
+          </p>
         </div>
       </div>
+      <button id="back-to-form">Make Another Prediction</button>
     </section>
-
+    
     <!-- Prediction History Section -->
     <section id="history-section">
       <h2>Prediction History</h2>
-      <button id="clearHistoryBtn">Clear Prediction History</button>
-      <table id="historyTable">
+      <table id="history-table">
         <thead>
           <tr>
             <th>Living Area</th>
@@ -115,16 +129,18 @@
           </tr>
         </thead>
         <tbody>
-          <!-- Prediction history will be populated here by JavaScript -->
+          <!-- History rows will be dynamically inserted here -->
         </tbody>
       </table>
+      <button id="clear-history">Clear Prediction History</button>
     </section>
   </main>
-
+  
   <footer>
     <p>&copy; 2025 Intelligent Housing. All rights reserved.</p>
   </footer>
-
+  
+  <!-- Link to our custom JavaScript -->
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

@@ -1,274 +1,383 @@
-/* Reset & Box-Sizing */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Root Variables for Light Theme */
+/* ============================================
+   CSS Variables (Color Tokens)
+============================================ */
+:root {
+  --primary-color: #005f73;  /* Deep teal */
+  --secondary-color: #0a9396; /* Lighter teal */
+  --accent-color: #94d2bd;    /* Soft accent */
+  --bg-color: #f1faee;        /* Light background */
+  --text-color: #333;
+  --error-color: #d32f2f;
+  --button-hover: #004e66;    /* Slightly darker for hover states */
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
   :root {
-    --primary-color: #4a90e2;
-    --secondary-color: #50e3c2;
-    --bg-color: #ffffff;
-    --text-color: #333333;
-    --card-bg: #f7f7f7;
-    --border-color: #dddddd;
+    --primary-color: #66d9ef;
+    --secondary-color: #38a3a5;
+    --accent-color: #a8dadc;
+    --bg-color: #1e1e1e;
+    --text-color: #f1f1f1;
   }
-  
-  /* Dark Mode Overrides */
-  body.dark-mode {
-    --bg-color: #1d1f21;
-    --text-color: #cccccc;
-    --card-bg: #2b2d31;
-    --border-color: #444444;
+}
+
+/* ============================================
+   Global Reset and Body
+============================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif; /* Modern, professional font */
+  background: var(--bg-color);
+  background-image: radial-gradient(circle at center, #f1faee, #e8f6f3);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   Header with Geometric Overlay & Radial Gradient
+============================================ */
+header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 40px 20px;
+  background: radial-gradient(circle at top left, var(--primary-color), var(--secondary-color));
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Geometric overlay: a translucent circular element */
+header::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+  border-radius: 50%;
+  top: -50px;
+  right: -50px;
+  z-index: 0;
+}
+
+header h1,
+header p {
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   Main Layout
+============================================ */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   Form Section with Subtle Background Pattern
+============================================ */
+#form-section {
+  position: relative;
+  background: #ffffff;
+  background-image: radial-gradient(circle, rgba(0,95,115,0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  border: 1px solid #e0e0e0;
+}
+
+#form-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0,95,115,0.02), transparent);
+  pointer-events: none;
+  border-radius: 15px;
+}
+
+#form-section form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px rgba(0, 95, 115, 0.4);
+  outline: none;
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: 0.85rem;
+  margin-top: 5px;
+  display: none;
+}
+
+/* Tooltip styling with subtle dashed underline */
+.tooltip {
+  cursor: help;
+  border-bottom: 1px dashed #555;
+}
+
+/* ============================================
+   Predict Button with Radial Gradient & Hover Effects
+============================================ */
+#predict-btn {
+  grid-column: 1 / -1;
+  padding: 15px;
+  background: radial-gradient(circle, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#predict-btn:disabled {
+  background: radial-gradient(circle, #a0c1d1, #8fa9bf);
+  cursor: not-allowed;
+}
+
+#predict-btn:hover:not(:disabled) {
+  background: radial-gradient(circle, var(--button-hover), var(--secondary-color));
+}
+
+/* ============================================
+   Result Section with Animation & Frame Shadows
+============================================ */
+#result-section {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: slideDown 0.5s forwards;
+}
+
+#result-section.hidden {
+  display: none;
+}
+
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Global Styles */
-  body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
-    padding: 20px;
-  }
-  
-  /* Header */
-  header {
-    background-color: var(--card-bg);
-    padding: 20px;
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: 20px;
-  }
-  
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  header h1 {
-    font-size: 1.8em;
-    color: var(--primary-color);
-  }
-  
-  /* Toggle Switch */
-  .theme-toggle {
-    display: flex;
-    align-items: center;
-  }
-  
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 40px;
-    height: 20px;
-  }
-  
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--border-color);
-    transition: 0.4s;
-    border-radius: 20px;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 16px;
-    width: 16px;
-    left: 2px;
-    bottom: 2px;
-    background-color: var(--bg-color);
-    transition: 0.4s;
-    border-radius: 50%;
-  }
-  
-  input:checked + .slider {
-    background-color: var(--primary-color);
-  }
-  
-  input:checked + .slider:before {
-    transform: translateX(20px);
-  }
-  
-  #themeLabel {
-    margin-left: 10px;
-    font-size: 0.9em;
-  }
-  
-  /* Main Content */
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Form Section */
-  #input-section {
-    background-color: var(--card-bg);
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  #input-section h2 {
-    margin-bottom: 15px;
-    color: var(--primary-color);
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-  }
-  
-  .form-group small {
-    display: block;
-    margin-top: 5px;
-    font-size: 0.85em;
-  }
-  
-  button#submitBtn {
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-  }
-  
-  button#submitBtn:hover {
-    background-color: var(--secondary-color);
-  }
-  
-  /* Result Section */
-  #result-section {
-    margin: 20px 0;
-    padding: 20px;
-    background-color: var(--card-bg);
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  .result-message h2 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
-  }
-  
-  .result-message p {
-    font-size: 1.1em;
-  }
-  
-  /* Analysis Section */
-  #analysis-section {
-    margin: 20px 0;
-  }
-  
-  #analysis-section h2 {
-    margin-bottom: 15px;
-    color: var(--primary-color);
-  }
-  
-  .analysis-cards {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .analysis-cards .card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 15px;
-    flex: 1 1 300px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  .analysis-cards .card img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-  }
-  
-  .card-description {
-    margin-top: 10px;
-  }
-  
-  .card-description h3 {
-    margin-bottom: 5px;
-    color: var(--secondary-color);
-  }
-  
-  .card-description p {
-    font-size: 0.95em;
-  }
-  
-  /* History Section */
-  #history-section {
-    margin: 20px 0;
-  }
-  
-  #history-section h2 {
-    margin-bottom: 15px;
-    color: var(--primary-color);
-  }
-  
-  #history-section button {
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-bottom: 10px;
-  }
-  
-  #historyTable {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  #historyTable th, #historyTable td {
-    border: 1px solid var(--border-color);
-    padding: 8px;
-    text-align: center;
-  }
-  
-  #historyTable th {
-    background-color: var(--secondary-color);
-    color: #fff;
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    margin-top: 40px;
-    padding: 20px 0;
-    border-top: 1px solid var(--border-color);
-    color: var(--text-color);
-  }
-  
+}
+
+#result-section h2 {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+#prediction-message {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+/* ============================================
+   Model Insights Cards with Geometric Overlays & Blending Modes
+============================================ */
+#model-insights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.insight {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  background: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle geometric overlay on insight cards */
+.insight::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, var(--accent-color), transparent);
+  top: -20px;
+  right: -20px;
+  border-radius: 50%;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+}
+
+.insight:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.insight img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.insight-description {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ============================================
+   Back-to-Form Button with Subtle Hover
+============================================ */
+#back-to-form {
+  padding: 10px 20px;
+  background: radial-gradient(circle, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#back-to-form:hover {
+  background: radial-gradient(circle, var(--button-hover), var(--secondary-color));
+}
+
+/* ============================================
+   History Section with Grid Layout & Pattern
+============================================ */
+#history-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  border: 1px solid #e0e0e0;
+}
+
+#history-section h2 {
+  margin-bottom: 15px;
+  color: var(--primary-color);
+  text-align: center;
+  font-weight: 700;
+}
+
+#history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+#history-table th,
+#history-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+#history-table th {
+  background: radial-gradient(circle, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Clear history button with a gentle hover change */
+#clear-history {
+  padding: 10px 20px;
+  background: radial-gradient(circle, #d32f2f, #c62828);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#clear-history:hover {
+  background: radial-gradient(circle, #b71c1c, #a91a1a);
+}
+
+/* ============================================
+   Footer
+============================================ */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* ============================================
+   Overrides for White-Background Sections in Dark Mode
+   (Ensures that text in the form, results, history, and insight cards
+    remains dark and visible even when the system is in dark mode.)
+============================================ */
+#form-section,
+#result-section,
+#history-section,
+.insight {
+  color: #333;
+}
+
+/* Override the prediction message in the result section */
+#result-section #prediction-message {
+  color: #333 !important;
+}
+
+/* Ensure form labels and inputs have dark text */
+#form-section .form-group label,
+#form-section input,
+#form-section textarea {
+  color: #333;
+}
