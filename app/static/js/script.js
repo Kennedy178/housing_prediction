@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
   /* ===============================
-     Theme Toggle Functionality
+     Theme Toggle Functionality using Font Awesome Icons
   =============================== */
   const toggle = document.getElementById('theme-toggle');
 
   // Determine saved theme or use system preference if none saved
   let theme = localStorage.getItem('theme');
   if (!theme) {
-    theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
       ? 'dark'
       : 'light';
   }
@@ -17,11 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark-mode');
       document.documentElement.classList.remove('light-mode');
-      toggle.textContent = '🌕'; // Full moon icon
+      // When in dark mode, show the sun icon to indicate switching to light mode.
+      toggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
     } else {
       document.documentElement.classList.add('light-mode');
       document.documentElement.classList.remove('dark-mode');
-      toggle.textContent = '🌙'; // Crescent moon icon
+      // When in light mode, show the moon icon to indicate switching to dark mode.
+      toggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
     }
     localStorage.setItem('theme', theme);
   }
@@ -96,12 +98,23 @@ document.addEventListener('DOMContentLoaded', function() {
     predictBtn.disabled = !isValid;
   }
 
-  // Load prediction history from localStorage and display in table
+  /* ===============================
+     Prediction History Logic
+  =============================== */
+  // This flag indicates whether to show the full history or only the last 5 entries.
+  let historyExpanded = false;
+
   function loadHistory() {
     const historyTableBody = document.querySelector('#history-table tbody');
     historyTableBody.innerHTML = "";
     const history = JSON.parse(localStorage.getItem('predictionHistory')) || [];
-    history.forEach(item => {
+    
+    // Reverse the history so that the most recent is first.
+    const reversedHistory = history.slice().reverse();
+    // Determine which items to display:
+    const itemsToShow = historyExpanded ? reversedHistory : reversedHistory.slice(0, 5);
+
+    itemsToShow.forEach(item => {
       const tr = document.createElement('tr');
       tr.innerHTML = `
         <td>${item.sqft_living}</td>
@@ -115,9 +128,27 @@ document.addEventListener('DOMContentLoaded', function() {
       `;
       historyTableBody.appendChild(tr);
     });
+
+    // Update the toggle button text with an arrow icon
+    const toggleHistoryBtn = document.getElementById('toggle-history');
+    if (history.length <= 5) {
+      // If history has 5 or fewer entries, hide the toggle button.
+      toggleHistoryBtn.style.display = 'none';
+    } else {
+      toggleHistoryBtn.style.display = 'inline-block';
+      toggleHistoryBtn.innerHTML = historyExpanded 
+        ? 'Show Less &#9650;'   // Up arrow when expanded
+        : 'Show All &#9660;';   // Down arrow when collapsed
+    }
   }
 
   loadHistory();
+
+  // Toggle history view when the toggle button is clicked
+  document.getElementById('toggle-history').addEventListener('click', function() {
+    historyExpanded = !historyExpanded;
+    loadHistory();
+  });
 
   // Clear history button
   document.getElementById('clear-history').addEventListener('click', function() {
@@ -125,7 +156,9 @@ document.addEventListener('DOMContentLoaded', function() {
     loadHistory();
   });
 
-  // Handle form submission (using AJAX/fetch)
+  /* ===============================
+     Form Submission and Prediction Result
+  =============================== */
   form.addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -139,9 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Send data to Flask backend via AJAX (expects a JSON response)
     fetch('/', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     })
     .then(response => response.json())
@@ -170,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
     resultSection.scrollIntoView({ behavior: 'smooth' });
   }
 
-  // Update prediction history (both localStorage and the displayed table)
+  // Update prediction history (store in localStorage and update the table)
   function updateHistory(predicted_price, inputData) {
     const history = JSON.parse(localStorage.getItem('predictionHistory')) || [];
     history.push({
@@ -184,6 +215,8 @@ document.addEventListener('DOMContentLoaded', function() {
       predicted_price: parseFloat(predicted_price).toFixed(2)
     });
     localStorage.setItem('predictionHistory', JSON.stringify(history));
+    // Reset to compact view (latest 5) when a new prediction is added.
+    historyExpanded = false;
     loadHistory();
   }
 

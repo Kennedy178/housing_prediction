@@ -7,11 +7,18 @@
   <!-- Google Fonts for modern design -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <!-- Link to our custom CSS -->
-   
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <!-- Include Font Awesome CDN for icons -->
+
+
+      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+      integrity="sha384-nRgPTkuX86pH8yjPJUAFuASXQSSl2/bBUiNV47vSYpKFxHJhbcrGnmlYpYJMeD7a" crossorigin="anonymous">
+      
 </head>
 <body>
   <header>
+    <!-- Theme toggle button: its content will be set by JS -->
     <button id="theme-toggle" aria-label="Toggle Dark Mode"></button>
     <h1>Intelligent Housing Price Predictor</h1>
     <p>Enter your home details below and receive a state-of-the-art price prediction.</p>
@@ -63,35 +70,24 @@
       </form>
     </section>
 
-<section>
-  <div id="model-insights">
-    <div class="insight">
-      <img src="{{ url_for('static', filename='images/residual.png') }}" alt="Residual Analysis">
-      <p class="insight-description">
-        <strong>Residual Analysis:</strong> This image shows the residuals of our model's predictions, helping identify potential biases.
-      </p>
-    </div>
-    <div class="insight">
-      <img src="{{ url_for('static', filename='images/feature_importance.png') }}" alt="Feature Importance">
-      <p class="insight-description">
-        <strong>Feature Importance:</strong> This pie chart highlights the impact of each feature on the final prediction.
-      </p>
-    </div>
-  </div>
-</section>
+    <!-- (Optional) Model Insights Preview Section -->
+    <section id="model-insights-preview">
+      <div id="model-insights">
+        <div class="insight">
+          <img src="{{ url_for('static', filename='images/residual.png') }}" alt="Residual Analysis">
+          <p class="insight-description">
+            <strong>Residual Analysis:</strong> This image shows the residuals of our model's predictions, helping identify potential biases.
+          </p>
+        </div>
+        <div class="insight">
+          <img src="{{ url_for('static', filename='images/feature_importance.png') }}" alt="Feature Importance">
+          <p class="insight-description">
+            <strong>Feature Importance:</strong> This pie chart highlights the impact of each feature on the final prediction.
+          </p>
+        </div>
+      </div>
+    </section>
 
-
-
-
-
-
-
-
-
-
-
-
-    
     <!-- Prediction Result Section -->
     <section id="result-section" class="hidden">
       <h2>Prediction Result</h2>
@@ -133,6 +129,8 @@
           <!-- History rows will be dynamically inserted here -->
         </tbody>
       </table>
+      <!-- History toggle and clear buttons -->
+      <button id="toggle-history">Show All &#9660;</button>
       <button id="clear-history">Clear Prediction History</button>
     </section>
   </main>

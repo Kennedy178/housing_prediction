@@ -85,6 +85,23 @@ header {
   border: none;
 }
 
+/* Ensure Font Awesome icons inside the toggle have the desired size */
+#theme-toggle i {
+  font-size: 1.5rem;
+}
+
+/* Enforce icon colors:
+   - When in dark mode the sun icon (fa-sun) should be white.
+   - When in light mode the moon icon (fa-moon) will be dark.
+*/
+#theme-toggle i.fa-sun {
+  color: #fff !important;
+}
+
+#theme-toggle i.fa-moon {
+  color: #333 !important;
+}
+
 header::before {
   content: "";
   position: absolute;
@@ -345,6 +362,27 @@ main {
   font-weight: 600;
 }
 
+/* History Toggle Button */
+#toggle-history {
+  padding: 10px 20px;
+  background: radial-gradient(circle, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+#toggle-history:hover {
+  background: radial-gradient(circle, var(--button-hover), var(--secondary-color));
+}
+
+/* Clear History Button */
 #clear-history {
   padding: 10px 20px;
   background: radial-gradient(circle, #d32f2f, #c62828);
