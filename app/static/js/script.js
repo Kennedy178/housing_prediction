@@ -1,8 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
+  /* ===============================
+     Theme Toggle Functionality
+  =============================== */
+  const toggle = document.getElementById('theme-toggle');
+
+  // Function to update the toggle icon based on the current mode
+  function updateIcon() {
+    if (document.documentElement.classList.contains('dark-mode')) {
+      toggle.textContent = '🌕'; // Full moon icon for dark mode
+    } else {
+      toggle.textContent = '🌙'; // Crescent moon icon for light mode
+    }
+  }
+
+  // Set the initial icon when the page loads
+  updateIcon();
+
+  // Toggle dark mode on click and update the icon accordingly
+  toggle.addEventListener('click', function () {
+    document.documentElement.classList.toggle('dark-mode');
+    updateIcon();
+  });
+
+  /* ===============================
+     Housing Form and Prediction Logic
+  =============================== */
   const form = document.getElementById('housing-form');
   const predictBtn = document.getElementById('predict-btn');
   const inputs = form.querySelectorAll('input');
-  
+
   // Define validation rules (min, max, and error messages)
   const validationRules = {
     sqft_living: { min: 200, max: 10000, error: "Living area must be between 200 and 10,000 sqft." },
@@ -13,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     house_age: { min: 0, max: 150, error: "House age must be between 0 and 150 years." },
     zipcode: { min: 98001, max: 99001, error: "Invalid ZIP code. Must be between 98001 and 99001." }
   };
-  
+
   // Real-time validation for each input field
   inputs.forEach(input => {
     input.addEventListener('input', function() {
@@ -21,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
       checkFormValidity();
     });
   });
-  
+
   function validateField(input) {
     const fieldName = input.name;
     const value = parseFloat(input.value);
@@ -34,20 +60,20 @@ document.addEventListener('DOMContentLoaded', function() {
       input.classList.add("invalid");
       return false;
     }
-    
+
     if (value < rule.min || value > rule.max) {
       errorMsgEl.textContent = rule.error;
       errorMsgEl.style.display = "block";
       input.classList.add("invalid");
       return false;
     }
-    
+
     errorMsgEl.textContent = "";
     errorMsgEl.style.display = "none";
     input.classList.remove("invalid");
     return true;
   }
-  
+
   function checkFormValidity() {
     let isValid = true;
     inputs.forEach(input => {
@@ -57,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     predictBtn.disabled = !isValid;
   }
-  
+
   // Load prediction history from localStorage and display in table
   function loadHistory() {
     const historyTableBody = document.querySelector('#history-table tbody');
@@ -78,26 +104,26 @@ document.addEventListener('DOMContentLoaded', function() {
       historyTableBody.appendChild(tr);
     });
   }
-  
+
   loadHistory();
-  
+
   // Clear history button
   document.getElementById('clear-history').addEventListener('click', function() {
     localStorage.removeItem('predictionHistory');
     loadHistory();
   });
-  
+
   // Handle form submission (using AJAX/fetch)
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-    
+
     // Collect form data
     const formData = new FormData(form);
     const data = {};
     formData.forEach((value, key) => {
       data[key] = value;
     });
-    
+
     // Send data to Flask backend via AJAX (expects a JSON response)
     fetch('/', {
       method: 'POST',
@@ -117,21 +143,21 @@ document.addEventListener('DOMContentLoaded', function() {
       alert('An error occurred while predicting. Please try again.');
     });
   });
-  
+
   // Display prediction result and scroll to results section
   function displayResult(result, inputData) {
     const resultSection = document.getElementById('result-section');
     const predictionMessage = document.getElementById('prediction-message');
-    
+
     predictionMessage.innerHTML = `Based on the data provided, your home is estimated to be valued at <strong>$${parseFloat(result.predicted_price).toLocaleString()}</strong>.<br>
       The confidence interval for this prediction ranges between <strong>$${parseFloat(result.confidence_interval[0]).toLocaleString()}</strong> and <strong>$${parseFloat(result.confidence_interval[1]).toLocaleString()}</strong>.`;
-    
+
     // Hide the form section and show the result section
     document.getElementById('form-section').classList.add('hidden');
     resultSection.classList.remove('hidden');
     resultSection.scrollIntoView({ behavior: 'smooth' });
   }
-  
+
   // Update prediction history (both localStorage and the displayed table)
   function updateHistory(predicted_price, inputData) {
     const history = JSON.parse(localStorage.getItem('predictionHistory')) || [];
@@ -148,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
     localStorage.setItem('predictionHistory', JSON.stringify(history));
     loadHistory();
   }
-  
+
   // “Back to Form” button to allow making another prediction
   document.getElementById('back-to-form').addEventListener('click', function() {
     document.getElementById('result-section').classList.add('hidden');

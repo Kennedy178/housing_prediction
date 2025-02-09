@@ -11,7 +11,7 @@
   --button-hover: #004e66;    /* Slightly darker for hover states */
 }
 
-/* Dark mode support */
+/* Dark mode support based on system preference */
 @media (prefers-color-scheme: dark) {
   :root {
     --primary-color: #66d9ef;
@@ -20,6 +20,15 @@
     --bg-color: #1e1e1e;
     --text-color: #f1f1f1;
   }
+}
+
+/* Manual Dark Mode Toggle Override via class on <html> */
+html.dark-mode {
+  --primary-color: #66d9ef;
+  --secondary-color: #38a3a5;
+  --accent-color: #a8dadc;
+  --bg-color: #1e1e1e;
+  --text-color: #f1f1f1;
 }
 
 /* ============================================
@@ -41,6 +50,12 @@ body {
   overflow-x: hidden;
 }
 
+/* Override body background in dark mode */
+html.dark-mode body {
+  background: var(--bg-color);
+  background-image: radial-gradient(circle at center, #1e1e1e, #141414);
+}
+
 /* ============================================
    Header with Geometric Overlay & Radial Gradient
 ============================================ */
@@ -54,6 +69,18 @@ header {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   color: #fff;
   overflow: hidden;
+}
+
+/* Theme toggle button in header (placed in the top right corner) */
+#theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 2;
+  background: transparent;
+  border: none;
 }
 
 /* Geometric overlay: a translucent circular element */
@@ -135,6 +162,8 @@ main {
 .form-group label {
   font-weight: 500;
   margin-bottom: 5px;
+  /* Ensure label text is visible by default */
+  color: #333;
 }
 
 .form-group input {
@@ -143,6 +172,8 @@ main {
   border: 1px solid #ccc;
   border-radius: 8px;
   transition: border-color 0.3s, box-shadow 0.3s;
+  /* Inherit text color */
+  color: inherit;
 }
 
 .form-group input:focus {
@@ -222,7 +253,8 @@ main {
 #prediction-message {
   font-size: 1.2rem;
   margin-bottom: 20px;
-  color: var(--text-color);
+  /* Set default color for predicted price text */
+  color: #333;
 }
 
 /* ============================================
@@ -248,7 +280,6 @@ main {
   overflow: hidden;
 }
 
-/* Subtle geometric overlay on insight cards */
 .insight::before {
   content: "";
   position: absolute;
@@ -273,9 +304,12 @@ main {
   margin-bottom: 10px;
 }
 
-.insight-description {
+/* If you have diagram descriptions, add this class to them */
+.diagram-description {
   font-size: 0.95rem;
-  color: #555;
+  margin-top: 10px;
+  /* Default color for light mode */
+  color: #333;
 }
 
 /* ============================================
@@ -305,6 +339,8 @@ main {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
   border: 1px solid #e0e0e0;
+  /* Ensure history text is visible */
+  color: #333;
 }
 
 #history-section h2 {
@@ -359,25 +395,33 @@ footer {
 }
 
 /* ============================================
-   Overrides for White-Background Sections in Dark Mode
-   (Ensures that text in the form, results, history, and insight cards
-    remains dark and visible even when the system is in dark mode.)
+   Additional Overrides for Text Visibility in Both Modes
 ============================================ */
-#form-section,
-#result-section,
-#history-section,
-.insight {
-  color: #333;
-}
 
-/* Override the prediction message in the result section */
-#result-section #prediction-message {
+/* LIGHT MODE: Force text to dark (#333) */
+html:not(.dark-mode) .form-group label,
+html:not(.dark-mode) input,
+html:not(.dark-mode) textarea,
+html:not(.dark-mode) #prediction-message,
+html:not(.dark-mode) #history-section,
+html:not(.dark-mode) .insight,
+html:not(.dark-mode) .diagram-description {
   color: #333 !important;
 }
 
-/* Ensure form labels and inputs have dark text */
-#form-section .form-group label,
-#form-section input,
-#form-section textarea {
-  color: #333;
+/* DARK MODE: Force text to light (#f1f1f1) and adjust input backgrounds */
+html.dark-mode .form-group label,
+html.dark-mode input,
+html.dark-mode textarea,
+html.dark-mode #prediction-message,
+html.dark-mode #history-section,
+html.dark-mode .insight,
+html.dark-mode .diagram-description {
+  color: #f1f1f1 !important;
+}
+
+html.dark-mode input,
+html.dark-mode textarea {
+  background-color: #444 !important;
+  border-color: #666 !important;
 }
