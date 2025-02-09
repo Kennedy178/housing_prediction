@@ -2,33 +2,42 @@
    CSS Variables (Color Tokens)
 ============================================ */
 :root {
-  --primary-color: #005f73;  /* Deep teal */
-  --secondary-color: #0a9396; /* Lighter teal */
-  --accent-color: #94d2bd;    /* Soft accent */
-  --bg-color: #f1faee;        /* Light background */
-  --text-color: #333;
-  --error-color: #d32f2f;
-  --button-hover: #004e66;    /* Slightly darker for hover states */
+  /* Light theme variables (default) */
+  --primary-color: #005f73;       /* Deep teal */
+  --secondary-color: #0a9396;     /* Lighter teal */
+  --accent-color: #94d2bd;        /* Soft accent */
+  --bg-color: #f1faee;            /* Overall page background */
+  --form-bg: #ffffff;             /* Background for forms, cards, etc. */
+  --text-color: #333;             /* General text color */
+  --border-color: #e0e0e0;         /* Borders for cards, forms, tables */
+  --error-color: #d32f2f;          /* Error messages */
+  --button-hover: #004e66;        /* Hover state for buttons */
 }
 
-/* Dark mode support based on system preference */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary-color: #66d9ef;
-    --secondary-color: #38a3a5;
-    --accent-color: #a8dadc;
-    --bg-color: #1e1e1e;
-    --text-color: #f1f1f1;
-  }
-}
-
-/* Manual Dark Mode Toggle Override via class on <html> */
+/* Dark mode: Applied only if the html element has the .dark-mode class */
 html.dark-mode {
   --primary-color: #66d9ef;
   --secondary-color: #38a3a5;
   --accent-color: #a8dadc;
   --bg-color: #1e1e1e;
+  --form-bg: #2b2b2b;
   --text-color: #f1f1f1;
+  --border-color: #444;
+  --button-hover: #004e66;
+}
+
+/* (Optional) You can also add a .light-mode class for clarity */
+html.light-mode {
+  /* Same as the default :root values */
+  --primary-color: #005f73;
+  --secondary-color: #0a9396;
+  --accent-color: #94d2bd;
+  --bg-color: #f1faee;
+  --form-bg: #ffffff;
+  --text-color: #333;
+  --border-color: #e0e0e0;
+  --error-color: #d32f2f;
+  --button-hover: #004e66;
 }
 
 /* ============================================
@@ -41,19 +50,12 @@ html.dark-mode {
 }
 
 body {
-  font-family: 'Inter', sans-serif; /* Modern, professional font */
+  font-family: 'Inter', sans-serif;
   background: var(--bg-color);
-  background-image: radial-gradient(circle at center, #f1faee, #e8f6f3);
   color: var(--text-color);
   line-height: 1.6;
   padding: 20px;
   overflow-x: hidden;
-}
-
-/* Override body background in dark mode */
-html.dark-mode body {
-  background: var(--bg-color);
-  background-image: radial-gradient(circle at center, #1e1e1e, #141414);
 }
 
 /* ============================================
@@ -66,12 +68,12 @@ header {
   padding: 40px 20px;
   background: radial-gradient(circle at top left, var(--primary-color), var(--secondary-color));
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   color: #fff;
   overflow: hidden;
 }
 
-/* Theme toggle button in header (placed in the top right corner) */
+/* Theme toggle button in header */
 #theme-toggle {
   position: absolute;
   top: 10px;
@@ -83,13 +85,12 @@ header {
   border: none;
 }
 
-/* Geometric overlay: a translucent circular element */
 header::before {
   content: "";
   position: absolute;
   width: 150px;
   height: 150px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+  background: radial-gradient(circle, rgba(255,255,255,0.3), transparent);
   border-radius: 50%;
   top: -50px;
   right: -50px;
@@ -121,30 +122,16 @@ main {
 }
 
 /* ============================================
-   Form Section with Subtle Background Pattern
+   Form Section
 ============================================ */
 #form-section {
   position: relative;
-  background: #ffffff;
-  background-image: radial-gradient(circle, rgba(0,95,115,0.05) 1px, transparent 1px);
-  background-size: 20px 20px;
+  background: var(--form-bg);
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   margin-bottom: 30px;
-  border: 1px solid #e0e0e0;
-}
-
-#form-section::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(0,95,115,0.02), transparent);
-  pointer-events: none;
-  border-radius: 15px;
+  border: 1px solid var(--border-color);
 }
 
 #form-section form {
@@ -156,29 +143,27 @@ main {
 .form-group {
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 
 .form-group label {
   font-weight: 500;
   margin-bottom: 5px;
-  /* Ensure label text is visible by default */
-  color: #333;
+  color: var(--text-color);
 }
 
 .form-group input {
   padding: 12px;
   font-size: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
+  color: var(--text-color);
+  background: var(--form-bg);
   transition: border-color 0.3s, box-shadow 0.3s;
-  /* Inherit text color */
-  color: inherit;
 }
 
 .form-group input:focus {
   border-color: var(--primary-color);
-  box-shadow: 0 0 8px rgba(0, 95, 115, 0.4);
+  box-shadow: 0 0 8px rgba(0,95,115,0.4);
   outline: none;
 }
 
@@ -189,14 +174,8 @@ main {
   display: none;
 }
 
-/* Tooltip styling with subtle dashed underline */
-.tooltip {
-  cursor: help;
-  border-bottom: 1px dashed #555;
-}
-
 /* ============================================
-   Predict Button with Radial Gradient & Hover Effects
+   Predict Button
 ============================================ */
 #predict-btn {
   grid-column: 1 / -1;
@@ -220,13 +199,13 @@ main {
 }
 
 /* ============================================
-   Result Section with Animation & Frame Shadows
+   Result Section
 ============================================ */
 #result-section {
-  background: #ffffff;
+  background: var(--form-bg);
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   margin-bottom: 30px;
   opacity: 0;
   transform: translateY(-10px);
@@ -253,12 +232,11 @@ main {
 #prediction-message {
   font-size: 1.2rem;
   margin-bottom: 20px;
-  /* Set default color for predicted price text */
-  color: #333;
+  color: var(--text-color);
 }
 
 /* ============================================
-   Model Insights Cards with Geometric Overlays & Blending Modes
+   Model Insights Cards
 ============================================ */
 #model-insights {
   display: flex;
@@ -274,8 +252,8 @@ main {
   text-align: center;
   padding: 15px;
   border-radius: 10px;
-  background: #fff;
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: var(--form-bg);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   position: relative;
   overflow: hidden;
 }
@@ -295,7 +273,7 @@ main {
 
 .insight:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .insight img {
@@ -304,16 +282,15 @@ main {
   margin-bottom: 10px;
 }
 
-/* If you have diagram descriptions, add this class to them */
+/* Diagram descriptions */
 .diagram-description {
   font-size: 0.95rem;
   margin-top: 10px;
-  /* Default color for light mode */
-  color: #333;
+  color: var(--text-color);
 }
 
 /* ============================================
-   Back-to-Form Button with Subtle Hover
+   Back-to-Form Button
 ============================================ */
 #back-to-form {
   padding: 10px 20px;
@@ -330,17 +307,16 @@ main {
 }
 
 /* ============================================
-   History Section with Grid Layout & Pattern
+   History Section
 ============================================ */
 #history-section {
-  background: #fff;
+  background: var(--form-bg);
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   margin-bottom: 30px;
-  border: 1px solid #e0e0e0;
-  /* Ensure history text is visible */
-  color: #333;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
 }
 
 #history-section h2 {
@@ -359,7 +335,7 @@ main {
 #history-table th,
 #history-table td {
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   text-align: center;
 }
 
@@ -369,7 +345,6 @@ main {
   font-weight: 600;
 }
 
-/* Clear history button with a gentle hover change */
 #clear-history {
   padding: 10px 20px;
   background: radial-gradient(circle, #d32f2f, #c62828);
@@ -391,37 +366,5 @@ footer {
   text-align: center;
   margin-top: 20px;
   font-size: 0.9rem;
-  color: #777;
-}
-
-/* ============================================
-   Additional Overrides for Text Visibility in Both Modes
-============================================ */
-
-/* LIGHT MODE: Force text to dark (#333) */
-html:not(.dark-mode) .form-group label,
-html:not(.dark-mode) input,
-html:not(.dark-mode) textarea,
-html:not(.dark-mode) #prediction-message,
-html:not(.dark-mode) #history-section,
-html:not(.dark-mode) .insight,
-html:not(.dark-mode) .diagram-description {
-  color: #333 !important;
-}
-
-/* DARK MODE: Force text to light (#f1f1f1) and adjust input backgrounds */
-html.dark-mode .form-group label,
-html.dark-mode input,
-html.dark-mode textarea,
-html.dark-mode #prediction-message,
-html.dark-mode #history-section,
-html.dark-mode .insight,
-html.dark-mode .diagram-description {
-  color: #f1f1f1 !important;
-}
-
-html.dark-mode input,
-html.dark-mode textarea {
-  background-color: #444 !important;
-  border-color: #666 !important;
+  color: var(--text-color);
 }

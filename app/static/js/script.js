@@ -4,22 +4,34 @@ document.addEventListener('DOMContentLoaded', function() {
   =============================== */
   const toggle = document.getElementById('theme-toggle');
 
-  // Function to update the toggle icon based on the current mode
-  function updateIcon() {
-    if (document.documentElement.classList.contains('dark-mode')) {
-      toggle.textContent = '🌕'; // Full moon icon for dark mode
+  // Determine saved theme or use system preference if none saved
+  let theme = localStorage.getItem('theme');
+  if (!theme) {
+    theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light';
+  }
+  setTheme(theme);
+
+  function setTheme(theme) {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark-mode');
+      document.documentElement.classList.remove('light-mode');
+      toggle.textContent = '🌕'; // Full moon icon
     } else {
-      toggle.textContent = '🌙'; // Crescent moon icon for light mode
+      document.documentElement.classList.add('light-mode');
+      document.documentElement.classList.remove('dark-mode');
+      toggle.textContent = '🌙'; // Crescent moon icon
     }
+    localStorage.setItem('theme', theme);
   }
 
-  // Set the initial icon when the page loads
-  updateIcon();
-
-  // Toggle dark mode on click and update the icon accordingly
-  toggle.addEventListener('click', function () {
-    document.documentElement.classList.toggle('dark-mode');
-    updateIcon();
+  toggle.addEventListener('click', function() {
+    if (document.documentElement.classList.contains('dark-mode')) {
+      setTheme('light');
+    } else {
+      setTheme('dark');
+    }
   });
 
   /* ===============================
@@ -52,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const fieldName = input.name;
     const value = parseFloat(input.value);
     const rule = validationRules[fieldName];
-    const errorMsgEl = input.nextElementSibling; // The <small> error message element
+    const errorMsgEl = input.nextElementSibling; // Assumes a <small> element follows the input
 
     if (input.value.trim() === "" || isNaN(value)) {
       errorMsgEl.textContent = "This field is required.";
