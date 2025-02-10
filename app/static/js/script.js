@@ -214,10 +214,10 @@ document.addEventListener('DOMContentLoaded', function() {
       zipcode: inputData.zipcode,
       predicted_price: parseFloat(predicted_price).toFixed(2)
     });
-    localStorage.setItem('predictionHistory', JSON.stringify(history));
+    localStorage.setItem('predictionHistory', JSON.stringify(history)); // Save to localStorage for persistence and load history
     // Reset to compact view (latest 5) when a new prediction is added.
-    historyExpanded = false;
-    loadHistory();
+    historyExpanded = false; // Reset to compact view
+    loadHistory();// Reload history table
   }
 
   // “Back to Form” button to allow making another prediction
@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('result-section').classList.add('hidden');
     document.getElementById('form-section').classList.remove('hidden');
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    form.reset();
+    form.reset(); // Clear form fields
     predictBtn.disabled = true;
   });
 });
