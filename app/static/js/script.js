@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Validate the entire form when the Predict button is clicked
   function validateField(input) {
     const fieldName = input.name;
     const value = parseFloat(input.value);
@@ -113,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const reversedHistory = history.slice().reverse();
     // Determine which items to display:
     const itemsToShow = historyExpanded ? reversedHistory : reversedHistory.slice(0, 5);
-
+// Display the history in the table
     itemsToShow.forEach(item => {
       const tr = document.createElement('tr');
       tr.innerHTML = `
