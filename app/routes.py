@@ -2,6 +2,7 @@ from flask import render_template, request, flash, jsonify
 from app import app
 from model.predict import predict_price  # Import the predict function
 from config import Config  # Import the Config class to access config settings
+from app.utils import fetch_real_estate_listings  # Import function to fetch listings
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -42,20 +43,26 @@ def index():
                 "zipcode": zipcode
             }
 
-            # Use the predict_price function to get the predicted price and confidence interval
+            # Get the predicted price and confidence interval
             predicted_price, confidence_interval = predict_price(features)
 
-            # Return JSON if it's an AJAX request, else render the template as before
+            # Fetch real estate listings within ±$50,000 of predicted price
+            listings = fetch_real_estate_listings(zipcode, predicted_price)
+
+            # Return JSON if it's an AJAX request
             if request.is_json:
                 return jsonify({
                     'predicted_price': predicted_price,
-                    'confidence_interval': confidence_interval
+                    'confidence_interval': confidence_interval,
+                    'listings': listings
                 })
-            else:
-                return render_template('index.html', 
-                                       predicted_price=predicted_price, 
-                                       confidence_interval=confidence_interval, 
-                                       features=features)
+
+            # Render the results in HTML template
+            return render_template('index.html', 
+                                   predicted_price=predicted_price, 
+                                   confidence_interval=confidence_interval, 
+                                   listings=listings,
+                                   features=features)
 
         except ValueError:
             error_msg = "Please enter valid numerical values for all fields."
@@ -64,6 +71,7 @@ def index():
             else:
                 flash(error_msg, "danger")
                 return render_template('index.html')
+
         except Exception as e:
             error_msg = f"An unexpected error occurred: {str(e)}"
             if request.is_json:

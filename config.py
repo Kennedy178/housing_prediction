@@ -5,6 +5,11 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY', 'my_default_secret_key') # Secret key for Flask app
     FLASK_ENV = 'development'  # Change to 'production' when deploying # Set to 'development' for debugging
 
+
+# Crawlbase API Config
+    CRAWLBASE_API_KEY = "your_crawlbase_api_key_here"
+
+
     # Model paths
     MODEL_PATH = 'model/saved_model/model.pkl'
     ENCODER_PATH = 'model/saved_model/encoder.pkl'
