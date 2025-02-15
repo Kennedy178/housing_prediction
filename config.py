@@ -6,8 +6,9 @@ class Config:
     FLASK_ENV = 'development'  # Change to 'production' when deploying # Set to 'development' for debugging
 
 
-# Crawlbase API Config
-    CRAWLBASE_API_KEY = "your_crawlbase_api_key_here"
+    # Load Crawlbase API key from environment variables
+    CRAWLBASE_API_KEY = os.getenv("CRAWLBASE_API_KEY")
+
 
 
     # Model paths

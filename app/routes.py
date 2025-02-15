@@ -21,8 +21,7 @@ def index():
             zipcode = data['zipcode']
 
             # Validate the zipcode against the range defined in config.py
-            min_zipcode = Config.ZIPCODE_RANGE[0]
-            max_zipcode = Config.ZIPCODE_RANGE[1]
+            min_zipcode, max_zipcode = Config.ZIPCODE_RANGE
 
             if not (min_zipcode <= int(zipcode) <= max_zipcode):
                 error_msg = f"Invalid zipcode. It should be between {min_zipcode} and {max_zipcode}."
@@ -43,11 +42,19 @@ def index():
                 "zipcode": zipcode
             }
 
-            # Get the predicted price and confidence interval
+            # Get the predicted price
             predicted_price, confidence_interval = predict_price(features)
 
-            # Fetch real estate listings within ±$50,000 of predicted price
-            listings = fetch_real_estate_listings(zipcode, predicted_price)
+            # Define the price range (+/- $50,000)
+            min_price = max(predicted_price - 50000, 0)  # Ensure it doesn't go below 0
+            max_price = predicted_price + 50000
+
+            # Fetch real estate listings within the specified price range
+            listings = fetch_real_estate_listings(zipcode, min_price, max_price)
+
+            # Handle case where no listings are found
+            if not listings:
+                flash(f"No houses found on Realtor.com within ${min_price:,} - ${max_price:,}.", "warning")
 
             # Return JSON if it's an AJAX request
             if request.is_json:
