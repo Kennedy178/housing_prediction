@@ -43,9 +43,12 @@ def predict_price(features):
     # Inverse log transformation to get actual price
     predicted_price = np.expm1(predicted_price_log)  # np.expm1 is the inverse of log1p
 
-    # Calculate the confidence interval (we can use a similar logic as training)
-    std_dev = np.std(predicted_price_log)  # Standard deviation of predictions
-    ci_min = predicted_price - (1.96 * std_dev)  # Confidence Interval Lower Bound
-    ci_max = predicted_price + (1.96 * std_dev)  # Confidence Interval Upper Bound
+    # Fixed margin of error of $40,000
+    margin_of_error = 20000  # You can adjust this value if needed
+
+    # Confidence Interval
+    ci_min = predicted_price - margin_of_error  # Confidence Interval Lower Bound
+    ci_max = predicted_price + margin_of_error  # Confidence Interval Upper Bound
 
     return predicted_price[0], (ci_min[0], ci_max[0])
+

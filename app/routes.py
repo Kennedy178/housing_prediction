@@ -2,7 +2,6 @@ from flask import render_template, request, flash, jsonify
 from app import app
 from model.predict import predict_price  # Import the predict function
 from config import Config  # Import the Config class to access config settings
-from app.utils import fetch_real_estate_listings  # Import function to fetch listings
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -45,31 +44,29 @@ def index():
             # Get the predicted price
             predicted_price, confidence_interval = predict_price(features)
 
-            # Define the price range (+/- $50,000)
-            min_price = max(predicted_price - 50000, 0)  # Ensure it doesn't go below 0
+
+             # Calculate price range (±$50,000)
+            min_price = max(predicted_price - 50000, 0)  # Ensure min price is not negative
             max_price = predicted_price + 50000
 
-            # Fetch real estate listings within the specified price range
-            listings = fetch_real_estate_listings(zipcode, min_price, max_price)
+            # Construct the dynamic Realtor.com URL
+            realtor_url = f"https://www.realtor.com/realestateandhomes-search/{zipcode}/price-{min_price}-{max_price}" #add
 
-            # Handle case where no listings are found
-            if not listings:
-                flash(f"No houses found on Realtor.com within ${min_price:,} - ${max_price:,}.", "warning")
 
             # Return JSON if it's an AJAX request
             if request.is_json:
                 return jsonify({
                     'predicted_price': predicted_price,
                     'confidence_interval': confidence_interval,
-                    'listings': listings
+                     'realtor_url': realtor_url  # Include the dynamic link #add
                 })
 
             # Render the results in HTML template
             return render_template('index.html', 
                                    predicted_price=predicted_price, 
-                                   confidence_interval=confidence_interval, 
-                                   listings=listings,
-                                   features=features)
+                                   confidence_interval=confidence_interval,
+                                   features=features,
+                                    realtor_url=realtor_url)  # Pass the dynamic link to the template #add
 
         except ValueError:
             error_msg = "Please enter valid numerical values for all fields."

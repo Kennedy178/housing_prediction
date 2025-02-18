@@ -195,7 +195,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     predictionMessage.innerHTML = `Based on the data provided, your home is estimated to be valued at <strong>$${parseFloat(result.predicted_price).toLocaleString()}</strong>.<br>
       The confidence interval for this prediction ranges between <strong>$${parseFloat(result.confidence_interval[0]).toLocaleString()}</strong> and <strong>$${parseFloat(result.confidence_interval[1]).toLocaleString()}</strong>.`;
-
+// Add the dynamic Realtor.com link
+const realtorLinkContainer = document.getElementById('realtor-link-container');
+realtorLinkContainer.innerHTML = `
+    <p>View properties in your area on <a href="${result.realtor_url}" target="_blank">Realtor.com</a>.</p>
+`;
     // Hide the form section and show the result section
     document.getElementById('form-section').classList.add('hidden');
     resultSection.classList.remove('hidden');

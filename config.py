@@ -17,7 +17,7 @@ class Config:
     POLY_PATH = 'model/saved_model/poly.pkl'
 
     # Database Configuration (SQLite example)
-    DATABASE_URI = 'sqlite:///data/your_database.db'  # Modify as per your actual DB path
+    DATABASE_URI = 'sqlite:///data/your_database.db'  # Modify as per the actual DB path
 
     # Other settings (if needed later)
     CACHE_TYPE = 'simple'  # Flask-Caching, if you decide to use it

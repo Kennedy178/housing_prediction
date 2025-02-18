@@ -92,22 +92,13 @@
       <h2>Prediction Result</h2>
       <p id="prediction-message"></p>
       <div id="model-insights">
-        <div class="insight">
-          <img src="{{ url_for('static', filename='images/residual.png') }}" alt="Residual Analysis">
-          <p class="insight-description">
-            <strong>Residual Analysis:</strong> This image shows the residuals of our model's predictions, helping identify potential biases.
-          </p>
-        </div>
-        <div class="insight">
-          <img src="{{ url_for('static', filename='images/feature_importance.png') }}" alt="Feature Importance">
-          <p class="insight-description">
-            <strong>Feature Importance:</strong> This pie chart highlights the impact of each feature on the final prediction.
-          </p>
-        </div>
+         <!-- Container for the dynamic Realtor.com link -->
+    <div id="realtor-link-container"></div>
       </div>
+        <!-- Container for the dynamic Realtor.com link -->
+    <div id="realtor-link-container"></div>
       <button id="back-to-form">Make Another Prediction</button>
     </section>
-    
     <!-- Prediction History Section -->
     <section id="history-section">
       <h2>Prediction History</h2>
