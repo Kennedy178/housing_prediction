@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-  /* ===============================
+  /* 
      Theme Toggle Functionality using Font Awesome Icons
-  =============================== */
+   */
   const toggle = document.getElementById('theme-toggle');
 
   // Determine saved theme or use system preference if none saved
@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   setTheme(theme);
 
+// handle the theme toggle button click event
   function setTheme(theme) {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark-mode');
@@ -27,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     localStorage.setItem('theme', theme);
   }
-
+// handle the theme toggle button click event
   toggle.addEventListener('click', function() {
     if (document.documentElement.classList.contains('dark-mode')) {
       setTheme('light');
@@ -36,9 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  /* ===============================
+  /* 
      Housing Form and Prediction Logic
-  =============================== */
+  */
   const form = document.getElementById('housing-form');
   const predictBtn = document.getElementById('predict-btn');
   const inputs = form.querySelectorAll('input');
