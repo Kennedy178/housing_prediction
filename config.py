@@ -16,17 +16,15 @@ class Config:
     ENCODER_PATH = 'model/saved_model/encoder.pkl'
     POLY_PATH = 'model/saved_model/poly.pkl'
 
-    # Database Configuration (SQLite example)
-    DATABASE_URI = 'sqlite:///data/your_database.db'  # Modify as per the actual DB path
+    # Database Configuration (SQLite e)
+    DATABASE_URI = 'sqlite:///data/your_database.db'  # as per the actual DB path
 
-    # Other settings (if needed later)
-    CACHE_TYPE = 'simple'  # Flask-Caching, if you decide to use it
-    CACHE_DEFAULT_TIMEOUT = 300  # Cache timeout
+  
 
     # Zipcode range for validation (can be modified as needed)
     ZIPCODE_RANGE = (98001, 99001)
 
-    # Default values (if needed for any specific fields, for example):
+    # Default values (wen needed for any specific):
     DEFAULT_BEDROOMS = 3
     DEFAULT_BATHROOMS = 2
     DEFAULT_SQFT_LIVING = 1500
