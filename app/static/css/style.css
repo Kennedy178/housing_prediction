@@ -1,6 +1,6 @@
-/* ============================================
+/* 
    CSS Variables (Color Tokens)
-============================================ */
+ */
 :root {
   /* Light theme variables (default) */
   --primary-color: #005f73;       /* Deep teal */
@@ -503,9 +503,9 @@ main {
 
 
 
-/* ============================================
+/* 
    Footer
-============================================ */
+ */
 footer {
   text-align: center;
   margin-top: 20px;
