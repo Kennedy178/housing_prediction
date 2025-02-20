@@ -2,7 +2,7 @@ from flask import render_template, request, flash, jsonify
 from app import app
 from model.predict import predict_price  # Import the predict function
 from config import Config  # Import the Config class to access config settings
-from app.database import insert_query  # Import function to store predictions in DB
+from app.database import insert_query, get_all_queries  # Import functions to store & retrieve predictions
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -52,7 +52,7 @@ def index():
             # Construct the dynamic Realtor.com URL
             realtor_url = f"https://www.realtor.com/realestateandhomes-search/{zipcode}/price-{min_price}-{max_price}"
 
-            # ✅ Store the prediction in the database
+            # Store the prediction in the database
             insert_query(
                 sqft_living=sqft_living,
                 no_of_bedrooms=no_of_bedrooms,
@@ -97,6 +97,22 @@ def index():
 
     # For GET requests, simply render the page
     return render_template('index.html')
+
+# ------------------- NEW ADMIN PAGE -------------------
+
+@app.route('/admin')
+def admin_dashboard():
+    try:
+        # Fetch all stored predictions from the database
+        predictions = get_all_queries()
+        return render_template('admin.html', predictions=predictions)
+    
+    except Exception as e:
+        error_msg = f"Error fetching predictions: {str(e)}"
+        flash(error_msg, "danger")
+        return render_template('admin.html', predictions=[])
+
+# -----------------------------------------------------
 
 # Global error handler for unexpected errors
 @app.errorhandler(500)

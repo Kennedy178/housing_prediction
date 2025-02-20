@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Predictions</title>
+
+    <style>
+        :root {
+            --primary-color: #005f73;
+            --secondary-color: #0a9396;
+            --accent-color: #94d2bd;
+            --bg-color: #f1faee;
+            --form-bg: #ffffff;
+            --text-color: #333;
+            --border-color: #e0e0e0;
+            --error-color: #d32f2f;
+            --button-hover: #004e66;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--form-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 10px;
+            background: var(--secondary-color);
+            border-radius: 8px;
+            color: white;
+        }
+
+        .filters label {
+            font-weight: bold;
+        }
+
+        .filters input {
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+        }
+
+        .filters button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .filters button:hover {
+            background: var(--button-hover);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        @media (max-width: 768px) {
+            .filters {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Admin Dashboard - Predictions</h1>
+
+        <!-- Filters -->
+        <div class="filters">
+            <div>
+                <label for="minPrice">Min Price:</label>
+                <input type="number" id="minPrice" placeholder="Min price">
+            </div>
+            <div>
+                <label for="maxPrice">Max Price:</label>
+                <input type="number" id="maxPrice" placeholder="Max price">
+            </div>
+            <div>
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate">
+            </div>
+            <div>
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate">
+            </div>
+            <button onclick="applyFilters()">Apply Filters</button>
+        </div>
+
+        <!-- Predictions Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Sqft Living</th>
+                    <th>Bedrooms</th>
+                    <th>Bathrooms</th>
+                    <th>Lot Size</th>
+                    <th>Floors</th>
+                    <th>House Age</th>
+                    <th>Zipcode</th>
+                    <th>Predicted Price</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="predictionsTable">
+                <!-- Predictions will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let predictions = [];  // Holds the full data from the server
+
+        function loadPredictions() {
+            fetch('/admin/data')  // Fetch predictions from Flask
+                .then(response => response.json())
+                .then(data => {
+                    predictions = data;
+                    displayPredictions(data);
+                })
+                .catch(error => console.error('Error fetching predictions:', error));
+        }
+
+        function displayPredictions(data) {
+            const tableBody = document.getElementById('predictionsTable');
+            tableBody.innerHTML = "";
+
+            data.forEach(prediction => {
+                let row = `
+                    <tr>
+                        <td>${prediction.sqft_living}</td>
+                        <td>${prediction.no_of_bedrooms}</td>
+                        <td>${prediction.no_of_bathrooms}</td>
+                        <td>${prediction.sqft_lot}</td>
+                        <td>${prediction.no_of_floors}</td>
+                        <td>${prediction.house_age}</td>
+                        <td>${prediction.zipcode}</td>
+                        <td>$${prediction.predicted_price.toLocaleString()}</td>
+                        <td>${prediction.prediction_date}</td>
+                    </tr>
+                `;
+                tableBody.innerHTML += row;
+            });
+        }
+
+        function applyFilters() {
+            let minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
+            let maxPrice = parseFloat(document.getElementById('maxPrice').value) || Infinity;
+            let startDate = document.getElementById('startDate').value;
+            let endDate = document.getElementById('endDate').value;
+
+            let filtered = predictions.filter(prediction => {
+                let price = prediction.predicted_price;
+                let date = new Date(prediction.prediction_date);
+
+                return price >= minPrice &&
+                       price <= maxPrice &&
+                       (!startDate || date >= new Date(startDate)) &&
+                       (!endDate || date <= new Date(endDate));
+            });
+
+            displayPredictions(filtered);
+        }
+
+        // Load data on page load
+        window.onload = loadPredictions;
+    </script>
+
+</body>
+</html>
