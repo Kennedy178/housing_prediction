@@ -52,7 +52,7 @@
     }
 
     .clear-button {
-        display: none; /* Hidden initially */
+        display: none;
         background-color: var(--error-color);
     }
 
@@ -170,12 +170,13 @@
         const clearButton = document.getElementById("clearFilters");
         const toggleButton = document.getElementById("toggleEntries");
         const rows = document.querySelectorAll("#predictionsTable tr");
+        let showingAll = false; // Track state
 
         filterButton.addEventListener("click", applyFilters);
         clearButton.addEventListener("click", clearFilters);
         toggleButton.addEventListener("click", toggleEntries);
 
-        // Show only first 20 rows initially
+        // Initially show only the first 20 rows
         updateTableVisibility(false);
 
         function applyFilters() {
@@ -205,7 +206,6 @@
                 }
             });
 
-            // Show Clear Filters button if filters applied
             clearButton.style.display = filtersApplied ? "inline-block" : "none";
         }
 
@@ -216,13 +216,13 @@
             document.getElementById('endDate').value = "";
 
             rows.forEach(row => row.style.display = "");
-            clearButton.style.display = "none"; // Hide clear button
+            clearButton.style.display = "none";
         }
 
         function toggleEntries() {
-            let showingAll = toggleButton.innerText === "Show Less";
+            showingAll = !showingAll;
             updateTableVisibility(showingAll);
-            toggleButton.innerText = showingAll ? "Show All" : "Show Less";
+            toggleButton.innerText = showingAll ? "Show Less" : "Show All";
         }
 
         function updateTableVisibility(showAll) {

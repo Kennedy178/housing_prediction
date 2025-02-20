@@ -511,4 +511,24 @@ footer {
   margin-top: 20px;
   font-size: 0.9rem;
   color: var(--text-color);
+  padding: 15px 0;
+  background: var(--form-bg);
+  border-top: 1px solid var(--border-color);
+}
+
+footer a {
+  display: inline-block;
+  margin: 10px;
+  padding: 8px 16px;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+footer a:hover {
+  background: var(--button-hover);
+  transform: scale(1.05);
 }
