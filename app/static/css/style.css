@@ -425,6 +425,84 @@ main {
   background: radial-gradient(circle, #b71c1c, #a91a1a);
 }
 
+.admin-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  background: var(--form-bg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-container h1 {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: var(--secondary-color);
+  border-radius: 8px;
+  color: white;
+}
+
+.filters label {
+  font-weight: bold;
+}
+
+.filters input {
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.filters button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.filters button:hover {
+  background: var(--button-hover);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.admin-table th, .admin-table td {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  text-align: left;
+}
+
+.admin-table th {
+  background: var(--primary-color);
+  color: white;
+}
+
+.admin-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+  .filters {
+      flex-direction: column;
+  }
+}
+
+
+
+
 /* ============================================
    Footer
 ============================================ */

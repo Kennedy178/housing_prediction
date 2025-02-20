@@ -4,4 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Housing Price Predictor{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css
+    
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Page Content -->
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Housing Price Predictor</p>
+        {% if request.path == '/' %}
+            <a href="{{ url_for('admin_dashboard') }}">Admin Dashboard</a>
+        {% elif request.path == '/admin' %}
+            <a href="{{ url_for('index') }}">Go to Home</a>
+        {% endif %}
+    </footer>
+
+    <!-- ✅ Allow child templates to add scripts here -->
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>

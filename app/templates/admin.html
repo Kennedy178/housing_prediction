@@ -1,211 +1,235 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - Predictions</title>
+{% extends 'layout.html' %}
 
-    <style>
-        :root {
-            --primary-color: #005f73;
-            --secondary-color: #0a9396;
-            --accent-color: #94d2bd;
-            --bg-color: #f1faee;
-            --form-bg: #ffffff;
-            --text-color: #333;
-            --border-color: #e0e0e0;
-            --error-color: #d32f2f;
-            --button-hover: #004e66;
-        }
+{% block title %}Admin Dashboard - Predictions{% endblock %}
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 20px;
-        }
+{% block content %}
+<style>
+    :root {
+        --primary-color: #005f73;
+        --secondary-color: #0a9396;
+        --accent-color: #94d2bd;
+        --bg-color: #f1faee;
+        --form-bg: #ffffff;
+        --text-color: #333;
+        --border-color: #e0e0e0;
+        --error-color: #d32f2f;
+        --button-hover: #004e66;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: var(--form-bg);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+    .admin-container {
+        background: var(--bg-color);
+        padding: 20px;
+        border-radius: 10px;
+    }
 
-        h1 {
-            text-align: center;
-            color: var(--primary-color);
-        }
+    .filters {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+    }
 
-        .filters {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 20px;
-            padding: 10px;
-            background: var(--secondary-color);
-            border-radius: 8px;
-            color: white;
-        }
+    .filters input {
+        padding: 10px;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+    }
 
-        .filters label {
-            font-weight: bold;
-        }
+    .button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 8px;
+        background-color: var(--primary-color);
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+    }
 
-        .filters input {
-            padding: 8px;
-            border: 1px solid var(--border-color);
-            border-radius: 5px;
-        }
+    .button:hover {
+        background-color: var(--button-hover);
+    }
 
-        .filters button {
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+    .clear-button {
+        display: none; /* Hidden initially */
+        background-color: var(--error-color);
+    }
 
-        .filters button:hover {
-            background: var(--button-hover);
-        }
+    .clear-button:hover {
+        background-color: #b22222;
+    }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
+    .toggle-button {
+        margin-top: 15px;
+        display: block;
+        text-align: center;
+        padding: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        color: var(--primary-color);
+        border-radius: 8px;
+        border: 1px solid var(--primary-color);
+        transition: 0.3s;
+    }
 
-        th, td {
-            border: 1px solid var(--border-color);
-            padding: 10px;
-            text-align: left;
-        }
+    .toggle-button:hover {
+        background-color: var(--primary-color);
+        color: white;
+    }
 
-        th {
-            background: var(--primary-color);
-            color: white;
-        }
+    .admin-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: var(--form-bg);
+        border-radius: 8px;
+        overflow: hidden;
+    }
 
-        tr:nth-child(even) {
-            background: #f9f9f9;
-        }
+    .admin-table th, .admin-table td {
+        padding: 10px;
+        border-bottom: 1px solid var(--border-color);
+        text-align: left;
+    }
 
-        @media (max-width: 768px) {
-            .filters {
-                flex-direction: column;
-            }
-        }
-    </style>
-</head>
-<body>
+    .admin-table th {
+        background: var(--secondary-color);
+        color: white;
+    }
 
-    <div class="container">
-        <h1>Admin Dashboard - Predictions</h1>
+</style>
 
-        <!-- Filters -->
-        <div class="filters">
-            <div>
-                <label for="minPrice">Min Price:</label>
-                <input type="number" id="minPrice" placeholder="Min price">
-            </div>
-            <div>
-                <label for="maxPrice">Max Price:</label>
-                <input type="number" id="maxPrice" placeholder="Max price">
-            </div>
-            <div>
-                <label for="startDate">Start Date:</label>
-                <input type="date" id="startDate">
-            </div>
-            <div>
-                <label for="endDate">End Date:</label>
-                <input type="date" id="endDate">
-            </div>
-            <button onclick="applyFilters()">Apply Filters</button>
+<div class="admin-container">
+    <h1>Admin Dashboard - Predictions</h1>
+
+    <!-- Filters -->
+    <div class="filters">
+        <div>
+            <label for="minPrice">Min Price:</label>
+            <input type="number" id="minPrice" placeholder="Min price">
         </div>
-
-        <!-- Predictions Table -->
-        <table>
-            <thead>
-                <tr>
-                    <th>Sqft Living</th>
-                    <th>Bedrooms</th>
-                    <th>Bathrooms</th>
-                    <th>Lot Size</th>
-                    <th>Floors</th>
-                    <th>House Age</th>
-                    <th>Zipcode</th>
-                    <th>Predicted Price</th>
-                    <th>Date</th>
-                </tr>
-            </thead>
-            <tbody id="predictionsTable">
-                <!-- Predictions will be inserted here -->
-            </tbody>
-        </table>
+        <div>
+            <label for="maxPrice">Max Price:</label>
+            <input type="number" id="maxPrice" placeholder="Max price">
+        </div>
+        <div>
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate">
+        </div>
+        <div>
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate">
+        </div>
+        <button id="filterButton" class="button">Apply Filters</button>
+        <button id="clearFilters" class="button clear-button">Clear Filters</button>
     </div>
 
-    <script>
-        let predictions = [];  // Holds the full data from the server
+    <!-- Predictions Table -->
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>#</th>  
+                <th>Sqft Living</th>
+                <th>Bedrooms</th>
+                <th>Bathrooms</th>
+                <th>Lot Size</th>
+                <th>Floors</th>
+                <th>House Age</th>
+                <th>Zipcode</th>
+                <th>Predicted Price</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody id="predictionsTable">
+            {% for prediction in predictions %}
+            <tr>
+                <td>{{ loop.index }}</td>  
+                <td>{{ prediction[1] }}</td>
+                <td>{{ prediction[2] }}</td>
+                <td>{{ prediction[3] }}</td>
+                <td>{{ prediction[4] }}</td>
+                <td>{{ prediction[5] }}</td>
+                <td>{{ prediction[6] }}</td>
+                <td>{{ prediction[7] }}</td>
+                <td>${{ prediction[8] | int | string }}</td>
+                <td>{{ prediction[9] }}</td> 
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 
-        function loadPredictions() {
-            fetch('/admin/data')  // Fetch predictions from Flask
-                .then(response => response.json())
-                .then(data => {
-                    predictions = data;
-                    displayPredictions(data);
-                })
-                .catch(error => console.error('Error fetching predictions:', error));
-        }
+    <!-- Show More/Less Button -->
+    <button id="toggleEntries" class="toggle-button">Show All</button>
+</div>
+{% endblock %}
 
-        function displayPredictions(data) {
-            const tableBody = document.getElementById('predictionsTable');
-            tableBody.innerHTML = "";
+{% block scripts %}
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const filterButton = document.getElementById("filterButton");
+        const clearButton = document.getElementById("clearFilters");
+        const toggleButton = document.getElementById("toggleEntries");
+        const rows = document.querySelectorAll("#predictionsTable tr");
 
-            data.forEach(prediction => {
-                let row = `
-                    <tr>
-                        <td>${prediction.sqft_living}</td>
-                        <td>${prediction.no_of_bedrooms}</td>
-                        <td>${prediction.no_of_bathrooms}</td>
-                        <td>${prediction.sqft_lot}</td>
-                        <td>${prediction.no_of_floors}</td>
-                        <td>${prediction.house_age}</td>
-                        <td>${prediction.zipcode}</td>
-                        <td>$${prediction.predicted_price.toLocaleString()}</td>
-                        <td>${prediction.prediction_date}</td>
-                    </tr>
-                `;
-                tableBody.innerHTML += row;
-            });
-        }
+        filterButton.addEventListener("click", applyFilters);
+        clearButton.addEventListener("click", clearFilters);
+        toggleButton.addEventListener("click", toggleEntries);
+
+        // Show only first 20 rows initially
+        updateTableVisibility(false);
 
         function applyFilters() {
             let minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
             let maxPrice = parseFloat(document.getElementById('maxPrice').value) || Infinity;
-            let startDate = document.getElementById('startDate').value;
-            let endDate = document.getElementById('endDate').value;
+            let startDate = document.getElementById('startDate').value ? new Date(document.getElementById('startDate').value) : null;
+            let endDate = document.getElementById('endDate').value ? new Date(document.getElementById('endDate').value) : null;
 
-            let filtered = predictions.filter(prediction => {
-                let price = prediction.predicted_price;
-                let date = new Date(prediction.prediction_date);
+            let count = 1;
+            let filtersApplied = false;
 
-                return price >= minPrice &&
-                       price <= maxPrice &&
-                       (!startDate || date >= new Date(startDate)) &&
-                       (!endDate || date <= new Date(endDate));
+            rows.forEach(row => {
+                let price = parseFloat(row.cells[8].innerText.replace('$', '').replace(',', '')) || 0;
+                let dateText = row.cells[9].innerText.trim();
+                let date = dateText ? new Date(dateText) : null;
+
+                let priceCondition = price >= minPrice && price <= maxPrice;
+                let startDateCondition = startDate ? date >= startDate : true;
+                let endDateCondition = endDate ? date <= endDate : true;
+
+                if (priceCondition && startDateCondition && endDateCondition) {
+                    row.style.display = "";
+                    row.cells[0].innerText = count++;
+                    filtersApplied = true;
+                } else {
+                    row.style.display = "none";
+                }
             });
 
-            displayPredictions(filtered);
+            // Show Clear Filters button if filters applied
+            clearButton.style.display = filtersApplied ? "inline-block" : "none";
         }
 
-        // Load data on page load
-        window.onload = loadPredictions;
-    </script>
+        function clearFilters() {
+            document.getElementById('minPrice').value = "";
+            document.getElementById('maxPrice').value = "";
+            document.getElementById('startDate').value = "";
+            document.getElementById('endDate').value = "";
 
-</body>
-</html>
+            rows.forEach(row => row.style.display = "");
+            clearButton.style.display = "none"; // Hide clear button
+        }
+
+        function toggleEntries() {
+            let showingAll = toggleButton.innerText === "Show Less";
+            updateTableVisibility(showingAll);
+            toggleButton.innerText = showingAll ? "Show All" : "Show Less";
+        }
+
+        function updateTableVisibility(showAll) {
+            rows.forEach((row, index) => {
+                row.style.display = showAll || index < 20 ? "" : "none";
+            });
+        }
+    });
+</script>
+{% endblock %}
