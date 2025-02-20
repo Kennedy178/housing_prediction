@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import OneHotEncoder, PolynomialFeatures
 from config import Config  # Import from the config file
+from app.database import insert_query  # Import the function to store predictions
 
 # Load the saved model using paths from the config
 model_path = Config.MODEL_PATH
@@ -32,7 +33,7 @@ def preprocess_features(features):
 
     return input_data_poly
 
-# Function to predict price and confidence interval
+# Function to predict price and store the query in the database
 def predict_price(features):
     # Preprocess the features before passing them to the model
     processed_features = preprocess_features(features)
@@ -43,12 +44,23 @@ def predict_price(features):
     # Inverse log transformation to get actual price
     predicted_price = np.expm1(predicted_price_log)  # np.expm1 is the inverse of log1p
 
-    # Fixed margin of error of $40,000
-    margin_of_error = 20000  # You can adjust this value if needed
+    # Fixed margin of error of $20,000
+    margin_of_error = 20000  
 
     # Confidence Interval
-    ci_min = predicted_price - margin_of_error  # Confidence Interval Lower Bound
-    ci_max = predicted_price + margin_of_error  # Confidence Interval Upper Bound
+    ci_min = predicted_price - margin_of_error  
+    ci_max = predicted_price + margin_of_error  
+
+    # Store the query in the database
+    insert_query(
+        sqft_living=features['sqft_living'],
+        no_of_bedrooms=features['no_of_bedrooms'],
+        no_of_bathrooms=features['no_of_bathrooms'],
+        sqft_lot=features['sqft_lot'],
+        no_of_floors=features['no_of_floors'],
+        house_age=features['house_age'],
+        zipcode=features['zipcode'],
+        predicted_price=predicted_price[0]  # Store the single predicted value
+    )
 
     return predicted_price[0], (ci_min[0], ci_max[0])
-

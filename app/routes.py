@@ -2,6 +2,7 @@ from flask import render_template, request, flash, jsonify
 from app import app
 from model.predict import predict_price  # Import the predict function
 from config import Config  # Import the Config class to access config settings
+from app.database import insert_query  # Import function to store predictions in DB
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -44,21 +45,31 @@ def index():
             # Get the predicted price
             predicted_price, confidence_interval = predict_price(features)
 
-
-             # Calculate price range (±$50,000)
+            # Calculate price range (±$50,000)
             min_price = max(predicted_price - 50000, 0)  # Ensure min price is not negative
             max_price = predicted_price + 50000
 
             # Construct the dynamic Realtor.com URL
-            realtor_url = f"https://www.realtor.com/realestateandhomes-search/{zipcode}/price-{min_price}-{max_price}" #add
+            realtor_url = f"https://www.realtor.com/realestateandhomes-search/{zipcode}/price-{min_price}-{max_price}"
 
+            # ✅ Store the prediction in the database
+            insert_query(
+                sqft_living=sqft_living,
+                no_of_bedrooms=no_of_bedrooms,
+                no_of_bathrooms=no_of_bathrooms,
+                sqft_lot=sqft_lot,
+                no_of_floors=no_of_floors,
+                house_age=house_age,
+                zipcode=zipcode,
+                predicted_price=predicted_price
+            )
 
             # Return JSON if it's an AJAX request
             if request.is_json:
                 return jsonify({
                     'predicted_price': predicted_price,
                     'confidence_interval': confidence_interval,
-                     'realtor_url': realtor_url  # Include the dynamic link #add
+                    'realtor_url': realtor_url
                 })
 
             # Render the results in HTML template
@@ -66,7 +77,7 @@ def index():
                                    predicted_price=predicted_price, 
                                    confidence_interval=confidence_interval,
                                    features=features,
-                                    realtor_url=realtor_url)  # Pass the dynamic link to the template #add
+                                   realtor_url=realtor_url)
 
         except ValueError:
             error_msg = "Please enter valid numerical values for all fields."
