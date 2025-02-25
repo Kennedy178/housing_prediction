@@ -1,4 +1,6 @@
-from flask import render_template, request, flash, jsonify
+import csv
+import os
+from flask import render_template, request, flash, jsonify, Response
 from app import app
 from model.predict import predict_price  # Import the predict function
 from config import Config  # Import the Config class to access config settings
@@ -111,6 +113,40 @@ def admin_dashboard():
         error_msg = f"Error fetching predictions: {str(e)}"
         flash(error_msg, "danger")
         return render_template('admin.html', predictions=[])
+
+# ------------------- CSV DOWNLOAD FUNCTION -------------------
+
+@app.route('/download_csv')
+def download_csv():
+    try:
+        # Fetch all stored predictions
+        predictions = get_all_queries()
+
+        # Define the CSV headers
+        headers = [
+            "ID", "Sqft Living", "No. of Bedrooms", "No. of Bathrooms", 
+            "Sqft Lot", "No. of Floors", "House Age", "Zipcode", 
+            "Predicted Price", "Timestamp (Nairobi Time)"
+        ]
+
+        # Create CSV data
+        def generate():
+            # Write the headers
+            yield ','.join(headers) + '\n'
+            
+            # Write each row of data
+            for row in predictions:
+                yield ','.join(map(str, row)) + '\n'
+
+        # Prepare the response with CSV file
+        response = Response(generate(), mimetype="text/csv")
+        response.headers["Content-Disposition"] = "attachment; filename=predictions.csv"
+        
+        return response
+
+    except Exception as e:
+        flash(f"Error generating CSV: {str(e)}", "danger")
+        return render_template('admin.html')
 
 # -----------------------------------------------------
 

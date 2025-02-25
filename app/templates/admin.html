@@ -22,6 +22,28 @@
         border-radius: 10px;
     }
 
+    .header-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .download-button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 8px;
+        background-color: var(--secondary-color);
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .download-button:hover {
+        background-color: var(--button-hover);
+    }
+
     .filters {
         display: flex;
         gap: 15px;
@@ -100,7 +122,10 @@
 </style>
 
 <div class="admin-container">
-    <h1>Admin Dashboard - Predictions</h1>
+    <div class="header-section">
+        <h1>Admin Dashboard - Predictions</h1>
+        <button id="downloadCSV" class="download-button">Export Housing Data (CSV)</button>
+    </div>
 
     <!-- Filters -->
     <div class="filters">
@@ -166,81 +191,107 @@
 {% block scripts %}
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-    const filterButton = document.getElementById("filterButton");
-    const clearButton = document.getElementById("clearFilters");
-    const toggleButton = document.getElementById("toggleEntries");
-    const rows = document.querySelectorAll("#predictionsTable tr");
-    let showingAll = false; // Track state
-    let filtersApplied = false; // Track if filters were applied
+        const filterButton = document.getElementById("filterButton");
+        const clearButton = document.getElementById("clearFilters");
+        const toggleButton = document.getElementById("toggleEntries");
+        const downloadButton = document.getElementById("downloadCSV");
+        const rows = document.querySelectorAll("#predictionsTable tr");
+        let showingAll = false; // Track state
+        let filtersApplied = false; // Track if filters were applied
 
-    filterButton.addEventListener("click", applyFilters);
-    clearButton.addEventListener("click", clearFilters);
-    toggleButton.addEventListener("click", toggleEntries);
+        filterButton.addEventListener("click", applyFilters);
+        clearButton.addEventListener("click", clearFilters);
+        toggleButton.addEventListener("click", toggleEntries);
+        downloadButton.addEventListener("click", downloadCSV);
 
-    // Initially show only the first 20 rows
-    updateTableVisibility(false);
+        // Initially show only the first 20 rows
+        updateTableVisibility(false);
 
-    function applyFilters() {
-        let minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
-        let maxPrice = parseFloat(document.getElementById('maxPrice').value) || Infinity;
-        let startDate = document.getElementById('startDate').value ? new Date(document.getElementById('startDate').value) : null;
-        let endDate = document.getElementById('endDate').value ? new Date(document.getElementById('endDate').value) : null;
+        function applyFilters() {
+            let minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
+            let maxPrice = parseFloat(document.getElementById('maxPrice').value) || Infinity;
+            let startDate = document.getElementById('startDate').value ? new Date(document.getElementById('startDate').value) : null;
+            let endDate = document.getElementById('endDate').value ? new Date(document.getElementById('endDate').value) : null;
+            let count = 1;
 
-        let count = 1;
-        filtersApplied = false;
+            // Always set filtersApplied to true when filters are applied
+            filtersApplied = true;
 
-        rows.forEach(row => {
-            let price = parseFloat(row.cells[8].innerText.replace('$', '').replace(',', '')) || 0;
-            let dateText = row.cells[9].innerText.trim();
-            let date = dateText ? new Date(dateText) : null;
+            rows.forEach(row => {
+                let price = parseFloat(row.cells[8].innerText.replace('$', '').replace(',', '')) || 0;
+                let dateText = row.cells[9].innerText.trim();
+                let date = dateText ? new Date(dateText) : null;
+                let priceCondition = price >= minPrice && price <= maxPrice;
+                let startDateCondition = startDate ? date >= startDate : true;
+                let endDateCondition = endDate ? date <= endDate : true;
 
-            let priceCondition = price >= minPrice && price <= maxPrice;
-            let startDateCondition = startDate ? date >= startDate : true;
-            let endDateCondition = endDate ? date <= endDate : true;
+                if (priceCondition && startDateCondition && endDateCondition) {
+                    row.style.display = "";
+                    row.cells[0].innerText = count++;
+                } else {
+                    row.style.display = "none";
+                }
+            });
 
-            if (priceCondition && startDateCondition && endDateCondition) {
-                row.style.display = "";
-                row.cells[0].innerText = count++;
-                filtersApplied = true;
-            } else {
-                row.style.display = "none";
-            }
-        });
-
-        clearButton.style.display = filtersApplied ? "inline-block" : "none";
-    }
-
-    function clearFilters() {
-        document.getElementById('minPrice').value = "";
-        document.getElementById('maxPrice').value = "";
-        document.getElementById('startDate').value = "";
-        document.getElementById('endDate').value = "";
-
-        rows.forEach(row => row.style.display = "");
-        clearButton.style.display = "none";
-        filtersApplied = false;
-        updateTableVisibility(false); // Reset to default visibility
-    }
-
-    function toggleEntries() {
-        if (filtersApplied) {
-            // If filters were applied, reset everything
-            clearFilters();
-            toggleButton.innerText = "Show All";
-        } else {
-            // Toggle visibility only if no filters are applied
-            showingAll = !showingAll;
-            updateTableVisibility(showingAll);
-            toggleButton.innerText = showingAll ? "Show Less" : "Show All";
+            // Ensure the clear button is always visible when filters are applied
+            clearButton.style.display = "inline-block";
         }
-    }
 
-    function updateTableVisibility(showAll) {
-        rows.forEach((row, index) => {
-            row.style.display = showAll || index < 20 ? "" : "none";
-        });
-    }
-});
+        function clearFilters() {
+            document.getElementById('minPrice').value = "";
+            document.getElementById('maxPrice').value = "";
+            document.getElementById('startDate').value = "";
+            document.getElementById('endDate').value = "";
 
+            // Reset all rows to visible
+            rows.forEach(row => row.style.display = "");
+
+            // Reset row numbering
+            rows.forEach((row, index) => {
+                row.cells[0].innerText = index + 1;
+            });
+
+            // Hide the clear button and reset filtersApplied flag
+            clearButton.style.display = "none";
+            filtersApplied = false;
+
+            // Reset to default visibility
+            updateTableVisibility(false);
+        }
+
+        function toggleEntries() {
+            if (filtersApplied) {
+                // If filters were applied, reset everything
+                clearFilters();
+                toggleButton.innerText = "Show All";
+            } else {
+                // Toggle visibility only if no filters are applied
+                showingAll = !showingAll;
+                updateTableVisibility(showingAll);
+                toggleButton.innerText = showingAll ? "Show Less" : "Show All";
+            }
+        }
+
+        function updateTableVisibility(showAll) {
+            rows.forEach((row, index) => {
+                row.style.display = showAll || index < 20 ? "" : "none";
+            });
+        }
+
+        function downloadCSV() {
+            let csv = "Sqft Living,Bedrooms,Bathrooms,Lot Size,Floors,House Age,Zipcode,Predicted Price,Date\n";
+            rows.forEach(row => {
+                if (row.style.display !== "none") {
+                    csv += [...row.cells].slice(1).map(cell => cell.innerText).join(",") + "\n";
+                }
+            });
+            let blob = new Blob([csv], { type: 'text/csv' });
+            let link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "houses_price_predictions.csv";
+            link.click();
+        }
+    });
 </script>
+
 {% endblock %}
