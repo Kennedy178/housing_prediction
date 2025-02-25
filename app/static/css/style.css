@@ -532,3 +532,43 @@ footer a:hover {
   background: var(--button-hover);
   transform: scale(1.05);
 }
+
+
+/* === Table Dark Mode Fix === */
+/* This section overrides all other table styles to ensure visibility in dark mode */
+
+/* Default table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Alternate row coloring */
+tr:nth-child(even) { 
+  background-color: #f2f2f2; /* Light gray for normal mode */
+}
+
+tr:nth-child(odd) { 
+  background-color: #ffffff; /* White for normal mode */
+}
+
+/* Dark mode styles */
+.dark-mode tr:nth-child(even) { 
+  background-color: #333333; /* Dark gray for visibility */
+}
+
+.dark-mode tr:nth-child(odd) { 
+  background-color: #444444; /* Slightly lighter dark gray */
+}
+
+.dark-mode th, .dark-mode td {
+  color: #ffffff; /* White text for better visibility */
+  border-color: #555555; /* Darker border for contrast */
+}
+/* === End of Table Dark Mode Fix === */
+
