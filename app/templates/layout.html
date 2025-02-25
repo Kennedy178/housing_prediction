@@ -5,10 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Housing Price Predictor{% endblock %}</title>
     
+    <!-- Google Fonts for modern design -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Include Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+          integrity="sha384-nRgPTkuX86pH8yjPJUAFuASXQSSl2/bBUiNV47vSYpKFxHJhbcrGnmlYpYJMeD7a" crossorigin="anonymous">
+
     <!-- Link to CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+
+    <header>
+        <!-- Theme toggle button with icon -->
+        <button id="theme-toggle" aria-label="Toggle Dark Mode">
+            <i class="fas fa-moon"></i> <!-- Font Awesome icon for dark mode -->
+        </button>
+        <h1>Intelligent Housing Price Predictor</h1>
+        <p>Enter your home details below and receive a state-of-the-art price prediction.</p>
+    </header>
 
     <!-- Page Content -->
     <div class="container">
@@ -25,8 +41,15 @@
         {% endif %}
     </footer>
 
-    <!-- ✅ Allow child templates to add scripts here -->
+    <!-- Link to JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script> 
+    <!-- Allow child templates to add scripts here -->
     {% block scripts %}{% endblock %}
-
 </body>
 </html>
+
+
+
+
+
+<!-- The 'defer' attribute ensures that the script is executed after the HTML document has been fully parsed. -->

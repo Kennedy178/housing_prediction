@@ -1,25 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Intelligent Housing - Predict Price</title>
-  <!-- Google Fonts for modern design -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <!-- Link to our custom CSS -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  <!-- Include Font Awesome CDN for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
-      integrity="sha384-nRgPTkuX86pH8yjPJUAFuASXQSSl2/bBUiNV47vSYpKFxHJhbcrGnmlYpYJMeD7a" crossorigin="anonymous">     
-</head>
-<body>
-  <header>
-    <!-- Theme toggle button: its content will be set by JS -->
-    <button id="theme-toggle" aria-label="Toggle Dark Mode"></button>
-    <h1>Intelligent Housing Price Predictor</h1>
-    <p>Enter your home details below and receive a state-of-the-art price prediction.</p>
-  </header>
-  
+{% extends 'layout.html' %}
+
+{% block title %}Intelligent Housing - Predict Price{% endblock %}
+
+{% block content %}
   <main>
     <!-- Housing Input Form Section -->
     <section id="form-section"> 
@@ -89,13 +72,12 @@
       <h2>Prediction Result</h2>
       <p id="prediction-message"></p>
       <div id="model-insights">
-         <!-- Container for the dynamic Realtor.com link -->
-    <div id="realtor-link-container"></div>
-      </div>
         <!-- Container for the dynamic Realtor.com link -->
-    <div id="realtor-link-container"></div>
+        <div id="realtor-link-container"></div>
+      </div>
       <button id="back-to-form">Make Another Prediction</button>
     </section>
+
     <!-- Prediction History Section -->
     <section id="history-section">
       <h2>Prediction History</h2>
@@ -121,13 +103,4 @@
       <button id="clear-history">Clear Prediction History</button>
     </section>
   </main>
-  
-  <footer>
-    <p>&copy; 2025 Intelligent Housing. All rights reserved.</p>
-    <p><a href="{{ url_for('admin_dashboard') }}">Admin Dashboard</a></p>
-  </footer>
-  
-  <!-- Link to our custom JavaScript -->
-  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-</body>
-</html>
+{% endblock %}
