@@ -166,70 +166,81 @@
 {% block scripts %}
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const filterButton = document.getElementById("filterButton");
-        const clearButton = document.getElementById("clearFilters");
-        const toggleButton = document.getElementById("toggleEntries");
-        const rows = document.querySelectorAll("#predictionsTable tr");
-        let showingAll = false; // Track state
+    const filterButton = document.getElementById("filterButton");
+    const clearButton = document.getElementById("clearFilters");
+    const toggleButton = document.getElementById("toggleEntries");
+    const rows = document.querySelectorAll("#predictionsTable tr");
+    let showingAll = false; // Track state
+    let filtersApplied = false; // Track if filters were applied
 
-        filterButton.addEventListener("click", applyFilters);
-        clearButton.addEventListener("click", clearFilters);
-        toggleButton.addEventListener("click", toggleEntries);
+    filterButton.addEventListener("click", applyFilters);
+    clearButton.addEventListener("click", clearFilters);
+    toggleButton.addEventListener("click", toggleEntries);
 
-        // Initially show only the first 20 rows
-        updateTableVisibility(false);
+    // Initially show only the first 20 rows
+    updateTableVisibility(false);
 
-        function applyFilters() {
-            let minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
-            let maxPrice = parseFloat(document.getElementById('maxPrice').value) || Infinity;
-            let startDate = document.getElementById('startDate').value ? new Date(document.getElementById('startDate').value) : null;
-            let endDate = document.getElementById('endDate').value ? new Date(document.getElementById('endDate').value) : null;
+    function applyFilters() {
+        let minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
+        let maxPrice = parseFloat(document.getElementById('maxPrice').value) || Infinity;
+        let startDate = document.getElementById('startDate').value ? new Date(document.getElementById('startDate').value) : null;
+        let endDate = document.getElementById('endDate').value ? new Date(document.getElementById('endDate').value) : null;
 
-            let count = 1;
-            let filtersApplied = false;
+        let count = 1;
+        filtersApplied = false;
 
-            rows.forEach(row => {
-                let price = parseFloat(row.cells[8].innerText.replace('$', '').replace(',', '')) || 0;
-                let dateText = row.cells[9].innerText.trim();
-                let date = dateText ? new Date(dateText) : null;
+        rows.forEach(row => {
+            let price = parseFloat(row.cells[8].innerText.replace('$', '').replace(',', '')) || 0;
+            let dateText = row.cells[9].innerText.trim();
+            let date = dateText ? new Date(dateText) : null;
 
-                let priceCondition = price >= minPrice && price <= maxPrice;
-                let startDateCondition = startDate ? date >= startDate : true;
-                let endDateCondition = endDate ? date <= endDate : true;
+            let priceCondition = price >= minPrice && price <= maxPrice;
+            let startDateCondition = startDate ? date >= startDate : true;
+            let endDateCondition = endDate ? date <= endDate : true;
 
-                if (priceCondition && startDateCondition && endDateCondition) {
-                    row.style.display = "";
-                    row.cells[0].innerText = count++;
-                    filtersApplied = true;
-                } else {
-                    row.style.display = "none";
-                }
-            });
+            if (priceCondition && startDateCondition && endDateCondition) {
+                row.style.display = "";
+                row.cells[0].innerText = count++;
+                filtersApplied = true;
+            } else {
+                row.style.display = "none";
+            }
+        });
 
-            clearButton.style.display = filtersApplied ? "inline-block" : "none";
-        }
+        clearButton.style.display = filtersApplied ? "inline-block" : "none";
+    }
 
-        function clearFilters() {
-            document.getElementById('minPrice').value = "";
-            document.getElementById('maxPrice').value = "";
-            document.getElementById('startDate').value = "";
-            document.getElementById('endDate').value = "";
+    function clearFilters() {
+        document.getElementById('minPrice').value = "";
+        document.getElementById('maxPrice').value = "";
+        document.getElementById('startDate').value = "";
+        document.getElementById('endDate').value = "";
 
-            rows.forEach(row => row.style.display = "");
-            clearButton.style.display = "none";
-        }
+        rows.forEach(row => row.style.display = "");
+        clearButton.style.display = "none";
+        filtersApplied = false;
+        updateTableVisibility(false); // Reset to default visibility
+    }
 
-        function toggleEntries() {
+    function toggleEntries() {
+        if (filtersApplied) {
+            // If filters were applied, reset everything
+            clearFilters();
+            toggleButton.innerText = "Show All";
+        } else {
+            // Toggle visibility only if no filters are applied
             showingAll = !showingAll;
             updateTableVisibility(showingAll);
             toggleButton.innerText = showingAll ? "Show Less" : "Show All";
         }
+    }
 
-        function updateTableVisibility(showAll) {
-            rows.forEach((row, index) => {
-                row.style.display = showAll || index < 20 ? "" : "none";
-            });
-        }
-    });
+    function updateTableVisibility(showAll) {
+        rows.forEach((row, index) => {
+            row.style.display = showAll || index < 20 ? "" : "none";
+        });
+    }
+});
+
 </script>
 {% endblock %}
