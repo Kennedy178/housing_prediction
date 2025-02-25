@@ -119,6 +119,42 @@
         color: white;
     }
 
+    /* Modal Styling */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        overflow: auto;
+    }
+
+    .modal-content {
+        background-color: var(--form-bg);
+        margin: 15% auto;
+        padding: 20px;
+        border-radius: 10px;
+        width: 50%;
+        text-align: center;
+    }
+
+    .modal-content button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        background-color: var(--primary-color);
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .modal-content button:hover {
+        background-color: var(--button-hover);
+    }
 </style>
 
 <div class="admin-container">
@@ -153,7 +189,7 @@
     <table class="admin-table">
         <thead>
             <tr>
-                <th>#</th>  
+                <th>#</th>
                 <th>Sqft Living</th>
                 <th>Bedrooms</th>
                 <th>Bathrooms</th>
@@ -186,6 +222,17 @@
     <!-- Show More/Less Button -->
     <button id="toggleEntries" class="toggle-button">Show All</button>
 </div>
+
+<!-- Modal for Export Options -->
+<div id="exportModal" class="modal">
+    <div class="modal-content">
+        <p>Select the data to export:</p>
+        <button id="exportFiltered" class="button">Export Filtered Data</button>
+        <button id="exportAll" class="button">Export All Data</button>
+        <button id="closeModal" class="button">Cancel</button>
+    </div>
+</div>
+
 {% endblock %}
 
 {% block scripts %}
@@ -196,102 +243,180 @@
         const toggleButton = document.getElementById("toggleEntries");
         const downloadButton = document.getElementById("downloadCSV");
         const rows = document.querySelectorAll("#predictionsTable tr");
-        let showingAll = false; // Track state
-        let filtersApplied = false; // Track if filters were applied
+        let showingAll = false;
+        let filtersApplied = false;
+
+        // Modal elements
+        const exportModal = document.getElementById("exportModal");
+        const closeModal = document.getElementById("closeModal");
+        const exportFiltered = document.getElementById("exportFiltered");
+        const exportAll = document.getElementById("exportAll");
 
         filterButton.addEventListener("click", applyFilters);
         clearButton.addEventListener("click", clearFilters);
         toggleButton.addEventListener("click", toggleEntries);
-        downloadButton.addEventListener("click", downloadCSV);
+        downloadButton.addEventListener("click", openExportModal);
+        exportFiltered.addEventListener("click", () => downloadCSV(true));
+        exportAll.addEventListener("click", () => downloadCSV(false));
+        closeModal.addEventListener("click", closeModalHandler);
 
-        // Initially show only the first 20 rows
-        updateTableVisibility(false);
-
-        function applyFilters() {
-            let minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
-            let maxPrice = parseFloat(document.getElementById('maxPrice').value) || Infinity;
-            let startDate = document.getElementById('startDate').value ? new Date(document.getElementById('startDate').value) : null;
-            let endDate = document.getElementById('endDate').value ? new Date(document.getElementById('endDate').value) : null;
-            let count = 1;
-
-            // Always set filtersApplied to true when filters are applied
-            filtersApplied = true;
-
-            rows.forEach(row => {
-                let price = parseFloat(row.cells[8].innerText.replace('$', '').replace(',', '')) || 0;
-                let dateText = row.cells[9].innerText.trim();
-                let date = dateText ? new Date(dateText) : null;
-                let priceCondition = price >= minPrice && price <= maxPrice;
-                let startDateCondition = startDate ? date >= startDate : true;
-                let endDateCondition = endDate ? date <= endDate : true;
-
-                if (priceCondition && startDateCondition && endDateCondition) {
-                    row.style.display = "";
-                    row.cells[0].innerText = count++;
-                } else {
-                    row.style.display = "none";
-                }
-            });
-
-            // Ensure the clear button is always visible when filters are applied
-            clearButton.style.display = "inline-block";
+        function openExportModal() {
+            exportModal.style.display = "block";
         }
 
-        function clearFilters() {
-            document.getElementById('minPrice').value = "";
-            document.getElementById('maxPrice').value = "";
-            document.getElementById('startDate').value = "";
-            document.getElementById('endDate').value = "";
-
-            // Reset all rows to visible
-            rows.forEach(row => row.style.display = "");
-
-            // Reset row numbering
-            rows.forEach((row, index) => {
-                row.cells[0].innerText = index + 1;
-            });
-
-            // Hide the clear button and reset filtersApplied flag
-            clearButton.style.display = "none";
-            filtersApplied = false;
-
-            // Reset to default visibility
-            updateTableVisibility(false);
+        function closeModalHandler() {
+            exportModal.style.display = "none";
         }
 
-        function toggleEntries() {
-            if (filtersApplied) {
-                // If filters were applied, reset everything
-                clearFilters();
-                toggleButton.innerText = "Show All";
-            } else {
-                // Toggle visibility only if no filters are applied
-                showingAll = !showingAll;
-                updateTableVisibility(showingAll);
-                toggleButton.innerText = showingAll ? "Show Less" : "Show All";
-            }
-        }
+         // Initially show only the first 20 rows
+         updateTableVisibility(false);
 
-        function updateTableVisibility(showAll) {
-            rows.forEach((row, index) => {
-                row.style.display = showAll || index < 20 ? "" : "none";
-            });
-        }
+function applyFilters() {
+    let minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
+    let maxPrice = parseFloat(document.getElementById('maxPrice').value) || Infinity;
+    let startDate = document.getElementById('startDate').value ? new Date(document.getElementById('startDate').value) : null;
+    let endDate = document.getElementById('endDate').value ? new Date(document.getElementById('endDate').value) : null;
+    let count = 1;
 
-        function downloadCSV() {
-            let csv = "Sqft Living,Bedrooms,Bathrooms,Lot Size,Floors,House Age,Zipcode,Predicted Price,Date\n";
-            rows.forEach(row => {
-                if (row.style.display !== "none") {
-                    csv += [...row.cells].slice(1).map(cell => cell.innerText).join(",") + "\n";
-                }
-            });
-            let blob = new Blob([csv], { type: 'text/csv' });
-            let link = document.createElement("a");
-            link.href = URL.createObjectURL(blob);
-            link.download = "houses_price_predictions.csv";
-            link.click();
+    // Always set filtersApplied to true when filters are applied
+    filtersApplied = true;
+
+    rows.forEach(row => {
+        let price = parseFloat(row.cells[8].innerText.replace('$', '').replace(',', '')) || 0;
+        let dateText = row.cells[9].innerText.trim();
+        let date = dateText ? new Date(dateText) : null;
+        let priceCondition = price >= minPrice && price <= maxPrice;
+        let startDateCondition = startDate ? date >= startDate : true;
+        let endDateCondition = endDate ? date <= endDate : true;
+
+        if (priceCondition && startDateCondition && endDateCondition) {
+            row.style.display = "";
+            row.cells[0].innerText = count++;
+        } else {
+            row.style.display = "none";
         }
     });
+
+    // Ensure the clear button is always visible when filters are applied
+    clearButton.style.display = "inline-block";
+}
+
+function clearFilters() {
+    document.getElementById('minPrice').value = "";
+    document.getElementById('maxPrice').value = "";
+    document.getElementById('startDate').value = "";
+    document.getElementById('endDate').value = "";
+
+    // Reset all rows to visible
+    rows.forEach(row => row.style.display = "");
+
+    // Reset row numbering
+    rows.forEach((row, index) => {
+        row.cells[0].innerText = index + 1;
+    });
+
+    // Hide the clear button and reset filtersApplied flag
+    clearButton.style.display = "none";
+    filtersApplied = false;
+
+    // Reset to default visibility
+    updateTableVisibility(false);
+}
+
+function toggleEntries() {
+    if (filtersApplied) {
+        // If filters were applied, reset everything
+        clearFilters();
+        toggleButton.innerText = "Show All";
+    } else {
+        // Toggle visibility only if no filters are applied
+        showingAll = !showingAll;
+        updateTableVisibility(showingAll);
+        toggleButton.innerText = showingAll ? "Show Less" : "Show All";
+    }
+}
+
+function updateTableVisibility(showAll) {
+    rows.forEach((row, index) => {
+        row.style.display = showAll || index < 20 ? "" : "none";
+    });
+}
+
+        // Function to download CSV with filtered or all data
+        function downloadCSV(filtered) {
+            let data = filtered ? getFilteredData() : getAllData();
+            let csvContent = "data:text/csv;charset=utf-8,";
+
+            csvContent += "Sqft Living,Bedrooms,Bathrooms,Lot Size,Floors,House Age,Zipcode,Predicted Price,Date\n";
+
+            data.forEach(row => {
+                csvContent += row.join(",") + "\n";
+            });
+
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", filtered ? "filtered_data.csv" : "all_data.csv");
+            link.click();
+        }
+
+        // Function to get all data (without filters)
+        function getAllData() {
+            let allData = [];
+            rows.forEach(row => {
+                let rowData = [
+                    row.cells[1].innerText, // Sqft Living
+                    row.cells[2].innerText, // Bedrooms
+                    row.cells[3].innerText, // Bathrooms
+                    row.cells[4].innerText, // Lot Size
+                    row.cells[5].innerText, // Floors
+                    row.cells[6].innerText, // House Age
+                    row.cells[7].innerText, // Zipcode
+                    row.cells[8].innerText, // Predicted Price
+                    row.cells[9].innerText  // Date
+                ];
+                allData.push(rowData);
+            });
+            return allData;
+        }
+
+        // Function to get filtered data
+        function getFilteredData() {
+            let filteredData = [];
+            rows.forEach(row => {
+                if (row.style.display !== "none") {
+                    let rowData = [
+                        row.cells[1].innerText,
+                        row.cells[2].innerText,
+                        row.cells[3].innerText,
+                        row.cells[4].innerText,
+                        row.cells[5].innerText,
+                        row.cells[6].innerText,
+                        row.cells[7].innerText,
+                        row.cells[8].innerText,
+                        row.cells[9].innerText
+                    ];
+                    filteredData.push(rowData);
+                }
+            });
+            return filteredData;
+        }
+
+        // Initially set to show only the first 20 entries by default
+        resetToDefault();
+
+        // Handle "Show All" reset after applying filters
+        toggleButton.addEventListener("click", function () {
+            if (filtersApplied) {
+                resetToDefault(); // Reset view to first 20 rows and clear filters
+                filtersApplied = false; // Clear filter flag
+            } else {
+                toggleEntries(); // Toggle visibility of all rows
+            }
+        });
+    });
 </script>
+
+
 
 {% endblock %}
