@@ -1,5 +1,9 @@
+import os
 from app import app
 from config import Config  # Import the Config class
+
+# Set the system time zone to Nairobi (EAT, UTC+3)
+os.environ['TZ'] = 'Africa/Nairobi'
 
 # Apply configuration to the app
 app.config.from_object(Config)
