@@ -283,56 +283,148 @@ main {
 /* ============================================
    Model Insights Cards
 ============================================ */
-#model-insights {
+/* ===== Model Insights Section ===== */
+#insights-container {
+  background: var(--form-bg); /* Background for the entire section */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+/* Explanation Text */
+/* Insights Explanation - Glassmorphism Style */
+.insights-explanation {
+  background: rgba(255, 255, 255, 0.2); /* Slightly more visible */
+  backdrop-filter: blur(8px);
+  padding: 20px 28px; /* Increased padding for space */
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.08rem;
+  font-weight: 500; /* Slightly bolder than before */
+  color: rgba(0, 0, 0, 0.75); /* Balanced contrast */
+  line-height: 1.6; /* More open spacing */
+  max-width: 85%; /* Takes up more width for openness */
+  margin: 15px auto 30px; /* More breathing room */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  border-left: 5px solid var(--accent-color); /* Slightly thicker */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect - Gentle Lift */
+.insights-explanation:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+/* Container for Images & Text - Unified Look */
+.insights-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-around;
-  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: var(--form-bg); /* Keeps consistency */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
+/* Style for Each Insight (Image + Text) */
 .insight {
   flex: 1;
-  min-width: 280px;
+  min-width: 300px;
   text-align: center;
   padding: 15px;
-  border-radius: 10px;
-  background: var(--form-bg);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   position: relative;
   overflow: hidden;
+  transition: transform 0.3s ease-in-out;
 }
 
-.insight::before {
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(circle, var(--accent-color), transparent);
-  top: -20px;
-  right: -20px;
-  border-radius: 50%;
-  opacity: 0.5;
-  mix-blend-mode: overlay;
-}
-
+/* Subtle Scale-Up Effect on Hover */
 .insight:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
+/* Image Styling */
 .insight img {
   max-width: 100%;
   border-radius: 8px;
   margin-bottom: 10px;
 }
 
-/* Diagram descriptions */
+/* Diagram Description Text - A Bit More Presence */
 .diagram-description {
-  font-size: 0.95rem;
+  font-size: 0.95rem; /* Slightly larger */
   margin-top: 10px;
-  color: var(--text-color);
+  color: rgba(0, 0, 0, 0.7); /* A little darker for clarity */
+  font-weight: 500; /* Subtly bolder */
+  opacity: 0.9;
 }
+
+
+
+
+
+/* Insights Wrapper */
+.insights-content {
+  display: flex;
+  justify-content: space-between; /* Keeps images side by side */
+  gap: 20px; /* Spacing between images */
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Individual Insight Boxes */
+.insight {
+  flex: 1;
+  min-width: 280px;
+  max-width: 48%; /* Prevents them from stretching too much */
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  background: var(--form-bg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.insight:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling */
+.insight img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Insight Descriptions */
+.insight-description {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .insights-content {
+    flex-direction: column; /* Stack images on smaller screens */
+    align-items: center;
+  }
+
+  .insight {
+    max-width: 90%; /* Allows images to take more space on small screens */
+  }
+}
+
 
 /* ============================================
    Back-to-Form Button

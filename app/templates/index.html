@@ -50,22 +50,42 @@
     </section>
 
     <!-- (Optional) Model Insights Preview Section -->
-    <section id="model-insights-preview">
-      <div id="model-insights">
-        <div class="insight">
-          <img src="{{ url_for('static', filename='images/residual.png') }}" alt="Residual Analysis">
-          <p class="insight-description">
-            <strong>Residual Analysis:</strong> This image shows the residuals of our model's predictions, helping identify potential biases.
-          </p>
-        </div>
-        <div class="insight">
-          <img src="{{ url_for('static', filename='images/feature_importance.png') }}" alt="Feature Importance">
-          <p class="insight-description">
-            <strong>Feature Importance:</strong> This pie chart highlights the impact of each feature on the final prediction.
-          </p>
-        </div>
+<!-- (Optional) Model Insights Preview Section -->
+<section id="model-insights-preview">
+  <div id="insights-container"> <!-- Main Box Wrapper -->
+    
+    <!-- Explanation for non-technical users -->
+    <div class="insights-explanation">
+      <p>
+        To help you trust our model's predictions, we provide two key insights:
+        <strong>On the left</strong>, the <strong>Residual Analysis</strong> chart shows how accurate our predictions are.  
+        The red line at zero means "no errors," and most points are close to this line, proving our model is well-balanced and not making big mistakes.  
+        <strong>On the right</strong>, the <strong>Feature Importance</strong> pie chart shows what influences house prices the most.  
+        For example, the number of bedrooms contributes <strong>21.9%</strong> to the final price, meaning it's an important factor in determining how much a house costs.
+      </p>
+    </div>
+
+    <!-- Images and Descriptions Wrapper -->
+    <div class="insights-content">
+      <div class="insight">
+        <img src="{{ url_for('static', filename='images/residual.png') }}" alt="Residual Analysis">
+        <p class="insight-description">
+          <strong>Residual Analysis (Left):</strong> Shows how close our predictions are to the real prices. The red line at zero means perfect accuracy.
+        </p>
       </div>
-    </section>
+
+      <div class="insight">
+        <img src="{{ url_for('static', filename='images/feature_importance.png') }}" alt="Feature Importance">
+        <p class="insight-description">
+          <strong>Feature Importance (Right):</strong> Shows which house features impact the price the most, like bedrooms (21.9% influence).
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 
     <!-- Prediction Result Section -->
     <section id="result-section" class="hidden">
