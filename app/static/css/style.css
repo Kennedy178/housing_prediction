@@ -17,7 +17,7 @@
 /* Dark mode: Applied only if the html element has the .dark-mode class */
 html.dark-mode {
   --primary-color: #00c2ff;    /* Ultra-premium electric cyan (bold, high-end) */
-  --secondary-color:#ff4757;  /* Deep rare magenta (luxurious contrast) */
+  --secondary-color:#d35400;  /* Deep rare magenta (luxurious contrast) */
   --accent-color: #00ffcc;     /* Sleek neon turquoise (futuristic highlights) */
   --bg-color: #050505;         /* True BLACK HOLE black (OLED perfect) */
   --form-bg: #101010;          /* Darkened obsidian gray (matte smoothness) */
