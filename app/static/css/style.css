@@ -291,6 +291,18 @@ main {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
 }
+
+.insights-title {
+  text-align: center;
+  font-size: 1.8rem; /* Adjust to match  other headings in the web */
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 1.2rem; /* Adds spacing before the next section */
+  border-bottom: 2px solid var(--secondary-color); /* Subtle underline for emphasis */
+  padding-bottom: 0.5rem;
+}
+
+
 .insights-text {
   text-align: left;  /* Ensures all text starts from the left */
 }
