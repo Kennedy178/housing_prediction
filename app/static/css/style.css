@@ -16,15 +16,21 @@
 
 /* Dark mode: Applied only if the html element has the .dark-mode class */
 html.dark-mode {
-  --primary-color: #66d9ef;
-  --secondary-color: #38a3a5;
-  --accent-color: #a8dadc;
-  --bg-color: #1e1e1e;
-  --form-bg: #2b2b2b;
-  --text-color: #f1f1f1;
-  --border-color: #444;
-  --button-hover: #004e66;
+  --primary-color: #00c2ff;    /* Ultra-premium electric cyan (bold, high-end) */
+  --secondary-color:#ff4757;  /* Deep rare magenta (luxurious contrast) */
+  --accent-color: #00ffcc;     /* Sleek neon turquoise (futuristic highlights) */
+  --bg-color: #050505;         /* True BLACK HOLE black (OLED perfect) */
+  --form-bg: #101010;          /* Darkened obsidian gray (matte smoothness) */
+  --text-color: #f5f5f5;       /* Ultra-premium diamond white (soft, expensive readability) */
+  --border-color: #1a1a1a;     /* Rich, subtle borders (clean & modern) */
+  --button-hover: #00eaff;     /* Glowing crystal blue (powerful & dynamic) */
+  --shadow-color: rgba(0, 255, 255, 0.25); /* Deep, rich ambient neon glow */
+  --glass-bg: rgba(255, 255, 255, 0.05);  /* Sleek glassmorphism effect */
+  --golden-accent: #ffcc00;    /* Subtle luxury gold accent (for premium touch) */
 }
+
+
+
 
 /* (Optional) You can also add a .light-mode class for clarity */
 html.light-mode {
