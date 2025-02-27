@@ -31,8 +31,10 @@ html.dark-mode {
 
 html.dark-mode .insights-explanation {
   background-color: var(--form-bg); /* Dark obsidian gray for uniformity */
-  color: rgba(245, 245, 245, 0.85); /* Softer white for less contrast */
-  padding: 15px;
+  color: var(--text-color); /* Matches insight-description color */
+  
+  font-size: 1.07rem;
+  padding: 19px;
   border-radius: 8px;
   box-shadow: -6px 6px 15px rgba(0, 255, 127, 0.4), /* Green glow on left */
               0 4px 10px var(--shadow-color); /* Subtle ambient glow */
