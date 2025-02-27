@@ -54,7 +54,10 @@ html.light-mode {
   --error-color: #d32f2f;
   --button-hover: #004e66;
 }
-
+/* 
+   Light Mode - Insights Box Glow Effect    
+    Soft minty ambient glow to enhance visibility on a white background.  
+*/
 html.light-mode .insights-explanation {
   background-color: var(--bg-color); /* Keep light mode background */
   padding: 15px;
@@ -64,9 +67,6 @@ html.light-mode .insights-explanation {
   position: relative;
   color: var(--text-color); /* Ensures readability */
 }
-
-
-
 
 
 
