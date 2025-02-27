@@ -29,6 +29,15 @@ html.dark-mode {
   --golden-accent: #ffcc00;    /* Subtle luxury gold accent (for premium touch) */
 }
 
+html.dark-mode .insights-explanation {
+  background-color: var(--form-bg); /* Dark obsidian gray for uniformity */
+  color: rgba(245, 245, 245, 0.85); /* Softer white for less contrast */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: -6px 6px 15px rgba(0, 255, 127, 0.4), /* Green glow on left */
+              0 4px 10px var(--shadow-color); /* Subtle ambient glow */
+  position: relative; /* Needed for extra effects */
+}
 
 
 
@@ -45,6 +54,21 @@ html.light-mode {
   --error-color: #d32f2f;
   --button-hover: #004e66;
 }
+
+html.light-mode .insights-explanation {
+  background-color: var(--bg-color); /* Keep light mode background */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: -6px 6px 20px rgba(10, 147, 150, 0.6), /* Teal glow on left */
+              0 6px 15px rgba(148, 210, 189, 0.7);  /* Minty soft ambient glow */
+  position: relative;
+  color: var(--text-color); /* Ensures readability */
+}
+
+
+
+
+
 
 /* ============================================
    Global Reset and Body
