@@ -645,12 +645,10 @@ main {
 
 
 
-/* ================================
+/* 
    Compact & Elegant Footer
-   ================================ */
-  /* ================================
-   🚀 Luxurious & Professional Footer
-   ================================ */
+    */
+  
 footer {
   background: var(--glass-bg);
   backdrop-filter: blur(10px);
@@ -665,33 +663,33 @@ footer {
   font-size: 1rem;
 }
 
-/* 📌 Footer Container */
+/*  Footer Container */
 .footer-container {
   display: flex;
   justify-content: space-evenly;  /* Even spacing but tighter */
   align-items: center;
-  width: 65%; /* 🔹 Reduced width to bring elements closer */
-  max-width: 850px; /* 🔹 Controlled max width for spacing */
-  gap: 1.5cm; /* 🔹 Exact spacing between elements */
+  width: 65%; /*  Reduced width to bring elements closer */
+  max-width: 850px; /*  Controlled max width for spacing */
+  gap: 1.5cm; /*  Exact spacing between elements */
 }
 
-/* 📌 Footer Branding */
+/*  Footer Branding */
 .footer-logo p {
   font-size: 1rem;
-  font-weight: normal; /* Normal weight (not bold) */
+  font-weight: normal; /* (not bold) */
   color: var(--text-color);
   letter-spacing: 0.5px;
 }
 
-/* 📌 Navigation Links */
+/*  Navigation Links */
 .footer-links {
   display: flex;
-  gap: 12px; /* 🔹 Tightened spacing between buttons */
+  gap: 12px; /*  Tightened spacing between buttons */
 }
 
-/* 📌 Main Button Links */
+/*  Main Button Links */
 .main-link {
-  padding: 6px 16px; /* 🔹 Slightly reduced padding */
+  padding: 6px 16px; 
   background: var(--primary-color);
   color: white;
   font-weight: bold;
@@ -706,15 +704,15 @@ footer {
   box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
 }
 
-/* 📌 Developer Credit */
+/*  Developer Credit */
 .developer-credit {
   font-size: 1rem;
 }
 
 .dev-link {
-  color: var(--text-color); /* 🔹 Matched the copyright style */
-  font-size: 1rem; /* 🔹 Same as normal text */
-  font-weight: normal; /* 🔹 No bold emphasis */
+  color: var(--text-color); /*  Matched the copyright style */
+  font-size: 1rem; /*  Same as normal text */
+  font-weight: normal; /*  No bold emphasis */
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -730,12 +728,12 @@ html.dark-mode footer {
   box-shadow: 0 -3px 15px rgba(255, 204, 0, 0.2);
 }
 
-/* 📌 Responsive - Mobile Optimization */
+/*  Responsive - Mobile Optimization */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     text-align: center;
-    gap: 8px;  /* 🔹 Reduced mobile spacing */
+    gap: 8px;  /*  Reduced mobile spacing */
   }
   .footer-links {
     flex-direction: column;
