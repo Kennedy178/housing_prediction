@@ -43,20 +43,32 @@
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Housing Price Predictor</p>
+        <div class="footer-container">
+            <!-- Branding with Copyright -->
+            <div class="footer-logo">
+                <p>© Housing Price Predictor</p>
+            </div>
     
-            {% if request.endpoint == 'index' %}
-                <a href="{{ url_for('admin_dashboard') }}" class="main-link">Admin Dashboard</a>
-            {% elif request.endpoint == 'admin_dashboard' %}
-                <a href="{{ url_for('index') }}" class="main-link">Go to Home</a>
-            {% endif %}
+            <!-- Navigation Links -->
+            <div class="footer-links">
+                {% if request.endpoint == 'index' %}
+                    <a href="{{ url_for('admin_dashboard') }}" class="main-link">Admin Dashboard</a>
+                {% elif request.endpoint == 'admin_dashboard' %}
+                    <a href="{{ url_for('index') }}" class="main-link">Go to Home</a>
+                {% endif %}
+            </div>
     
-            <a href="https://www.linkedin.com/in/kennedy-munene-dsml" target="_blank" class="dev-link">
-                Connect with the Developer
-            </a>
+            <!-- Developer Credit -->
+            <div class="developer-credit">
+                <a href="https://www.linkedin.com/in/kennedy-munene-dsml" target="_blank" class="dev-link">
+                    Connect with the Developer
+                </a>
+            </div>
         </div>
     </footer>
+    
+    
+    
     
     
     

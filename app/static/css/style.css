@@ -648,75 +648,100 @@ main {
 /* ================================
    Compact & Elegant Footer
    ================================ */
-   footer {
-    display: flex;
-    justify-content: center; /* Center everything */
-    align-items: center;
-    gap: 12px; /* Keep elements close but not cramped */
-    padding: 12px 20px;
-    background: var(--form-bg);
-    border-top: 2px solid var(--border-color);
-    font-size: 0.9rem;
-    color: var(--text-color);
+  /* ================================
+   🚀 Luxurious & Professional Footer
+   ================================ */
+footer {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 2px solid var(--golden-accent);
+  box-shadow: 0 -3px 15px rgba(255, 204, 0, 0.1);
+  padding: 18px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+/* 📌 Footer Container */
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;  /* Even spacing but tighter */
+  align-items: center;
+  width: 65%; /* 🔹 Reduced width to bring elements closer */
+  max-width: 850px; /* 🔹 Controlled max width for spacing */
+  gap: 1.5cm; /* 🔹 Exact spacing between elements */
+}
+
+/* 📌 Footer Branding */
+.footer-logo p {
+  font-size: 1rem;
+  font-weight: normal; /* Normal weight (not bold) */
+  color: var(--text-color);
+  letter-spacing: 0.5px;
+}
+
+/* 📌 Navigation Links */
+.footer-links {
+  display: flex;
+  gap: 12px; /* 🔹 Tightened spacing between buttons */
+}
+
+/* 📌 Main Button Links */
+.main-link {
+  padding: 6px 16px; /* 🔹 Slightly reduced padding */
+  background: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-link:hover {
+  background: var(--button-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
+}
+
+/* 📌 Developer Credit */
+.developer-credit {
+  font-size: 1rem;
+}
+
+.dev-link {
+  color: var(--text-color); /* 🔹 Matched the copyright style */
+  font-size: 1rem; /* 🔹 Same as normal text */
+  font-weight: normal; /* 🔹 No bold emphasis */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.dev-link:hover {
+  color: var(--primary-color);
+}
+
+/* 🌙 Dark Mode Enhancements */
+html.dark-mode footer {
+  background: rgba(0, 0, 0, 0.5);
+  border-top: 2px solid var(--golden-accent);
+  box-shadow: 0 -3px 15px rgba(255, 204, 0, 0.2);
+}
+
+/* 📌 Responsive - Mobile Optimization */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
     text-align: center;
+    gap: 8px;  /* 🔹 Reduced mobile spacing */
   }
-  
-  /* Footer text */
-  .footer-content {
-    display: flex;
-    align-items: center;
-    gap: 15px; /* Controls spacing between elements */
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
   }
-  
-  /* Copyright text */
-  .footer-content p {
-    margin: 0;
-    font-weight: 500;
-    opacity: 0.85;
-  }
-  
-  /* Main action link (Admin/Home) */
-  .footer-content .main-link {
-    padding: 8px 16px;
-    background: var(--primary-color);
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 6px;
-    transition: background 0.3s ease, transform 0.2s ease;
-  }
-  
-  .footer-content .main-link:hover {
-    background: var(--button-hover);
-    transform: translateY(-2px);
-  }
-  
-  /* Developer link (subtle & secondary) */
-  .footer-content .dev-link {
-    font-size: 0.85rem;
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 500;
-    opacity: 0.8;
-    transition: opacity 0.3s ease, color 0.3s ease;
-  }
-  
-  .footer-content .dev-link:hover {
-    color: var(--primary-color);
-    opacity: 1;
-  }
-  
-  /* Responsive (Mobile Optimization) */
-  @media (max-width: 768px) {
-    footer {
-      flex-direction: column;
-    }
-    .footer-content {
-      flex-direction: column;
-      gap: 8px;
-    }
-  }
-  
+}
 
 
 /* === Table Dark Mode Fix === */
