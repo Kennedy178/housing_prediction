@@ -645,36 +645,78 @@ main {
 
 
 
-
-/* 
-   Footer
- */
-footer {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 0.9rem;
-  color: var(--text-color);
-  padding: 15px 0;
-  background: var(--form-bg);
-  border-top: 1px solid var(--border-color);
-}
-
-footer a {
-  display: inline-block;
-  margin: 10px;
-  padding: 8px 16px;
-  background: var(--primary-color);
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-footer a:hover {
-  background: var(--button-hover);
-  transform: scale(1.05);
-}
+/* ================================
+   Compact & Elegant Footer
+   ================================ */
+   footer {
+    display: flex;
+    justify-content: center; /* Center everything */
+    align-items: center;
+    gap: 12px; /* Keep elements close but not cramped */
+    padding: 12px 20px;
+    background: var(--form-bg);
+    border-top: 2px solid var(--border-color);
+    font-size: 0.9rem;
+    color: var(--text-color);
+    text-align: center;
+  }
+  
+  /* Footer text */
+  .footer-content {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Controls spacing between elements */
+  }
+  
+  /* Copyright text */
+  .footer-content p {
+    margin: 0;
+    font-weight: 500;
+    opacity: 0.85;
+  }
+  
+  /* Main action link (Admin/Home) */
+  .footer-content .main-link {
+    padding: 8px 16px;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .footer-content .main-link:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+  }
+  
+  /* Developer link (subtle & secondary) */
+  .footer-content .dev-link {
+    font-size: 0.85rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, color 0.3s ease;
+  }
+  
+  .footer-content .dev-link:hover {
+    color: var(--primary-color);
+    opacity: 1;
+  }
+  
+  /* Responsive (Mobile Optimization) */
+  @media (max-width: 768px) {
+    footer {
+      flex-direction: column;
+    }
+    .footer-content {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+  
 
 
 /* === Table Dark Mode Fix === */
