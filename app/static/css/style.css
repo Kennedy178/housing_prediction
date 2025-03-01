@@ -169,6 +169,53 @@ main {
   max-width: 1200px;
   margin: 0 auto;
 }
+.purpose-selection {
+  display: flex;
+  justify-content: center; /* Centers it horizontally */
+  align-items: center;
+  gap: 20px; /* Adds spacing between radio buttons */
+  padding: 20px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  background: var(--background-secondary); /* Subtle background */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.purpose-selection label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: opacity 0.3s ease, color 0.3s ease; /* Smooth fade and color change */
+}
+
+.purpose-selection input[type="radio"] {
+  accent-color: var(--primary-color); /* Uses primary theme color */
+  transform: scale(1.2); /* Makes radio buttons slightly larger */
+  cursor: pointer;
+  transition: transform 0.2s ease; /* Smooth hover effect */
+}
+
+.purpose-selection input[type="radio"]:hover {
+  transform: scale(1.3); /* Slightly enlarge on hover */
+}
+
+.purpose-selection label:hover {
+  color: var(--primary-color); /* Highlight text on hover */
+}
+
+/* Selected state */
+.purpose-selection label.selected {
+  color: var(--primary-color); /* Highlight text when selected */
+}
+
+.purpose-selection label.selected input[type="radio"] {
+  accent-color: var(--primary-color); /* Highlight radio button when selected */
+}
+
+
 
 /* ============================================
    Form Section

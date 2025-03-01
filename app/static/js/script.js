@@ -37,6 +37,61 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+/* 
+   🚀 Radio Button Selection Functionality (Buying/Selling)
+*/
+const buyOption = document.getElementById("buy-option");
+const sellOption = document.getElementById("sell-option");
+const buyLabel = buyOption.parentElement;
+const sellLabel = sellOption.parentElement;
+
+function updateSelection(selectedValue) {
+  if (selectedValue === "buy") {
+    // Highlight "Buying"
+    buyLabel.classList.add("selected");
+    sellLabel.classList.remove("selected");
+  } else if (selectedValue === "sell") {
+    // Highlight "Selling"
+    sellLabel.classList.add("selected");
+    buyLabel.classList.remove("selected");
+  }
+
+  // Store the selected value in localStorage
+  localStorage.setItem("selectedPurpose", selectedValue);
+
+  // Reload the page
+  location.reload();
+}
+
+// Event listeners for radio button changes
+buyOption.addEventListener("change", () => updateSelection("buy"));
+sellOption.addEventListener("change", () => updateSelection("sell"));
+
+// Reset options when the page loads
+function resetOptions() {
+  // Remove selected class from both
+  buyLabel.classList.remove("selected");
+  sellLabel.classList.remove("selected");
+
+  // Restore the selected value from localStorage
+  const savedPurpose = localStorage.getItem("selectedPurpose");
+  if (savedPurpose === "buy") {
+    buyOption.checked = true;
+    buyLabel.classList.add("selected");
+  } else if (savedPurpose === "sell") {
+    sellOption.checked = true;
+    sellLabel.classList.add("selected");
+  }
+}
+
+// Call resetOptions on page load
+resetOptions();
+
+
+
+
+
+
   /* 
      Housing Form and Prediction Logic
   */
