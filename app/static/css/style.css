@@ -701,7 +701,7 @@ footer {
 .main-link:hover {
   background: var(--button-hover);
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
+ 
 }
 
 /*  Developer Credit */
@@ -721,11 +721,11 @@ footer {
   color: var(--primary-color);
 }
 
-/* 🌙 Dark Mode Enhancements */
+/*  Dark Mode Enhancements */
 html.dark-mode footer {
   background: rgba(0, 0, 0, 0.5);
-  border-top: 2px solid var(--golden-accent);
-  box-shadow: 0 -3px 15px rgba(255, 204, 0, 0.2);
+  border-top: 2px solid #d35400;
+  box-shadow: 0 -3px 15px #d35400; /*  Darker shadow for contrast */
 }
 
 /*  Responsive - Mobile Optimization */
