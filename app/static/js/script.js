@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
           errorMsgEl.style.color = "red";
           errorMsgEl.style.fontSize = "0.9em";
           errorMsgEl.style.marginTop = "5px";
-          errorMsgEl.textContent = "Hey there! Please choose whether you're buying or selling before entering details.";
+          errorMsgEl.textContent = "Hey there! Please choose whether you're buying or selling(above) before entering details.";
           this.parentNode.insertBefore(errorMsgEl, this.nextSibling);
         }
 
