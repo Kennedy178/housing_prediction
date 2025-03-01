@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing Price Prediction</title>
+    <style>
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            display: none;
+        }
+        .invalid {
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Housing Input Form Section -->
+    <section id="form-section"> 
+        <form id="housing-form" novalidate>
+
+            <!-- Buying or Selling Selection -->
+            <div class="form-group">
+                <label for="purpose">Are you Buying or Selling?</label>
+                <select id="purpose" name="purpose">
+                    <option value="" selected disabled>Select an option</option>
+                    <option value="buying">Buying</option>
+                    <option value="selling">Selling</option>
+                </select>
+                <small class="error-message" id="purpose-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="sqft_living">Living Area (sqft)</label>
+                <input type="number" id="sqft_living" name="sqft_living" required min="200" max="10000" placeholder="e.g., 1500" disabled>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="no_of_bedrooms">Bedrooms</label>
+                <input type="number" id="no_of_bedrooms" name="no_of_bedrooms" required min="1" max="25" placeholder="e.g., 3" disabled>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="no_of_bathrooms">Bathrooms</label>
+                <input type="number" id="no_of_bathrooms" name="no_of_bathrooms" required min="1" max="15" step="0.5" placeholder="e.g., 2.5" disabled>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="sqft_lot">Lot Size (sqft)</label>
+                <input type="number" id="sqft_lot" name="sqft_lot" required min="500" max="50000" placeholder="e.g., 3000" disabled>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="no_of_floors">Floors</label>
+                <input type="number" id="no_of_floors" name="no_of_floors" required min="0" max="10" placeholder="e.g., 2" disabled>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="house_age">House Age (years)</label>
+                <input type="number" id="house_age" name="house_age" required min="0" max="150" placeholder="e.g., 20" disabled>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="zipcode">
+                    ZIP Code (location)
+                    <span class="tooltip" title="Enter a valid ZIP code between 98001 and 99001">?</span>
+                </label>
+                <input type="number" id="zipcode" name="zipcode" required min="98001" max="99001" placeholder="e.g., 98105" disabled>
+                <small class="error-message"></small>
+            </div>
+
+            <button type="submit" id="predict-btn" disabled>Predict Price</button>
+
+        </form>
+    </section>
+
+    <script>
+        /*
+        Housing Form and Prediction Logic
+        */
+        const form = document.getElementById('housing-form');
+        const predictBtn = document.getElementById('predict-btn');
+        const inputs = form.querySelectorAll('input');
+        const purposeSelect = document.getElementById('purpose');
+        const purposeError = document.getElementById('purpose-error');
+
+        // Define validation rules (min, max, and error messages)
+        const validationRules = {
+            sqft_living: { min: 200, max: 10000, error: "Living area must be between 200 and 10,000 sqft." },
+            no_of_bedrooms: { min: 1, max: 25, error: "Number of bedrooms must be between 1 and 25." },
+            no_of_bathrooms: { min: 1, max: 15, error: "Number of bathrooms must be between 1 and 15." },
+            sqft_lot: { min: 500, max: 50000, error: "Lot size must be between 500 and 50,000 sqft." },
+            no_of_floors: { min: 0, max: 10, error: "Floors must be between 0 and 10." },
+            house_age: { min: 0, max: 150, error: "House age must be between 0 and 150 years." },
+            zipcode: { min: 98001, max: 99001, error: "Invalid ZIP code. Must be between 98001 and 99001." }
+        };
+
+        // Enable input fields only when purpose is selected
+        purposeSelect.addEventListener('change', function () {
+            if (purposeSelect.value) {
+                inputs.forEach(input => input.removeAttribute('disabled'));
+                purposeError.textContent = "";
+                purposeError.style.display = "none";
+            }
+        });
+
+        // Real-time validation for each input field
+        inputs.forEach(input => {
+            input.addEventListener('input', function () {
+                validateField(input);
+                checkFormValidity();
+            });
+
+            input.addEventListener('focus', function () {
+                if (!purposeSelect.value) {
+                    purposeError.textContent = "Please select Buying or Selling first.";
+                    purposeError.style.display = "block";
+                    input.blur(); // Prevents input until selection is made
+                }
+            });
+        });
+
+        // Validate a single input field
+        function validateField(input) {
+            const fieldName = input.name;
+            const value = parseFloat(input.value);
+            const rule = validationRules[fieldName];
+            const errorMsgEl = input.nextElementSibling; // Assumes a <small> element follows the input
+
+            if (input.value.trim() === "" || isNaN(value)) {
+                errorMsgEl.textContent = "This field is required.";
+                errorMsgEl.style.display = "block";
+                input.classList.add("invalid");
+                return false;
+            }
+
+            if (value < rule.min || value > rule.max) {
+                errorMsgEl.textContent = rule.error;
+                errorMsgEl.style.display = "block";
+                input.classList.add("invalid");
+                return false;
+            }
+
+            errorMsgEl.textContent = "";
+            errorMsgEl.style.display = "none";
+            input.classList.remove("invalid");
+            return true;
+        }
+
+        // Check if the entire form is valid before enabling the Predict button
+        function checkFormValidity() {
+            let isValid = true;
+            inputs.forEach(input => {
+                if (!validateField(input)) {
+                    isValid = false;
+                }
+            });
+            predictBtn.disabled = !isValid;
+        }
+    </script>
+
+</body>
+</html>

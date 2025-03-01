@@ -1,10 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
-  /* 
-     Theme Toggle Functionality using Font Awesome Icons
-   */
+document.addEventListener('DOMContentLoaded', function () {
+  /*
+   Theme Toggle Functionality using Font Awesome Icons
+  */
   const toggle = document.getElementById('theme-toggle');
 
-  // Determine saved theme or use system preference if none saved
   let theme = localStorage.getItem('theme');
   if (!theme) {
     theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
@@ -13,93 +12,111 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   setTheme(theme);
 
-// handle the theme toggle button click event
   function setTheme(theme) {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark-mode');
       document.documentElement.classList.remove('light-mode');
-      // When in dark mode, show the sun icon to indicate switching to light mode.
       toggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
     } else {
       document.documentElement.classList.add('light-mode');
       document.documentElement.classList.remove('dark-mode');
-      // When in light mode, show the moon icon to indicate switching to dark mode.
       toggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
     }
     localStorage.setItem('theme', theme);
   }
-// handle the theme toggle button click event
-  toggle.addEventListener('click', function() {
-    if (document.documentElement.classList.contains('dark-mode')) {
-      setTheme('light');
-    } else {
-      setTheme('dark');
-    }
+
+  toggle.addEventListener('click', function () {
+    setTheme(document.documentElement.classList.contains('dark-mode') ? 'light' : 'dark');
   });
 
-/* 
-   🚀 Radio Button Selection Functionality (Buying/Selling)
-*/
-const buyOption = document.getElementById("buy-option");
-const sellOption = document.getElementById("sell-option");
-const buyLabel = buyOption.parentElement;
-const sellLabel = sellOption.parentElement;
+  /*
+     Buying/Selling Selection Logic
+  */
+  const buyOption = document.getElementById("buy-option");
+  const sellOption = document.getElementById("sell-option");
+  const buyLabel = buyOption.parentElement;
+  const sellLabel = sellOption.parentElement;
+  const inputs = document.querySelectorAll('#housing-form input');
 
-function updateSelection(selectedValue) {
-  if (selectedValue === "buy") {
-    // Highlight "Buying"
-    buyLabel.classList.add("selected");
-    sellLabel.classList.remove("selected");
-  } else if (selectedValue === "sell") {
-    // Highlight "Selling"
-    sellLabel.classList.add("selected");
-    buyLabel.classList.remove("selected");
+  let selectedPurpose = localStorage.getItem("selectedPurpose");
+
+  function updateSelection(selectedValue) {
+    selectedPurpose = selectedValue;
+    localStorage.setItem("selectedPurpose", selectedValue);
+
+    // Highlight selected option
+    if (selectedValue === "buy") {
+      buyLabel.classList.add("selected");
+      sellLabel.classList.remove("selected");
+    } else if (selectedValue === "sell") {
+      sellLabel.classList.add("selected");
+      buyLabel.classList.remove("selected");
+    }
+
+    //  Clear form when user switches between Buying and Selling
+    clearForm();
+
+    // Remove any "Select purpose" error messages
+    document.querySelectorAll('.purpose-error').forEach(error => error.remove());
   }
 
-  // Store the selected value in localStorage
-  localStorage.setItem("selectedPurpose", selectedValue);
+  buyOption.addEventListener("change", () => updateSelection("buy"));
+  sellOption.addEventListener("change", () => updateSelection("sell"));
 
-  // Reload the page
-  location.reload();
-}
-
-// Event listeners for radio button changes
-buyOption.addEventListener("change", () => updateSelection("buy"));
-sellOption.addEventListener("change", () => updateSelection("sell"));
-
-// Reset options when the page loads
-function resetOptions() {
-  // Remove selected class from both
-  buyLabel.classList.remove("selected");
-  sellLabel.classList.remove("selected");
-
-  // Restore the selected value from localStorage
-  const savedPurpose = localStorage.getItem("selectedPurpose");
-  if (savedPurpose === "buy") {
-    buyOption.checked = true;
-    buyLabel.classList.add("selected");
-  } else if (savedPurpose === "sell") {
-    sellOption.checked = true;
-    sellLabel.classList.add("selected");
+  function resetOptions() {
+    if (selectedPurpose === "buy" || selectedPurpose === "sell") {
+      document.getElementById(`${selectedPurpose}-option`).checked = true;
+      document.getElementById(`${selectedPurpose}-option`).parentElement.classList.add("selected");
+    }
   }
-}
 
-// Call resetOptions on page load
-resetOptions();
+  resetOptions();
 
+  /*
+     Clear Form Function - Called when user switches between Buying and Selling
+  */
+  function clearForm() {
+    inputs.forEach(input => {
+      input.value = ""; // Reset input values
+      input.classList.remove("invalid"); // Remove red border if any
+    });
 
+    // Remove all validation error messages
+    document.querySelectorAll('.error-msg, .purpose-error').forEach(error => error.remove());
 
+    // Disable the "Predict" button (until valid input is entered again)
+    predictBtn.disabled = true;
+  }
 
+  /*
+     Prevent Typing Without Selecting a Purpose (Show Error Below Input)
+  */
+  inputs.forEach(input => {
+    input.addEventListener('focus', function () {
+      if (!selectedPurpose) {
+        let errorMsgEl = this.nextElementSibling;
 
+        if (!errorMsgEl || !errorMsgEl.classList.contains('purpose-error')) {
+          errorMsgEl = document.createElement("div");
+          errorMsgEl.className = "purpose-error";
+          errorMsgEl.style.color = "red";
+          errorMsgEl.style.fontSize = "0.9em";
+          errorMsgEl.style.marginTop = "5px";
+          errorMsgEl.textContent = "Hey there! Please choose whether you're buying or selling before entering details.";
+          this.parentNode.insertBefore(errorMsgEl, this.nextSibling);
+        }
 
-  /* 
+        this.blur(); // Prevent typing by removing focus
+      }
+    });
+  });
+
+  /*
      Housing Form and Prediction Logic
   */
   const form = document.getElementById('housing-form');
   const predictBtn = document.getElementById('predict-btn');
-  const inputs = form.querySelectorAll('input');
 
-  // Define validation rules (min, max, and error messages)
   const validationRules = {
     sqft_living: { min: 200, max: 10000, error: "Living area must be between 200 and 10,000 sqft." },
     no_of_bedrooms: { min: 1, max: 25, error: "Number of bedrooms must be between 1 and 25." },
@@ -110,41 +127,44 @@ resetOptions();
     zipcode: { min: 98001, max: 99001, error: "Invalid ZIP code. Must be between 98001 and 99001." }
   };
 
-  // Real-time validation for each input field
-  inputs.forEach(input => {
-    input.addEventListener('input', function() {
-      validateField(input);
-      checkFormValidity();
-    });
-  });
-
-  // Validate the entire form when the Predict button is clicked
+  /*
+     Function to Validate a Single Input Field
+  */
   function validateField(input) {
     const fieldName = input.name;
     const value = parseFloat(input.value);
     const rule = validationRules[fieldName];
-    const errorMsgEl = input.nextElementSibling; // Assumes a <small> element follows the input
+    let errorMsgEl = input.nextElementSibling;
+
+    if (!errorMsgEl || !errorMsgEl.classList.contains('error-msg')) {
+      errorMsgEl = document.createElement("div");
+      errorMsgEl.className = "error-msg";
+      errorMsgEl.style.color = "red";
+      errorMsgEl.style.fontSize = "0.9em";
+      errorMsgEl.style.marginTop = "5px";
+      input.parentNode.insertBefore(errorMsgEl, input.nextSibling);
+    }
 
     if (input.value.trim() === "" || isNaN(value)) {
       errorMsgEl.textContent = "This field is required.";
-      errorMsgEl.style.display = "block";
       input.classList.add("invalid");
       return false;
     }
 
     if (value < rule.min || value > rule.max) {
       errorMsgEl.textContent = rule.error;
-      errorMsgEl.style.display = "block";
       input.classList.add("invalid");
       return false;
     }
 
     errorMsgEl.textContent = "";
-    errorMsgEl.style.display = "none";
     input.classList.remove("invalid");
     return true;
   }
 
+  /*
+     Function to Check Overall Form Validity and Enable/Disable Predict Button
+  */
   function checkFormValidity() {
     let isValid = true;
     inputs.forEach(input => {
@@ -154,6 +174,17 @@ resetOptions();
     });
     predictBtn.disabled = !isValid;
   }
+
+  /*
+     Attach Event Listeners to Each Input for Validation
+  */
+  inputs.forEach(input => {
+    input.addEventListener('input', function () {
+      validateField(input);
+      checkFormValidity();
+    });
+  });
+
 
   /* ===============================
      Prediction History Logic
