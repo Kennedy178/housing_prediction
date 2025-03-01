@@ -701,7 +701,7 @@ footer {
 .main-link:hover {
   background: var(--button-hover);
   transform: translateY(-3px);
- 
+  
 }
 
 /*  Developer Credit */
