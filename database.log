@@ -1,0 +1,76 @@
+2025-03-03 13:02:12,389 - INFO - \u2705 Database and table created successfully at c:\Users\AMON\Desktop\C200\app\../data\housing.db
+2025-03-03 13:05:56,557 - INFO - Database and table created successfully at c:\Users\AMON\Desktop\C200\app\../data\housing.db
+2025-03-03 13:06:03,924 - INFO - Database and table created successfully at c:\Users\AMON\Desktop\C200\app\../data\housing.db
+2025-03-03 13:08:28,035 - INFO - Database and table created successfully at c:\Users\AMON\Desktop\C200\app\../data\housing.db
+2025-03-03 13:13:57,243 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-03 13:13:57,244 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 13:13:57,249 - INFO -  * Restarting with stat
+2025-03-03 13:14:02,258 - WARNING -  * Debugger is active!
+2025-03-03 13:14:02,266 - INFO -  * Debugger PIN: 404-395-077
+2025-03-03 13:14:10,430 - INFO - 127.0.0.1 - - [03/Mar/2025 13:14:10] "GET / HTTP/1.1" 200 -
+2025-03-03 13:14:10,759 - INFO - 127.0.0.1 - - [03/Mar/2025 13:14:10] "GET /static/images/residual.png HTTP/1.1" 200 -
+2025-03-03 13:14:10,761 - INFO - 127.0.0.1 - - [03/Mar/2025 13:14:10] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-03 13:14:10,769 - INFO - 127.0.0.1 - - [03/Mar/2025 13:14:10] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-03 13:14:10,775 - INFO - 127.0.0.1 - - [03/Mar/2025 13:14:10] "GET /static/images/feature_importance.png HTTP/1.1" 200 -
+2025-03-03 13:14:13,548 - INFO - 127.0.0.1 - - [03/Mar/2025 13:14:13] "GET / HTTP/1.1" 200 -
+2025-03-03 13:14:13,585 - INFO - 127.0.0.1 - - [03/Mar/2025 13:14:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 13:14:13,588 - INFO - 127.0.0.1 - - [03/Mar/2025 13:14:13] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 13:14:13,595 - INFO - 127.0.0.1 - - [03/Mar/2025 13:14:13] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 13:14:13,604 - INFO - 127.0.0.1 - - [03/Mar/2025 13:14:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 13:14:13,679 - INFO - 127.0.0.1 - - [03/Mar/2025 13:14:13] "GET /static/images/favicon32.png HTTP/1.1" 200 -
+2025-03-03 13:15:06,895 - INFO - User query inserted successfully: (7654.0, 4, 2.0, 7688.0, 3, 10, '98765', np.float64(783853.2347733954))
+2025-03-03 13:15:06,898 - WARNING - Duplicate entry prevented: (7654.0, 4, 2.0, 7688.0, 3, 10, '98765', np.float64(783853.2347733954))
+2025-03-03 13:15:06,899 - INFO - 127.0.0.1 - - [03/Mar/2025 13:15:06] "POST / HTTP/1.1" 200 -
+2025-03-03 13:15:09,590 - INFO - 127.0.0.1 - - [03/Mar/2025 13:15:09] "GET /admin HTTP/1.1" 200 -
+2025-03-03 13:15:09,640 - INFO - 127.0.0.1 - - [03/Mar/2025 13:15:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 13:15:09,644 - INFO - 127.0.0.1 - - [03/Mar/2025 13:15:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 13:15:35,283 - INFO - User query inserted successfully: (5436.0, 4, 2.0, 7688.0, 3, 10, '98765', np.float64(775062.2787267696))
+2025-03-03 13:15:35,287 - WARNING - Duplicate entry prevented: (5436.0, 4, 2.0, 7688.0, 3, 10, '98765', np.float64(775062.2787267696))
+2025-03-03 13:15:35,287 - INFO - 127.0.0.1 - - [03/Mar/2025 13:15:35] "POST / HTTP/1.1" 200 -
+2025-03-03 13:15:39,718 - INFO - 127.0.0.1 - - [03/Mar/2025 13:15:39] "GET /admin HTTP/1.1" 200 -
+2025-03-03 13:15:39,771 - INFO - 127.0.0.1 - - [03/Mar/2025 13:15:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 13:15:39,773 - INFO - 127.0.0.1 - - [03/Mar/2025 13:15:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 13:17:53,584 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-03 13:17:53,584 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 13:17:53,587 - INFO -  * Restarting with stat
+2025-03-03 10:17:59,510 - WARNING -  * Debugger is active!
+2025-03-03 10:17:59,518 - INFO -  * Debugger PIN: 140-194-908
+2025-03-03 10:18:05,067 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:05] "GET /admin HTTP/1.1" 200 -
+2025-03-03 10:18:05,221 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:05] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-03 10:18:05,223 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:05] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-03 10:18:05,259 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:05] "GET /static/images/favicon32.png HTTP/1.1" 200 -
+2025-03-03 10:18:05,952 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:05] "GET /admin HTTP/1.1" 200 -
+2025-03-03 10:18:05,989 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 10:18:05,989 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 10:18:06,035 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:06] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 10:18:06,174 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:06] "GET /admin HTTP/1.1" 200 -
+2025-03-03 10:18:06,210 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 10:18:06,211 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 10:18:06,249 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:06] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 10:18:06,352 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:06] "GET /admin HTTP/1.1" 200 -
+2025-03-03 10:18:06,389 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 10:18:06,391 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 10:18:06,433 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:06] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 10:18:06,511 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:06] "GET /admin HTTP/1.1" 200 -
+2025-03-03 10:18:06,563 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 10:18:06,564 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 10:18:06,604 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:06] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 10:18:12,925 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:12] "GET / HTTP/1.1" 200 -
+2025-03-03 10:18:13,033 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:13] "GET /static/images/residual.png HTTP/1.1" 200 -
+2025-03-03 10:18:13,035 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 10:18:13,042 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:13] "GET /static/images/feature_importance.png HTTP/1.1" 200 -
+2025-03-03 10:18:13,053 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 10:18:40,966 - INFO - User query inserted successfully: (2900.0, 2, 3.0, 3400.0, 0, 57, '98006', np.float64(609423.303444671))
+2025-03-03 10:18:40,969 - WARNING - Duplicate entry prevented: (2900.0, 2, 3.0, 3400.0, 0, 57, '98006', np.float64(609423.303444671))
+2025-03-03 10:18:40,969 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:40] "POST / HTTP/1.1" 200 -
+2025-03-03 10:18:43,005 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:43] "GET /admin HTTP/1.1" 200 -
+2025-03-03 10:18:43,068 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 10:18:43,072 - INFO - 127.0.0.1 - - [03/Mar/2025 10:18:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 13:21:55,277 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-03 13:21:55,277 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 13:21:55,282 - INFO -  * Restarting with stat
+2025-03-03 13:21:59,928 - WARNING -  * Debugger is active!
+2025-03-03 13:21:59,937 - INFO -  * Debugger PIN: 404-395-077
