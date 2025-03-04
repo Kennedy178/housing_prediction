@@ -5,156 +5,208 @@
 {% block content %}
 <style>
     :root {
-        --primary-color: #005f73;
-        --secondary-color: #0a9396;
-        --accent-color: #94d2bd;
-        --bg-color: #f1faee;
-        --form-bg: #ffffff;
-        --text-color: #333;
-        --border-color: #e0e0e0;
-        --error-color: #d32f2f;
-        --button-hover: #004e66;
-    }
+    --primary-color: #005f73;
+    --secondary-color: #0a9396;
+    --accent-color: #94d2bd;
+    --bg-color: #f1faee;
+    --form-bg: #ffffff;
+    --text-color: #333;
+    --border-color: #e0e0e0;
+    --error-color: #d32f2f;
+    --button-hover: #004e66;
+}
 
-    .admin-container {
-        background: var(--bg-color);
-        padding: 20px;
-        border-radius: 10px;
-    }
+.admin-container {
+    background: var(--bg-color);
+    padding: 20px;
+    border-radius: 10px;
+}
 
-    .header-section {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 15px;
-    }
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
 
-    .download-button {
-        padding: 10px 15px;
-        border: none;
-        border-radius: 8px;
-        background-color: var(--secondary-color);
-        color: white;
-        cursor: pointer;
-        font-weight: bold;
-        transition: 0.3s;
-    }
+.download-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-    .download-button:hover {
-        background-color: var(--button-hover);
-    }
+.download-button:hover {
+    background-color: var(--button-hover);
+}
 
+/* Filters Section */
+.filters {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+   
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+/* Make all filters inline */
+.filters div {
+    display: flex;
+    flex-direction: column;
+}
+
+.filters label {
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+
+.filters input,
+.filters select {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: white;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* Intention Dropdown Styling */
+#intention {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: var(--form-bg);
+    font-size: 14px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+#intention option {
+    padding: 10px;
+}
+
+/* Buttons */
+.button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: var(--button-hover);
+}
+
+.clear-button {
+    display: none;
+    background-color: var(--error-color);
+}
+
+.clear-button:hover {
+    background-color: #b22222;
+}
+
+.toggle-button {
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--primary-color);
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+    transition: 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Admin Table */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--form-bg);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.admin-table th {
+    background: var(--secondary-color);
+    color: white;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: var(--form-bg);
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: var(--button-hover);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
     .filters {
-        display: flex;
-        gap: 15px;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-bottom: 15px;
+        flex-direction: column;
+        gap: 10px;
     }
 
-    .filters input {
-        padding: 10px;
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-    }
-
-    .button {
-        padding: 10px 15px;
-        border: none;
-        border-radius: 8px;
-        background-color: var(--primary-color);
-        color: white;
-        cursor: pointer;
-        font-weight: bold;
-        transition: 0.3s;
-    }
-
-    .button:hover {
-        background-color: var(--button-hover);
-    }
-
-    .clear-button {
-        display: none;
-        background-color: var(--error-color);
-    }
-
-    .clear-button:hover {
-        background-color: #b22222;
-    }
-
-    .toggle-button {
-        margin-top: 15px;
-        display: block;
-        text-align: center;
-        padding: 8px;
-        cursor: pointer;
-        font-weight: bold;
-        color: var(--primary-color);
-        border-radius: 8px;
-        border: 1px solid var(--primary-color);
-        transition: 0.3s;
-    }
-
-    .toggle-button:hover {
-        background-color: var(--primary-color);
-        color: white;
-    }
-
-    .admin-table {
+    .filters div {
         width: 100%;
-        border-collapse: collapse;
-        background: var(--form-bg);
-        border-radius: 8px;
-        overflow: hidden;
     }
+}
 
-    .admin-table th, .admin-table td {
-        padding: 10px;
-        border-bottom: 1px solid var(--border-color);
-        text-align: left;
-    }
-
-    .admin-table th {
-        background: var(--secondary-color);
-        color: white;
-    }
-
-    /* Modal Styling */
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        overflow: auto;
-    }
-
-    .modal-content {
-        background-color: var(--form-bg);
-        margin: 15% auto;
-        padding: 20px;
-        border-radius: 10px;
-        width: 50%;
-        text-align: center;
-    }
-
-    .modal-content button {
-        padding: 10px 20px;
-        border: none;
-        border-radius: 8px;
-        background-color: var(--primary-color);
-        color: white;
-        cursor: pointer;
-        font-weight: bold;
-        transition: 0.3s;
-    }
-
-    .modal-content button:hover {
-        background-color: var(--button-hover);
-    }
 </style>
 
 <div class="admin-container">
