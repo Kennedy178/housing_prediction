@@ -98,35 +98,37 @@ def insert_recommendation(purpose, feature, condition, suggestion):
         logging.error("Error inserting recommendation: %s", e)
 
 def get_recommendations(purpose, user_features):
-    """Fetches applicable recommendations based on user input safely."""
+    """Fetches recommendations using optimized SQL filtering."""
     try:
         conn = sqlite3.connect(DB_PATH)
         cursor = conn.cursor()
-        
-        cursor.execute("SELECT feature, condition, suggestion FROM recommendations WHERE purpose = ?", (purpose,))
-        rules = cursor.fetchall()
-        
         recommendations = []
-        for feature, condition, suggestion in rules:
-            user_value = user_features.get(feature)
-            
-            if user_value is not None:
-                # Extract operator and numeric value safely
-                for op_symbol, op_func in OPERATORS.items():
-                    if op_symbol in condition:
-                        value = condition.split(op_symbol)[-1].strip()
-                        if value.replace('.', '', 1).isdigit():  # Ensure numeric value
-                            value = float(value)
-                            if op_func(user_value, value):  # Apply safe comparison
-                                recommendations.append(suggestion)
-                        break  
+
+        for feature, user_value in user_features.items():
+            if isinstance(user_value, (int, float)):  # Ensure numeric value
+                # Fetch only matching rules using SQL filtering
+                cursor.execute(f"""
+                    SELECT suggestion FROM recommendations
+                    WHERE purpose = ? 
+                    AND feature = ?
+                    AND (
+                        (condition LIKE '< %' AND CAST(SUBSTR(condition, 3) AS REAL) > ?)
+                        OR (condition LIKE '<= %' AND CAST(SUBSTR(condition, 4) AS REAL) >= ?)
+                        OR (condition LIKE '> %' AND CAST(SUBSTR(condition, 3) AS REAL) < ?)
+                        OR (condition LIKE '>= %' AND CAST(SUBSTR(condition, 4) AS REAL) <= ?)
+                        OR (condition LIKE '= %' AND CAST(SUBSTR(condition, 3) AS REAL) = ?)
+                    )
+                """, (purpose, feature, user_value, user_value, user_value, user_value, user_value))
+                
+                recommendations.extend([row[0] for row in cursor.fetchall()])
 
         conn.close()
         return recommendations
+
     except Exception as e:
         logging.error("Error fetching recommendations: %s", e)
         return []
-    
+
     
 def insert_query(sqft_living, no_of_bedrooms, no_of_bathrooms, sqft_lot, no_of_floors, house_age, zipcode, purpose, predicted_price):
     """Inserts a new user query and prediction into the database, preventing exact duplicates at the same timestamp."""
