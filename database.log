@@ -1374,3 +1374,5 @@
 2025-03-04 18:32:28,657 - INFO - 127.0.0.1 - - [04/Mar/2025 18:32:28] "GET /admin HTTP/1.1" 200 -
 2025-03-04 18:32:28,718 - INFO - 127.0.0.1 - - [04/Mar/2025 18:32:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-04 18:32:28,720 - INFO - 127.0.0.1 - - [04/Mar/2025 18:32:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 18:37:27,591 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\app\\database.py', reloading
+2025-03-04 18:37:27,914 - INFO -  * Restarting with stat

@@ -178,8 +178,7 @@ def get_all_queries():
             id, sqft_living, no_of_bedrooms, no_of_bathrooms, sqft_lot, no_of_floors, house_age, zipcode, purpose, predicted_price, timestamp = row
             nairobi_timestamp = convert_to_nairobi(timestamp)
             results.append((id, sqft_living, no_of_bedrooms, no_of_bathrooms, sqft_lot, no_of_floors, house_age, zipcode, purpose, predicted_price, nairobi_timestamp))
-        print("Fetched Data:", rows)  # Debugging Output to see what's inside
-        
+ 
         return results  
     except Exception as e:
         logging.error("Error retrieving queries: %s", e)
