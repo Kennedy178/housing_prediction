@@ -163,27 +163,36 @@
         <button id="downloadCSV" class="download-button">Export Housing Data (CSV)</button>
     </div>
 
-    <!-- Filters -->
-    <div class="filters">
-        <div>
-            <label for="minPrice">Min Price:</label>
-            <input type="number" id="minPrice" placeholder="Min price">
-        </div>
-        <div>
-            <label for="maxPrice">Max Price:</label>
-            <input type="number" id="maxPrice" placeholder="Max price">
-        </div>
-        <div>
-            <label for="startDate">Start Date:</label>
-            <input type="date" id="startDate">
-        </div>
-        <div>
-            <label for="endDate">End Date:</label>
-            <input type="date" id="endDate">
-        </div>
-        <button id="filterButton" class="button">Apply Filters</button>
-        <button id="clearFilters" class="button clear-button">Clear Filters</button>
+  <!-- Filters -->
+<div class="filters">
+    <div>
+        <label for="minPrice">Min Price:</label>
+        <input type="number" id="minPrice" placeholder="Min price">
     </div>
+    <div>
+        <label for="maxPrice">Max Price:</label>
+        <input type="number" id="maxPrice" placeholder="Max price">
+    </div>
+    <div>
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate">
+    </div>
+    <div>
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate">
+    </div>
+    <div>
+        <label for="intention">Intention:</label>
+        <select id="intention">
+            <option value="">All</option> <!-- Default: Show all -->
+            <option value="buy">Buy</option>
+            <option value="sell">Sell</option>
+        </select>
+    </div>
+    <button id="filterButton" class="button">Apply Filters</button>
+    <button id="clearFilters" class="button clear-button">Clear Filters</button>
+</div>
+
 
   <!-- Predictions Table -->
 <table class="admin-table">
@@ -242,68 +251,90 @@
 {% block scripts %}
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const filterButton = document.getElementById("filterButton");
-        const clearButton = document.getElementById("clearFilters");
-        const toggleButton = document.getElementById("toggleEntries");
-        const downloadButton = document.getElementById("downloadCSV");
-        const rows = document.querySelectorAll("#predictionsTable tr");
-        let showingAll = false;
-        let filtersApplied = false;
+    const filterButton = document.getElementById("filterButton");
+    const clearButton = document.getElementById("clearFilters");
+    const toggleButton = document.getElementById("toggleEntries");
+    const downloadButton = document.getElementById("downloadCSV");
+    const intentionFilter = document.getElementById("intention"); // Get the intention filter dropdown
+    const rows = document.querySelectorAll("#predictionsTable tr");
+    let showingAll = false;
+    let filtersApplied = false;
 
-        // Modal elements
-        const exportModal = document.getElementById("exportModal");
-        const closeModal = document.getElementById("closeModal");
-        const exportFiltered = document.getElementById("exportFiltered");
-        const exportAll = document.getElementById("exportAll");
+    // Modal elements
+    const exportModal = document.getElementById("exportModal");
+    const closeModal = document.getElementById("closeModal");
+    const exportFiltered = document.getElementById("exportFiltered");
+    const exportAll = document.getElementById("exportAll");
 
-        filterButton.addEventListener("click", applyFilters);
-        clearButton.addEventListener("click", clearFilters);
-        toggleButton.addEventListener("click", toggleEntries);
-        downloadButton.addEventListener("click", openExportModal);
-        exportFiltered.addEventListener("click", () => downloadCSV(true));
-        exportAll.addEventListener("click", () => downloadCSV(false));
-        closeModal.addEventListener("click", closeModalHandler);
+    filterButton.addEventListener("click", applyFilters);
+    clearButton.addEventListener("click", clearFilters);
+    toggleButton.addEventListener("click", toggleEntries);
+    downloadButton.addEventListener("click", openExportModal);
+    exportFiltered.addEventListener("click", () => downloadCSV(true));
+    exportAll.addEventListener("click", () => downloadCSV(false));
+    closeModal.addEventListener("click", closeModalHandler);
 
-        function openExportModal() {
-            exportModal.style.display = "block";
-        }
+    function openExportModal() {
+        exportModal.style.display = "block";
+    }
 
-        function closeModalHandler() {
-            exportModal.style.display = "none";
-        }
+    function closeModalHandler() {
+        exportModal.style.display = "none";
+    }
 
-         // Initially show only the first 20 rows
-         updateTableVisibility(false);
+    // Initially show only the first 20 rows
+    updateTableVisibility(false);
 
-function applyFilters() {
-    let minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
-    let maxPrice = parseFloat(document.getElementById('maxPrice').value) || Infinity;
-    let startDate = document.getElementById('startDate').value ? new Date(document.getElementById('startDate').value) : null;
-    let endDate = document.getElementById('endDate').value ? new Date(document.getElementById('endDate').value) : null;
-    let count = 1;
+    function applyFilters() {
+        let minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
+        let maxPrice = parseFloat(document.getElementById('maxPrice').value) || Infinity;
+        let startDate = document.getElementById('startDate').value ? new Date(document.getElementById('startDate').value) : null;
+        let endDate = document.getElementById('endDate').value ? new Date(document.getElementById('endDate').value) : null;
+        let selectedIntention = intentionFilter.value.toLowerCase(); // Get selected intention (buy, sell, or all)
+        let count = 1;
 
-    // Always set filtersApplied to true when filters are applied
-    filtersApplied = true;
+        filtersApplied = true;
 
-    rows.forEach(row => {
-        let price = parseFloat(row.cells[8].innerText.replace('$', '').replace(',', '')) || 0;
-        let dateText = row.cells[9].innerText.trim();
-        let date = dateText ? new Date(dateText) : null;
-        let priceCondition = price >= minPrice && price <= maxPrice;
-        let startDateCondition = startDate ? date >= startDate : true;
-        let endDateCondition = endDate ? date <= endDate : true;
+        rows.forEach(row => {
+            let price = parseFloat(row.cells[9].innerText.replace('$', '').replace(',', '')) || 0; 
+            let dateText = row.cells[10].innerText.trim();
+            let date = dateText ? new Date(dateText) : null;
+            let intention = row.cells[8].innerText.trim().toLowerCase(); // Get intention from table
+            
+            let priceCondition = price >= minPrice && price <= maxPrice;
+            let startDateCondition = startDate ? date >= startDate : true;
+            let endDateCondition = endDate ? date <= endDate : true;
+            let intentionCondition = selectedIntention === "" || intention === selectedIntention; // Show all if empty, else match buy/sell
+            
+            if (priceCondition && startDateCondition && endDateCondition && intentionCondition) {
+                row.style.display = "";
+                row.cells[0].innerText = count++;
+            } else {
+                row.style.display = "none";
+            }
+        });
 
-        if (priceCondition && startDateCondition && endDateCondition) {
+        clearButton.style.display = "inline-block";
+    }
+
+    function clearFilters() {
+        document.getElementById('minPrice').value = "";
+        document.getElementById('maxPrice').value = "";
+        document.getElementById('startDate').value = "";
+        document.getElementById('endDate').value = "";
+        intentionFilter.value = ""; // Reset intention filter
+        filtersApplied = false;
+
+        let count = 1;
+        rows.forEach(row => {
             row.style.display = "";
             row.cells[0].innerText = count++;
-        } else {
-            row.style.display = "none";
-        }
-    });
+        });
 
-    // Ensure the clear button is always visible when filters are applied
-    clearButton.style.display = "inline-block";
-}
+        clearButton.style.display = "none";
+    }
+
+
 
 function clearFilters() {
     document.getElementById('minPrice').value = "";
@@ -347,64 +378,66 @@ function updateTableVisibility(showAll) {
 }
 
         // Function to download CSV with filtered or all data
-        function downloadCSV(filtered) {
-            let data = filtered ? getFilteredData() : getAllData();
-            let csvContent = "data:text/csv;charset=utf-8,";
+function downloadCSV(filtered) {
+    let data = filtered ? getFilteredData() : getAllData();
+    let csvContent = "data:text/csv;charset=utf-8,";
 
-            csvContent += "Sqft Living,Bedrooms,Bathrooms,Lot Size,Floors,House Age,Zipcode,Predicted Price,Date\n";
+    csvContent += "Sqft Living,Bedrooms,Bathrooms,Lot Size,Floors,House Age,Zipcode,Intention,Predicted Price,Date\n";
 
-            data.forEach(row => {
-                csvContent += row.join(",") + "\n";
-            });
+    data.forEach(row => {
+        csvContent += row.join(",") + "\n";
+    });
 
-            const encodedUri = encodeURI(csvContent);
-            const link = document.createElement("a");
-            link.setAttribute("href", encodedUri);
-            link.setAttribute("download", filtered ? "filtered_data.csv" : "all_data.csv");
-            link.click();
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", filtered ? "filtered_data.csv" : "all_data.csv");
+    link.click();
+}
+
+// Function to get all data (without filters)
+function getAllData() {
+    let allData = [];
+    rows.forEach(row => {
+        let rowData = [
+            row.cells[1].innerText, // Sqft Living
+            row.cells[2].innerText, // Bedrooms
+            row.cells[3].innerText, // Bathrooms
+            row.cells[4].innerText, // Lot Size
+            row.cells[5].innerText, // Floors
+            row.cells[6].innerText, // House Age
+            row.cells[7].innerText, // Zipcode
+            row.cells[8].innerText, // Intention (Purpose)
+            row.cells[9].innerText, // Predicted Price
+            row.cells[10].innerText // Date
+        ];
+        allData.push(rowData);
+    });
+    return allData;
+}
+
+// Function to get filtered data
+function getFilteredData() {
+    let filteredData = [];
+    rows.forEach(row => {
+        if (row.style.display !== "none") {
+            let rowData = [
+                row.cells[1].innerText,
+                row.cells[2].innerText,
+                row.cells[3].innerText,
+                row.cells[4].innerText,
+                row.cells[5].innerText,
+                row.cells[6].innerText,
+                row.cells[7].innerText,
+                row.cells[8].innerText, // Intention (Purpose)
+                row.cells[9].innerText,
+                row.cells[10].innerText
+            ];
+            filteredData.push(rowData);
         }
-
-        // Function to get all data (without filters)
-        function getAllData() {
-            let allData = [];
-            rows.forEach(row => {
-                let rowData = [
-                    row.cells[1].innerText, // Sqft Living
-                    row.cells[2].innerText, // Bedrooms
-                    row.cells[3].innerText, // Bathrooms
-                    row.cells[4].innerText, // Lot Size
-                    row.cells[5].innerText, // Floors
-                    row.cells[6].innerText, // House Age
-                    row.cells[7].innerText, // Zipcode
-                    row.cells[8].innerText, // Predicted Price
-                    row.cells[9].innerText  // Date
-                ];
-                allData.push(rowData);
-            });
-            return allData;
-        }
-
-        // Function to get filtered data
-        function getFilteredData() {
-            let filteredData = [];
-            rows.forEach(row => {
-                if (row.style.display !== "none") {
-                    let rowData = [
-                        row.cells[1].innerText,
-                        row.cells[2].innerText,
-                        row.cells[3].innerText,
-                        row.cells[4].innerText,
-                        row.cells[5].innerText,
-                        row.cells[6].innerText,
-                        row.cells[7].innerText,
-                        row.cells[8].innerText,
-                        row.cells[9].innerText
-                    ];
-                    filteredData.push(rowData);
-                }
-            });
-            return filteredData;
-        }
+    });
+    return filteredData;
+}
 
         // Initially set to show only the first 20 entries by default
         resetToDefault();
