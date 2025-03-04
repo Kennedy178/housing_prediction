@@ -1182,3 +1182,195 @@
 2025-03-04 17:26:07,375 - WARNING - Duplicate entry prevented: (5000.0, 2, 3.0, 7000.0, 2, 70, '98006', 'buy', np.float64(763484.1253635386))
 2025-03-04 17:26:07,376 - DEBUG - Prediction stored in the database
 2025-03-04 17:26:07,376 - INFO - 127.0.0.1 - - [04/Mar/2025 17:26:07] "POST / HTTP/1.1" 200 -
+2025-03-04 17:30:43,303 - INFO - 127.0.0.1 - - [04/Mar/2025 17:30:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 17:31:52,041 - DEBUG - Fetched 18 predictions for admin dashboard
+2025-03-04 17:31:52,052 - INFO - 127.0.0.1 - - [04/Mar/2025 17:31:52] "GET /admin HTTP/1.1" 200 -
+2025-03-04 17:31:52,085 - INFO - 127.0.0.1 - - [04/Mar/2025 17:31:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 17:31:52,107 - INFO - 127.0.0.1 - - [04/Mar/2025 17:31:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 17:31:52,188 - INFO - 127.0.0.1 - - [04/Mar/2025 17:31:52] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 17:31:53,378 - DEBUG - Fetched 18 predictions for admin dashboard
+2025-03-04 17:31:53,379 - INFO - 127.0.0.1 - - [04/Mar/2025 17:31:53] "GET /admin HTTP/1.1" 200 -
+2025-03-04 17:31:53,416 - INFO - 127.0.0.1 - - [04/Mar/2025 17:31:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 17:31:53,418 - INFO - 127.0.0.1 - - [04/Mar/2025 17:31:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 17:31:53,471 - INFO - 127.0.0.1 - - [04/Mar/2025 17:31:53] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 17:39:03,929 - INFO - 127.0.0.1 - - [04/Mar/2025 17:39:03] "GET / HTTP/1.1" 200 -
+2025-03-04 17:39:03,980 - INFO - 127.0.0.1 - - [04/Mar/2025 17:39:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 17:39:03,988 - INFO - 127.0.0.1 - - [04/Mar/2025 17:39:03] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 17:39:03,989 - INFO - 127.0.0.1 - - [04/Mar/2025 17:39:03] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 17:39:04,001 - INFO - 127.0.0.1 - - [04/Mar/2025 17:39:04] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 17:39:04,068 - INFO - 127.0.0.1 - - [04/Mar/2025 17:39:04] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 17:39:24,905 - DEBUG - Received JSON data: {'purpose': 'buy', 'sqft_living': '4333', 'no_of_bedrooms': '4', 'no_of_bathrooms': '2', 'sqft_lot': '7688', 'no_of_floors': '3', 'house_age': '10', 'zipcode': '98765'}
+2025-03-04 17:39:24,905 - DEBUG - Parsed input data: sqft_living=4333.0, no_of_bedrooms=4, no_of_bathrooms=2.0, sqft_lot=7688.0, no_of_floors=3, house_age=10, zipcode=98765, purpose=buy
+2025-03-04 17:39:24,906 - DEBUG - Features prepared for prediction: {'sqft_living': 4333.0, 'no_of_bedrooms': 4, 'no_of_bathrooms': 2.0, 'sqft_lot': 7688.0, 'no_of_floors': 3, 'house_age': 10, 'zipcode': '98765'}
+2025-03-04 17:39:25,152 - INFO - User query inserted successfully: (4333.0, 4, 2.0, 7688.0, 3, 10, '98765', 'buy', np.float64(757740.6615190982))
+2025-03-04 17:39:25,153 - DEBUG - Predicted price: 757740.6615190982, Confidence interval: (np.float64(737740.6615190982), np.float64(777740.6615190982))
+2025-03-04 17:39:25,153 - DEBUG - Realtor.com URL: https://www.realtor.com/realestateandhomes-search/98765/price-707740.6615190982-807740.6615190982
+2025-03-04 17:39:25,156 - DEBUG - Recommendations: []
+2025-03-04 17:39:25,158 - WARNING - Duplicate entry prevented: (4333.0, 4, 2.0, 7688.0, 3, 10, '98765', 'buy', np.float64(757740.6615190982))
+2025-03-04 17:39:25,158 - DEBUG - Prediction stored in the database
+2025-03-04 17:39:25,158 - INFO - 127.0.0.1 - - [04/Mar/2025 17:39:25] "POST / HTTP/1.1" 200 -
+2025-03-04 17:40:05,002 - DEBUG - Received JSON data: {'purpose': 'sell', 'sqft_living': '900', 'no_of_bedrooms': '1', 'no_of_bathrooms': '1', 'sqft_lot': '1300', 'no_of_floors': '0', 'house_age': '29', 'zipcode': '98007'}
+2025-03-04 17:40:05,003 - DEBUG - Parsed input data: sqft_living=900.0, no_of_bedrooms=1, no_of_bathrooms=1.0, sqft_lot=1300.0, no_of_floors=0, house_age=29, zipcode=98007, purpose=sell
+2025-03-04 17:40:05,003 - DEBUG - Features prepared for prediction: {'sqft_living': 900.0, 'no_of_bedrooms': 1, 'no_of_bathrooms': 1.0, 'sqft_lot': 1300.0, 'no_of_floors': 0, 'house_age': 29, 'zipcode': '98007'}
+2025-03-04 17:40:05,247 - INFO - User query inserted successfully: (900.0, 1, 1.0, 1300.0, 0, 29, '98007', 'sell', np.float64(275667.3007690104))
+2025-03-04 17:40:05,248 - DEBUG - Predicted price: 275667.3007690104, Confidence interval: (np.float64(255667.30076901038), np.float64(295667.3007690104))
+2025-03-04 17:40:05,248 - DEBUG - Realtor.com URL: https://www.realtor.com/realestateandhomes-search/98007/price-225667.30076901038-325667.3007690104
+2025-03-04 17:40:05,252 - DEBUG - Recommendations: ['Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.']
+2025-03-04 17:40:05,253 - WARNING - Duplicate entry prevented: (900.0, 1, 1.0, 1300.0, 0, 29, '98007', 'sell', np.float64(275667.3007690104))
+2025-03-04 17:40:05,254 - DEBUG - Prediction stored in the database
+2025-03-04 17:40:05,254 - INFO - 127.0.0.1 - - [04/Mar/2025 17:40:05] "POST / HTTP/1.1" 200 -
+2025-03-04 17:42:28,258 - DEBUG - Received JSON data: {'purpose': 'sell', 'sqft_living': '900', 'no_of_bedrooms': '1', 'no_of_bathrooms': '1', 'sqft_lot': '1300', 'no_of_floors': '0', 'house_age': '29', 'zipcode': '98007'}
+2025-03-04 17:42:28,258 - DEBUG - Parsed input data: sqft_living=900.0, no_of_bedrooms=1, no_of_bathrooms=1.0, sqft_lot=1300.0, no_of_floors=0, house_age=29, zipcode=98007, purpose=sell
+2025-03-04 17:42:28,258 - DEBUG - Features prepared for prediction: {'sqft_living': 900.0, 'no_of_bedrooms': 1, 'no_of_bathrooms': 1.0, 'sqft_lot': 1300.0, 'no_of_floors': 0, 'house_age': 29, 'zipcode': '98007'}
+2025-03-04 17:42:28,550 - INFO - User query inserted successfully: (900.0, 1, 1.0, 1300.0, 0, 29, '98007', 'sell', np.float64(275667.3007690104))
+2025-03-04 17:42:28,551 - DEBUG - Predicted price: 275667.3007690104, Confidence interval: (np.float64(255667.30076901038), np.float64(295667.3007690104))
+2025-03-04 17:42:28,551 - DEBUG - Realtor.com URL: https://www.realtor.com/realestateandhomes-search/98007/price-225667.30076901038-325667.3007690104
+2025-03-04 17:42:28,557 - DEBUG - Recommendations: ['Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.', 'Adding another bedroom can increase value by 15%.']
+2025-03-04 17:42:28,559 - WARNING - Duplicate entry prevented: (900.0, 1, 1.0, 1300.0, 0, 29, '98007', 'sell', np.float64(275667.3007690104))
+2025-03-04 17:42:28,559 - DEBUG - Prediction stored in the database
+2025-03-04 17:42:28,560 - INFO - 127.0.0.1 - - [04/Mar/2025 17:42:28] "POST / HTTP/1.1" 200 -
+2025-03-04 17:49:10,454 - INFO - 127.0.0.1 - - [04/Mar/2025 17:49:10] "GET / HTTP/1.1" 200 -
+2025-03-04 17:49:10,491 - INFO - 127.0.0.1 - - [04/Mar/2025 17:49:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 17:49:10,495 - INFO - 127.0.0.1 - - [04/Mar/2025 17:49:10] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 17:49:10,506 - INFO - 127.0.0.1 - - [04/Mar/2025 17:49:10] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 17:49:10,519 - INFO - 127.0.0.1 - - [04/Mar/2025 17:49:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 17:49:10,601 - INFO - 127.0.0.1 - - [04/Mar/2025 17:49:10] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 17:49:12,947 - DEBUG - Fetched 21 predictions for admin dashboard
+2025-03-04 17:49:13,030 - INFO - 127.0.0.1 - - [04/Mar/2025 17:49:13] "GET /admin HTTP/1.1" 200 -
+2025-03-04 17:49:13,081 - INFO - 127.0.0.1 - - [04/Mar/2025 17:49:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 17:49:13,085 - INFO - 127.0.0.1 - - [04/Mar/2025 17:49:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 17:49:17,258 - DEBUG - Fetched 21 predictions for admin dashboard
+2025-03-04 17:49:17,261 - INFO - 127.0.0.1 - - [04/Mar/2025 17:49:17] "GET /admin HTTP/1.1" 200 -
+2025-03-04 17:49:17,316 - INFO - 127.0.0.1 - - [04/Mar/2025 17:49:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 17:49:17,319 - INFO - 127.0.0.1 - - [04/Mar/2025 17:49:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 17:49:17,381 - INFO - 127.0.0.1 - - [04/Mar/2025 17:49:17] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 17:49:18,228 - DEBUG - Fetched 21 predictions for admin dashboard
+2025-03-04 17:49:18,230 - INFO - 127.0.0.1 - - [04/Mar/2025 17:49:18] "GET /admin HTTP/1.1" 200 -
+2025-03-04 17:49:18,264 - INFO - 127.0.0.1 - - [04/Mar/2025 17:49:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 17:49:18,268 - INFO - 127.0.0.1 - - [04/Mar/2025 17:49:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 17:49:18,337 - INFO - 127.0.0.1 - - [04/Mar/2025 17:49:18] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 17:54:34,428 - DEBUG - Received JSON data: {'purpose': 'buy', 'sqft_living': '800', 'no_of_bedrooms': '1', 'no_of_bathrooms': '1.5', 'sqft_lot': '1000', 'no_of_floors': '0', 'house_age': '80', 'zipcode': '98095'}
+2025-03-04 17:54:34,428 - DEBUG - Parsed input data: sqft_living=800.0, no_of_bedrooms=1, no_of_bathrooms=1.5, sqft_lot=1000.0, no_of_floors=0, house_age=80, zipcode=98095, purpose=buy
+2025-03-04 17:54:34,428 - DEBUG - Features prepared for prediction: {'sqft_living': 800.0, 'no_of_bedrooms': 1, 'no_of_bathrooms': 1.5, 'sqft_lot': 1000.0, 'no_of_floors': 0, 'house_age': 80, 'zipcode': '98095'}
+2025-03-04 17:54:34,685 - INFO - User query inserted successfully: (800.0, 1, 1.5, 1000.0, 0, 80, '98095', 'buy', np.float64(287915.2125029692))
+2025-03-04 17:54:34,685 - DEBUG - Predicted price: 287915.2125029692, Confidence interval: (np.float64(267915.2125029692), np.float64(307915.2125029692))
+2025-03-04 17:54:34,685 - DEBUG - Realtor.com URL: https://www.realtor.com/realestateandhomes-search/98095/price-237915.2125029692-337915.2125029692
+2025-03-04 17:54:34,689 - DEBUG - Recommendations: ['Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.', 'Consider a home with at least 1200 sqft for better resale value.']
+2025-03-04 17:54:34,691 - WARNING - Duplicate entry prevented: (800.0, 1, 1.5, 1000.0, 0, 80, '98095', 'buy', np.float64(287915.2125029692))
+2025-03-04 17:54:34,691 - DEBUG - Prediction stored in the database
+2025-03-04 17:54:34,692 - INFO - 127.0.0.1 - - [04/Mar/2025 17:54:34] "POST / HTTP/1.1" 200 -
+2025-03-04 17:54:44,651 - DEBUG - Fetched 22 predictions for admin dashboard
+2025-03-04 17:54:44,655 - INFO - 127.0.0.1 - - [04/Mar/2025 17:54:44] "GET /admin HTTP/1.1" 200 -
+2025-03-04 17:54:44,723 - INFO - 127.0.0.1 - - [04/Mar/2025 17:54:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 17:54:44,727 - INFO - 127.0.0.1 - - [04/Mar/2025 17:54:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 18:09:04,911 - DEBUG - Fetched 22 predictions for admin dashboard
+2025-03-04 18:09:04,913 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:04] "GET /admin HTTP/1.1" 200 -
+2025-03-04 18:09:04,955 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 18:09:04,958 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:04] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 18:09:05,013 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:05] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 18:09:06,405 - DEBUG - Fetched 22 predictions for admin dashboard
+2025-03-04 18:09:06,407 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:06] "GET /admin HTTP/1.1" 200 -
+2025-03-04 18:09:06,450 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 18:09:06,462 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 18:09:06,513 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:06] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 18:09:06,916 - DEBUG - Fetched 22 predictions for admin dashboard
+2025-03-04 18:09:06,919 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:06] "GET /admin HTTP/1.1" 200 -
+2025-03-04 18:09:06,970 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 18:09:06,972 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 18:09:07,041 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:07] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 18:09:07,117 - DEBUG - Fetched 22 predictions for admin dashboard
+2025-03-04 18:09:07,120 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:07] "GET /admin HTTP/1.1" 200 -
+2025-03-04 18:09:07,170 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 18:09:07,171 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 18:09:07,234 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:07] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 18:09:07,295 - DEBUG - Fetched 22 predictions for admin dashboard
+2025-03-04 18:09:07,298 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:07] "GET /admin HTTP/1.1" 200 -
+2025-03-04 18:09:07,349 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 18:09:07,352 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 18:09:07,399 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:07] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 18:09:07,486 - DEBUG - Fetched 22 predictions for admin dashboard
+2025-03-04 18:09:07,488 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:07] "GET /admin HTTP/1.1" 200 -
+2025-03-04 18:09:07,516 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 18:09:07,520 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 18:09:07,582 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:07] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 18:09:07,638 - DEBUG - Fetched 22 predictions for admin dashboard
+2025-03-04 18:09:07,639 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:07] "GET /admin HTTP/1.1" 200 -
+2025-03-04 18:09:07,679 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 18:09:07,692 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 18:09:07,753 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:07] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 18:09:07,795 - DEBUG - Fetched 22 predictions for admin dashboard
+2025-03-04 18:09:07,798 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:07] "GET /admin HTTP/1.1" 200 -
+2025-03-04 18:09:07,844 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 18:09:07,850 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 18:09:07,894 - INFO - 127.0.0.1 - - [04/Mar/2025 18:09:07] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 18:15:45,727 - DEBUG - Fetched 22 predictions for admin dashboard
+2025-03-04 18:15:45,729 - INFO - 127.0.0.1 - - [04/Mar/2025 18:15:45] "GET /admin HTTP/1.1" 200 -
+2025-03-04 18:15:45,765 - INFO - 127.0.0.1 - - [04/Mar/2025 18:15:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 18:15:45,767 - INFO - 127.0.0.1 - - [04/Mar/2025 18:15:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 18:15:45,835 - INFO - 127.0.0.1 - - [04/Mar/2025 18:15:45] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 18:15:46,319 - DEBUG - Fetched 22 predictions for admin dashboard
+2025-03-04 18:15:46,321 - INFO - 127.0.0.1 - - [04/Mar/2025 18:15:46] "GET /admin HTTP/1.1" 200 -
+2025-03-04 18:15:46,356 - INFO - 127.0.0.1 - - [04/Mar/2025 18:15:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 18:15:46,357 - INFO - 127.0.0.1 - - [04/Mar/2025 18:15:46] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 18:15:46,412 - INFO - 127.0.0.1 - - [04/Mar/2025 18:15:46] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 18:15:46,555 - DEBUG - Fetched 22 predictions for admin dashboard
+2025-03-04 18:15:46,557 - INFO - 127.0.0.1 - - [04/Mar/2025 18:15:46] "GET /admin HTTP/1.1" 200 -
+2025-03-04 18:15:46,601 - INFO - 127.0.0.1 - - [04/Mar/2025 18:15:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 18:15:46,603 - INFO - 127.0.0.1 - - [04/Mar/2025 18:15:46] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 18:15:46,665 - INFO - 127.0.0.1 - - [04/Mar/2025 18:15:46] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 18:16:59,918 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\app\\database.py', reloading
+2025-03-04 18:17:00,414 - INFO -  * Restarting with stat
+2025-03-04 18:17:03,905 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 18:17:03,916 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 18:17:03,926 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 18:17:04,369 - WARNING -  * Debugger is active!
+2025-03-04 18:17:04,376 - INFO -  * Debugger PIN: 873-155-825
+2025-03-04 18:17:04,670 - DEBUG - Fetched 22 predictions for admin dashboard
+2025-03-04 18:17:04,693 - INFO - 127.0.0.1 - - [04/Mar/2025 18:17:04] "GET /admin HTTP/1.1" 200 -
+2025-03-04 18:17:04,842 - INFO - 127.0.0.1 - - [04/Mar/2025 18:17:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 18:17:04,846 - INFO - 127.0.0.1 - - [04/Mar/2025 18:17:04] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 18:17:04,891 - INFO - 127.0.0.1 - - [04/Mar/2025 18:17:04] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 18:20:23,767 - INFO - 127.0.0.1 - - [04/Mar/2025 18:20:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 18:20:31,195 - DEBUG - Fetched 22 predictions for admin dashboard
+2025-03-04 18:20:31,198 - INFO - 127.0.0.1 - - [04/Mar/2025 18:20:31] "GET /admin HTTP/1.1" 200 -
+2025-03-04 18:20:31,252 - INFO - 127.0.0.1 - - [04/Mar/2025 18:20:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 18:20:31,274 - INFO - 127.0.0.1 - - [04/Mar/2025 18:20:31] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 18:20:31,402 - INFO - 127.0.0.1 - - [04/Mar/2025 18:20:31] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 18:21:37,496 - INFO - 127.0.0.1 - - [04/Mar/2025 18:21:37] "GET / HTTP/1.1" 200 -
+2025-03-04 18:21:37,581 - INFO - 127.0.0.1 - - [04/Mar/2025 18:21:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 18:21:37,598 - INFO - 127.0.0.1 - - [04/Mar/2025 18:21:37] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 18:21:37,600 - INFO - 127.0.0.1 - - [04/Mar/2025 18:21:37] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 18:21:37,607 - INFO - 127.0.0.1 - - [04/Mar/2025 18:21:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 18:21:46,895 - DEBUG - Fetched 22 predictions for admin dashboard
+2025-03-04 18:21:46,899 - INFO - 127.0.0.1 - - [04/Mar/2025 18:21:46] "GET /admin HTTP/1.1" 200 -
+2025-03-04 18:21:46,963 - INFO - 127.0.0.1 - - [04/Mar/2025 18:21:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 18:21:46,965 - INFO - 127.0.0.1 - - [04/Mar/2025 18:21:46] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 18:22:52,667 - DEBUG - Fetched 22 predictions for admin dashboard
+2025-03-04 18:22:52,731 - INFO - 127.0.0.1 - - [04/Mar/2025 18:22:52] "GET /admin HTTP/1.1" 200 -
+2025-03-04 18:22:52,763 - INFO - 127.0.0.1 - - [04/Mar/2025 18:22:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 18:22:52,765 - INFO - 127.0.0.1 - - [04/Mar/2025 18:22:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 18:22:52,834 - INFO - 127.0.0.1 - - [04/Mar/2025 18:22:52] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 18:22:54,043 - DEBUG - Fetched 22 predictions for admin dashboard
+2025-03-04 18:22:54,049 - INFO - 127.0.0.1 - - [04/Mar/2025 18:22:54] "GET /admin HTTP/1.1" 200 -
+2025-03-04 18:22:54,099 - INFO - 127.0.0.1 - - [04/Mar/2025 18:22:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 18:22:54,101 - INFO - 127.0.0.1 - - [04/Mar/2025 18:22:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 18:22:54,162 - INFO - 127.0.0.1 - - [04/Mar/2025 18:22:54] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 18:31:14,389 - DEBUG - Fetched 22 predictions for admin dashboard
+2025-03-04 18:31:14,450 - INFO - 127.0.0.1 - - [04/Mar/2025 18:31:14] "GET /admin HTTP/1.1" 200 -
+2025-03-04 18:31:14,484 - INFO - 127.0.0.1 - - [04/Mar/2025 18:31:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 18:31:14,491 - INFO - 127.0.0.1 - - [04/Mar/2025 18:31:14] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 18:31:14,566 - INFO - 127.0.0.1 - - [04/Mar/2025 18:31:14] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 18:32:21,359 - DEBUG - Received JSON data: {'purpose': 'buy', 'sqft_living': '5600', 'no_of_bedrooms': '3', 'no_of_bathrooms': '2', 'sqft_lot': '6500', 'no_of_floors': '2', 'house_age': '29', 'zipcode': '98234'}
+2025-03-04 18:32:21,360 - DEBUG - Parsed input data: sqft_living=5600.0, no_of_bedrooms=3, no_of_bathrooms=2.0, sqft_lot=6500.0, no_of_floors=2, house_age=29, zipcode=98234, purpose=buy
+2025-03-04 18:32:21,360 - DEBUG - Features prepared for prediction: {'sqft_living': 5600.0, 'no_of_bedrooms': 3, 'no_of_bathrooms': 2.0, 'sqft_lot': 6500.0, 'no_of_floors': 2, 'house_age': 29, 'zipcode': '98234'}
+2025-03-04 18:32:21,761 - INFO - User query inserted successfully: (5600.0, 3, 2.0, 6500.0, 2, 29, '98234', 'buy', np.float64(713454.5997234652))
+2025-03-04 18:32:21,761 - DEBUG - Predicted price: 713454.5997234652, Confidence interval: (np.float64(693454.5997234652), np.float64(733454.5997234652))
+2025-03-04 18:32:21,762 - DEBUG - Realtor.com URL: https://www.realtor.com/realestateandhomes-search/98234/price-663454.5997234652-763454.5997234652
+2025-03-04 18:32:21,764 - DEBUG - Recommendations: []
+2025-03-04 18:32:21,765 - WARNING - Duplicate entry prevented: (5600.0, 3, 2.0, 6500.0, 2, 29, '98234', 'buy', np.float64(713454.5997234652))
+2025-03-04 18:32:21,765 - DEBUG - Prediction stored in the database
+2025-03-04 18:32:21,766 - INFO - 127.0.0.1 - - [04/Mar/2025 18:32:21] "POST / HTTP/1.1" 200 -
+2025-03-04 18:32:28,654 - DEBUG - Fetched 23 predictions for admin dashboard
+2025-03-04 18:32:28,657 - INFO - 127.0.0.1 - - [04/Mar/2025 18:32:28] "GET /admin HTTP/1.1" 200 -
+2025-03-04 18:32:28,718 - INFO - 127.0.0.1 - - [04/Mar/2025 18:32:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 18:32:28,720 - INFO - 127.0.0.1 - - [04/Mar/2025 18:32:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -

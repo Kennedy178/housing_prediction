@@ -185,39 +185,43 @@
         <button id="clearFilters" class="button clear-button">Clear Filters</button>
     </div>
 
-    <!-- Predictions Table -->
-    <table class="admin-table">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Sqft Living</th>
-                <th>Bedrooms</th>
-                <th>Bathrooms</th>
-                <th>Lot Size</th>
-                <th>Floors</th>
-                <th>House Age</th>
-                <th>Zipcode</th>
-                <th>Predicted Price</th>
-                <th>Date</th>
-            </tr>
-        </thead>
-        <tbody id="predictionsTable">
-            {% for prediction in predictions %}
-            <tr>
-                <td>{{ loop.index }}</td>  
-                <td>{{ prediction[1] }}</td>
-                <td>{{ prediction[2] }}</td>
-                <td>{{ prediction[3] }}</td>
-                <td>{{ prediction[4] }}</td>
-                <td>{{ prediction[5] }}</td>
-                <td>{{ prediction[6] }}</td>
-                <td>{{ prediction[7] }}</td>
-                <td>${{ prediction[8] | int | string }}</td>
-                <td>{{ prediction[9] }}</td> 
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+  <!-- Predictions Table -->
+<table class="admin-table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Sqft Living</th>
+            <th>Bedrooms</th>
+            <th>Bathrooms</th>
+            <th>Lot Size</th>
+            <th>Floors</th>
+            <th>House Age</th>
+            <th>Zipcode</th>
+            <th>Intention</th> <!-- Corrected: Purpose Column -->
+            <th>Predicted Price</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody id="predictionsTable">
+        {% for prediction in predictions %}
+        <tr>
+            <td>{{ loop.index }}</td>  
+            <td>{{ prediction[1] }}</td> <!-- Sqft Living -->
+            <td>{{ prediction[2] }}</td> <!-- Bedrooms -->
+            <td>{{ prediction[3] }}</td> <!-- Bathrooms -->
+            <td>{{ prediction[4] }}</td> <!-- Lot Size -->
+            <td>{{ prediction[5] }}</td> <!-- Floors -->
+            <td>{{ prediction[6] }}</td> <!-- House Age -->
+            <td>{{ prediction[7] }}</td> <!-- Zipcode -->
+            <td>{{ prediction[8] }}</td> <!-- Purpose (Buy/Sell) -->
+            <td>${{ prediction[9] | int | string }}</td> <!-- Predicted Price -->
+            <td>{{ prediction[10] }}</td> <!-- Date -->
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
 
     <!-- Show More/Less Button -->
     <button id="toggleEntries" class="toggle-button">Show All</button>
