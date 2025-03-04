@@ -72,17 +72,28 @@ def create_database():
         logging.error("Error creating database: %s", e)
 
 def insert_recommendation(purpose, feature, condition, suggestion):
-    """Inserts a new recommendation rule into the database."""
+    """Inserts a new recommendation rule into the database if it does not already exist."""
     try:
         conn = sqlite3.connect(DB_PATH)
         cursor = conn.cursor()
+
+        # Check if the exact recommendation already exists
         cursor.execute("""
-            INSERT INTO recommendations (purpose, feature, condition, suggestion)
-            VALUES (?, ?, ?, ?)
+            SELECT COUNT(*) FROM recommendations
+            WHERE purpose = ? AND feature = ? AND condition = ? AND suggestion = ?
         """, (purpose, feature, condition, suggestion))
-        conn.commit()
+
+        if cursor.fetchone()[0] == 0:  # Only insert if it doesn't exist
+            cursor.execute("""
+                INSERT INTO recommendations (purpose, feature, condition, suggestion)
+                VALUES (?, ?, ?, ?)
+            """, (purpose, feature, condition, suggestion))
+            conn.commit()
+            logging.info("Inserted recommendation: %s", suggestion)
+        else:
+            logging.info("Duplicate recommendation found. Skipping insert: %s", suggestion)
+
         conn.close()
-        logging.info("Inserted recommendation: %s", suggestion)
     except Exception as e:
         logging.error("Error inserting recommendation: %s", e)
 
@@ -187,13 +198,4 @@ def get_all_queries():
 if __name__ == "__main__":
     create_database()
 
-    # Test rules insertion (only runs when executed directly)
-recommendations = [
-    ("buy", "sqft_living", "< 1000", "Consider a home with at least 1200 sqft for better resale value."),
-    ("buy", "no_of_bathrooms", "= 1", "Consider a home with at least 2 bathrooms for greater resale value."),
-    ("sell", "no_of_bedrooms", "< 2", "Adding another bedroom can increase value by 15%.")
-]
 
-# Loop through the list and insert each recommendation
-for rec in recommendations:
-    insert_recommendation(*rec)  # Unpacking tuple values
