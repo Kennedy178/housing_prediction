@@ -74,3 +74,1111 @@
 2025-03-03 13:21:55,282 - INFO -  * Restarting with stat
 2025-03-03 13:21:59,928 - WARNING -  * Debugger is active!
 2025-03-03 13:21:59,937 - INFO -  * Debugger PIN: 404-395-077
+2025-03-03 13:28:08,541 - INFO - 127.0.0.1 - - [03/Mar/2025 13:28:08] "GET /admin HTTP/1.1" 200 -
+2025-03-03 13:28:08,717 - INFO - 127.0.0.1 - - [03/Mar/2025 13:28:08] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-03 13:28:08,720 - INFO - 127.0.0.1 - - [03/Mar/2025 13:28:08] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-03 13:28:08,777 - INFO - 127.0.0.1 - - [03/Mar/2025 13:28:08] "GET /static/images/favicon32.png HTTP/1.1" 200 -
+2025-03-03 13:28:15,352 - INFO - 127.0.0.1 - - [03/Mar/2025 13:28:15] "GET /admin HTTP/1.1" 200 -
+2025-03-03 13:28:15,428 - INFO - 127.0.0.1 - - [03/Mar/2025 13:28:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 13:28:15,432 - INFO - 127.0.0.1 - - [03/Mar/2025 13:28:15] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 13:28:58,307 - INFO - User query inserted successfully: (800.0, 1, 1.0, 1200.0, 0, 20, '98135', np.float64(277816.76127517194))
+2025-03-03 13:28:58,310 - WARNING - Duplicate entry prevented: (800.0, 1, 1.0, 1200.0, 0, 20, '98135', np.float64(277816.76127517194))
+2025-03-03 13:28:58,311 - INFO - 127.0.0.1 - - [03/Mar/2025 13:28:58] "POST / HTTP/1.1" 200 -
+2025-03-03 13:29:01,606 - INFO - 127.0.0.1 - - [03/Mar/2025 13:29:01] "GET /admin HTTP/1.1" 200 -
+2025-03-03 13:29:01,673 - INFO - 127.0.0.1 - - [03/Mar/2025 13:29:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 13:29:01,674 - INFO - 127.0.0.1 - - [03/Mar/2025 13:29:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 13:29:47,713 - INFO - User query inserted successfully: (1900.0, 1, 1.0, 2200.0, 0, 20, '98007', np.float64(374437.2732929893))
+2025-03-03 13:29:47,717 - WARNING - Duplicate entry prevented: (1900.0, 1, 1.0, 2200.0, 0, 20, '98007', np.float64(374437.2732929893))
+2025-03-03 13:29:47,718 - INFO - 127.0.0.1 - - [03/Mar/2025 13:29:47] "POST / HTTP/1.1" 200 -
+2025-03-03 15:35:05,775 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-03 15:35:05,776 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 15:35:05,779 - INFO -  * Restarting with stat
+2025-03-03 15:35:10,659 - WARNING -  * Debugger is active!
+2025-03-03 15:35:10,669 - INFO -  * Debugger PIN: 404-395-077
+2025-03-03 15:35:13,009 - INFO - 127.0.0.1 - - [03/Mar/2025 15:35:13] "GET / HTTP/1.1" 200 -
+2025-03-03 15:35:13,354 - INFO - 127.0.0.1 - - [03/Mar/2025 15:35:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:35:13,357 - INFO - 127.0.0.1 - - [03/Mar/2025 15:35:13] "GET /static/images/residual.png HTTP/1.1" 200 -
+2025-03-03 15:35:13,367 - INFO - 127.0.0.1 - - [03/Mar/2025 15:35:13] "GET /static/images/feature_importance.png HTTP/1.1" 200 -
+2025-03-03 15:35:13,368 - INFO - 127.0.0.1 - - [03/Mar/2025 15:35:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 15:35:13,706 - INFO - 127.0.0.1 - - [03/Mar/2025 15:35:13] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 15:35:44,834 - INFO - User query inserted successfully: (7800.0, 3, 6.0, 10000.0, 3, 25, '98006', np.float64(831911.711114523))
+2025-03-03 15:35:44,838 - WARNING - Duplicate entry prevented: (7800.0, 3, 6.0, 10000.0, 3, 25, '98006', np.float64(831911.711114523))
+2025-03-03 15:35:44,839 - INFO - 127.0.0.1 - - [03/Mar/2025 15:35:44] "POST / HTTP/1.1" 200 -
+2025-03-03 15:36:27,000 - INFO - 127.0.0.1 - - [03/Mar/2025 15:36:27] "GET /admin HTTP/1.1" 200 -
+2025-03-03 15:36:27,055 - INFO - 127.0.0.1 - - [03/Mar/2025 15:36:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 15:36:27,060 - INFO - 127.0.0.1 - - [03/Mar/2025 15:36:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 16:00:39,572 - INFO - 127.0.0.1 - - [03/Mar/2025 16:00:39] "GET / HTTP/1.1" 200 -
+2025-03-03 16:00:39,624 - INFO - 127.0.0.1 - - [03/Mar/2025 16:00:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 16:00:39,631 - INFO - 127.0.0.1 - - [03/Mar/2025 16:00:39] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 16:00:39,634 - INFO - 127.0.0.1 - - [03/Mar/2025 16:00:39] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 16:00:39,655 - INFO - 127.0.0.1 - - [03/Mar/2025 16:00:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 16:00:39,751 - INFO - 127.0.0.1 - - [03/Mar/2025 16:00:39] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 16:16:49,003 - INFO - 127.0.0.1 - - [03/Mar/2025 16:16:49] "GET /admin HTTP/1.1" 200 -
+2025-03-03 16:16:49,058 - INFO - 127.0.0.1 - - [03/Mar/2025 16:16:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 16:16:49,060 - INFO - 127.0.0.1 - - [03/Mar/2025 16:16:49] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 16:18:13,105 - ERROR - Error retrieving queries: no such table: queries
+2025-03-03 16:18:13,107 - INFO - 127.0.0.1 - - [03/Mar/2025 16:18:13] "GET /admin HTTP/1.1" 200 -
+2025-03-03 16:18:13,157 - INFO - 127.0.0.1 - - [03/Mar/2025 16:18:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 16:18:13,163 - INFO - 127.0.0.1 - - [03/Mar/2025 16:18:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 16:18:13,209 - INFO - 127.0.0.1 - - [03/Mar/2025 16:18:13] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 16:23:00,163 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\app\\database.py', reloading
+2025-03-03 16:23:00,587 - INFO -  * Restarting with stat
+2025-03-03 16:23:05,528 - WARNING -  * Debugger is active!
+2025-03-03 16:23:05,536 - INFO -  * Debugger PIN: 404-395-077
+2025-03-03 16:23:06,336 - INFO - Database and tables created successfully at c:\Users\AMON\Desktop\C200\app\../data\housing.db
+2025-03-03 16:32:20,367 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\app\\database.py', reloading
+2025-03-03 16:32:20,707 - INFO -  * Restarting with stat
+2025-03-03 16:32:25,298 - WARNING -  * Debugger is active!
+2025-03-03 16:32:25,307 - INFO -  * Debugger PIN: 404-395-077
+2025-03-03 16:32:44,089 - INFO - Database and tables created successfully at c:\Users\AMON\Desktop\C200\app\../data\housing.db
+2025-03-03 17:10:13,322 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\app\\database.py', reloading
+2025-03-03 17:10:13,644 - INFO -  * Restarting with stat
+2025-03-03 17:10:17,225 - INFO - Database and tables created successfully at c:\Users\AMON\Desktop\C200\app\../data\housing.db
+2025-03-03 17:10:18,138 - WARNING -  * Debugger is active!
+2025-03-03 17:10:18,149 - INFO -  * Debugger PIN: 404-395-077
+2025-03-03 17:17:06,917 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\app\\database.py', reloading
+2025-03-03 17:17:07,310 - INFO -  * Restarting with stat
+2025-03-03 17:17:11,570 - WARNING -  * Debugger is active!
+2025-03-03 17:17:11,577 - INFO -  * Debugger PIN: 404-395-077
+2025-03-03 17:17:23,942 - INFO - Database and tables created successfully at c:\Users\AMON\Desktop\C200\app\../data\housing.db
+2025-03-03 17:17:23,956 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-03 17:17:23,969 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-03 17:17:23,981 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-03 17:26:01,013 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\app\\database.py', reloading
+2025-03-03 17:26:01,321 - INFO -  * Restarting with stat
+2025-03-03 17:26:05,211 - WARNING -  * Debugger is active!
+2025-03-03 17:26:05,218 - INFO -  * Debugger PIN: 404-395-077
+2025-03-03 17:26:13,266 - ERROR - Error creating database: near "feature": syntax error
+2025-03-03 17:26:13,269 - ERROR - Error inserting recommendation: no such table: recommendations
+2025-03-03 17:26:13,271 - ERROR - Error inserting recommendation: no such table: recommendations
+2025-03-03 17:26:13,272 - ERROR - Error inserting recommendation: no such table: recommendations
+2025-03-03 17:31:04,295 - ERROR - Error creating database: near "feature": syntax error
+2025-03-03 17:31:04,296 - ERROR - Error inserting recommendation: no such table: recommendations
+2025-03-03 17:31:04,297 - ERROR - Error inserting recommendation: no such table: recommendations
+2025-03-03 17:31:04,298 - ERROR - Error inserting recommendation: no such table: recommendations
+2025-03-03 17:37:25,286 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\app\\database.py', reloading
+2025-03-03 17:37:25,616 - INFO -  * Restarting with stat
+2025-03-03 17:37:26,467 - INFO - Database and tables created successfully at c:\Users\AMON\Desktop\C200\app\../data\housing.db
+2025-03-03 17:37:26,476 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-03 17:37:26,485 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-03 17:37:26,494 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-03 17:37:30,160 - WARNING -  * Debugger is active!
+2025-03-03 17:37:30,167 - INFO -  * Debugger PIN: 404-395-077
+2025-03-03 17:46:32,449 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\app\\database.py', reloading
+2025-03-03 17:46:32,771 - INFO -  * Restarting with stat
+2025-03-03 17:46:37,462 - WARNING -  * Debugger is active!
+2025-03-03 17:46:37,470 - INFO -  * Debugger PIN: 404-395-077
+2025-03-03 18:14:26,687 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\app\\database.py', reloading
+2025-03-03 18:14:27,142 - INFO -  * Restarting with stat
+2025-03-03 18:14:30,656 - INFO - Database and tables created successfully at c:\Users\AMON\Desktop\C200\app\../data\housing.db
+2025-03-03 18:14:30,666 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-03 18:14:30,676 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-03 18:14:30,688 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-03 18:14:31,780 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-03 18:14:31,796 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-03 18:14:31,810 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-03 18:14:32,576 - WARNING -  * Debugger is active!
+2025-03-03 18:14:32,585 - INFO -  * Debugger PIN: 404-395-077
+2025-03-03 18:15:08,924 - INFO - Database and tables created successfully at c:\Users\AMON\Desktop\C200\app\../data\housing.db
+2025-03-03 18:15:08,935 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-03 18:15:08,945 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-03 18:15:08,956 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-03 18:16:25,304 - INFO - Database and tables created successfully at c:\Users\AMON\Desktop\C200\app\../data\housing.db
+2025-03-03 18:16:25,317 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-03 18:16:25,332 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-03 18:16:25,346 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-03 20:47:22,031 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\app\\routes.py', reloading
+2025-03-03 20:47:22,814 - INFO -  * Restarting with stat
+2025-03-03 20:47:40,666 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-03 20:47:40,679 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-03 20:47:40,690 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-03 20:47:42,815 - WARNING -  * Debugger is active!
+2025-03-03 20:47:42,823 - INFO -  * Debugger PIN: 404-395-077
+2025-03-03 21:12:36,369 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\model\\predict.py', reloading
+2025-03-03 21:12:36,696 - INFO -  * Restarting with stat
+2025-03-03 21:12:40,132 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-03 21:12:40,141 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-03 21:12:40,154 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-03 21:12:40,583 - WARNING -  * Debugger is active!
+2025-03-03 21:12:40,591 - INFO -  * Debugger PIN: 404-395-077
+2025-03-03 21:28:41,171 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:41] "GET / HTTP/1.1" 200 -
+2025-03-03 21:28:41,391 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:28:41,406 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:41] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:41,407 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:41] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:41,477 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:41] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-03 21:28:41,510 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:41] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:42,438 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:42] "GET / HTTP/1.1" 200 -
+2025-03-03 21:28:42,478 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:28:42,486 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:42] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:42,488 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:42] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:42,490 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 21:28:42,537 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:42] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:43,320 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:43] "GET / HTTP/1.1" 200 -
+2025-03-03 21:28:43,353 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:28:43,357 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:43] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:43,359 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:43] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:43,371 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 21:28:43,401 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:43] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:43,572 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:43] "GET / HTTP/1.1" 200 -
+2025-03-03 21:28:43,615 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:28:43,633 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:43] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:43,635 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:43] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:43,644 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 21:28:43,687 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:43] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:43,758 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:43] "GET / HTTP/1.1" 200 -
+2025-03-03 21:28:43,843 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:43] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:43,843 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:28:43,848 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:43] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:43,856 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 21:28:43,908 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:43] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:43,966 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:43] "GET / HTTP/1.1" 200 -
+2025-03-03 21:28:44,016 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,022 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,025 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,039 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,082 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,142 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "GET / HTTP/1.1" 200 -
+2025-03-03 21:28:44,200 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,205 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,213 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,219 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,257 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,321 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "GET / HTTP/1.1" 200 -
+2025-03-03 21:28:44,394 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,399 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,405 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,408 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,457 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,522 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "GET / HTTP/1.1" 200 -
+2025-03-03 21:28:44,581 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,589 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,592 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,593 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,627 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,698 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "GET / HTTP/1.1" 200 -
+2025-03-03 21:28:44,736 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,752 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,753 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,755 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 21:28:44,816 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:44] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:45,549 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:45] "GET / HTTP/1.1" 200 -
+2025-03-03 21:28:45,592 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:28:45,595 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:45] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:45,596 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:45] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 21:28:45,609 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 21:28:45,651 - INFO - 127.0.0.1 - - [03/Mar/2025 21:28:45] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 21:29:21,410 - INFO - 127.0.0.1 - - [03/Mar/2025 21:29:21] "GET / HTTP/1.1" 200 -
+2025-03-03 21:29:21,464 - INFO - 127.0.0.1 - - [03/Mar/2025 21:29:21] "GET /static/images/residual.png HTTP/1.1" 200 -
+2025-03-03 21:29:21,566 - INFO - 127.0.0.1 - - [03/Mar/2025 21:29:21] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-03 21:29:21,568 - INFO - 127.0.0.1 - - [03/Mar/2025 21:29:21] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-03 21:29:21,569 - INFO - 127.0.0.1 - - [03/Mar/2025 21:29:21] "GET /static/images/feature_importance.png HTTP/1.1" 200 -
+2025-03-03 21:29:22,767 - INFO - 127.0.0.1 - - [03/Mar/2025 21:29:22] "GET /static/images/favicon32.png HTTP/1.1" 200 -
+2025-03-03 21:29:33,394 - INFO - 127.0.0.1 - - [03/Mar/2025 21:29:33] "GET / HTTP/1.1" 200 -
+2025-03-03 21:29:33,423 - INFO - 127.0.0.1 - - [03/Mar/2025 21:29:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:29:33,423 - INFO - 127.0.0.1 - - [03/Mar/2025 21:29:33] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 21:29:33,435 - INFO - 127.0.0.1 - - [03/Mar/2025 21:29:33] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 21:29:33,437 - INFO - 127.0.0.1 - - [03/Mar/2025 21:29:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 21:29:33,506 - INFO - 127.0.0.1 - - [03/Mar/2025 21:29:33] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 21:29:42,066 - INFO - 127.0.0.1 - - [03/Mar/2025 21:29:42] "GET / HTTP/1.1" 200 -
+2025-03-03 21:29:42,092 - INFO - 127.0.0.1 - - [03/Mar/2025 21:29:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:29:42,094 - INFO - 127.0.0.1 - - [03/Mar/2025 21:29:42] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 21:29:42,105 - INFO - 127.0.0.1 - - [03/Mar/2025 21:29:42] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 21:29:42,107 - INFO - 127.0.0.1 - - [03/Mar/2025 21:29:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 21:29:42,153 - INFO - 127.0.0.1 - - [03/Mar/2025 21:29:42] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 21:30:18,475 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-03 21:30:18,484 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-03 21:30:18,494 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-03 21:30:18,965 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-03 21:30:18,966 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 21:30:18,970 - INFO -  * Restarting with stat
+2025-03-03 21:30:21,648 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-03 21:30:21,658 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-03 21:30:21,667 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-03 21:30:22,082 - WARNING -  * Debugger is active!
+2025-03-03 21:30:22,088 - INFO -  * Debugger PIN: 404-395-077
+2025-03-03 21:30:38,728 - INFO - 127.0.0.1 - - [03/Mar/2025 21:30:38] "GET / HTTP/1.1" 200 -
+2025-03-03 21:30:38,995 - INFO - 127.0.0.1 - - [03/Mar/2025 21:30:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:30:39,008 - INFO - 127.0.0.1 - - [03/Mar/2025 21:30:39] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 21:30:39,015 - INFO - 127.0.0.1 - - [03/Mar/2025 21:30:39] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 21:30:39,032 - INFO - 127.0.0.1 - - [03/Mar/2025 21:30:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 21:31:14,609 - INFO - 127.0.0.1 - - [03/Mar/2025 21:31:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:33:32,550 - INFO - 127.0.0.1 - - [03/Mar/2025 21:33:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:38:11,917 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\app\\routes.py', reloading
+2025-03-03 21:38:12,347 - INFO -  * Restarting with stat
+2025-03-03 21:38:15,704 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-03 21:38:15,719 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-03 21:38:15,734 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-03 21:38:16,166 - WARNING -  * Debugger is active!
+2025-03-03 21:38:16,173 - INFO -  * Debugger PIN: 404-395-077
+2025-03-03 21:38:16,384 - INFO - 127.0.0.1 - - [03/Mar/2025 21:38:16] "GET / HTTP/1.1" 200 -
+2025-03-03 21:38:16,715 - INFO - 127.0.0.1 - - [03/Mar/2025 21:38:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:38:16,718 - INFO - 127.0.0.1 - - [03/Mar/2025 21:38:16] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 21:38:16,750 - INFO - 127.0.0.1 - - [03/Mar/2025 21:38:16] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 21:38:16,776 - INFO - 127.0.0.1 - - [03/Mar/2025 21:38:16] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 21:38:16,981 - INFO - 127.0.0.1 - - [03/Mar/2025 21:38:16] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 21:38:18,682 - INFO - 127.0.0.1 - - [03/Mar/2025 21:38:18] "GET / HTTP/1.1" 200 -
+2025-03-03 21:38:18,761 - INFO - 127.0.0.1 - - [03/Mar/2025 21:38:18] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 21:38:18,764 - INFO - 127.0.0.1 - - [03/Mar/2025 21:38:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:38:18,772 - INFO - 127.0.0.1 - - [03/Mar/2025 21:38:18] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 21:38:18,779 - INFO - 127.0.0.1 - - [03/Mar/2025 21:38:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 21:38:18,910 - INFO - 127.0.0.1 - - [03/Mar/2025 21:38:18] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 21:43:36,146 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-03 21:43:36,155 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-03 21:43:36,164 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-03 21:43:37,918 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-03 21:43:37,918 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 21:43:37,921 - INFO -  * Restarting with stat
+2025-03-03 21:43:40,342 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-03 21:43:40,351 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-03 21:43:40,360 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-03 21:43:40,749 - WARNING -  * Debugger is active!
+2025-03-03 21:43:40,756 - INFO -  * Debugger PIN: 221-402-637
+2025-03-03 21:43:53,193 - INFO - 127.0.0.1 - - [03/Mar/2025 21:43:53] "GET / HTTP/1.1" 200 -
+2025-03-03 21:43:53,403 - INFO - 127.0.0.1 - - [03/Mar/2025 21:43:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:43:53,408 - INFO - 127.0.0.1 - - [03/Mar/2025 21:43:53] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 21:43:53,411 - INFO - 127.0.0.1 - - [03/Mar/2025 21:43:53] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 21:43:53,468 - INFO - 127.0.0.1 - - [03/Mar/2025 21:43:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 21:43:53,534 - INFO - 127.0.0.1 - - [03/Mar/2025 21:43:53] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 21:44:19,464 - INFO - 127.0.0.1 - - [03/Mar/2025 21:44:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:46:03,359 - INFO - 127.0.0.1 - - [03/Mar/2025 21:46:03] "GET / HTTP/1.1" 200 -
+2025-03-03 21:46:03,425 - INFO - 127.0.0.1 - - [03/Mar/2025 21:46:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:46:03,430 - INFO - 127.0.0.1 - - [03/Mar/2025 21:46:03] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 21:46:03,440 - INFO - 127.0.0.1 - - [03/Mar/2025 21:46:03] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 21:46:03,502 - INFO - 127.0.0.1 - - [03/Mar/2025 21:46:03] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-03 21:46:03,546 - INFO - 127.0.0.1 - - [03/Mar/2025 21:46:03] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 21:46:31,818 - INFO - 127.0.0.1 - - [03/Mar/2025 21:46:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:52:29,869 - INFO - 127.0.0.1 - - [03/Mar/2025 21:52:29] "GET / HTTP/1.1" 200 -
+2025-03-03 21:52:29,943 - INFO - 127.0.0.1 - - [03/Mar/2025 21:52:29] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 21:52:29,952 - INFO - 127.0.0.1 - - [03/Mar/2025 21:52:29] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 21:52:29,971 - INFO - 127.0.0.1 - - [03/Mar/2025 21:52:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:52:30,033 - INFO - 127.0.0.1 - - [03/Mar/2025 21:52:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 21:52:30,121 - INFO - 127.0.0.1 - - [03/Mar/2025 21:52:30] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 21:52:54,775 - INFO - 127.0.0.1 - - [03/Mar/2025 21:52:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:53:38,197 - INFO - 127.0.0.1 - - [03/Mar/2025 21:53:38] "GET / HTTP/1.1" 200 -
+2025-03-03 21:53:38,288 - INFO - 127.0.0.1 - - [03/Mar/2025 21:53:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 21:53:38,315 - INFO - 127.0.0.1 - - [03/Mar/2025 21:53:38] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 21:53:38,317 - INFO - 127.0.0.1 - - [03/Mar/2025 21:53:38] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 21:53:38,487 - INFO - 127.0.0.1 - - [03/Mar/2025 21:53:38] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-03 21:53:38,577 - INFO - 127.0.0.1 - - [03/Mar/2025 21:53:38] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 22:02:12,971 - INFO - 127.0.0.1 - - [03/Mar/2025 22:02:12] "GET / HTTP/1.1" 200 -
+2025-03-03 22:02:13,036 - INFO - 127.0.0.1 - - [03/Mar/2025 22:02:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 22:02:13,046 - INFO - 127.0.0.1 - - [03/Mar/2025 22:02:13] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 22:02:13,048 - INFO - 127.0.0.1 - - [03/Mar/2025 22:02:13] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 22:02:13,176 - INFO - 127.0.0.1 - - [03/Mar/2025 22:02:13] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-03 22:02:13,231 - INFO - 127.0.0.1 - - [03/Mar/2025 22:02:13] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 22:03:22,291 - INFO - 127.0.0.1 - - [03/Mar/2025 22:03:22] "GET / HTTP/1.1" 200 -
+2025-03-03 22:03:22,362 - INFO - 127.0.0.1 - - [03/Mar/2025 22:03:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 22:03:22,378 - INFO - 127.0.0.1 - - [03/Mar/2025 22:03:22] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 22:03:22,419 - INFO - 127.0.0.1 - - [03/Mar/2025 22:03:22] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 22:03:22,507 - INFO - 127.0.0.1 - - [03/Mar/2025 22:03:22] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-03 22:03:22,631 - INFO - 127.0.0.1 - - [03/Mar/2025 22:03:22] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 22:04:12,991 - INFO - 127.0.0.1 - - [03/Mar/2025 22:04:12] "GET / HTTP/1.1" 200 -
+2025-03-03 22:04:13,052 - INFO - 127.0.0.1 - - [03/Mar/2025 22:04:13] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-03 22:04:13,074 - INFO - 127.0.0.1 - - [03/Mar/2025 22:04:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-03 22:04:13,076 - INFO - 127.0.0.1 - - [03/Mar/2025 22:04:13] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-03 22:04:13,152 - INFO - 127.0.0.1 - - [03/Mar/2025 22:04:13] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-03 22:04:13,238 - INFO - 127.0.0.1 - - [03/Mar/2025 22:04:13] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-03 22:04:48,886 - INFO - 127.0.0.1 - - [03/Mar/2025 22:04:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 01:42:55,479 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 01:42:55,489 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 01:42:55,499 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 01:42:57,799 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-04 01:42:57,800 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-04 01:42:57,804 - INFO -  * Restarting with stat
+2025-03-04 01:43:02,367 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 01:43:02,379 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 01:43:02,389 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 01:43:03,050 - WARNING -  * Debugger is active!
+2025-03-04 01:43:03,056 - INFO -  * Debugger PIN: 873-155-825
+2025-03-04 01:43:05,540 - INFO - 127.0.0.1 - - [04/Mar/2025 01:43:05] "GET / HTTP/1.1" 200 -
+2025-03-04 01:43:05,802 - INFO - 127.0.0.1 - - [04/Mar/2025 01:43:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 01:43:05,810 - INFO - 127.0.0.1 - - [04/Mar/2025 01:43:05] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 01:43:05,815 - INFO - 127.0.0.1 - - [04/Mar/2025 01:43:05] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 01:43:05,880 - INFO - 127.0.0.1 - - [04/Mar/2025 01:43:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 01:43:05,948 - INFO - 127.0.0.1 - - [04/Mar/2025 01:43:05] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 01:43:12,569 - INFO - 127.0.0.1 - - [04/Mar/2025 01:43:12] "GET /admin HTTP/1.1" 200 -
+2025-03-04 01:43:12,627 - INFO - 127.0.0.1 - - [04/Mar/2025 01:43:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 01:43:12,629 - INFO - 127.0.0.1 - - [04/Mar/2025 01:43:12] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 01:43:16,995 - INFO - 127.0.0.1 - - [04/Mar/2025 01:43:16] "GET /admin HTTP/1.1" 200 -
+2025-03-04 01:43:17,057 - INFO - 127.0.0.1 - - [04/Mar/2025 01:43:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 01:43:17,061 - INFO - 127.0.0.1 - - [04/Mar/2025 01:43:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 01:43:17,096 - INFO - 127.0.0.1 - - [04/Mar/2025 01:43:17] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 01:43:17,933 - INFO - 127.0.0.1 - - [04/Mar/2025 01:43:17] "GET /admin HTTP/1.1" 200 -
+2025-03-04 01:43:17,978 - INFO - 127.0.0.1 - - [04/Mar/2025 01:43:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 01:43:17,983 - INFO - 127.0.0.1 - - [04/Mar/2025 01:43:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 01:43:18,009 - INFO - 127.0.0.1 - - [04/Mar/2025 01:43:18] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 01:44:02,614 - INFO - 127.0.0.1 - - [04/Mar/2025 01:44:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 01:53:36,136 - INFO - 127.0.0.1 - - [04/Mar/2025 01:53:36] "GET / HTTP/1.1" 200 -
+2025-03-04 01:53:36,191 - INFO - 127.0.0.1 - - [04/Mar/2025 01:53:36] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 01:53:36,198 - INFO - 127.0.0.1 - - [04/Mar/2025 01:53:36] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 01:53:36,198 - INFO - 127.0.0.1 - - [04/Mar/2025 01:53:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 01:53:36,312 - INFO - 127.0.0.1 - - [04/Mar/2025 01:53:36] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-04 01:53:36,441 - INFO - 127.0.0.1 - - [04/Mar/2025 01:53:36] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 01:53:37,401 - INFO - 127.0.0.1 - - [04/Mar/2025 01:53:37] "GET / HTTP/1.1" 200 -
+2025-03-04 01:53:37,468 - INFO - 127.0.0.1 - - [04/Mar/2025 01:53:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 01:53:37,470 - INFO - 127.0.0.1 - - [04/Mar/2025 01:53:37] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 01:53:37,474 - INFO - 127.0.0.1 - - [04/Mar/2025 01:53:37] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 01:53:37,492 - INFO - 127.0.0.1 - - [04/Mar/2025 01:53:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 01:53:37,719 - INFO - 127.0.0.1 - - [04/Mar/2025 01:53:37] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 01:54:02,177 - INFO - 127.0.0.1 - - [04/Mar/2025 01:54:02] "[33mPOST /predict HTTP/1.1[0m" 404 -
+2025-03-04 01:54:12,766 - INFO - 127.0.0.1 - - [04/Mar/2025 01:54:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 01:54:19,518 - INFO - 127.0.0.1 - - [04/Mar/2025 01:54:19] "[33mGET /predict HTTP/1.1[0m" 404 -
+2025-03-04 01:54:19,620 - INFO - 127.0.0.1 - - [04/Mar/2025 01:54:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-04 02:13:20,446 - INFO - 127.0.0.1 - - [04/Mar/2025 02:13:20] "GET / HTTP/1.1" 200 -
+2025-03-04 02:13:20,556 - INFO - 127.0.0.1 - - [04/Mar/2025 02:13:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 02:13:20,560 - INFO - 127.0.0.1 - - [04/Mar/2025 02:13:20] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 02:13:20,565 - INFO - 127.0.0.1 - - [04/Mar/2025 02:13:20] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 02:13:20,657 - INFO - 127.0.0.1 - - [04/Mar/2025 02:13:20] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-04 02:13:20,919 - INFO - 127.0.0.1 - - [04/Mar/2025 02:13:20] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 02:21:16,434 - INFO - 127.0.0.1 - - [04/Mar/2025 02:21:16] "GET / HTTP/1.1" 200 -
+2025-03-04 02:21:16,529 - INFO - 127.0.0.1 - - [04/Mar/2025 02:21:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 02:21:16,535 - INFO - 127.0.0.1 - - [04/Mar/2025 02:21:16] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 02:21:16,547 - INFO - 127.0.0.1 - - [04/Mar/2025 02:21:16] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 02:21:16,667 - INFO - 127.0.0.1 - - [04/Mar/2025 02:21:16] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-04 02:21:16,769 - INFO - 127.0.0.1 - - [04/Mar/2025 02:21:16] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 02:21:18,043 - INFO - 127.0.0.1 - - [04/Mar/2025 02:21:18] "GET / HTTP/1.1" 200 -
+2025-03-04 02:21:18,138 - INFO - 127.0.0.1 - - [04/Mar/2025 02:21:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 02:21:18,139 - INFO - 127.0.0.1 - - [04/Mar/2025 02:21:18] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 02:21:18,143 - INFO - 127.0.0.1 - - [04/Mar/2025 02:21:18] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 02:21:18,170 - INFO - 127.0.0.1 - - [04/Mar/2025 02:21:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 02:21:18,261 - INFO - 127.0.0.1 - - [04/Mar/2025 02:21:18] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 02:21:39,884 - INFO - 127.0.0.1 - - [04/Mar/2025 02:21:39] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-03-04 02:21:54,021 - INFO - 127.0.0.1 - - [04/Mar/2025 02:21:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 02:22:29,702 - INFO - 127.0.0.1 - - [04/Mar/2025 02:22:29] "GET / HTTP/1.1" 200 -
+2025-03-04 02:22:29,794 - INFO - 127.0.0.1 - - [04/Mar/2025 02:22:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 02:22:29,888 - INFO - 127.0.0.1 - - [04/Mar/2025 02:22:29] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 02:22:29,903 - INFO - 127.0.0.1 - - [04/Mar/2025 02:22:29] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 02:22:30,064 - INFO - 127.0.0.1 - - [04/Mar/2025 02:22:30] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-04 02:22:30,184 - INFO - 127.0.0.1 - - [04/Mar/2025 02:22:30] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 02:24:19,380 - INFO - 127.0.0.1 - - [04/Mar/2025 02:24:19] "GET / HTTP/1.1" 200 -
+2025-03-04 02:24:19,447 - INFO - 127.0.0.1 - - [04/Mar/2025 02:24:19] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 02:24:19,458 - INFO - 127.0.0.1 - - [04/Mar/2025 02:24:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 02:24:19,490 - INFO - 127.0.0.1 - - [04/Mar/2025 02:24:19] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 02:24:19,669 - INFO - 127.0.0.1 - - [04/Mar/2025 02:24:19] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-04 02:24:19,836 - INFO - 127.0.0.1 - - [04/Mar/2025 02:24:19] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 02:34:27,724 - INFO - 127.0.0.1 - - [04/Mar/2025 02:34:27] "GET / HTTP/1.1" 200 -
+2025-03-04 02:34:27,795 - INFO - 127.0.0.1 - - [04/Mar/2025 02:34:27] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 02:34:27,798 - INFO - 127.0.0.1 - - [04/Mar/2025 02:34:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 02:34:27,800 - INFO - 127.0.0.1 - - [04/Mar/2025 02:34:27] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 02:34:27,919 - INFO - 127.0.0.1 - - [04/Mar/2025 02:34:27] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-04 02:34:28,050 - INFO - 127.0.0.1 - - [04/Mar/2025 02:34:28] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 02:35:29,638 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 02:35:29,656 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 02:35:29,680 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 02:35:30,263 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-04 02:35:30,263 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-04 02:35:30,266 - INFO -  * Restarting with stat
+2025-03-03 23:35:33,333 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-03 23:35:33,347 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-03 23:35:33,362 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-03 23:35:33,883 - WARNING -  * Debugger is active!
+2025-03-03 23:35:33,889 - INFO -  * Debugger PIN: 882-010-245
+2025-03-03 23:35:37,549 - INFO - 127.0.0.1 - - [03/Mar/2025 23:35:37] "GET / HTTP/1.1" 200 -
+2025-03-03 23:35:37,842 - INFO - 127.0.0.1 - - [03/Mar/2025 23:35:37] "GET /static/images/residual.png HTTP/1.1" 200 -
+2025-03-03 23:35:37,905 - INFO - 127.0.0.1 - - [03/Mar/2025 23:35:37] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-03 23:35:37,917 - INFO - 127.0.0.1 - - [03/Mar/2025 23:35:37] "GET /static/images/feature_importance.png HTTP/1.1" 200 -
+2025-03-03 23:35:37,922 - INFO - 127.0.0.1 - - [03/Mar/2025 23:35:37] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-03 23:35:38,095 - INFO - 127.0.0.1 - - [03/Mar/2025 23:35:38] "GET /static/images/favicon32.png HTTP/1.1" 200 -
+2025-03-04 02:36:59,520 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 02:36:59,535 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 02:36:59,550 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 02:37:00,407 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-04 02:37:00,408 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-04 02:37:00,413 - INFO -  * Restarting with stat
+2025-03-04 02:37:04,029 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 02:37:04,043 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 02:37:04,059 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 02:37:04,579 - WARNING -  * Debugger is active!
+2025-03-04 02:37:04,585 - INFO -  * Debugger PIN: 873-155-825
+2025-03-04 02:37:12,758 - INFO - 127.0.0.1 - - [04/Mar/2025 02:37:12] "GET / HTTP/1.1" 200 -
+2025-03-04 02:37:13,002 - INFO - 127.0.0.1 - - [04/Mar/2025 02:37:13] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-04 02:37:13,049 - INFO - 127.0.0.1 - - [04/Mar/2025 02:37:13] "GET /static/images/residual.png HTTP/1.1" 200 -
+2025-03-04 02:37:13,056 - INFO - 127.0.0.1 - - [04/Mar/2025 02:37:13] "GET /static/images/feature_importance.png HTTP/1.1" 200 -
+2025-03-04 02:37:13,073 - INFO - 127.0.0.1 - - [04/Mar/2025 02:37:13] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-04 02:37:13,180 - INFO - 127.0.0.1 - - [04/Mar/2025 02:37:13] "GET /static/images/favicon32.png HTTP/1.1" 200 -
+2025-03-04 02:38:22,814 - INFO - 127.0.0.1 - - [04/Mar/2025 02:38:22] "GET / HTTP/1.1" 200 -
+2025-03-04 02:38:22,898 - INFO - 127.0.0.1 - - [04/Mar/2025 02:38:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 02:38:22,900 - INFO - 127.0.0.1 - - [04/Mar/2025 02:38:22] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 02:38:22,910 - INFO - 127.0.0.1 - - [04/Mar/2025 02:38:22] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 02:38:23,001 - INFO - 127.0.0.1 - - [04/Mar/2025 02:38:23] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-04 02:38:23,126 - INFO - 127.0.0.1 - - [04/Mar/2025 02:38:23] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 02:48:43,287 - INFO - 127.0.0.1 - - [04/Mar/2025 02:48:43] "GET / HTTP/1.1" 200 -
+2025-03-04 02:48:43,350 - INFO - 127.0.0.1 - - [04/Mar/2025 02:48:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 02:48:43,359 - INFO - 127.0.0.1 - - [04/Mar/2025 02:48:43] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 02:48:43,370 - INFO - 127.0.0.1 - - [04/Mar/2025 02:48:43] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 02:48:43,484 - INFO - 127.0.0.1 - - [04/Mar/2025 02:48:43] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-04 02:48:43,584 - INFO - 127.0.0.1 - - [04/Mar/2025 02:48:43] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 02:49:14,701 - INFO - 127.0.0.1 - - [04/Mar/2025 02:49:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 03:00:19,373 - INFO - 127.0.0.1 - - [04/Mar/2025 03:00:19] "GET / HTTP/1.1" 200 -
+2025-03-04 03:00:19,423 - INFO - 127.0.0.1 - - [04/Mar/2025 03:00:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 03:00:19,428 - INFO - 127.0.0.1 - - [04/Mar/2025 03:00:19] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 03:00:19,447 - INFO - 127.0.0.1 - - [04/Mar/2025 03:00:19] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 03:00:19,539 - INFO - 127.0.0.1 - - [04/Mar/2025 03:00:19] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-04 03:00:19,638 - INFO - 127.0.0.1 - - [04/Mar/2025 03:00:19] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 03:00:51,501 - INFO - 127.0.0.1 - - [04/Mar/2025 03:00:51] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-03-04 03:04:01,932 - INFO - 127.0.0.1 - - [04/Mar/2025 03:04:01] "GET / HTTP/1.1" 200 -
+2025-03-04 03:04:01,963 - INFO - 127.0.0.1 - - [04/Mar/2025 03:04:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 03:04:01,966 - INFO - 127.0.0.1 - - [04/Mar/2025 03:04:01] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 03:04:01,970 - INFO - 127.0.0.1 - - [04/Mar/2025 03:04:01] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 03:04:02,045 - INFO - 127.0.0.1 - - [04/Mar/2025 03:04:02] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-04 03:04:02,102 - INFO - 127.0.0.1 - - [04/Mar/2025 03:04:02] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 03:04:22,605 - INFO - 127.0.0.1 - - [04/Mar/2025 03:04:22] "[33mPOST /api/submit HTTP/1.1[0m" 404 -
+2025-03-04 03:04:51,538 - INFO - 127.0.0.1 - - [04/Mar/2025 03:04:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 03:05:03,910 - INFO - 127.0.0.1 - - [04/Mar/2025 03:05:03] "[33mGET /api/submit HTTP/1.1[0m" 404 -
+2025-03-04 03:05:23,643 - INFO - 127.0.0.1 - - [04/Mar/2025 03:05:23] "GET / HTTP/1.1" 200 -
+2025-03-04 03:05:23,705 - INFO - 127.0.0.1 - - [04/Mar/2025 03:05:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 03:05:23,714 - INFO - 127.0.0.1 - - [04/Mar/2025 03:05:23] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 03:05:23,719 - INFO - 127.0.0.1 - - [04/Mar/2025 03:05:23] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 03:05:23,736 - INFO - 127.0.0.1 - - [04/Mar/2025 03:05:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 03:05:23,864 - INFO - 127.0.0.1 - - [04/Mar/2025 03:05:23] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 03:05:45,415 - INFO - 127.0.0.1 - - [04/Mar/2025 03:05:45] "[33mPOST /api/submit HTTP/1.1[0m" 404 -
+2025-03-04 03:07:50,586 - INFO - 127.0.0.1 - - [04/Mar/2025 03:07:50] "[33mPOST /api/submit HTTP/1.1[0m" 404 -
+2025-03-04 03:08:28,331 - INFO - 127.0.0.1 - - [04/Mar/2025 03:08:28] "GET / HTTP/1.1" 200 -
+2025-03-04 03:08:28,386 - INFO - 127.0.0.1 - - [04/Mar/2025 03:08:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 03:08:28,396 - INFO - 127.0.0.1 - - [04/Mar/2025 03:08:28] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 03:08:28,398 - INFO - 127.0.0.1 - - [04/Mar/2025 03:08:28] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 03:08:28,482 - INFO - 127.0.0.1 - - [04/Mar/2025 03:08:28] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-04 03:08:28,571 - INFO - 127.0.0.1 - - [04/Mar/2025 03:08:28] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 03:08:56,486 - INFO - 127.0.0.1 - - [04/Mar/2025 03:08:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 03:16:14,271 - INFO - 127.0.0.1 - - [04/Mar/2025 03:16:14] "GET / HTTP/1.1" 200 -
+2025-03-04 03:16:14,423 - INFO - 127.0.0.1 - - [04/Mar/2025 03:16:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 03:16:14,427 - INFO - 127.0.0.1 - - [04/Mar/2025 03:16:14] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 03:16:14,431 - INFO - 127.0.0.1 - - [04/Mar/2025 03:16:14] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 03:16:14,552 - INFO - 127.0.0.1 - - [04/Mar/2025 03:16:14] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-04 03:16:14,654 - INFO - 127.0.0.1 - - [04/Mar/2025 03:16:14] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 03:16:44,784 - INFO - 127.0.0.1 - - [04/Mar/2025 03:16:44] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-03-04 03:23:54,611 - INFO - 127.0.0.1 - - [04/Mar/2025 03:23:54] "GET / HTTP/1.1" 200 -
+2025-03-04 03:23:54,664 - INFO - 127.0.0.1 - - [04/Mar/2025 03:23:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 03:23:54,675 - INFO - 127.0.0.1 - - [04/Mar/2025 03:23:54] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 03:23:54,676 - INFO - 127.0.0.1 - - [04/Mar/2025 03:23:54] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 03:23:54,741 - INFO - 127.0.0.1 - - [04/Mar/2025 03:23:54] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-04 03:23:55,026 - INFO - 127.0.0.1 - - [04/Mar/2025 03:23:55] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 03:24:19,639 - INFO - 127.0.0.1 - - [04/Mar/2025 03:24:19] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-03-04 03:24:27,142 - INFO - 127.0.0.1 - - [04/Mar/2025 03:24:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 03:26:10,459 - INFO - 127.0.0.1 - - [04/Mar/2025 03:26:10] "GET /admin HTTP/1.1" 200 -
+2025-03-04 03:26:10,509 - INFO - 127.0.0.1 - - [04/Mar/2025 03:26:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 03:26:10,510 - INFO - 127.0.0.1 - - [04/Mar/2025 03:26:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 03:26:13,705 - INFO - 127.0.0.1 - - [04/Mar/2025 03:26:13] "GET /admin HTTP/1.1" 200 -
+2025-03-04 03:26:13,746 - INFO - 127.0.0.1 - - [04/Mar/2025 03:26:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 03:26:13,747 - INFO - 127.0.0.1 - - [04/Mar/2025 03:26:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 03:26:13,786 - INFO - 127.0.0.1 - - [04/Mar/2025 03:26:13] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 15:12:51,709 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 15:12:51,719 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 15:12:51,730 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 15:12:54,082 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-04 15:12:54,082 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-04 15:12:54,087 - INFO -  * Restarting with stat
+2025-03-04 15:12:57,789 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 15:12:57,805 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 15:12:57,819 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 15:12:58,283 - WARNING -  * Debugger is active!
+2025-03-04 15:12:58,291 - INFO -  * Debugger PIN: 873-155-825
+2025-03-04 15:14:37,380 - INFO - 127.0.0.1 - - [04/Mar/2025 15:14:37] "GET / HTTP/1.1" 200 -
+2025-03-04 15:14:37,643 - INFO - 127.0.0.1 - - [04/Mar/2025 15:14:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 15:14:37,669 - INFO - 127.0.0.1 - - [04/Mar/2025 15:14:37] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 15:14:37,674 - INFO - 127.0.0.1 - - [04/Mar/2025 15:14:37] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 15:14:37,749 - INFO - 127.0.0.1 - - [04/Mar/2025 15:14:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 15:14:37,918 - INFO - 127.0.0.1 - - [04/Mar/2025 15:14:37] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 15:14:38,646 - INFO - 127.0.0.1 - - [04/Mar/2025 15:14:38] "GET / HTTP/1.1" 200 -
+2025-03-04 15:14:38,698 - INFO - 127.0.0.1 - - [04/Mar/2025 15:14:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 15:14:38,723 - INFO - 127.0.0.1 - - [04/Mar/2025 15:14:38] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 15:14:38,734 - INFO - 127.0.0.1 - - [04/Mar/2025 15:14:38] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 15:14:38,758 - INFO - 127.0.0.1 - - [04/Mar/2025 15:14:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 15:14:38,826 - INFO - 127.0.0.1 - - [04/Mar/2025 15:14:38] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 15:15:04,902 - INFO - 127.0.0.1 - - [04/Mar/2025 15:15:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-04 15:15:15,217 - INFO - 127.0.0.1 - - [04/Mar/2025 15:15:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 15:15:44,874 - INFO - 127.0.0.1 - - [04/Mar/2025 15:15:44] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-03-04 15:28:44,773 - INFO - 127.0.0.1 - - [04/Mar/2025 15:28:44] "GET / HTTP/1.1" 200 -
+2025-03-04 15:28:44,847 - INFO - 127.0.0.1 - - [04/Mar/2025 15:28:44] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 15:28:44,851 - INFO - 127.0.0.1 - - [04/Mar/2025 15:28:44] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 15:28:44,864 - INFO - 127.0.0.1 - - [04/Mar/2025 15:28:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 15:28:44,923 - INFO - 127.0.0.1 - - [04/Mar/2025 15:28:44] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-04 15:28:45,131 - INFO - 127.0.0.1 - - [04/Mar/2025 15:28:45] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 15:29:03,295 - INFO - 127.0.0.1 - - [04/Mar/2025 15:29:03] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-03-04 15:32:08,238 - INFO - 127.0.0.1 - - [04/Mar/2025 15:32:08] "GET /admin HTTP/1.1" 200 -
+2025-03-04 15:32:08,279 - INFO - 127.0.0.1 - - [04/Mar/2025 15:32:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 15:32:08,334 - INFO - 127.0.0.1 - - [04/Mar/2025 15:32:08] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-04 15:32:16,166 - INFO - 127.0.0.1 - - [04/Mar/2025 15:32:16] "GET / HTTP/1.1" 200 -
+2025-03-04 15:32:16,241 - INFO - 127.0.0.1 - - [04/Mar/2025 15:32:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 15:32:16,243 - INFO - 127.0.0.1 - - [04/Mar/2025 15:32:16] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 15:32:16,248 - INFO - 127.0.0.1 - - [04/Mar/2025 15:32:16] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 15:32:16,253 - INFO - 127.0.0.1 - - [04/Mar/2025 15:32:16] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 15:32:35,119 - INFO - 127.0.0.1 - - [04/Mar/2025 15:32:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 15:32:44,830 - INFO - 127.0.0.1 - - [04/Mar/2025 15:32:44] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-03-04 15:36:35,777 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\app\\routes.py', reloading
+2025-03-04 15:36:36,294 - INFO -  * Restarting with stat
+2025-03-04 15:36:51,635 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 15:36:51,649 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 15:36:51,661 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 15:36:53,353 - WARNING -  * Debugger is active!
+2025-03-04 15:36:53,360 - INFO -  * Debugger PIN: 873-155-825
+2025-03-04 15:38:16,861 - INFO - 127.0.0.1 - - [04/Mar/2025 15:38:16] "GET / HTTP/1.1" 200 -
+2025-03-04 15:38:17,107 - INFO - 127.0.0.1 - - [04/Mar/2025 15:38:17] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 15:38:17,174 - INFO - 127.0.0.1 - - [04/Mar/2025 15:38:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 15:38:17,177 - INFO - 127.0.0.1 - - [04/Mar/2025 15:38:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 15:38:17,181 - INFO - 127.0.0.1 - - [04/Mar/2025 15:38:17] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 15:38:17,237 - INFO - 127.0.0.1 - - [04/Mar/2025 15:38:17] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 15:38:33,558 - INFO - 127.0.0.1 - - [04/Mar/2025 15:38:33] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-03-04 15:47:53,324 - INFO - 127.0.0.1 - - [04/Mar/2025 15:47:53] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-03-04 15:58:33,601 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\app\\routes.py', reloading
+2025-03-04 15:58:33,984 - INFO -  * Restarting with stat
+2025-03-04 15:58:37,416 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 15:58:37,427 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 15:58:37,437 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 15:58:37,890 - WARNING -  * Debugger is active!
+2025-03-04 15:58:37,898 - INFO -  * Debugger PIN: 873-155-825
+2025-03-04 15:58:38,104 - INFO - 127.0.0.1 - - [04/Mar/2025 15:58:38] "GET / HTTP/1.1" 200 -
+2025-03-04 15:58:38,453 - INFO - 127.0.0.1 - - [04/Mar/2025 15:58:38] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 15:58:38,458 - INFO - 127.0.0.1 - - [04/Mar/2025 15:58:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 15:58:38,463 - INFO - 127.0.0.1 - - [04/Mar/2025 15:58:38] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 15:58:38,471 - INFO - 127.0.0.1 - - [04/Mar/2025 15:58:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 15:58:38,698 - INFO - 127.0.0.1 - - [04/Mar/2025 15:58:38] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 15:58:56,583 - DEBUG - Received JSON data: {'purpose': 'buy', 'sqft_living': '4333', 'no_of_bedrooms': '4', 'no_of_bathrooms': '2', 'sqft_lot': '7688', 'no_of_floors': '3', 'house_age': '10', 'zipcode': '98765'}
+2025-03-04 15:58:56,584 - DEBUG - Parsed input data: sqft_living=4333.0, no_of_bedrooms=4, no_of_bathrooms=2.0, sqft_lot=7688.0, no_of_floors=3, house_age=10, zipcode=98765, purpose=buy
+2025-03-04 15:58:56,584 - DEBUG - Features prepared for prediction: {'sqft_living': 4333.0, 'no_of_bedrooms': 4, 'no_of_bathrooms': 2.0, 'sqft_lot': 7688.0, 'no_of_floors': 3, 'house_age': 10, 'zipcode': '98765'}
+2025-03-04 15:58:56,584 - ERROR - An unexpected error occurred: predict_price() missing 1 required positional argument: 'purpose'
+2025-03-04 15:58:56,585 - INFO - 127.0.0.1 - - [04/Mar/2025 15:58:56] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-03-04 15:59:59,707 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 15:59:59,721 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 15:59:59,736 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 16:00:00,193 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-04 16:00:00,193 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-04 16:00:00,197 - INFO -  * Restarting with stat
+2025-03-04 13:00:03,113 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 13:00:03,124 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 13:00:03,140 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 13:00:03,582 - WARNING -  * Debugger is active!
+2025-03-04 13:00:03,590 - INFO -  * Debugger PIN: 882-010-245
+2025-03-04 13:00:06,417 - INFO - 127.0.0.1 - - [04/Mar/2025 13:00:06] "GET / HTTP/1.1" 200 -
+2025-03-04 13:00:06,665 - INFO - 127.0.0.1 - - [04/Mar/2025 13:00:06] "GET /static/images/feature_importance.png HTTP/1.1" 200 -
+2025-03-04 13:00:06,673 - INFO - 127.0.0.1 - - [04/Mar/2025 13:00:06] "GET /static/images/residual.png HTTP/1.1" 200 -
+2025-03-04 13:00:06,673 - INFO - 127.0.0.1 - - [04/Mar/2025 13:00:06] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-04 13:00:06,691 - INFO - 127.0.0.1 - - [04/Mar/2025 13:00:06] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-04 13:00:06,802 - INFO - 127.0.0.1 - - [04/Mar/2025 13:00:06] "GET /static/images/favicon32.png HTTP/1.1" 200 -
+2025-03-04 13:00:28,150 - DEBUG - Received JSON data: {'purpose': 'sell', 'sqft_living': '4333', 'no_of_bedrooms': '4', 'no_of_bathrooms': '2', 'sqft_lot': '7688', 'no_of_floors': '3', 'house_age': '10', 'zipcode': '98765'}
+2025-03-04 13:00:28,151 - DEBUG - Parsed input data: sqft_living=4333.0, no_of_bedrooms=4, no_of_bathrooms=2.0, sqft_lot=7688.0, no_of_floors=3, house_age=10, zipcode=98765, purpose=sell
+2025-03-04 13:00:28,151 - DEBUG - Features prepared for prediction: {'sqft_living': 4333.0, 'no_of_bedrooms': 4, 'no_of_bathrooms': 2.0, 'sqft_lot': 7688.0, 'no_of_floors': 3, 'house_age': 10, 'zipcode': '98765'}
+2025-03-04 13:00:28,152 - ERROR - An unexpected error occurred: predict_price() missing 1 required positional argument: 'purpose'
+2025-03-04 13:00:28,152 - INFO - 127.0.0.1 - - [04/Mar/2025 13:00:28] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-03-04 16:02:31,465 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 16:02:31,475 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 16:02:31,487 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 16:02:32,008 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-04 16:02:32,008 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-04 16:02:32,012 - INFO -  * Restarting with stat
+2025-03-04 16:02:35,212 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 16:02:35,222 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 16:02:35,232 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 16:02:35,670 - WARNING -  * Debugger is active!
+2025-03-04 16:02:35,680 - INFO -  * Debugger PIN: 873-155-825
+2025-03-04 16:08:29,639 - DEBUG - Received JSON data: {'purpose': 'sell', 'sqft_living': '4333', 'no_of_bedrooms': '4', 'no_of_bathrooms': '2', 'sqft_lot': '7688', 'no_of_floors': '3', 'house_age': '10', 'zipcode': '98001'}
+2025-03-04 16:08:29,639 - DEBUG - Parsed input data: sqft_living=4333.0, no_of_bedrooms=4, no_of_bathrooms=2.0, sqft_lot=7688.0, no_of_floors=3, house_age=10, zipcode=98001, purpose=sell
+2025-03-04 16:08:29,640 - DEBUG - Features prepared for prediction: {'sqft_living': 4333.0, 'no_of_bedrooms': 4, 'no_of_bathrooms': 2.0, 'sqft_lot': 7688.0, 'no_of_floors': 3, 'house_age': 10, 'zipcode': '98001'}
+2025-03-04 16:08:29,640 - ERROR - An unexpected error occurred: predict_price() missing 1 required positional argument: 'purpose'
+2025-03-04 16:08:29,641 - INFO - 127.0.0.1 - - [04/Mar/2025 16:08:29] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-03-04 16:16:51,696 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\app\\routes.py', reloading
+2025-03-04 16:16:52,017 - INFO -  * Restarting with stat
+2025-03-04 16:16:55,602 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 16:16:55,616 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 16:16:55,631 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 16:16:56,096 - WARNING -  * Debugger is active!
+2025-03-04 16:16:56,102 - INFO -  * Debugger PIN: 873-155-825
+2025-03-04 16:16:56,321 - INFO - 127.0.0.1 - - [04/Mar/2025 16:16:56] "GET / HTTP/1.1" 200 -
+2025-03-04 16:16:56,575 - INFO - 127.0.0.1 - - [04/Mar/2025 16:16:56] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-04 16:16:56,648 - INFO - 127.0.0.1 - - [04/Mar/2025 16:16:56] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-04 16:16:56,659 - INFO - 127.0.0.1 - - [04/Mar/2025 16:16:56] "GET /static/images/residual.png HTTP/1.1" 200 -
+2025-03-04 16:16:56,661 - INFO - 127.0.0.1 - - [04/Mar/2025 16:16:56] "GET /static/images/feature_importance.png HTTP/1.1" 200 -
+2025-03-04 16:16:56,757 - INFO - 127.0.0.1 - - [04/Mar/2025 16:16:56] "GET /static/images/favicon32.png HTTP/1.1" 200 -
+2025-03-04 16:17:09,900 - DEBUG - Received JSON data: {'purpose': 'sell', 'sqft_living': '4333', 'no_of_bedrooms': '4', 'no_of_bathrooms': '2', 'sqft_lot': '7688', 'no_of_floors': '3', 'house_age': '10', 'zipcode': '98765'}
+2025-03-04 16:17:09,900 - DEBUG - Parsed input data: sqft_living=4333.0, no_of_bedrooms=4, no_of_bathrooms=2.0, sqft_lot=7688.0, no_of_floors=3, house_age=10, zipcode=98765, purpose=sell
+2025-03-04 16:17:09,901 - DEBUG - Features prepared for prediction: {'sqft_living': 4333.0, 'no_of_bedrooms': 4, 'no_of_bathrooms': 2.0, 'sqft_lot': 7688.0, 'no_of_floors': 3, 'house_age': 10, 'zipcode': '98765'}
+2025-03-04 16:17:09,901 - ERROR - An unexpected error occurred: predict_price() missing 1 required positional argument: 'purpose'
+2025-03-04 16:17:09,903 - INFO - 127.0.0.1 - - [04/Mar/2025 16:17:09] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-03-04 16:21:34,888 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\model\\predict.py', reloading
+2025-03-04 16:21:35,274 - INFO -  * Restarting with stat
+2025-03-04 16:21:38,570 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 16:21:38,581 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 16:21:38,591 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 16:21:39,037 - WARNING -  * Debugger is active!
+2025-03-04 16:21:39,044 - INFO -  * Debugger PIN: 873-155-825
+2025-03-04 16:21:42,391 - INFO - 127.0.0.1 - - [04/Mar/2025 16:21:42] "GET / HTTP/1.1" 200 -
+2025-03-04 16:21:42,683 - INFO - 127.0.0.1 - - [04/Mar/2025 16:21:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 16:21:42,685 - INFO - 127.0.0.1 - - [04/Mar/2025 16:21:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 16:21:42,699 - INFO - 127.0.0.1 - - [04/Mar/2025 16:21:42] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 16:21:42,702 - INFO - 127.0.0.1 - - [04/Mar/2025 16:21:42] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 16:21:42,754 - INFO - 127.0.0.1 - - [04/Mar/2025 16:21:42] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 16:21:59,437 - DEBUG - Received JSON data: {'purpose': 'buy', 'sqft_living': '4333', 'no_of_bedrooms': '4', 'no_of_bathrooms': '2', 'sqft_lot': '7688', 'no_of_floors': '3', 'house_age': '10', 'zipcode': '98765'}
+2025-03-04 16:21:59,437 - DEBUG - Parsed input data: sqft_living=4333.0, no_of_bedrooms=4, no_of_bathrooms=2.0, sqft_lot=7688.0, no_of_floors=3, house_age=10, zipcode=98765, purpose=buy
+2025-03-04 16:21:59,438 - DEBUG - Features prepared for prediction: {'sqft_living': 4333.0, 'no_of_bedrooms': 4, 'no_of_bathrooms': 2.0, 'sqft_lot': 7688.0, 'no_of_floors': 3, 'house_age': 10, 'zipcode': '98765'}
+2025-03-04 16:21:59,438 - ERROR - An unexpected error occurred: predict_price() missing 1 required positional argument: 'purpose'
+2025-03-04 16:21:59,438 - INFO - 127.0.0.1 - - [04/Mar/2025 16:21:59] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-03-04 16:24:03,136 - DEBUG - Received JSON data: {'purpose': 'buy', 'sqft_living': '4333', 'no_of_bedrooms': '4', 'no_of_bathrooms': '2', 'sqft_lot': '7688', 'no_of_floors': '3', 'house_age': '10', 'zipcode': '98765'}
+2025-03-04 16:24:03,136 - DEBUG - Parsed input data: sqft_living=4333.0, no_of_bedrooms=4, no_of_bathrooms=2.0, sqft_lot=7688.0, no_of_floors=3, house_age=10, zipcode=98765, purpose=buy
+2025-03-04 16:24:03,136 - DEBUG - Features prepared for prediction: {'sqft_living': 4333.0, 'no_of_bedrooms': 4, 'no_of_bathrooms': 2.0, 'sqft_lot': 7688.0, 'no_of_floors': 3, 'house_age': 10, 'zipcode': '98765'}
+2025-03-04 16:24:03,136 - ERROR - An unexpected error occurred: predict_price() missing 1 required positional argument: 'purpose'
+2025-03-04 16:24:03,137 - INFO - 127.0.0.1 - - [04/Mar/2025 16:24:03] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-03-04 16:29:46,656 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\model\\predict.py', reloading
+2025-03-04 16:29:47,019 - INFO -  * Restarting with stat
+2025-03-04 16:29:50,728 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 16:29:50,740 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 16:29:50,751 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 16:29:51,309 - WARNING -  * Debugger is active!
+2025-03-04 16:29:51,317 - INFO -  * Debugger PIN: 873-155-825
+2025-03-04 16:29:51,547 - INFO - 127.0.0.1 - - [04/Mar/2025 16:29:51] "GET / HTTP/1.1" 200 -
+2025-03-04 16:29:51,895 - INFO - 127.0.0.1 - - [04/Mar/2025 16:29:51] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 16:29:51,950 - INFO - 127.0.0.1 - - [04/Mar/2025 16:29:51] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 16:29:51,955 - INFO - 127.0.0.1 - - [04/Mar/2025 16:29:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 16:29:51,960 - INFO - 127.0.0.1 - - [04/Mar/2025 16:29:51] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 16:29:52,040 - INFO - 127.0.0.1 - - [04/Mar/2025 16:29:52] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 16:30:09,860 - DEBUG - Received JSON data: {'purpose': 'buy', 'sqft_living': '4333', 'no_of_bedrooms': '4', 'no_of_bathrooms': '2', 'sqft_lot': '7688', 'no_of_floors': '3', 'house_age': '10', 'zipcode': '98765'}
+2025-03-04 16:30:09,860 - DEBUG - Parsed input data: sqft_living=4333.0, no_of_bedrooms=4, no_of_bathrooms=2.0, sqft_lot=7688.0, no_of_floors=3, house_age=10, zipcode=98765, purpose=buy
+2025-03-04 16:30:09,860 - DEBUG - Features prepared for prediction: {'sqft_living': 4333.0, 'no_of_bedrooms': 4, 'no_of_bathrooms': 2.0, 'sqft_lot': 7688.0, 'no_of_floors': 3, 'house_age': 10, 'zipcode': '98765'}
+2025-03-04 16:30:09,861 - ERROR - Error in predict_price function: name 'purpose' is not defined
+2025-03-04 16:30:09,861 - ERROR - An unexpected error occurred: name 'purpose' is not defined
+2025-03-04 16:30:09,861 - INFO - 127.0.0.1 - - [04/Mar/2025 16:30:09] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-03-04 16:30:59,655 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\model\\predict.py', reloading
+2025-03-04 16:31:00,054 - INFO -  * Restarting with stat
+2025-03-04 16:31:04,888 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 16:31:04,902 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 16:31:04,917 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 16:31:05,566 - WARNING -  * Debugger is active!
+2025-03-04 16:31:05,574 - INFO -  * Debugger PIN: 873-155-825
+2025-03-04 16:31:12,954 - INFO - 127.0.0.1 - - [04/Mar/2025 16:31:12] "GET / HTTP/1.1" 200 -
+2025-03-04 16:31:13,264 - INFO - 127.0.0.1 - - [04/Mar/2025 16:31:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 16:31:13,272 - INFO - 127.0.0.1 - - [04/Mar/2025 16:31:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 16:31:13,292 - INFO - 127.0.0.1 - - [04/Mar/2025 16:31:13] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 16:31:13,296 - INFO - 127.0.0.1 - - [04/Mar/2025 16:31:13] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 16:31:13,481 - INFO - 127.0.0.1 - - [04/Mar/2025 16:31:13] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 16:31:28,739 - DEBUG - Received JSON data: {'purpose': 'buy', 'sqft_living': '4333', 'no_of_bedrooms': '4', 'no_of_bathrooms': '2', 'sqft_lot': '7688', 'no_of_floors': '3', 'house_age': '10', 'zipcode': '98765'}
+2025-03-04 16:31:28,739 - DEBUG - Parsed input data: sqft_living=4333.0, no_of_bedrooms=4, no_of_bathrooms=2.0, sqft_lot=7688.0, no_of_floors=3, house_age=10, zipcode=98765, purpose=buy
+2025-03-04 16:31:28,739 - DEBUG - Features prepared for prediction: {'sqft_living': 4333.0, 'no_of_bedrooms': 4, 'no_of_bathrooms': 2.0, 'sqft_lot': 7688.0, 'no_of_floors': 3, 'house_age': 10, 'zipcode': '98765'}
+2025-03-04 16:31:28,739 - ERROR - An unexpected error occurred: predict_price() missing 1 required positional argument: 'purpose'
+2025-03-04 16:31:28,740 - INFO - 127.0.0.1 - - [04/Mar/2025 16:31:28] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-03-04 16:40:38,757 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\app\\routes.py', reloading
+2025-03-04 16:40:39,239 - INFO -  * Restarting with stat
+2025-03-04 16:40:43,244 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 16:40:43,261 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 16:40:43,277 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 16:40:43,847 - WARNING -  * Debugger is active!
+2025-03-04 16:40:43,855 - INFO -  * Debugger PIN: 873-155-825
+2025-03-04 16:40:44,177 - INFO - 127.0.0.1 - - [04/Mar/2025 16:40:44] "GET / HTTP/1.1" 200 -
+2025-03-04 16:40:44,496 - INFO - 127.0.0.1 - - [04/Mar/2025 16:40:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 16:40:44,504 - INFO - 127.0.0.1 - - [04/Mar/2025 16:40:44] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 16:40:44,508 - INFO - 127.0.0.1 - - [04/Mar/2025 16:40:44] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 16:40:44,545 - INFO - 127.0.0.1 - - [04/Mar/2025 16:40:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 16:40:44,624 - INFO - 127.0.0.1 - - [04/Mar/2025 16:40:44] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 16:41:14,327 - DEBUG - Received JSON data: {'purpose': 'sell', 'sqft_living': '4333', 'no_of_bedrooms': '4', 'no_of_bathrooms': '2', 'sqft_lot': '7688', 'no_of_floors': '3', 'house_age': '10', 'zipcode': '98765'}
+2025-03-04 16:41:14,327 - DEBUG - Parsed input data: sqft_living=4333.0, no_of_bedrooms=4, no_of_bathrooms=2.0, sqft_lot=7688.0, no_of_floors=3, house_age=10, zipcode=98765, purpose=sell
+2025-03-04 16:41:14,327 - DEBUG - Features prepared for prediction: {'sqft_living': 4333.0, 'no_of_bedrooms': 4, 'no_of_bathrooms': 2.0, 'sqft_lot': 7688.0, 'no_of_floors': 3, 'house_age': 10, 'zipcode': '98765'}
+2025-03-04 16:41:14,847 - INFO - User query inserted successfully: (4333.0, 4, 2.0, 7688.0, 3, 10, '98765', 'sell', np.float64(757740.6615190982))
+2025-03-04 16:41:14,847 - ERROR - Please enter valid numerical values for all fields. Error: too many values to unpack (expected 2)
+2025-03-04 16:41:14,848 - INFO - 127.0.0.1 - - [04/Mar/2025 16:41:14] "[31m[1mPOST / HTTP/1.1[0m" 400 -
+2025-03-04 16:42:15,792 - DEBUG - Received JSON data: {'purpose': 'sell', 'sqft_living': '4333', 'no_of_bedrooms': '4', 'no_of_bathrooms': '2', 'sqft_lot': '7688', 'no_of_floors': '3', 'house_age': '10', 'zipcode': '98765'}
+2025-03-04 16:42:15,792 - DEBUG - Parsed input data: sqft_living=4333.0, no_of_bedrooms=4, no_of_bathrooms=2.0, sqft_lot=7688.0, no_of_floors=3, house_age=10, zipcode=98765, purpose=sell
+2025-03-04 16:42:15,793 - DEBUG - Features prepared for prediction: {'sqft_living': 4333.0, 'no_of_bedrooms': 4, 'no_of_bathrooms': 2.0, 'sqft_lot': 7688.0, 'no_of_floors': 3, 'house_age': 10, 'zipcode': '98765'}
+2025-03-04 16:42:16,033 - INFO - User query inserted successfully: (4333.0, 4, 2.0, 7688.0, 3, 10, '98765', 'sell', np.float64(757740.6615190982))
+2025-03-04 16:42:16,034 - ERROR - Please enter valid numerical values for all fields. Error: too many values to unpack (expected 2)
+2025-03-04 16:42:16,035 - INFO - 127.0.0.1 - - [04/Mar/2025 16:42:16] "[31m[1mPOST / HTTP/1.1[0m" 400 -
+2025-03-04 16:45:53,684 - INFO - 127.0.0.1 - - [04/Mar/2025 16:45:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 16:46:10,134 - DEBUG - Received JSON data: {'purpose': 'sell', 'sqft_living': '4333', 'no_of_bedrooms': '4', 'no_of_bathrooms': '2', 'sqft_lot': '7688', 'no_of_floors': '3', 'house_age': '10', 'zipcode': '98765'}
+2025-03-04 16:46:10,134 - DEBUG - Parsed input data: sqft_living=4333.0, no_of_bedrooms=4, no_of_bathrooms=2.0, sqft_lot=7688.0, no_of_floors=3, house_age=10, zipcode=98765, purpose=sell
+2025-03-04 16:46:10,135 - DEBUG - Features prepared for prediction: {'sqft_living': 4333.0, 'no_of_bedrooms': 4, 'no_of_bathrooms': 2.0, 'sqft_lot': 7688.0, 'no_of_floors': 3, 'house_age': 10, 'zipcode': '98765'}
+2025-03-04 16:46:10,339 - INFO - User query inserted successfully: (4333.0, 4, 2.0, 7688.0, 3, 10, '98765', 'sell', np.float64(757740.6615190982))
+2025-03-04 16:46:10,339 - ERROR - Please enter valid numerical values for all fields. Error: too many values to unpack (expected 2)
+2025-03-04 16:46:10,340 - INFO - 127.0.0.1 - - [04/Mar/2025 16:46:10] "[31m[1mPOST / HTTP/1.1[0m" 400 -
+2025-03-04 16:46:32,356 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\app\\routes.py', reloading
+2025-03-04 16:46:32,780 - INFO -  * Restarting with stat
+2025-03-04 16:46:36,770 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 16:46:36,790 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 16:46:36,806 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 16:46:37,390 - WARNING -  * Debugger is active!
+2025-03-04 16:46:37,397 - INFO -  * Debugger PIN: 873-155-825
+2025-03-04 16:46:59,165 - INFO - 127.0.0.1 - - [04/Mar/2025 16:46:59] "GET / HTTP/1.1" 200 -
+2025-03-04 16:46:59,426 - INFO - 127.0.0.1 - - [04/Mar/2025 16:46:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 16:46:59,449 - INFO - 127.0.0.1 - - [04/Mar/2025 16:46:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 16:46:59,460 - INFO - 127.0.0.1 - - [04/Mar/2025 16:46:59] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 16:46:59,463 - INFO - 127.0.0.1 - - [04/Mar/2025 16:46:59] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 16:47:00,088 - INFO - 127.0.0.1 - - [04/Mar/2025 16:47:00] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 16:47:14,805 - DEBUG - Received JSON data: {'purpose': 'buy', 'sqft_living': '4333', 'no_of_bedrooms': '4', 'no_of_bathrooms': '2', 'sqft_lot': '7688', 'no_of_floors': '3', 'house_age': '10', 'zipcode': '98765'}
+2025-03-04 16:47:14,805 - DEBUG - Parsed input data: sqft_living=4333.0, no_of_bedrooms=4, no_of_bathrooms=2.0, sqft_lot=7688.0, no_of_floors=3, house_age=10, zipcode=98765, purpose=buy
+2025-03-04 16:47:14,806 - DEBUG - Features prepared for prediction: {'sqft_living': 4333.0, 'no_of_bedrooms': 4, 'no_of_bathrooms': 2.0, 'sqft_lot': 7688.0, 'no_of_floors': 3, 'house_age': 10, 'zipcode': '98765'}
+2025-03-04 16:47:15,217 - INFO - User query inserted successfully: (4333.0, 4, 2.0, 7688.0, 3, 10, '98765', 'buy', np.float64(757740.6615190982))
+2025-03-04 16:47:15,218 - ERROR - Please enter valid numerical values for all fields. Error: too many values to unpack (expected 2)
+2025-03-04 16:47:15,219 - INFO - 127.0.0.1 - - [04/Mar/2025 16:47:15] "[31m[1mPOST / HTTP/1.1[0m" 400 -
+2025-03-04 16:47:20,098 - INFO - 127.0.0.1 - - [04/Mar/2025 16:47:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 16:47:31,791 - DEBUG - Received JSON data: {'purpose': 'buy', 'sqft_living': '4333', 'no_of_bedrooms': '4', 'no_of_bathrooms': '2', 'sqft_lot': '7688', 'no_of_floors': '3', 'house_age': '10', 'zipcode': '98765'}
+2025-03-04 16:47:31,792 - DEBUG - Parsed input data: sqft_living=4333.0, no_of_bedrooms=4, no_of_bathrooms=2.0, sqft_lot=7688.0, no_of_floors=3, house_age=10, zipcode=98765, purpose=buy
+2025-03-04 16:47:31,792 - DEBUG - Features prepared for prediction: {'sqft_living': 4333.0, 'no_of_bedrooms': 4, 'no_of_bathrooms': 2.0, 'sqft_lot': 7688.0, 'no_of_floors': 3, 'house_age': 10, 'zipcode': '98765'}
+2025-03-04 16:47:32,096 - INFO - User query inserted successfully: (4333.0, 4, 2.0, 7688.0, 3, 10, '98765', 'buy', np.float64(757740.6615190982))
+2025-03-04 16:47:32,097 - ERROR - Please enter valid numerical values for all fields. Error: too many values to unpack (expected 2)
+2025-03-04 16:47:32,098 - INFO - 127.0.0.1 - - [04/Mar/2025 16:47:32] "[31m[1mPOST / HTTP/1.1[0m" 400 -
+2025-03-04 16:51:29,155 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\app\\routes.py', reloading
+2025-03-04 16:51:29,621 - INFO -  * Restarting with stat
+2025-03-04 16:51:33,339 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 16:51:33,350 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 16:51:33,360 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 16:51:34,111 - WARNING -  * Debugger is active!
+2025-03-04 16:51:34,121 - INFO -  * Debugger PIN: 873-155-825
+2025-03-04 16:51:54,612 - INFO - 127.0.0.1 - - [04/Mar/2025 16:51:54] "GET / HTTP/1.1" 200 -
+2025-03-04 16:51:54,899 - INFO - 127.0.0.1 - - [04/Mar/2025 16:51:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 16:51:54,906 - INFO - 127.0.0.1 - - [04/Mar/2025 16:51:54] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 16:51:54,974 - INFO - 127.0.0.1 - - [04/Mar/2025 16:51:54] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 16:51:54,986 - INFO - 127.0.0.1 - - [04/Mar/2025 16:51:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 16:51:55,123 - INFO - 127.0.0.1 - - [04/Mar/2025 16:51:55] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 16:52:11,692 - DEBUG - Received JSON data: {'purpose': 'sell', 'sqft_living': '4333', 'no_of_bedrooms': '4', 'no_of_bathrooms': '2', 'sqft_lot': '7688', 'no_of_floors': '3', 'house_age': '10', 'zipcode': '98765'}
+2025-03-04 16:52:11,692 - DEBUG - Parsed input data: sqft_living=4333.0, no_of_bedrooms=4, no_of_bathrooms=2.0, sqft_lot=7688.0, no_of_floors=3, house_age=10, zipcode=98765, purpose=sell
+2025-03-04 16:52:11,693 - DEBUG - Features prepared for prediction: {'sqft_living': 4333.0, 'no_of_bedrooms': 4, 'no_of_bathrooms': 2.0, 'sqft_lot': 7688.0, 'no_of_floors': 3, 'house_age': 10, 'zipcode': '98765'}
+2025-03-04 16:52:12,099 - INFO - User query inserted successfully: (4333.0, 4, 2.0, 7688.0, 3, 10, '98765', 'sell', np.float64(757740.6615190982))
+2025-03-04 16:52:12,099 - DEBUG - Predicted price: 757740.6615190982, Confidence interval: (np.float64(737740.6615190982), np.float64(777740.6615190982))
+2025-03-04 16:52:12,100 - DEBUG - Realtor.com URL: https://www.realtor.com/realestateandhomes-search/98765/price-707740.6615190982-807740.6615190982
+2025-03-04 16:52:12,103 - DEBUG - Recommendations: []
+2025-03-04 16:52:12,105 - WARNING - Duplicate entry prevented: (4333.0, 4, 2.0, 7688.0, 3, 10, '98765', 'sell', np.float64(757740.6615190982))
+2025-03-04 16:52:12,105 - DEBUG - Prediction stored in the database
+2025-03-04 16:52:12,105 - INFO - 127.0.0.1 - - [04/Mar/2025 16:52:12] "POST / HTTP/1.1" 200 -
+2025-03-04 16:52:27,739 - DEBUG - Received JSON data: {'purpose': 'sell', 'sqft_living': '4333', 'no_of_bedrooms': '4', 'no_of_bathrooms': '2', 'sqft_lot': '7688', 'no_of_floors': '3', 'house_age': '10', 'zipcode': '98765'}
+2025-03-04 16:52:27,739 - DEBUG - Parsed input data: sqft_living=4333.0, no_of_bedrooms=4, no_of_bathrooms=2.0, sqft_lot=7688.0, no_of_floors=3, house_age=10, zipcode=98765, purpose=sell
+2025-03-04 16:52:27,739 - DEBUG - Features prepared for prediction: {'sqft_living': 4333.0, 'no_of_bedrooms': 4, 'no_of_bathrooms': 2.0, 'sqft_lot': 7688.0, 'no_of_floors': 3, 'house_age': 10, 'zipcode': '98765'}
+2025-03-04 16:52:27,948 - INFO - User query inserted successfully: (4333.0, 4, 2.0, 7688.0, 3, 10, '98765', 'sell', np.float64(757740.6615190982))
+2025-03-04 16:52:27,949 - DEBUG - Predicted price: 757740.6615190982, Confidence interval: (np.float64(737740.6615190982), np.float64(777740.6615190982))
+2025-03-04 16:52:27,949 - DEBUG - Realtor.com URL: https://www.realtor.com/realestateandhomes-search/98765/price-707740.6615190982-807740.6615190982
+2025-03-04 16:52:27,952 - DEBUG - Recommendations: []
+2025-03-04 16:52:27,953 - WARNING - Duplicate entry prevented: (4333.0, 4, 2.0, 7688.0, 3, 10, '98765', 'sell', np.float64(757740.6615190982))
+2025-03-04 16:52:27,953 - DEBUG - Prediction stored in the database
+2025-03-04 16:52:27,953 - INFO - 127.0.0.1 - - [04/Mar/2025 16:52:27] "POST / HTTP/1.1" 200 -
+2025-03-04 16:52:46,186 - DEBUG - Received JSON data: {'purpose': 'sell', 'sqft_living': '7688', 'no_of_bedrooms': '4', 'no_of_bathrooms': '2', 'sqft_lot': '7688', 'no_of_floors': '3', 'house_age': '10', 'zipcode': '98765'}
+2025-03-04 16:52:46,186 - DEBUG - Parsed input data: sqft_living=7688.0, no_of_bedrooms=4, no_of_bathrooms=2.0, sqft_lot=7688.0, no_of_floors=3, house_age=10, zipcode=98765, purpose=sell
+2025-03-04 16:52:46,186 - DEBUG - Features prepared for prediction: {'sqft_living': 7688.0, 'no_of_bedrooms': 4, 'no_of_bathrooms': 2.0, 'sqft_lot': 7688.0, 'no_of_floors': 3, 'house_age': 10, 'zipcode': '98765'}
+2025-03-04 16:52:46,416 - INFO - User query inserted successfully: (7688.0, 4, 2.0, 7688.0, 3, 10, '98765', 'sell', np.float64(783853.2347733954))
+2025-03-04 16:52:46,417 - DEBUG - Predicted price: 783853.2347733954, Confidence interval: (np.float64(763853.2347733954), np.float64(803853.2347733954))
+2025-03-04 16:52:46,417 - DEBUG - Realtor.com URL: https://www.realtor.com/realestateandhomes-search/98765/price-733853.2347733954-833853.2347733954
+2025-03-04 16:52:46,420 - DEBUG - Recommendations: []
+2025-03-04 16:52:46,421 - WARNING - Duplicate entry prevented: (7688.0, 4, 2.0, 7688.0, 3, 10, '98765', 'sell', np.float64(783853.2347733954))
+2025-03-04 16:52:46,421 - DEBUG - Prediction stored in the database
+2025-03-04 16:52:46,421 - INFO - 127.0.0.1 - - [04/Mar/2025 16:52:46] "POST / HTTP/1.1" 200 -
+2025-03-04 16:54:38,157 - DEBUG - Received JSON data: {'purpose': 'sell', 'sqft_living': '3456', 'no_of_bedrooms': '2', 'no_of_bathrooms': '2', 'sqft_lot': '4000', 'no_of_floors': '2', 'house_age': '34', 'zipcode': '98145'}
+2025-03-04 16:54:38,157 - DEBUG - Parsed input data: sqft_living=3456.0, no_of_bedrooms=2, no_of_bathrooms=2.0, sqft_lot=4000.0, no_of_floors=2, house_age=34, zipcode=98145, purpose=sell
+2025-03-04 16:54:38,157 - DEBUG - Features prepared for prediction: {'sqft_living': 3456.0, 'no_of_bedrooms': 2, 'no_of_bathrooms': 2.0, 'sqft_lot': 4000.0, 'no_of_floors': 2, 'house_age': 34, 'zipcode': '98145'}
+2025-03-04 16:54:38,377 - INFO - User query inserted successfully: (3456.0, 2, 2.0, 4000.0, 2, 34, '98145', 'sell', np.float64(654697.0976464223))
+2025-03-04 16:54:38,377 - DEBUG - Predicted price: 654697.0976464223, Confidence interval: (np.float64(634697.0976464223), np.float64(674697.0976464223))
+2025-03-04 16:54:38,377 - DEBUG - Realtor.com URL: https://www.realtor.com/realestateandhomes-search/98145/price-604697.0976464223-704697.0976464223
+2025-03-04 16:54:38,381 - DEBUG - Recommendations: []
+2025-03-04 16:54:38,382 - WARNING - Duplicate entry prevented: (3456.0, 2, 2.0, 4000.0, 2, 34, '98145', 'sell', np.float64(654697.0976464223))
+2025-03-04 16:54:38,383 - DEBUG - Prediction stored in the database
+2025-03-04 16:54:38,383 - INFO - 127.0.0.1 - - [04/Mar/2025 16:54:38] "POST / HTTP/1.1" 200 -
+2025-03-04 16:55:21,873 - INFO - 127.0.0.1 - - [04/Mar/2025 16:55:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 16:55:51,006 - DEBUG - Received JSON data: {'purpose': 'sell', 'sqft_living': '3456', 'no_of_bedrooms': '2', 'no_of_bathrooms': '2', 'sqft_lot': '4000', 'no_of_floors': '2', 'house_age': '34', 'zipcode': '98145'}
+2025-03-04 16:55:51,006 - DEBUG - Parsed input data: sqft_living=3456.0, no_of_bedrooms=2, no_of_bathrooms=2.0, sqft_lot=4000.0, no_of_floors=2, house_age=34, zipcode=98145, purpose=sell
+2025-03-04 16:55:51,007 - DEBUG - Features prepared for prediction: {'sqft_living': 3456.0, 'no_of_bedrooms': 2, 'no_of_bathrooms': 2.0, 'sqft_lot': 4000.0, 'no_of_floors': 2, 'house_age': 34, 'zipcode': '98145'}
+2025-03-04 16:55:51,246 - INFO - User query inserted successfully: (3456.0, 2, 2.0, 4000.0, 2, 34, '98145', 'sell', np.float64(654697.0976464223))
+2025-03-04 16:55:51,247 - DEBUG - Predicted price: 654697.0976464223, Confidence interval: (np.float64(634697.0976464223), np.float64(674697.0976464223))
+2025-03-04 16:55:51,247 - DEBUG - Realtor.com URL: https://www.realtor.com/realestateandhomes-search/98145/price-604697.0976464223-704697.0976464223
+2025-03-04 16:55:51,250 - DEBUG - Recommendations: []
+2025-03-04 16:55:51,251 - WARNING - Duplicate entry prevented: (3456.0, 2, 2.0, 4000.0, 2, 34, '98145', 'sell', np.float64(654697.0976464223))
+2025-03-04 16:55:51,251 - DEBUG - Prediction stored in the database
+2025-03-04 16:55:51,252 - INFO - 127.0.0.1 - - [04/Mar/2025 16:55:51] "POST / HTTP/1.1" 200 -
+2025-03-04 17:03:53,842 - INFO - 127.0.0.1 - - [04/Mar/2025 17:03:53] "GET / HTTP/1.1" 200 -
+2025-03-04 17:03:53,908 - INFO - 127.0.0.1 - - [04/Mar/2025 17:03:53] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 17:03:53,908 - INFO - 127.0.0.1 - - [04/Mar/2025 17:03:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 17:03:53,910 - INFO - 127.0.0.1 - - [04/Mar/2025 17:03:53] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 17:03:53,968 - INFO - 127.0.0.1 - - [04/Mar/2025 17:03:53] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-04 17:03:54,162 - INFO - 127.0.0.1 - - [04/Mar/2025 17:03:54] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 17:04:30,589 - DEBUG - Received JSON data: {'purpose': 'buy', 'sqft_living': '4567', 'no_of_bedrooms': '3', 'no_of_bathrooms': '2', 'sqft_lot': '6000', 'no_of_floors': '3', 'house_age': '57', 'zipcode': '98567'}
+2025-03-04 17:04:30,589 - DEBUG - Parsed input data: sqft_living=4567.0, no_of_bedrooms=3, no_of_bathrooms=2.0, sqft_lot=6000.0, no_of_floors=3, house_age=57, zipcode=98567, purpose=buy
+2025-03-04 17:04:30,589 - DEBUG - Features prepared for prediction: {'sqft_living': 4567.0, 'no_of_bedrooms': 3, 'no_of_bathrooms': 2.0, 'sqft_lot': 6000.0, 'no_of_floors': 3, 'house_age': 57, 'zipcode': '98567'}
+2025-03-04 17:04:30,815 - INFO - User query inserted successfully: (4567.0, 3, 2.0, 6000.0, 3, 57, '98567', 'buy', np.float64(729030.9708974679))
+2025-03-04 17:04:30,816 - DEBUG - Predicted price: 729030.9708974679, Confidence interval: (np.float64(709030.9708974679), np.float64(749030.9708974679))
+2025-03-04 17:04:30,816 - DEBUG - Realtor.com URL: https://www.realtor.com/realestateandhomes-search/98567/price-679030.9708974679-779030.9708974679
+2025-03-04 17:04:30,828 - DEBUG - Recommendations: []
+2025-03-04 17:04:30,829 - WARNING - Duplicate entry prevented: (4567.0, 3, 2.0, 6000.0, 3, 57, '98567', 'buy', np.float64(729030.9708974679))
+2025-03-04 17:04:30,830 - DEBUG - Prediction stored in the database
+2025-03-04 17:04:30,830 - INFO - 127.0.0.1 - - [04/Mar/2025 17:04:30] "POST / HTTP/1.1" 200 -
+2025-03-04 17:05:04,436 - DEBUG - Received JSON data: {'purpose': 'buy', 'sqft_living': '2334', 'no_of_bedrooms': '2', 'no_of_bathrooms': '4', 'sqft_lot': '3000', 'no_of_floors': '1', 'house_age': '20', 'zipcode': '98007'}
+2025-03-04 17:05:04,437 - DEBUG - Parsed input data: sqft_living=2334.0, no_of_bedrooms=2, no_of_bathrooms=4.0, sqft_lot=3000.0, no_of_floors=1, house_age=20, zipcode=98007, purpose=buy
+2025-03-04 17:05:04,438 - DEBUG - Features prepared for prediction: {'sqft_living': 2334.0, 'no_of_bedrooms': 2, 'no_of_bathrooms': 4.0, 'sqft_lot': 3000.0, 'no_of_floors': 1, 'house_age': 20, 'zipcode': '98007'}
+2025-03-04 17:05:04,662 - INFO - User query inserted successfully: (2334.0, 2, 4.0, 3000.0, 1, 20, '98007', 'buy', np.float64(568293.6768860285))
+2025-03-04 17:05:04,663 - DEBUG - Predicted price: 568293.6768860285, Confidence interval: (np.float64(548293.6768860285), np.float64(588293.6768860285))
+2025-03-04 17:05:04,663 - DEBUG - Realtor.com URL: https://www.realtor.com/realestateandhomes-search/98007/price-518293.6768860285-618293.6768860285
+2025-03-04 17:05:04,667 - DEBUG - Recommendations: []
+2025-03-04 17:05:04,667 - WARNING - Duplicate entry prevented: (2334.0, 2, 4.0, 3000.0, 1, 20, '98007', 'buy', np.float64(568293.6768860285))
+2025-03-04 17:05:04,668 - DEBUG - Prediction stored in the database
+2025-03-04 17:05:04,668 - INFO - 127.0.0.1 - - [04/Mar/2025 17:05:04] "POST / HTTP/1.1" 200 -
+2025-03-04 17:05:21,286 - DEBUG - Fetched 12 predictions for admin dashboard
+2025-03-04 17:05:21,297 - INFO - 127.0.0.1 - - [04/Mar/2025 17:05:21] "GET /admin HTTP/1.1" 200 -
+2025-03-04 17:05:21,355 - INFO - 127.0.0.1 - - [04/Mar/2025 17:05:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 17:05:21,356 - INFO - 127.0.0.1 - - [04/Mar/2025 17:05:21] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 17:07:30,996 - DEBUG - Received JSON data: {'purpose': 'buy', 'sqft_living': '2334', 'no_of_bedrooms': '2', 'no_of_bathrooms': '1', 'sqft_lot': '3000', 'no_of_floors': '1', 'house_age': '20', 'zipcode': '98007'}
+2025-03-04 17:07:30,996 - DEBUG - Parsed input data: sqft_living=2334.0, no_of_bedrooms=2, no_of_bathrooms=1.0, sqft_lot=3000.0, no_of_floors=1, house_age=20, zipcode=98007, purpose=buy
+2025-03-04 17:07:30,996 - DEBUG - Features prepared for prediction: {'sqft_living': 2334.0, 'no_of_bedrooms': 2, 'no_of_bathrooms': 1.0, 'sqft_lot': 3000.0, 'no_of_floors': 1, 'house_age': 20, 'zipcode': '98007'}
+2025-03-04 17:07:31,222 - INFO - User query inserted successfully: (2334.0, 2, 1.0, 3000.0, 1, 20, '98007', 'buy', np.float64(514925.68182488193))
+2025-03-04 17:07:31,223 - DEBUG - Predicted price: 514925.68182488193, Confidence interval: (np.float64(494925.68182488193), np.float64(534925.6818248819))
+2025-03-04 17:07:31,223 - DEBUG - Realtor.com URL: https://www.realtor.com/realestateandhomes-search/98007/price-464925.68182488193-564925.6818248819
+2025-03-04 17:07:31,227 - DEBUG - Recommendations: ['Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.', 'Consider a home with at least 2 bathrooms for greater resale value.']
+2025-03-04 17:07:31,228 - WARNING - Duplicate entry prevented: (2334.0, 2, 1.0, 3000.0, 1, 20, '98007', 'buy', np.float64(514925.68182488193))
+2025-03-04 17:07:31,228 - DEBUG - Prediction stored in the database
+2025-03-04 17:07:31,229 - INFO - 127.0.0.1 - - [04/Mar/2025 17:07:31] "POST / HTTP/1.1" 200 -
+2025-03-04 17:18:34,546 - INFO - 127.0.0.1 - - [04/Mar/2025 17:18:34] "GET / HTTP/1.1" 200 -
+2025-03-04 17:18:34,584 - INFO - 127.0.0.1 - - [04/Mar/2025 17:18:34] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 17:18:34,588 - INFO - 127.0.0.1 - - [04/Mar/2025 17:18:34] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 17:18:34,589 - INFO - 127.0.0.1 - - [04/Mar/2025 17:18:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 17:18:34,689 - INFO - 127.0.0.1 - - [04/Mar/2025 17:18:34] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-04 17:18:34,725 - INFO - 127.0.0.1 - - [04/Mar/2025 17:18:34] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 17:19:16,025 - DEBUG - Received JSON data: {'purpose': 'sell', 'sqft_living': '9000', 'no_of_bedrooms': '3', 'no_of_bathrooms': '5', 'sqft_lot': '10000', 'no_of_floors': '3', 'house_age': '70', 'zipcode': '98006'}
+2025-03-04 17:19:16,025 - DEBUG - Parsed input data: sqft_living=9000.0, no_of_bedrooms=3, no_of_bathrooms=5.0, sqft_lot=10000.0, no_of_floors=3, house_age=70, zipcode=98006, purpose=sell
+2025-03-04 17:19:16,026 - DEBUG - Features prepared for prediction: {'sqft_living': 9000.0, 'no_of_bedrooms': 3, 'no_of_bathrooms': 5.0, 'sqft_lot': 10000.0, 'no_of_floors': 3, 'house_age': 70, 'zipcode': '98006'}
+2025-03-04 17:19:16,259 - INFO - User query inserted successfully: (9000.0, 3, 5.0, 10000.0, 3, 70, '98006', 'sell', np.float64(899796.3194501449))
+2025-03-04 17:19:16,259 - DEBUG - Predicted price: 899796.3194501449, Confidence interval: (np.float64(879796.3194501449), np.float64(919796.3194501449))
+2025-03-04 17:19:16,259 - DEBUG - Realtor.com URL: https://www.realtor.com/realestateandhomes-search/98006/price-849796.3194501449-949796.3194501449
+2025-03-04 17:19:16,263 - DEBUG - Recommendations: []
+2025-03-04 17:19:16,265 - WARNING - Duplicate entry prevented: (9000.0, 3, 5.0, 10000.0, 3, 70, '98006', 'sell', np.float64(899796.3194501449))
+2025-03-04 17:19:16,265 - DEBUG - Prediction stored in the database
+2025-03-04 17:19:16,266 - INFO - 127.0.0.1 - - [04/Mar/2025 17:19:16] "POST / HTTP/1.1" 200 -
+2025-03-04 17:20:15,729 - DEBUG - Received JSON data: {'purpose': 'sell', 'sqft_living': '3500', 'no_of_bedrooms': '2', 'no_of_bathrooms': '2', 'sqft_lot': '4000', 'no_of_floors': '0', 'house_age': '23', 'zipcode': '98007'}
+2025-03-04 17:20:15,729 - DEBUG - Parsed input data: sqft_living=3500.0, no_of_bedrooms=2, no_of_bathrooms=2.0, sqft_lot=4000.0, no_of_floors=0, house_age=23, zipcode=98007, purpose=sell
+2025-03-04 17:20:15,729 - DEBUG - Features prepared for prediction: {'sqft_living': 3500.0, 'no_of_bedrooms': 2, 'no_of_bathrooms': 2.0, 'sqft_lot': 4000.0, 'no_of_floors': 0, 'house_age': 23, 'zipcode': '98007'}
+2025-03-04 17:20:15,945 - INFO - User query inserted successfully: (3500.0, 2, 2.0, 4000.0, 0, 23, '98007', 'sell', np.float64(607853.1500831237))
+2025-03-04 17:20:15,945 - DEBUG - Predicted price: 607853.1500831237, Confidence interval: (np.float64(587853.1500831237), np.float64(627853.1500831237))
+2025-03-04 17:20:15,946 - DEBUG - Realtor.com URL: https://www.realtor.com/realestateandhomes-search/98007/price-557853.1500831237-657853.1500831237
+2025-03-04 17:20:15,949 - DEBUG - Recommendations: []
+2025-03-04 17:20:15,950 - WARNING - Duplicate entry prevented: (3500.0, 2, 2.0, 4000.0, 0, 23, '98007', 'sell', np.float64(607853.1500831237))
+2025-03-04 17:20:15,950 - DEBUG - Prediction stored in the database
+2025-03-04 17:20:15,950 - INFO - 127.0.0.1 - - [04/Mar/2025 17:20:15] "POST / HTTP/1.1" 200 -
+2025-03-04 17:20:26,680 - DEBUG - Fetched 15 predictions for admin dashboard
+2025-03-04 17:20:26,682 - INFO - 127.0.0.1 - - [04/Mar/2025 17:20:26] "GET /admin HTTP/1.1" 200 -
+2025-03-04 17:20:26,748 - INFO - 127.0.0.1 - - [04/Mar/2025 17:20:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 17:20:26,751 - INFO - 127.0.0.1 - - [04/Mar/2025 17:20:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 17:22:32,998 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\app\\database.py', reloading
+2025-03-04 17:22:33,606 - INFO -  * Restarting with stat
+2025-03-04 17:22:38,133 - DEBUG - matplotlib data path: c:\Users\AMON\Desktop\C200\.venv\Lib\site-packages\matplotlib\mpl-data
+2025-03-04 17:22:38,146 - DEBUG - CONFIGDIR=C:\Users\AMON\.matplotlib
+2025-03-04 17:22:38,149 - DEBUG - interactive is False
+2025-03-04 17:22:38,149 - DEBUG - platform is win32
+2025-03-04 17:22:38,226 - DEBUG - deprecate positional args: graphviz.backend.piping.pipe(['renderer', 'formatter', 'neato_no_op', 'quiet'])
+2025-03-04 17:22:38,228 - DEBUG - deprecate positional args: graphviz.backend.rendering.render(['renderer', 'formatter', 'neato_no_op', 'quiet'])
+2025-03-04 17:22:38,231 - DEBUG - deprecate positional args: graphviz.backend.unflattening.unflatten(['stagger', 'fanout', 'chain', 'encoding'])
+2025-03-04 17:22:38,233 - DEBUG - deprecate positional args: graphviz.backend.viewing.view(['quiet'])
+2025-03-04 17:22:38,244 - DEBUG - deprecate positional args: graphviz.quoting.quote(['is_html_string', 'is_valid_id', 'dot_keywords', 'endswith_odd_number_of_backslashes', 'escape_unescaped_quotes'])
+2025-03-04 17:22:38,245 - DEBUG - deprecate positional args: graphviz.quoting.a_list(['kwargs', 'attributes'])
+2025-03-04 17:22:38,245 - DEBUG - deprecate positional args: graphviz.quoting.attr_list(['kwargs', 'attributes'])
+2025-03-04 17:22:38,245 - DEBUG - deprecate positional args: graphviz.dot.Dot.clear(['keep_attrs'])
+2025-03-04 17:22:38,246 - DEBUG - deprecate positional args: graphviz.dot.Dot.__iter__(['subgraph'])
+2025-03-04 17:22:38,246 - DEBUG - deprecate positional args: graphviz.dot.Dot.node(['_attributes'])
+2025-03-04 17:22:38,246 - DEBUG - deprecate positional args: graphviz.dot.Dot.edge(['_attributes'])
+2025-03-04 17:22:38,246 - DEBUG - deprecate positional args: graphviz.dot.Dot.attr(['_attributes'])
+2025-03-04 17:22:38,246 - DEBUG - deprecate positional args: graphviz.dot.Dot.subgraph(['name', 'comment', 'graph_attr', 'node_attr', 'edge_attr', 'body'])
+2025-03-04 17:22:38,250 - DEBUG - deprecate positional args: graphviz.piping.Pipe._pipe_legacy(['renderer', 'formatter', 'neato_no_op', 'quiet'])
+2025-03-04 17:22:38,254 - DEBUG - deprecate positional args: graphviz.saving.Save.save(['directory'])
+2025-03-04 17:22:38,254 - DEBUG - deprecate positional args: graphviz.rendering.Render.render(['directory', 'view', 'cleanup', 'format', 'renderer', 'formatter', 'neato_no_op', 'quiet', 'quiet_view'])
+2025-03-04 17:22:38,254 - DEBUG - deprecate positional args: graphviz.rendering.Render.view(['directory', 'cleanup', 'quiet', 'quiet_view'])
+2025-03-04 17:22:38,256 - DEBUG - deprecate positional args: graphviz.unflattening.Unflatten.unflatten(['stagger', 'fanout', 'chain'])
+2025-03-04 17:22:38,257 - DEBUG - deprecate positional args: graphviz.graphs.BaseGraph.__init__(['comment', 'filename', 'directory', 'format', 'engine', 'encoding', 'graph_attr', 'node_attr', 'edge_attr', 'body', 'strict'])
+2025-03-04 17:22:38,259 - DEBUG - deprecate positional args: graphviz.sources.Source.from_file(['directory', 'format', 'engine', 'encoding', 'renderer', 'formatter'])
+2025-03-04 17:22:38,259 - DEBUG - deprecate positional args: graphviz.sources.Source.__init__(['filename', 'directory', 'format', 'engine', 'encoding'])
+2025-03-04 17:22:38,259 - DEBUG - deprecate positional args: graphviz.sources.Source.save(['directory'])
+2025-03-04 17:22:38,345 - DEBUG - Model, encoder, and polynomial features loaded successfully.
+2025-03-04 17:22:38,378 - WARNING -  * Debugger is active!
+2025-03-04 17:22:38,386 - INFO -  * Debugger PIN: 873-155-825
+2025-03-04 17:22:51,152 - DEBUG - Retrieved all queries: [(15, 3500, 2, 2.0, 4000, 0.0, 23, 98007, 'sell', 607853.1500831237, '2025-03-04 17:20:15'), (14, 9000, 3, 5.0, 10000, 3.0, 70, 98006, 'sell', 899796.3194501449, '2025-03-04 17:19:16'), (13, 2334, 2, 1.0, 3000, 1.0, 20, 98007, 'buy', 514925.68182488193, '2025-03-04 17:07:31'), (12, 2334, 2, 4.0, 3000, 1.0, 20, 98007, 'buy', 568293.6768860285, '2025-03-04 17:05:04'), (11, 4567, 3, 2.0, 6000, 3.0, 57, 98567, 'buy', 729030.9708974679, '2025-03-04 17:04:30'), (10, 3456, 2, 2.0, 4000, 2.0, 34, 98145, 'sell', 654697.0976464223, '2025-03-04 16:55:51'), (9, 3456, 2, 2.0, 4000, 2.0, 34, 98145, 'sell', 654697.0976464223, '2025-03-04 16:54:38'), (8, 7688, 4, 2.0, 7688, 3.0, 10, 98765, 'sell', 783853.2347733954, '2025-03-04 16:52:46'), (7, 4333, 4, 2.0, 7688, 3.0, 10, 98765, 'sell', 757740.6615190982, '2025-03-04 16:52:27'), (6, 4333, 4, 2.0, 7688, 3.0, 10, 98765, 'sell', 757740.6615190982, '2025-03-04 16:52:12'), (5, 4333, 4, 2.0, 7688, 3.0, 10, 98765, 'buy', 757740.6615190982, '2025-03-04 16:47:32'), (4, 4333, 4, 2.0, 7688, 3.0, 10, 98765, 'buy', 757740.6615190982, '2025-03-04 16:47:15'), (3, 4333, 4, 2.0, 7688, 3.0, 10, 98765, 'sell', 757740.6615190982, '2025-03-04 16:46:10'), (2, 4333, 4, 2.0, 7688, 3.0, 10, 98765, 'sell', 757740.6615190982, '2025-03-04 16:42:16'), (1, 4333, 4, 2.0, 7688, 3.0, 10, 98765, 'sell', 757740.6615190982, '2025-03-04 16:41:14')]
+2025-03-04 17:22:51,152 - DEBUG - Fetched 15 predictions for admin dashboard
+2025-03-04 17:22:51,180 - INFO - 127.0.0.1 - - [04/Mar/2025 17:22:51] "GET /admin HTTP/1.1" 200 -
+2025-03-04 17:22:51,330 - INFO - 127.0.0.1 - - [04/Mar/2025 17:22:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 17:22:51,333 - INFO - 127.0.0.1 - - [04/Mar/2025 17:22:51] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 17:22:51,397 - INFO - 127.0.0.1 - - [04/Mar/2025 17:22:51] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 17:22:56,727 - INFO - 127.0.0.1 - - [04/Mar/2025 17:22:56] "GET / HTTP/1.1" 200 -
+2025-03-04 17:22:56,789 - INFO - 127.0.0.1 - - [04/Mar/2025 17:22:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 17:22:56,795 - INFO - 127.0.0.1 - - [04/Mar/2025 17:22:56] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 17:22:56,797 - INFO - 127.0.0.1 - - [04/Mar/2025 17:22:56] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 17:22:56,802 - INFO - 127.0.0.1 - - [04/Mar/2025 17:22:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 17:22:56,859 - INFO - 127.0.0.1 - - [04/Mar/2025 17:22:56] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 17:23:09,853 - DEBUG - Received JSON data: {'purpose': 'buy', 'sqft_living': '4333', 'no_of_bedrooms': '4', 'no_of_bathrooms': '2', 'sqft_lot': '7688', 'no_of_floors': '3', 'house_age': '10', 'zipcode': '98765'}
+2025-03-04 17:23:09,853 - DEBUG - Parsed input data: sqft_living=4333.0, no_of_bedrooms=4, no_of_bathrooms=2.0, sqft_lot=7688.0, no_of_floors=3, house_age=10, zipcode=98765, purpose=buy
+2025-03-04 17:23:09,853 - DEBUG - Features prepared for prediction: {'sqft_living': 4333.0, 'no_of_bedrooms': 4, 'no_of_bathrooms': 2.0, 'sqft_lot': 7688.0, 'no_of_floors': 3, 'house_age': 10, 'zipcode': '98765'}
+2025-03-04 17:23:09,853 - DEBUG - Received features for prediction: {'sqft_living': 4333.0, 'no_of_bedrooms': 4, 'no_of_bathrooms': 2.0, 'sqft_lot': 7688.0, 'no_of_floors': 3, 'house_age': 10, 'zipcode': '98765'}
+2025-03-04 17:23:09,853 - DEBUG - Purpose: buy
+2025-03-04 17:23:09,877 - DEBUG - Input data converted to DataFrame:    sqft_living  no_of_bedrooms  no_of_bathrooms  sqft_lot  no_of_floors  house_age zipcode
+0       4333.0               4              2.0    7688.0             3         10   98765
+2025-03-04 17:23:09,969 - DEBUG - Encoded zipcode:    zipcode_98001  zipcode_98002  zipcode_98003  ...  zipcode_98188  zipcode_98198  zipcode_98199
+0            0.0            0.0            0.0  ...            0.0            0.0            0.0
+
+[1 rows x 70 columns]
+2025-03-04 17:23:10,125 - DEBUG - Input data after encoding:    sqft_living  no_of_bedrooms  no_of_bathrooms  sqft_lot  ...  zipcode_98178  zipcode_98188  zipcode_98198  zipcode_98199
+0       4333.0               4              2.0    7688.0  ...            0.0            0.0            0.0            0.0
+
+[1 rows x 76 columns]
+2025-03-04 17:23:10,128 - DEBUG - Input data after polynomial transformation: [[4.333e+03 4.000e+00 2.000e+00 ... 0.000e+00 0.000e+00 0.000e+00]]
+2025-03-04 17:23:10,128 - DEBUG - Processed features: [[4.333e+03 4.000e+00 2.000e+00 ... 0.000e+00 0.000e+00 0.000e+00]]
+2025-03-04 17:23:10,236 - DEBUG - Predicted price (log scale): [13.53809779]
+2025-03-04 17:23:10,236 - DEBUG - Predicted price (actual): [757740.6615191]
+2025-03-04 17:23:10,237 - DEBUG - Confidence interval: [[737740.6615191], [777740.6615191]]
+2025-03-04 17:23:10,238 - DEBUG - Fetched recommendation rules for purpose 'buy': [('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.')]
+2025-03-04 17:23:10,238 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,238 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,239 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,239 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,239 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,239 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,239 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,239 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,239 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,239 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,239 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,240 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,240 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,240 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,240 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,240 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,240 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,240 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,240 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,240 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,240 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,241 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,241 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,241 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,241 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,241 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,241 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,241 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,241 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,241 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,241 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,241 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,242 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,242 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,242 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,242 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,242 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,242 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,242 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,242 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,242 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,242 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,242 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,243 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,243 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,243 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,243 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,243 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,243 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,243 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,243 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,243 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,243 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,243 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,244 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,244 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,244 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,244 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,244 - DEBUG - Returning recommendations: []
+2025-03-04 17:23:10,244 - DEBUG - Recommendations: []
+2025-03-04 17:23:10,245 - DEBUG - Duplicate check count: 0
+2025-03-04 17:23:10,258 - INFO - User query inserted successfully: (4333.0, 4, 2.0, 7688.0, 3, 10, '98765', 'buy', np.float64(757740.6615190982))
+2025-03-04 17:23:10,258 - DEBUG - Prediction stored in the database.
+2025-03-04 17:23:10,258 - DEBUG - Predicted price: 757740.6615190982, Confidence interval: (np.float64(737740.6615190982), np.float64(777740.6615190982))
+2025-03-04 17:23:10,259 - DEBUG - Realtor.com URL: https://www.realtor.com/realestateandhomes-search/98765/price-707740.6615190982-807740.6615190982
+2025-03-04 17:23:10,262 - DEBUG - Fetched recommendation rules for purpose 'buy': [('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.'), ('sqft_living', '< 1000', 'Consider a home with at least 1200 sqft for better resale value.'), ('no_of_bathrooms', '= 1', 'Consider a home with at least 2 bathrooms for greater resale value.')]
+2025-03-04 17:23:10,262 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,262 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,262 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,262 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,262 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,262 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,262 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,262 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,263 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,263 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,263 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,263 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,263 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,263 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,263 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,263 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,263 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,263 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,263 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,264 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,264 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,264 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,264 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,264 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,264 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,264 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,264 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,264 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,264 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,264 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,264 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,265 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,265 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,265 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,265 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,265 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,265 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,265 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,265 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,265 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,265 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,266 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,266 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,266 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,266 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,266 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,266 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,266 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,266 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,266 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,266 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,266 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,267 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,267 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,267 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,267 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,267 - DEBUG - Checking rule: feature=sqft_living, condition=< 1000, user_value=4333.0
+2025-03-04 17:23:10,267 - DEBUG - Checking rule: feature=no_of_bathrooms, condition== 1, user_value=2.0
+2025-03-04 17:23:10,267 - DEBUG - Returning recommendations: []
+2025-03-04 17:23:10,267 - DEBUG - Recommendations: []
+2025-03-04 17:23:10,268 - DEBUG - Duplicate check count: 1
+2025-03-04 17:23:10,268 - WARNING - Duplicate entry prevented: (4333.0, 4, 2.0, 7688.0, 3, 10, '98765', 'buy', np.float64(757740.6615190982))
+2025-03-04 17:23:10,268 - DEBUG - Prediction stored in the database
+2025-03-04 17:23:10,269 - INFO - 127.0.0.1 - - [04/Mar/2025 17:23:10] "POST / HTTP/1.1" 200 -
+2025-03-04 17:24:19,856 - INFO -  * Detected change in 'C:\\Users\\AMON\\Desktop\\C200\\app\\database.py', reloading
+2025-03-04 17:24:20,196 - INFO -  * Restarting with stat
+2025-03-04 17:24:23,910 - INFO - Inserted recommendation: Consider a home with at least 1200 sqft for better resale value.
+2025-03-04 17:24:23,927 - INFO - Inserted recommendation: Consider a home with at least 2 bathrooms for greater resale value.
+2025-03-04 17:24:23,941 - INFO - Inserted recommendation: Adding another bedroom can increase value by 15%.
+2025-03-04 17:24:24,463 - WARNING -  * Debugger is active!
+2025-03-04 17:24:24,473 - INFO -  * Debugger PIN: 873-155-825
+2025-03-04 17:24:24,707 - INFO - 127.0.0.1 - - [04/Mar/2025 17:24:24] "GET / HTTP/1.1" 200 -
+2025-03-04 17:24:24,965 - INFO - 127.0.0.1 - - [04/Mar/2025 17:24:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-04 17:24:24,990 - INFO - 127.0.0.1 - - [04/Mar/2025 17:24:24] "[36mGET /static/images/feature_importance.png HTTP/1.1[0m" 304 -
+2025-03-04 17:24:25,010 - INFO - 127.0.0.1 - - [04/Mar/2025 17:24:25] "[36mGET /static/images/residual.png HTTP/1.1[0m" 304 -
+2025-03-04 17:24:25,062 - INFO - 127.0.0.1 - - [04/Mar/2025 17:24:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-04 17:24:25,132 - INFO - 127.0.0.1 - - [04/Mar/2025 17:24:25] "[36mGET /static/images/favicon32.png HTTP/1.1[0m" 304 -
+2025-03-04 17:24:56,046 - DEBUG - Received JSON data: {'purpose': 'buy', 'sqft_living': '1500', 'no_of_bedrooms': '2', 'no_of_bathrooms': '2', 'sqft_lot': '3450', 'no_of_floors': '1', 'house_age': '25', 'zipcode': '98006'}
+2025-03-04 17:24:56,047 - DEBUG - Parsed input data: sqft_living=1500.0, no_of_bedrooms=2, no_of_bathrooms=2.0, sqft_lot=3450.0, no_of_floors=1, house_age=25, zipcode=98006, purpose=buy
+2025-03-04 17:24:56,047 - DEBUG - Features prepared for prediction: {'sqft_living': 1500.0, 'no_of_bedrooms': 2, 'no_of_bathrooms': 2.0, 'sqft_lot': 3450.0, 'no_of_floors': 1, 'house_age': 25, 'zipcode': '98006'}
+2025-03-04 17:24:56,434 - INFO - User query inserted successfully: (1500.0, 2, 2.0, 3450.0, 1, 25, '98006', 'buy', np.float64(373045.7179403942))
+2025-03-04 17:24:56,434 - DEBUG - Predicted price: 373045.7179403942, Confidence interval: (np.float64(353045.7179403942), np.float64(393045.7179403942))
+2025-03-04 17:24:56,434 - DEBUG - Realtor.com URL: https://www.realtor.com/realestateandhomes-search/98006/price-323045.7179403942-423045.7179403942
+2025-03-04 17:24:56,437 - DEBUG - Recommendations: []
+2025-03-04 17:24:56,439 - WARNING - Duplicate entry prevented: (1500.0, 2, 2.0, 3450.0, 1, 25, '98006', 'buy', np.float64(373045.7179403942))
+2025-03-04 17:24:56,439 - DEBUG - Prediction stored in the database
+2025-03-04 17:24:56,440 - INFO - 127.0.0.1 - - [04/Mar/2025 17:24:56] "POST / HTTP/1.1" 200 -
+2025-03-04 17:26:07,098 - DEBUG - Received JSON data: {'purpose': 'buy', 'sqft_living': '5000', 'no_of_bedrooms': '2', 'no_of_bathrooms': '3', 'sqft_lot': '7000', 'no_of_floors': '2', 'house_age': '70', 'zipcode': '98006'}
+2025-03-04 17:26:07,098 - DEBUG - Parsed input data: sqft_living=5000.0, no_of_bedrooms=2, no_of_bathrooms=3.0, sqft_lot=7000.0, no_of_floors=2, house_age=70, zipcode=98006, purpose=buy
+2025-03-04 17:26:07,099 - DEBUG - Features prepared for prediction: {'sqft_living': 5000.0, 'no_of_bedrooms': 2, 'no_of_bathrooms': 3.0, 'sqft_lot': 7000.0, 'no_of_floors': 2, 'house_age': 70, 'zipcode': '98006'}
+2025-03-04 17:26:07,370 - INFO - User query inserted successfully: (5000.0, 2, 3.0, 7000.0, 2, 70, '98006', 'buy', np.float64(763484.1253635386))
+2025-03-04 17:26:07,370 - DEBUG - Predicted price: 763484.1253635386, Confidence interval: (np.float64(743484.1253635386), np.float64(783484.1253635386))
+2025-03-04 17:26:07,370 - DEBUG - Realtor.com URL: https://www.realtor.com/realestateandhomes-search/98006/price-713484.1253635386-813484.1253635386
+2025-03-04 17:26:07,374 - DEBUG - Recommendations: []
+2025-03-04 17:26:07,375 - WARNING - Duplicate entry prevented: (5000.0, 2, 3.0, 7000.0, 2, 70, '98006', 'buy', np.float64(763484.1253635386))
+2025-03-04 17:26:07,376 - DEBUG - Prediction stored in the database
+2025-03-04 17:26:07,376 - INFO - 127.0.0.1 - - [04/Mar/2025 17:26:07] "POST / HTTP/1.1" 200 -

@@ -105,15 +105,21 @@
 
 
     <!-- Prediction Result Section -->
-    <section id="result-section" class="hidden">
-      <h2>Prediction Result</h2>
-      <p id="prediction-message"></p>
-      <div id="model-insights">
-        <!-- Container for the dynamic Realtor.com link -->
-        <div id="realtor-link-container"></div>
-      </div>
-      <button id="back-to-form">Make Another Prediction</button>
-    </section>
+<section id="result-section" class="hidden">
+  <h2>Prediction Result</h2>
+  <p id="prediction-message"></p>
+
+  <div id="model-insights">
+    <!-- Container for the dynamic Realtor.com link -->
+    <div id="realtor-link-container"></div>
+  </div>
+  
+  <!-- Recommendations Section -->
+  <div id="recommendations-container"></div>
+
+  <button id="back-to-form">Make Another Prediction</button>
+</section>
+
 
     <!-- Prediction History Section -->
     <section id="history-section">
@@ -128,6 +134,7 @@
             <th>Floors</th>
             <th>House Age</th>
             <th>ZIP Code</th>
+            <th>Purpose</th>
             <th>Predicted Price</th>
           </tr>
         </thead>

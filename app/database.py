@@ -2,7 +2,19 @@ import sqlite3
 import os
 import pytz
 import logging
+import operator  # Safer condition handling
 from datetime import datetime
+
+# Define safe operator mappings
+OPERATORS = {
+    "<": operator.lt,
+    "<=": operator.le,
+    "=": operator.eq,
+    "==": operator.eq,
+    "!=": operator.ne,
+    ">": operator.gt,
+    ">=": operator.ge
+}
 
 # Configure logging
 logging.basicConfig(filename="database.log", level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -21,6 +33,7 @@ def create_database():
         conn = sqlite3.connect(DB_PATH)
         cursor = conn.cursor()
 
+        # Create queries table (stores user inputs and predictions)
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS queries (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -31,46 +44,107 @@ def create_database():
                 no_of_floors REAL NOT NULL,
                 house_age INTEGER NOT NULL,
                 zipcode INTEGER NOT NULL,
+                purpose TEXT NOT NULL,
                 predicted_price REAL NOT NULL,
                 timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP  
             )
         """)
 
+        # Add index for faster filtering based on purpose
+        cursor.execute("CREATE INDEX IF NOT EXISTS idx_queries_purpose ON queries (purpose);")
+
+     # Create recommendations table (stores rule-based suggestions)
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS recommendations (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                purpose TEXT NOT NULL,  -- buy or sell
+                feature TEXT NOT NULL,  -- Feature to check (e.g., 'sqft_living', 'no_of_bedrooms')
+                condition TEXT NOT NULL,  -- Condition (e.g., '< 1000', '= 1')
+                suggestion TEXT NOT NULL  -- Recommendation text
+            )
+        """)
+
         conn.commit()
         conn.close()
-        logging.info("Database and table created successfully at %s", DB_PATH)
+        logging.info("Database and tables created successfully at %s", DB_PATH)
 
     except Exception as e:
         logging.error("Error creating database: %s", e)
 
-def insert_query(sqft_living, no_of_bedrooms, no_of_bathrooms, sqft_lot, no_of_floors, house_age, zipcode, predicted_price):
+def insert_recommendation(purpose, feature, condition, suggestion):
+    """Inserts a new recommendation rule into the database."""
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        cursor = conn.cursor()
+        cursor.execute("""
+            INSERT INTO recommendations (purpose, feature, condition, suggestion)
+            VALUES (?, ?, ?, ?)
+        """, (purpose, feature, condition, suggestion))
+        conn.commit()
+        conn.close()
+        logging.info("Inserted recommendation: %s", suggestion)
+    except Exception as e:
+        logging.error("Error inserting recommendation: %s", e)
+
+def get_recommendations(purpose, user_features):
+    """Fetches applicable recommendations based on user input safely."""
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        cursor = conn.cursor()
+        
+        cursor.execute("SELECT feature, condition, suggestion FROM recommendations WHERE purpose = ?", (purpose,))
+        rules = cursor.fetchall()
+        
+        recommendations = []
+        for feature, condition, suggestion in rules:
+            user_value = user_features.get(feature)
+            
+            if user_value is not None:
+                # Extract operator and numeric value safely
+                for op_symbol, op_func in OPERATORS.items():
+                    if op_symbol in condition:
+                        value = condition.split(op_symbol)[-1].strip()
+                        if value.replace('.', '', 1).isdigit():  # Ensure numeric value
+                            value = float(value)
+                            if op_func(user_value, value):  # Apply safe comparison
+                                recommendations.append(suggestion)
+                        break  
+
+        conn.close()
+        return recommendations
+    except Exception as e:
+        logging.error("Error fetching recommendations: %s", e)
+        return []
+    
+    
+def insert_query(sqft_living, no_of_bedrooms, no_of_bathrooms, sqft_lot, no_of_floors, house_age, zipcode, purpose, predicted_price):
     """Inserts a new user query and prediction into the database, preventing exact duplicates at the same timestamp."""
     try:
         conn = sqlite3.connect(DB_PATH)
         cursor = conn.cursor()
 
-        # Check if an entry with the same details exists at the same timestamp
+        # Prevent duplicate entries within a short time frame
         cursor.execute("""
             SELECT COUNT(*) FROM queries 
             WHERE sqft_living = ? AND no_of_bedrooms = ? AND no_of_bathrooms = ? AND sqft_lot = ?
-            AND no_of_floors = ? AND house_age = ? AND zipcode = ? AND predicted_price = ?
-            AND timestamp >= datetime('now', '-1 second')  -- Prevent duplicate entries within 1 second
-        """, (sqft_living, no_of_bedrooms, no_of_bathrooms, sqft_lot, no_of_floors, house_age, zipcode, predicted_price))
+            AND no_of_floors = ? AND house_age = ? AND zipcode = ? AND purpose = ? AND predicted_price = ?
+            AND timestamp >= datetime('now', '-1 second')
+        """, (sqft_living, no_of_bedrooms, no_of_bathrooms, sqft_lot, no_of_floors, house_age, zipcode, purpose, predicted_price))
 
         count = cursor.fetchone()[0]
 
         if count == 0:
             cursor.execute("""
                 INSERT INTO queries (sqft_living, no_of_bedrooms, no_of_bathrooms, sqft_lot, 
-                                     no_of_floors, house_age, zipcode, predicted_price)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-            """, (sqft_living, no_of_bedrooms, no_of_bathrooms, sqft_lot, no_of_floors, house_age, zipcode, predicted_price))
+                                     no_of_floors, house_age, zipcode, purpose, predicted_price)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """, (sqft_living, no_of_bedrooms, no_of_bathrooms, sqft_lot, no_of_floors, house_age, zipcode, purpose, predicted_price))
 
             conn.commit()
-            logging.info("User query inserted successfully: %s", (sqft_living, no_of_bedrooms, no_of_bathrooms, sqft_lot, no_of_floors, house_age, zipcode, predicted_price))
+            logging.info("User query inserted successfully: %s", (sqft_living, no_of_bedrooms, no_of_bathrooms, sqft_lot, no_of_floors, house_age, zipcode, purpose, predicted_price))
 
         else:
-            logging.warning("Duplicate entry prevented: %s", (sqft_living, no_of_bedrooms, no_of_bathrooms, sqft_lot, no_of_floors, house_age, zipcode, predicted_price))
+            logging.warning("Duplicate entry prevented: %s", (sqft_living, no_of_bedrooms, no_of_bathrooms, sqft_lot, no_of_floors, house_age, zipcode, purpose, predicted_price))
 
         conn.close()
 
@@ -95,23 +169,30 @@ def get_all_queries():
     try:
         conn = sqlite3.connect(DB_PATH)
         cursor = conn.cursor()
-
-        cursor.execute("SELECT id, sqft_living, no_of_bedrooms, no_of_bathrooms, sqft_lot, no_of_floors, house_age, zipcode, predicted_price, timestamp FROM queries ORDER BY timestamp DESC")
+        cursor.execute("SELECT id, sqft_living, no_of_bedrooms, no_of_bathrooms, sqft_lot, no_of_floors, house_age, zipcode, purpose, predicted_price, timestamp FROM queries ORDER BY timestamp DESC")
         rows = cursor.fetchall()
-
         conn.close()
 
         results = []
         for row in rows:
-            id, sqft_living, no_of_bedrooms, no_of_bathrooms, sqft_lot, no_of_floors, house_age, zipcode, predicted_price, timestamp = row
+            id, sqft_living, no_of_bedrooms, no_of_bathrooms, sqft_lot, no_of_floors, house_age, zipcode, purpose, predicted_price, timestamp = row
             nairobi_timestamp = convert_to_nairobi(timestamp)
-            results.append((id, sqft_living, no_of_bedrooms, no_of_bathrooms, sqft_lot, no_of_floors, house_age, zipcode, predicted_price, nairobi_timestamp))
-
+            results.append((id, sqft_living, no_of_bedrooms, no_of_bathrooms, sqft_lot, no_of_floors, house_age, zipcode, purpose, predicted_price, nairobi_timestamp))
         return results  
-
     except Exception as e:
         logging.error("Error retrieving queries: %s", e)
         return []
 
 if __name__ == "__main__":
     create_database()
+
+    # Test rules insertion (only runs when executed directly)
+recommendations = [
+    ("buy", "sqft_living", "< 1000", "Consider a home with at least 1200 sqft for better resale value."),
+    ("buy", "no_of_bathrooms", "= 1", "Consider a home with at least 2 bathrooms for greater resale value."),
+    ("sell", "no_of_bedrooms", "< 2", "Adding another bedroom can increase value by 15%.")
+]
+
+# Loop through the list and insert each recommendation
+for rec in recommendations:
+    insert_recommendation(*rec)  # Unpacking tuple values
