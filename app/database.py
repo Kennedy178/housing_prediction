@@ -78,10 +78,11 @@ import logging
 
 # Define home location categories based on ZIP ranges
 def get_location_type(zip_code):
-    """Categorizes ZIP codes into Urban, Suburban, or Rural based on defined ranges."""
-    urban_zips = list(range(98001, 98200))  
-    suburban_zips = list(range(98201, 98550))  
-    rural_zips = list(range(98551, 99001))  
+    """Categorizes ZIP codes into Urban, Suburban, or Rural."""
+    urban_zips = list(range(98001, 98200))  # Covers Seattle, Bellevue, and Tacoma (high-density urban areas)
+    suburban_zips = list(range(98201, 98550))  # Covers Everett, Olympia, and surrounding suburban regions
+    rural_zips = list(range(98551, 99001))  # Covers Yakima, Goldendale, and eastern WA rural areas
+
 
     if zip_code in urban_zips:
         return "Urban"
@@ -90,8 +91,8 @@ def get_location_type(zip_code):
     else:
         return "Rural"
 
-# Feature-based insights (Real Estate AI)
-feature_rules = {
+# Expert-driven home pricing rules
+features = {
     "sqft_living": [
         ("<", 1000, "🏡 Consider a home with at least 1200 sqft for better resale value."),
         (">", 3000, "📏 Larger homes may have a smaller buyer pool; price competitively."),
@@ -106,7 +107,7 @@ feature_rules = {
         (">", 3, "💎 Luxury buyers expect at least 3.5 bathrooms in high-end homes."),
     ],
     "house_age": [
-        (">", 50, "🏚️ Older homes may require renovations; budget for upgrades."),
+        (">", 50, "🏚️ Older homes may require renovations; buyers should budget for upgrades."),
         ("<", 5, "🏠 Newer homes have modern features and lower maintenance costs."),
     ],
     "sqft_lot": [
@@ -114,12 +115,12 @@ feature_rules = {
         (">", 15000, "🏞️ Large lots are valuable but require more upkeep."),
     ],
     "no_of_floors": [
-        ("=", 1, "🏡 Single-story homes are ideal for retirees and families with kids."),
-        (">", 2, "🏢 Multi-level homes can be harder to sell due to accessibility concerns."),
+        ("=", 1, "🏡 Single-story homes are ideal for retirees and families with small kids."),
+        (">", 2, "🏢 Multi-level homes are harder to sell due to accessibility concerns."),
     ]
 }
 
-# AI-Powered ZIP Code Market Trends 🚀
+# Generate dynamic ZIP-based market trends
 def generate_location_trends(start_zip=98001, end_zip=99001):
     location_trends = {}
 
@@ -129,11 +130,10 @@ def generate_location_trends(start_zip=98001, end_zip=99001):
         price_trend = random.choice(["up", "down", "stable"])
         competition = random.choice(["high", "medium", "low"])
         median_days_on_market = random.randint(20, 120)
-        future_trend = random.choice(["Increase", "Decrease", "Stable"])  # AI-Powered Prediction
 
         suggestions = []
 
-        # AI-Powered Market Trend Insights
+        # Market trend insights
         if price_trend == "up":
             suggestions.append("📈 Home values are rising; great time to invest.")
         elif price_trend == "down":
@@ -141,7 +141,7 @@ def generate_location_trends(start_zip=98001, end_zip=99001):
         else:
             suggestions.append("⚖️ Market is stable; long-term investment potential.")
 
-        # Competition-Based AI Advice
+        # Competition-based advice
         if competition == "high":
             suggestions.append("🔥 Multiple offers expected; buyers must act FAST!")
         elif competition == "medium":
@@ -149,26 +149,19 @@ def generate_location_trends(start_zip=98001, end_zip=99001):
         else:
             suggestions.append("❄️ Slow market; sellers should offer incentives.")
 
-        # Luxury vs. Affordable Market Insights
+        # Luxury vs. Affordable Market
         if median_price > 600000:
             suggestions.append("💎 High-end area! Staging & premium upgrades attract top buyers.")
         elif median_price < 350000:
             suggestions.append("🏠 Affordable market—great for first-time buyers.")
 
-        # AI-Powered Future Price Prediction
-        if future_trend == "Increase":
-            suggestions.append("🚀 AI Prediction: Home prices expected to rise in the next 6 months.")
-        elif future_trend == "Decrease":
-            suggestions.append("⚠️ AI Prediction: Prices may drop—consider selling soon.")
-
-        # Location-Specific Insights
+        # Location-specific insights
         if location_type == "Urban":
             suggestions.append("🏙️ Urban area—condos & townhomes have fast resale.")
         elif location_type == "Suburban":
             suggestions.append("🏡 Suburban zone—family homes with yards are highly desirable.")
         else:
             suggestions.append("🌄 Rural market—large lots & quiet living appeal to niche buyers.")
-
         # Smart Timing Advice
         suggestions.append(f"⏳ Homes here take ~{median_days_on_market} days to sell.")
 
@@ -178,25 +171,23 @@ def generate_location_trends(start_zip=98001, end_zip=99001):
             "competition": competition,
             "location_type": location_type,
             "median_days_on_market": median_days_on_market,
-            "future_trend": future_trend,
             "suggestions": suggestions
         }
 
     return location_trends
 
-# Precompute location trends 🚀
+# Precompute location trends
 location_trends = generate_location_trends()
 
-# Smart AI-Powered Home Recommendations 🏡
 def get_recommendations(purpose, user_features):
-    """Generates AI-powered recommendations based on user input and market data."""
+    """Generates recommendations based on user features and dynamic trends."""
     try:
         recommendations = []
 
-        # Feature-Based Recommendations (AI-Enhanced)
+        # Feature-based recommendations (rule-based)
         for feature, user_value in user_features.items():
-            if feature in feature_rules and isinstance(user_value, (int, float)):  
-                for condition, value, suggestion in feature_rules[feature]:
+            if feature in features and isinstance(user_value, (int, float)):  
+                for condition, value, suggestion in features[feature]:
                     if (
                         (condition == "<" and user_value < value) or
                         (condition == "<=" and user_value <= value) or
@@ -207,7 +198,7 @@ def get_recommendations(purpose, user_features):
                         modified_suggestion = f"✅ Buyer Tip: {suggestion}" if purpose == "buy" else f"💰 Seller Tip: {suggestion} Consider staging or upgrades."
                         recommendations.append(modified_suggestion)
 
-        # AI Market-Based Recommendations (ZIP Trends)
+        # Market-based recommendations (ZIP trends)
         if "zipcode" in user_features:
             zip_code = str(user_features["zipcode"])
             if zip_code in location_trends:
@@ -219,21 +210,6 @@ def get_recommendations(purpose, user_features):
     except Exception as e:
         logging.error("Error generating recommendations: %s", e)
         return []
-
-# Example Usage
-user_features = {
-    "zipcode": 98102,
-    "sqft_living": 1500,
-    "no_of_bedrooms": 3,
-    "no_of_bathrooms": 2,
-    "house_age": 10,
-    "sqft_lot": 6000,
-    "no_of_floors": 2
-}
-
-recommendations = get_recommendations("buy", user_features)
-for rec in recommendations:
-    print(rec)
 
 def insert_query(sqft_living, no_of_bedrooms, no_of_bathrooms, sqft_lot, no_of_floors, house_age, zipcode, purpose, predicted_price):
     """Inserts a new user query and prediction into the database, preventing exact duplicates at the same timestamp."""
