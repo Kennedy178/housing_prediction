@@ -28,19 +28,25 @@
     --golden-accent: #ffcc00;
   }
   
+
+
+
+
   /* Chatbot Container */
   #chatbot-container {
-      background: var(--form-bg);
-      border-radius: 15px;
-      padding: 20px;
-      max-width: 500px;
-      margin: 20px auto;
-      box-shadow: 0px 4px 15px var(--border-color);
-      overflow-y: auto;
-      max-height: 400px;
-      background-color: var(--bg-color);  /* Slightly different from the page background */
-  }
-  
+    background: var(--form-bg);
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;  /* Full width of parent */
+    max-width: calc(100% - 1cm); /* Keeps a 1cm gap on each side */
+    margin: 20px auto;
+    box-shadow: 0px 4px 15px var(--border-color);
+    overflow-y: auto;
+    max-height: 400px;
+    background-color: var(--bg-color);  /* Slightly different from the page background */
+    display: block; /* Ensures proper width behavior */
+}
+
   /* Chatbot Messages */
   .chatbot-message {
       background: #e5e5e5; /* Neutral grey background for message */
@@ -90,13 +96,22 @@
       100% { opacity: 1; }
   }
   
-  /* End of Div (Message History) */
-  #end-of-div {
-      font-style: italic;
-      text-align: center;
-      color: var(--primary-color);
-      margin-top: 10px;
-  }
+ /* End of Div (Message History) */
+#end-of-div {
+    font-style: normal; /* Removed italics for a cleaner look */
+    text-align: center;
+    color: var(--secondary-color); /* Lighter, more balanced tone from root color */
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.8; /* Subtle opacity for a softer appearance */
+}
+
+/* Dark mode End of Div text */
+html.dark-mode #end-of-div {
+    color: var(--accent-color); /* Use accent color for a sleek finish */
+    opacity: 0.9; /* Slightly less opacity for dark mode for better visibility */
+}
+
   
   /* Dark mode specific overrides */
   html.dark-mode #chatbot-container {
@@ -113,17 +128,14 @@
   
   /* Dark mode closing message */
   html.dark-mode .closing-message {
-      color: var(--golden-accent);
-  }
+    color: var(--primary-color);  /* Muted purple for dark mode */
+}
+
   
   /* Dark mode typing indicator */
   html.dark-mode .chatbot-loading {
       color: var(--accent-color);
   }
   
-  /* Dark mode End of Div text */
-  html.dark-mode #end-of-div {
-      color: var(--golden-accent);
-      font-style: normal;
-  }
+
   
