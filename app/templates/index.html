@@ -104,7 +104,7 @@
 
 
 
-    <!-- Prediction Result Section -->
+<!-- Prediction Result Section -->
 <section id="result-section" class="hidden">
   <h2>Prediction Result</h2>
   <p id="prediction-message"></p>
@@ -113,12 +113,22 @@
     <!-- Container for the dynamic Realtor.com link -->
     <div id="realtor-link-container"></div>
   </div>
-  
-  <!-- Recommendations Section -->
-  <div id="recommendations-container"></div>
+
+  <!-- Chatbot-style Recommendations Section -->
+  <div id="chatbot-container">
+    <div id="recommendations-container"></div>
+  </div>
 
   <button id="back-to-form">Make Another Prediction</button>
 </section>
+
+<!-- Link to JavaScript -->
+<script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+
+
+
+
+
 
 
     <!-- Prediction History Section -->

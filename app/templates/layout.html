@@ -17,6 +17,8 @@
     
         <!-- Link to CSS -->
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/chatbot.css') }}">
+
     </head>
     
 <body>
@@ -80,6 +82,8 @@
     <!-- Link to JavaScript -->
     <script src="{{ url_for('static', filename='js/script.js') }}" defer></script> 
     <!-- The 'defer' attribute ensures that the script is executed after the HTML document has been fully parsed. --> 
+    <script src="{{ url_for('static', filename='js/chatbot.js') }}" defer></script>
+
     <!-- Allow child templates to add scripts here -->
     {% block scripts %}{% endblock %}
 </body>

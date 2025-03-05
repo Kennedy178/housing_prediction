@@ -234,6 +234,10 @@ predictBtn.addEventListener("click", function (event) {
     console.log("Parsed JSON response from backend:", result);
     displayResult(result, data);
     updateHistory(result.predicted_price, data);
+    if (result.recommendations) {
+      window.updateChatbotRecommendations(result.recommendations);
+  }
+  
   })
   .catch(error => {
     console.error("Error during fetch:", error);
@@ -253,18 +257,7 @@ function displayResult(result, inputData) {
   predictionMessage.innerHTML = `Based on the data provided, your home is estimated to be valued at <strong>$${parseFloat(result.predicted_price).toLocaleString()}</strong>.<br>
     The confidence interval for this prediction ranges between <strong>$${parseFloat(result.confidence_interval[0]).toLocaleString()}</strong> and <strong>$${parseFloat(result.confidence_interval[1]).toLocaleString()}</strong>.`;
 
-  // Add recommendations if any
-  const recommendationsContainer = document.getElementById('recommendations-container');
-  if (result.recommendations && result.recommendations.length > 0) {
-    recommendationsContainer.innerHTML = `
-      <h3>Recommendations:</h3>
-      <ul>
-        ${result.recommendations.map(recommendation => `<li>${recommendation}</li>`).join('')}
-      </ul>
-    `;
-  } else {
-    recommendationsContainer.innerHTML = `<p>No specific recommendations available for your input.</p>`;
-  }
+  
 
   // Add the dynamic Realtor.com link
   const realtorLinkContainer = document.getElementById('realtor-link-container');
