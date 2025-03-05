@@ -6,9 +6,11 @@
     max-width: 500px;
     margin: 20px auto;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 400px; /* Prevents overflow issues */
 }
 
-/* Chatbot Message */
+/* Chatbot Messages */
 .chatbot-message {
     background: #e3f2fd;
     color: #333;
@@ -20,9 +22,28 @@
     font-size: 14px;
     line-height: 1.4;
     animation: fadeIn 0.5s ease-in-out;
+    word-wrap: break-word;
 }
 
-/* Typing Animation */
+/* Closing Message (Special Styling) */
+.closing-message {
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 10px;
+}
+
+/* Typing Indicator (Blinking ...) */
+.chatbot-loading {
+    font-size: 16px;
+    font-weight: bold;
+    color: gray;
+    padding: 5px;
+    animation: fadeInOut 1s infinite alternate;
+}
+
+
+
+/* Smooth Fade-In Animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -32,4 +53,10 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Typing Indicator Animation */
+@keyframes fadeInOut {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
 }
