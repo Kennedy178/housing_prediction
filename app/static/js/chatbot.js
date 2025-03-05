@@ -19,16 +19,31 @@ document.addEventListener("DOMContentLoaded", function () {
         const loadingDiv = document.createElement("div");
         loadingDiv.classList.add("chatbot-loading");
         loadingDiv.innerHTML = "...";
-        recommendationsContainer.appendChild(loadingDiv);
-
+    
+        // Find the last recommendation message
+        const lastMessage = recommendationsContainer.lastElementChild;
+    
+        if (lastMessage) {
+            // Match the width of the last message
+            loadingDiv.style.width = getComputedStyle(lastMessage).width;
+            loadingDiv.style.marginLeft = getComputedStyle(lastMessage).marginLeft;
+    
+            // Insert loading indicator right after the last message
+            lastMessage.insertAdjacentElement("afterend", loadingDiv);
+        } else {
+            // If no messages exist, just add it normally
+            recommendationsContainer.appendChild(loadingDiv);
+        }
+    
         let dots = 0;
         const interval = setInterval(() => {
             dots = (dots + 1) % 4; // Cycle between "", ".", "..", "..."
             loadingDiv.innerHTML = ".".repeat(dots);
         }, 500);
-
+    
         return { element: loadingDiv, stop: () => clearInterval(interval) };
     }
+    
 
     function displayRecommendations(recommendations) {
         recommendationsContainer.innerHTML = ""; // Clear old content

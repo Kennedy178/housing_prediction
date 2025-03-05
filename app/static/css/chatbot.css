@@ -45,22 +45,42 @@
     max-height: 400px;
     background-color: var(--bg-color);  /* Slightly different from the page background */
     display: block; /* Ensures proper width behavior */
+    margin-bottom: 30px; /* Adjust this value as needed */
+    margin-top: 20px; /* Adjust this value as needed */
 }
 
-  /* Chatbot Messages */
-  .chatbot-message {
-      background: #e5e5e5; /* Neutral grey background for message */
-      color: var(--text-color);
-      padding: 12px;
-      border-radius: 12px;
-      margin-bottom: 12px;
-      max-width: 80%;
-      font-family: 'Arial', sans-serif;
-      font-size: 14px;
-      line-height: 1.5;
-      animation: fadeIn 0.5s ease-in-out;
-      word-wrap: break-word;
-  }
+
+#recommendations-container * {
+    font-size: 0.9em !important;  /* Adjust as needed */
+    line-height: 1.6 !important;  /* Ensures readability */
+}
+
+.recommendation-message {
+    max-width: calc(100% - 7ch); /* Ensures it extends but leaves 2cm from scrollbar */
+    width: auto; /* Allows it to adjust dynamically */
+    display: block; /* Makes sure it takes up space properly */
+    padding: 10px;
+    margin-right: 7ch; /* Pushes it away from the scrollbar */
+}
+
+
+/* Chatbot Messages */
+.chatbot-message {
+    background: #e5e5e5; /* Neutral grey background for message */
+    color: var(--text-color);
+    padding: 12px 20px; /* Standard padding for text spacing */
+    border-radius: 12px;
+    margin: 10px auto; /* Centers messages within chatbot container */
+    max-width: 80%; /* Keeps messages readable within chatbot container */
+    width: 80%; /* Ensures all messages have the same width */
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    animation: fadeIn 0.5s ease-in-out;
+    word-wrap: break-word;
+    box-shadow: 0px 2px 10px var(--shadow-color); /* Adds slight depth */
+}
+
   
   /* Closing Message (Special Styling) */
   .closing-message {
