@@ -15,6 +15,18 @@ document.addEventListener("DOMContentLoaded", function () {
         type();
     }
 
+
+    function addRecommendationsTitle(onComplete = () => {}) {
+        const titleElement = document.getElementById("recommendations-title");
+        
+        if (titleElement) {
+            titleElement.innerHTML = ""; // Clear any existing text
+            typeText(titleElement, "📈 Smart Moves: Market Insights Tailored for You!", 50, onComplete);
+        }
+    }
+    
+    
+
     function showLoadingIndicator() {
         const loadingDiv = document.createElement("div");
         loadingDiv.classList.add("chatbot-loading");
@@ -47,51 +59,51 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function displayRecommendations(recommendations) {
         recommendationsContainer.innerHTML = ""; // Clear old content
-        let delayBeforeStart = 1000; // 1s delay before first message
+        
+        addRecommendationsTitle(() => {
+            // Once title finishes typing, proceed with recommendations
+            let delayBeforeStart = 1000; // 1s delay before first message
+        
+            if (recommendations && recommendations.length > 0) {
+                let messageIndex = 0;
     
-        if (recommendations && recommendations.length > 0) {
-            let messageIndex = 0;
+                function typeNextMessage() {
+                    if (messageIndex < recommendations.length) {
+                        const rec = recommendations[messageIndex];
+                        const loadingIndicator = showLoadingIndicator();
     
-            // Function to type each message one after another
-            function typeNextMessage() {
-                if (messageIndex < recommendations.length) {
-                    const rec = recommendations[messageIndex];
-                    const loadingIndicator = showLoadingIndicator(); // Show "..." before message
+                        setTimeout(() => {
+                            loadingIndicator.stop();
+                            recommendationsContainer.removeChild(loadingIndicator.element);
     
-                    setTimeout(() => {
-                        loadingIndicator.stop(); // Remove "..." once message starts typing
-                        recommendationsContainer.removeChild(loadingIndicator.element);
+                            const messageDiv = document.createElement("div");
+                            messageDiv.classList.add("chatbot-message");
+                            recommendationsContainer.appendChild(messageDiv);
     
-                        const messageDiv = document.createElement("div");
-                        messageDiv.classList.add("chatbot-message");
-                        recommendationsContainer.appendChild(messageDiv);
+                            typeText(messageDiv, rec, 50, () => {
+                                recommendationsContainer.scrollTop = recommendationsContainer.scrollHeight;
     
-                        // Start typing this message
-                        typeText(messageDiv, rec, 50, () => {
-                            recommendationsContainer.scrollTop = recommendationsContainer.scrollHeight; // Auto-scroll down
-    
-                            // Move to next message after current one finishes
-                            messageIndex++;
-                            typeNextMessage(); // Call function to type next message
-                        });
-                    }, 1000); // Wait 1s while showing "..."
-                } else {
-                    // Once all messages are typed, add the closing message
-                    setTimeout(() => {
-                        const closingDiv = document.createElement("div");
-                        closingDiv.classList.add("chatbot-message", "closing-message");
-                        recommendationsContainer.appendChild(closingDiv);
-                        typeText(closingDiv, "I hope these insights help! 😊 If you need more tailored advice, try tweaking one of the house features above and click ‘Predict’—I'll refine my recommendations for you!");
-                    }, 1000); // Small delay before closing message
+                                messageIndex++;
+                                typeNextMessage();
+                            });
+                        }, 1000);
+                    } else {
+                        setTimeout(() => {
+                            const closingDiv = document.createElement("div");
+                            closingDiv.classList.add("chatbot-message", "closing-message");
+                            recommendationsContainer.appendChild(closingDiv);
+                            typeText(closingDiv, "I hope these insights help! 😊 If you need more tailored advice, try tweaking one of the house features above and click ‘Predict’—I'll refine my recommendations for you!");
+                        }, 1000);
+                    }
                 }
-            }
     
-            // Start typing the first message
-            typeNextMessage();
-        } else {
-            recommendationsContainer.innerHTML = `<p class="chatbot-message">No specific recommendations available.</p>`;
-        }
+                typeNextMessage();
+            } else {
+                recommendationsContainer.innerHTML = `<p class="chatbot-message">No specific recommendations available.</p>`;
+            }
+        });
     }
+    
     
 
     // Expose function to update recommendations
