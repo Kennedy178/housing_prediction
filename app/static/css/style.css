@@ -513,17 +513,7 @@ main {
   margin-top: 5px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .insights-content {
-    flex-direction: column; /* Stack images on smaller screens */
-    align-items: center;
-  }
 
-  .insight {
-    max-width: 90%; /* Allows images to take more space on small screens */
-  }
-}
 
 
 /* ============================================
