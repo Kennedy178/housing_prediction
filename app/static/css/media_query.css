@@ -547,3 +547,108 @@
   }
 }
 
+
+
+
+/* ============================================
+   Compact & Elegant Footer
+============================================ */
+footer {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 2px solid var(--golden-accent);
+    box-shadow: 0 -3px 15px rgba(255, 204, 0, 0.1);
+    padding: 18px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  /* Footer Container */
+  .footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 65%;
+    max-width: 850px;
+    gap: 1.5cm;
+  }
+  
+  /* Footer Branding */
+  .footer-logo p {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+  }
+  
+  /* Navigation Links */
+  .footer-links {
+    display: flex;
+    gap: 12px;
+  }
+  
+  /* Main Button Links */
+  .main-link {
+    padding: 6px 16px;
+    background: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .main-link:hover {
+    background: var(--button-hover);
+    transform: translateY(-3px);
+  }
+  
+  /* Developer Credit */
+  .developer-credit {
+    font-size: 1rem;
+  }
+  
+  .dev-link {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: normal;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .dev-link:hover {
+    color: var(--primary-color);
+  }
+  
+  /* ============================================
+     Responsive Footer - Small Screens
+  ============================================ */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* ✅ Stack items vertically */
+      align-items: center;
+      text-align: center;
+      width: 90%;
+      gap: 10px; /* ✅ Reduce space */
+    }
+  
+    .footer-links {
+      flex-direction: column; /* ✅ Stack links on small screens */
+      gap: 6px;
+    }
+  
+    .main-link {
+      font-size: 0.9rem;
+      padding: 6px 12px; /* ✅ Reduce button size */
+    }
+  
+    .developer-credit {
+      font-size: 0.9rem; /* ✅ Reduce text size */
+    }
+  }
+  

@@ -767,18 +767,7 @@ html.dark-mode footer {
   box-shadow: 0 -3px 15px #d35400; /*  Darker shadow for contrast */
 }
 
-/*  Responsive - Mobile Optimization */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 8px;  /*  Reduced mobile spacing */
-  }
-  .footer-links {
-    flex-direction: column;
-    gap: 8px;
-  }
-}
+
 
 
 /* === Table Dark Mode Fix === */
