@@ -47,37 +47,84 @@
 /* Filters Section */
 .filters {
     display: flex;
-    gap: 15px;
-    align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 15px;
-   
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
+    gap: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    background: var(--secondary-color);
+    color: white;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-/* Make all filters inline */
+/* Each filter field */
 .filters div {
     display: flex;
     flex-direction: column;
+    min-width: 150px;
 }
 
+/* Labels */
 .filters label {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
-    
+    margin-bottom: 5px;
 }
 
+/* Inputs and Select Fields */
 .filters input,
 .filters select {
     padding: 10px;
     border: 1px solid var(--border-color);
-    border-radius: 8px;
-    background: white;
+    border-radius: 6px;
     font-size: 14px;
+    background: var(--form-bg);
     color: var(--text-color);
 }
+
+/* Buttons */
+.filters button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover */
+.filters button:hover {
+    background: var(--button-hover);
+    transform: scale(1.05);
+}
+
+/* Clear Button */
+.clear-button {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.clear-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Dark Mode Adjustments */
+html.dark-mode .filters {
+    background: var(--glass-bg);
+    color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+}
+
+html.dark-mode .filters input,
+html.dark-mode .filters select {
+    background: var(--form-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
 
 /* Intention Dropdown Styling */
 #intention {
@@ -137,26 +184,51 @@
     color: white;
 }
 
-/* Admin Table */
+/* Admin Table Styling */
 .admin-table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 15px;
     background: var(--form-bg);
     border-radius: 8px;
     overflow: hidden;
 }
 
-.admin-table th,
+/* Table Headers */
+.admin-table th {
+    background: var(--secondary-color);
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Table Rows & Cells */
 .admin-table td {
     padding: 10px;
     border-bottom: 1px solid var(--border-color);
     text-align: left;
 }
 
-.admin-table th {
-    background: var(--secondary-color);
+/* Alternating Row Colors */
+.admin-table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* Dark Mode Adjustments */
+html.dark-mode .admin-table {
+    background: var(--form-bg);
+}
+
+html.dark-mode .admin-table th {
+    background: var(--secondary-color);  /* Now uses d35400 in dark mode */
     color: white;
 }
+
+
+html.dark-mode .admin-table tr:nth-child(even) {
+    background: var(--glass-bg);
+}
+
 
 /* Modal Styling */
 .modal {
@@ -195,17 +267,7 @@
     background-color: var(--button-hover);
 }
 
-/* Responsive Styling */
-@media (max-width: 768px) {
-    .filters {
-        flex-direction: column;
-        gap: 10px;
-    }
 
-    .filters div {
-        width: 100%;
-    }
-}
 
 </style>
 

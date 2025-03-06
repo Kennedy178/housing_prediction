@@ -1,7 +1,7 @@
 /* 
    CSS Variables (Color Tokens)
  */
-:root {
+ :root {
   /* Light theme variables (default) */
   --primary-color: #005f73;       /* Deep teal */
   --secondary-color: #0a9396;     /* Lighter teal */
@@ -621,66 +621,11 @@ main {
   color: var(--primary-color);
 }
 
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 20px;
-  padding: 10px;
-  background: var(--secondary-color);
-  border-radius: 8px;
-  color: white;
-}
 
-.filters label {
-  font-weight: bold;
-}
 
-.filters input {
-  padding: 8px;
-  border: 1px solid var(--border-color);
-  border-radius: 5px;
-}
 
-.filters button {
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-}
 
-.filters button:hover {
-  background: var(--button-hover);
-}
 
-.admin-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-}
-
-.admin-table th, .admin-table td {
-  border: 1px solid var(--border-color);
-  padding: 10px;
-  text-align: left;
-}
-
-.admin-table th {
-  background: var(--primary-color);
-  color: white;
-}
-
-.admin-table tr:nth-child(even) {
-  background: #f9f9f9;
-}
-
-@media (max-width: 768px) {
-  .filters {
-      flex-direction: column;
-  }
-}
 
 
 

@@ -420,133 +420,141 @@
    Prediction History Section (Responsive)
 ============================================ */
 #history-section {
-  background: var(--form-bg);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-  border: 1px solid var(--border-color);
-  color: var(--text-color);
-  width: 100%;
-  max-width: 100%;
-  overflow-x: auto; /* ✅ Enables horizontal scrolling if table overflows */
-}
-
-#history-section h2 {
-  margin-bottom: 15px;
-  color: var(--primary-color);
-  text-align: center;
-  font-weight: 700;
-}
-
-/* Responsive Table */
-#history-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 15px;
-  min-width: 800px; /* ✅ Ensures table doesn't shrink too much */
-}
-
-#history-table th,
-#history-table td {
-  padding: 10px;
-  border: 1px solid var(--border-color);
-  text-align: center;
-  font-size: 14px;
-  word-wrap: break-word;
-}
-
-#history-table th {
-  background: radial-gradient(circle, var(--primary-color), var(--secondary-color));
-  color: #fff;
-  font-weight: 600;
-}
-
-/* ✅ Make the table scrollable on small screens */
-#history-section {
-  overflow-x: auto;
-}
-
-/* ============================================
-   Buttons (Responsive)
-============================================ */
-#toggle-history,
-#clear-history {
-  padding: 10px 20px;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
-  font-size: 1rem;
-}
-
-#toggle-history {
-  background: radial-gradient(circle, var(--primary-color), var(--secondary-color));
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  margin-right: 10px;
-}
-
-#toggle-history:hover {
-  background: radial-gradient(circle, var(--button-hover), var(--secondary-color));
-}
-
-#clear-history {
-  background: radial-gradient(circle, #d32f2f, #c62828);
-}
-
-#clear-history:hover {
-  background: radial-gradient(circle, #b71c1c, #a91a1a);
-}
-
-/* ============================================
-   Responsive Media Queries
-============================================ */
-
-/* ✅ Small screens (phones) */
-@media (max-width: 600px) {
-  #history-section {
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    background: var(--form-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto; /*  Enables horizontal scrolling if table overflows */
   }
-
-  /* ✅ Make table horizontally scrollable */
+  
+  #history-section h2 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  /* Responsive Table */
   #history-table {
-    min-width: 100%;
-    display: block;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    min-width: 800px; /*  Ensures table doesn't shrink too much */
+  }
+  
+  #history-table th,
+  #history-table td {
+    padding: 12px; /*  Slightly larger padding */
+    border: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 16px; /*  Restored font size on PC */
+    word-wrap: break-word;
+  }
+  
+  #history-table th {
+    background: radial-gradient(circle, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  /*  Make the table scrollable on small screens */
+  #history-section {
     overflow-x: auto;
   }
-
-  /* ✅ Buttons should stack instead of being side-by-side */
+  
+  /* ============================================
+     Buttons (Responsive)
+  ============================================ */
   #toggle-history,
   #clear-history {
-    width: 100%;
-    margin-bottom: 10px;
-    text-align: center;
+    padding: 12px 22px; /* ⬆ Slightly larger padding */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1rem;
   }
-}
-
-/* ✅ Medium screens (tablets) */
-@media (max-width: 1024px) {
-  #history-section {
-    padding: 18px;
+  
+  #toggle-history {
+    background: radial-gradient(circle, var(--primary-color), var(--secondary-color));
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 10px;
   }
-
-  #history-table {
-    font-size: 14px;
-    min-width: 700px;
+  
+  #toggle-history:hover {
+    background: radial-gradient(circle, var(--button-hover), var(--secondary-color));
   }
-
-  #toggle-history,
+  
   #clear-history {
-    font-size: 14px;
-    padding: 10px;
+    background: radial-gradient(circle, #d32f2f, #c62828);
   }
-}
-
+  
+  #clear-history:hover {
+    background: radial-gradient(circle, #b71c1c, #a91a1a);
+  }
+  
+  /* ============================================
+     Responsive Media Queries
+  ============================================ */
+  
+  /*  Small screens (phones) */
+  @media (max-width: 600px) {
+    #history-section {
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+  
+    /*  Make table horizontally scrollable */
+    #history-table {
+      min-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+  
+    /*  Reduce font size only on small screens */
+    #history-table th,
+    #history-table td {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    /*  Buttons should stack instead of being side-by-side */
+    #toggle-history,
+    #clear-history {
+      width: 100%;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+  
+  /*  Medium screens (tablets) */
+  @media (max-width: 1024px) {
+    #history-section {
+      padding: 18px;
+    }
+  
+    /*  Prevent table from being too small */
+    #history-table {
+      font-size: 15px;
+      min-width: 700px;
+    }
+  
+    #toggle-history,
+    #clear-history {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  
 
 
 
@@ -630,25 +638,184 @@ footer {
   ============================================ */
   @media (max-width: 768px) {
     .footer-container {
-      flex-direction: column; /* ✅ Stack items vertically */
+      flex-direction: column; /*  Stack items vertically */
       align-items: center;
       text-align: center;
       width: 90%;
-      gap: 10px; /* ✅ Reduce space */
+      gap: 10px; /*  Reduce space */
     }
   
     .footer-links {
-      flex-direction: column; /* ✅ Stack links on small screens */
+      flex-direction: column; /*  Stack links on small screens */
       gap: 6px;
     }
   
     .main-link {
       font-size: 0.9rem;
-      padding: 6px 12px; /* ✅ Reduce button size */
+      padding: 6px 12px; /*  Reduce button size */
     }
   
     .developer-credit {
-      font-size: 0.9rem; /* ✅ Reduce text size */
+      font-size: 0.9rem; /*  Reduce text size */
     }
   }
   
+
+
+
+
+/* ============================================
+   Admin Dashboard Styling
+============================================ */
+.admin-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  background: var(--form-bg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap; /* ✅ Allows wrapping on smaller screens */
+}
+
+.admin-container h1 {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 24px; /* ✅ Ensures consistent readability */
+}
+
+.download-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--secondary-color);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.download-button:hover {
+  background-color: var(--button-hover);
+}
+
+/* ============================================
+   Responsive Media Queries
+============================================ */
+
+/* ✅ Small screens (phones) */
+@media (max-width: 600px) {
+  .admin-container {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .header-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .admin-container h1 {
+    font-size: 20px;
+  }
+
+  .download-button {
+    width: 100%; /* ✅ Makes button full width for better mobile usability */
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* ✅ Medium screens (tablets) */
+@media (max-width: 1024px) {
+  .admin-container {
+    padding: 18px;
+  }
+
+  .header-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .admin-container h1 {
+    font-size: 22px;
+  }
+
+  .download-button {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+}
+
+
+
+/* ============================================
+   Media Queries for Filters Section
+============================================ */
+
+/* Tablet: max-width: 768px */
+@media (max-width: 768px) {
+  .filters {
+    gap: 10px; /* Reduce spacing between elements */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .filters div {
+    min-width: 120px; /* Slightly smaller minimum width */
+  }
+
+  .filters label {
+    font-size: 13px; /* Slightly smaller font size */
+  }
+
+  .filters input,
+  .filters select {
+    padding: 8px; /* Slightly smaller padding */
+    font-size: 13px; /* Slightly smaller font size */
+  }
+
+  .filters button {
+    padding: 8px 12px; /* Slightly smaller padding */
+    font-size: 13px; /* Slightly smaller font size */
+  }
+}
+
+/* Mobile: max-width: 480px */
+@media (max-width: 480px) {
+  .filters {
+    flex-direction: column; /* Stack filters vertically */
+    gap: 8px; /* Further reduce spacing between elements */
+    padding: 8px; /* Further reduce padding */
+  }
+
+  .filters div {
+    width: 100%; /* Full width for inputs and selects */
+    min-width: unset; /* Remove minimum width */
+  }
+
+  .filters label {
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+
+  .filters input,
+  .filters select {
+    padding: 6px; /* Smaller padding for mobile */
+    font-size: 12px; /* Smaller font size for mobile */
+    width: 100%; /* Full width for inputs and selects */
+  }
+
+  .filters button {
+    padding: 6px 10px; /* Smaller padding for mobile */
+    font-size: 12px; /* Smaller font size for mobile */
+    width: 100%; /* Full width for buttons */
+    text-align: center; /* Center align button text */
+  }
+}
