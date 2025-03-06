@@ -290,23 +290,66 @@
 
 
   /* ============================================
-   Media Queries for Chatbot Section
+   Chatbot Container
 ============================================ */
-
-/* Tablet: max-width: 768px */
-@media (max-width: 768px) {
+#chatbot-container {
+    background: var(--form-bg);
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%; /* Full width of parent */
+    max-width: calc(100% - 1cm); /* Keeps a 1cm gap on each side */
+    margin: 20px auto;
+    box-shadow: 0px 4px 15px var(--border-color);
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 400px; /* Set a max height for scrolling */
+    background-color: var(--bg-color); /* Slightly different from the page background */
+    display: block; /* Ensures proper width behavior */
+    margin-bottom: 30px; /* Adjust this value as needed */
+    margin-top: 20px; /* Adjust this value as needed */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  }
+  
+  /* Ensure the chatbot container is scrollable on mobile */
+  @media (max-width: 768px) {
     #chatbot-container {
       max-width: 100% !important; /* Full width of parent container */
       padding: 15px !important; /* Reduce padding */
       margin: 15px auto !important; /* Adjust margin */
-      max-height: 350px; /* Slightly smaller max height */
-      box-shadow: 0px 4px 15px var(--border-color) !important; /* Ensure shadow is applied */
+      max-height: 60vh; /* Use viewport height for better mobile scrolling */
+      overflow-y: scroll; /* Ensure scrolling is enabled */
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
     }
+  }
   
-    .chatbot-title {
-      font-size: 16px !important; /* Slightly smaller font size */
+  @media (max-width: 480px) {
+    #chatbot-container {
+      padding: 10px !important; /* Further reduce padding */
+      margin: 10px auto !important; /* Further adjust margin */
+      max-height: 50vh; /* Smaller max height for mobile */
+      overflow-y: scroll; /* Ensure scrolling is enabled */
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
     }
+  }
   
+  /* Chatbot Messages */
+  .chatbot-message {
+    background: #e5e5e5; /* Neutral grey background for message */
+    color: var(--text-color);
+    padding: 12px 20px; /* Standard padding for text spacing */
+    border-radius: 12px;
+    margin: 10px auto; /* Centers messages within chatbot container */
+    max-width: 80%; /* Keeps messages readable within chatbot container */
+    width: 80%; /* Ensures all messages have the same width */
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    animation: fadeIn 0.5s ease-in-out;
+    word-wrap: break-word;
+    box-shadow: 0px 2px 10px var(--shadow-color); /* Adds slight depth */
+  }
+  
+  /* Adjust message width for mobile */
+  @media (max-width: 768px) {
     .chatbot-message {
       max-width: 100% !important; /* Full width for messages */
       width: 100% !important; /* Full width for messages */
@@ -314,44 +357,56 @@
       padding: 10px 15px !important; /* Adjust padding */
       margin: 10px 0 !important; /* Adjust margin */
     }
-  
-    #recommendations-container * {
-      font-size: 0.9em !important; /* Slightly smaller font size */
-      line-height: 1.6 !important; /* Ensure readability */
-    }
-  
-    .recommendation-message {
-      max-width: 100% !important; /* Full width for recommendation messages */
-      margin-right: 0 !important; /* Remove right margin */
-    }
   }
   
-  /* Mobile: max-width: 480px */
   @media (max-width: 480px) {
-    #chatbot-container {
-      padding: 10px !important; /* Further reduce padding */
-      margin: 10px auto !important; /* Further adjust margin */
-      max-height: 300px; /* Smaller max height for mobile */
-      box-shadow: 0px 4px 15px var(--border-color) !important; /* Ensure shadow is applied */
-    }
-  
-    .chatbot-title {
-      font-size: 14px !important; /* Smaller font size for mobile */
-    }
-  
     .chatbot-message {
-      max-width: 100% !important; /* Full width for messages */
-      width: 100% !important; /* Full width for messages */
       font-size: 13px !important; /* Smaller font size for mobile */
       padding: 8px 12px !important; /* Adjust padding */
       margin: 8px 0 !important; /* Adjust margin */
     }
+  }
   
-    #recommendations-container * {
-      font-size: 0.85em !important; /* Smaller font size for mobile */
-      line-height: 1.6 !important; /* Ensure readability */
+  /* Chatbot Title */
+  .chatbot-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--text-color); /* Uses your theme color */
+    margin-bottom: 10px;
+    padding: 10px 0;
+  }
+  
+  /* Adjust title font size for mobile */
+  @media (max-width: 768px) {
+    .chatbot-title {
+      font-size: 16px !important; /* Slightly smaller font size */
     }
+  }
   
+  @media (max-width: 480px) {
+    .chatbot-title {
+      font-size: 14px !important; /* Smaller font size for mobile */
+    }
+  }
+  
+  /* Recommendations Container */
+  #recommendations-container * {
+    font-size: 0.9em !important; /* Adjust as needed */
+    line-height: 1.6 !important; /* Ensures readability */
+  }
+  
+  /* Recommendation Messages */
+  .recommendation-message {
+    max-width: calc(100% - 7ch); /* Ensures it extends but leaves 2cm from scrollbar */
+    width: auto; /* Allows it to adjust dynamically */
+    display: block; /* Makes sure it takes up space properly */
+    padding: 10px;
+    margin-right: 7ch; /* Pushes it away from the scrollbar */
+  }
+  
+  /* Adjust recommendation messages for mobile */
+  @media (max-width: 768px) {
     .recommendation-message {
       max-width: 100% !important; /* Full width for recommendation messages */
       margin-right: 0 !important; /* Remove right margin */
