@@ -819,3 +819,39 @@ footer {
     text-align: center; /* Center align button text */
   }
 }
+
+
+/* ============================================
+   Responsive Media Queries for Predictions Table
+============================================ */
+
+/* Responsive Table Wrapper */
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* Enables horizontal scrolling */
+}
+
+/* Ensure table takes full width */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+  .admin-table th,
+  .admin-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+  .admin-table th,
+  .admin-table td {
+    padding: 10px;
+    font-size: 15px;
+  }
+}
