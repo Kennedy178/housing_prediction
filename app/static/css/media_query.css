@@ -855,3 +855,79 @@ footer {
     font-size: 15px;
   }
 }
+
+
+/* ============================================
+   Media Queries for Toggle Button
+============================================ */
+
+/* Tablet: max-width: 768px */
+@media (max-width: 768px) {
+  .toggle-button {
+    padding: 6px; /* Slightly smaller padding */
+    font-size: 0.95rem; /* Slightly smaller font size */
+  }
+}
+
+/* Mobile: max-width: 480px */
+@media (max-width: 480px) {
+  .toggle-button {
+    padding: 5px; /* Smaller padding for mobile */
+    font-size: 0.9rem; /* Smaller font size for mobile */
+    width: 100%; /* Full width for mobile */
+    text-align: center; /* Center align button text */
+  }
+}
+
+
+
+
+/* Media Queries for Modal */
+@media (max-width: 768px) {
+  .modal-content {
+      width: 70%; /* Slightly wider on tablets for better readability */
+      margin: 20% auto; /* Adjust margin for better centering */
+  }
+
+  .button-group {
+      flex-direction: column; /* Stack buttons vertically on smaller screens */
+      gap: 10px; /* Reduce gap between stacked buttons */
+  }
+
+  .button-group button {
+      width: 100%; /* Full-width buttons for easier tapping on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+      width: 90%; /* Wider on small mobile devices */
+      margin: 25% auto; /* Adjust margin for better centering */
+      padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .modal-content p {
+      font-size: 1em; /* Slightly smaller font size for mobile */
+  }
+
+  .button-group button {
+      padding: 10px 15px; /* Slightly smaller padding for mobile */
+      font-size: 0.9em; /* Smaller font size for mobile */
+  }
+}
+
+@media (max-width: 320px) {
+  .modal-content {
+      width: 95%; /* Almost full width on very small screens */
+      margin: 30% auto; /* Adjust margin for better centering */
+  }
+
+  .modal-content p {
+      font-size: 0.9em; /* Smaller font size for very small screens */
+  }
+
+  .button-group button {
+      padding: 8px 12px; /* Smaller padding for very small screens */
+      font-size: 0.8em; /* Smaller font size for very small screens */
+  }
+}

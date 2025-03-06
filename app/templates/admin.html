@@ -238,19 +238,35 @@ html.dark-mode .admin-table tr:nth-child(even) {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     overflow: auto;
+    backdrop-filter: blur(5px); /* Adds a subtle blur effect to the background */
 }
 
 .modal-content {
     background-color: var(--form-bg);
     margin: 15% auto;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 12px;
     width: 50%;
+    max-width: 400px;
     text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
 }
 
-.modal-content button {
-    padding: 10px 20px;
+.modal-content p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Adds space between buttons */
+}
+
+.button-group button {
+    flex: 1; /* Ensures buttons take equal space */
+    padding: 12px 20px;
     border: none;
     border-radius: 8px;
     background-color: var(--primary-color);
@@ -260,9 +276,21 @@ html.dark-mode .admin-table tr:nth-child(even) {
     transition: 0.3s;
 }
 
-.modal-content button:hover {
+.button-group button:hover {
     background-color: var(--button-hover);
+    transform: translateY(-2px); /* Adds a subtle lift effect on hover */
 }
+
+.button-group .cancel-button {
+    background-color: var(--border-color);
+    color: var(--text-color);
+}
+
+.button-group .cancel-button:hover {
+    background-color: var(--error-color);
+    color: white;
+}
+
 
 
 
@@ -354,11 +382,18 @@ html.dark-mode .admin-table tr:nth-child(even) {
 <div id="exportModal" class="modal">
     <div class="modal-content">
         <p>Select the data to export:</p>
-        <button id="exportFiltered" class="button">Export Filtered Data</button>
-        <button id="exportAll" class="button">Export All Data</button>
-        <button id="closeModal" class="button">Cancel</button>
+        <div class="button-group">
+            <button id="exportFiltered" class="button">Export Filtered Data</button>
+            <button id="exportAll" class="button">Export All Data</button>
+            <button id="closeModal" class="button cancel-button">Cancel</button>
+        </div>
     </div>
 </div>
+
+
+
+
+
 
 {% endblock %}
 
