@@ -1,0 +1,108 @@
+/* ============================================
+   Media Queries for Header
+============================================ */
+
+/* Tablet: max-width: 768px */
+@media (max-width: 768px) {
+    header {
+      padding: 30px 15px; /* Reduce padding */
+    }
+  
+    header h1 {
+      font-size: 2rem; /* Smaller font size for h1 */
+    }
+  
+    header p {
+      font-size: 1rem; /* Smaller font size for p */
+    }
+  
+    #theme-toggle {
+      font-size: 1.3rem; /* Slightly smaller toggle button */
+    }
+  
+    header::before {
+      width: 120px; /* Scale down the radial gradient overlay */
+      height: 120px;
+      top: -40px;
+      right: -40px;
+    }
+  }
+  
+  /* Mobile: max-width: 480px */
+  @media (max-width: 480px) {
+    header {
+      padding: 20px 10px; /* Further reduce padding */
+    }
+  
+    header h1 {
+      font-size: 1.5rem; /* Even smaller font size for h1 */
+    }
+  
+    header p {
+      font-size: 0.9rem; /* Even smaller font size for p */
+    }
+  
+    #theme-toggle {
+      font-size: 1.1rem; /* Smaller toggle button */
+      top: 5px; /* Adjust position */
+      right: 5px;
+    }
+  
+    header::before {
+      display: none; /* Hide the radial gradient overlay on mobile */
+    }
+  }
+
+
+
+ 
+  /* ============================================
+   Media Queries for Main Section
+============================================ */
+@media (max-width: 768px) { 
+    main {
+      max-width: 95%; /* Reduce width for tablets */
+      padding: 0 10px; /* Add some space on the sides */
+    }
+  }
+  
+  @media (max-width: 480px) { 
+    main {
+      max-width: 100%; /* Full width for small screens */
+      padding: 0 15px;
+    }
+  }
+
+  
+  /* ============================================
+   Media Queries for Purpose Selection
+============================================ */
+@media (max-width: 768px) { 
+    .purpose-selection {
+      flex-direction: column; /* Stack items vertically */
+      gap: 15px; /* Reduce spacing */
+      padding: 15px 10px; /* Adjust padding */
+      font-size: 1.1rem; /* Slightly smaller font */
+    }
+    
+    .purpose-selection label {
+      justify-content: center; /* Align labels properly */
+    }
+  }
+  
+  @media (max-width: 480px) { 
+    .purpose-selection {
+      font-size: 1rem; /* Make text smaller for small screens */
+      gap: 10px; /* Reduce spacing */
+      padding: 10px 5px; /* Less padding */
+    }
+    
+    .purpose-selection input[type="radio"] {
+      transform: scale(1); /* Reset radio button size */
+    }
+  
+    .purpose-selection input[type="radio"]:hover {
+      transform: scale(1.1); /* Slight hover effect */
+    }
+  }
+  
