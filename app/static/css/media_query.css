@@ -412,3 +412,138 @@
       margin-right: 0 !important; /* Remove right margin */
     }
   }
+
+
+
+
+/* ============================================
+   Prediction History Section (Responsive)
+============================================ */
+#history-section {
+  background: var(--form-bg);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto; /* ✅ Enables horizontal scrolling if table overflows */
+}
+
+#history-section h2 {
+  margin-bottom: 15px;
+  color: var(--primary-color);
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Responsive Table */
+#history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+  min-width: 800px; /* ✅ Ensures table doesn't shrink too much */
+}
+
+#history-table th,
+#history-table td {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+#history-table th {
+  background: radial-gradient(circle, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ✅ Make the table scrollable on small screens */
+#history-section {
+  overflow-x: auto;
+}
+
+/* ============================================
+   Buttons (Responsive)
+============================================ */
+#toggle-history,
+#clear-history {
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 1rem;
+}
+
+#toggle-history {
+  background: radial-gradient(circle, var(--primary-color), var(--secondary-color));
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 10px;
+}
+
+#toggle-history:hover {
+  background: radial-gradient(circle, var(--button-hover), var(--secondary-color));
+}
+
+#clear-history {
+  background: radial-gradient(circle, #d32f2f, #c62828);
+}
+
+#clear-history:hover {
+  background: radial-gradient(circle, #b71c1c, #a91a1a);
+}
+
+/* ============================================
+   Responsive Media Queries
+============================================ */
+
+/* ✅ Small screens (phones) */
+@media (max-width: 600px) {
+  #history-section {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  /* ✅ Make table horizontally scrollable */
+  #history-table {
+    min-width: 100%;
+    display: block;
+    overflow-x: auto;
+  }
+
+  /* ✅ Buttons should stack instead of being side-by-side */
+  #toggle-history,
+  #clear-history {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+
+/* ✅ Medium screens (tablets) */
+@media (max-width: 1024px) {
+  #history-section {
+    padding: 18px;
+  }
+
+  #history-table {
+    font-size: 14px;
+    min-width: 700px;
+  }
+
+  #toggle-history,
+  #clear-history {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
