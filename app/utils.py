@@ -80,4 +80,4 @@ def fetch_real_estate_listings(zip_code, predicted_price):
     except requests.exceptions.RequestException as e:
         return {"error": f"Error fetching data: {str(e)}"}
     
-    #ecluded due to strict anti scrapping measures u
+    #ecluded due to strict anti scrapping measures 
