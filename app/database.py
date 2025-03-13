@@ -83,7 +83,6 @@ def get_location_type(zip_code):
     suburban_zips = list(range(98201, 98550))  # Covers Everett, Olympia, and surrounding suburban regions
     rural_zips = list(range(98551, 99001))  # Covers Yakima, Goldendale, and eastern WA rural areas
 
-
     if zip_code in urban_zips:
         return "Urban"
     elif zip_code in suburban_zips:
@@ -94,29 +93,29 @@ def get_location_type(zip_code):
 # Expert-driven home pricing rules
 features = {
     "sqft_living": [
-        ("<", 1000, "🏡 Consider a home with at least 1200 sqft for better resale value."),
-        (">", 3000, "📏 Larger homes may have a smaller buyer pool; price competitively."),
-        (">", 4000, "💎 Luxury homes take longer to sell; staging is critical."),
+        ("<", 1000, "🏡 Consider purchasing a home with at least 1200 sqft, as larger homes tend to have better resale value and appeal to a broader audience."),
+        (">", 3000, "📏 Larger homes, while desirable, may have a smaller buyer pool. Ensure your pricing is competitive to attract serious buyers."),
+        (">", 4000, "💎 Luxury homes often take longer to sell. Invest in professional staging and high-quality marketing to stand out in the market."),
     ],
     "no_of_bedrooms": [
-        ("<", 2, "🛏️ Homes with 3+ bedrooms attract a wider buyer base."),
-        (">", 5, "🏡 6+ bedroom homes cater to a niche market; price carefully."),
+        ("<", 2, "🛏️ Homes with 3 or more bedrooms are more attractive to families and have a wider buyer base, making them easier to sell."),
+        (">", 5, "🏡 Homes with 6 or more bedrooms cater to a niche market. Price carefully and highlight unique features to attract the right buyers."),
     ],
     "no_of_bathrooms": [
-        ("=", 1, "🚿 Consider adding a second bathroom for better resale value."),
-        (">", 3, "💎 Luxury buyers expect at least 3.5 bathrooms in high-end homes."),
+        ("=", 1, "🚿 Adding a second bathroom can significantly increase your home's resale value and appeal to a larger pool of buyers."),
+        (">", 3, "💎 Luxury buyers typically expect at least 3.5 bathrooms in high-end homes. Ensure your property meets these expectations."),
     ],
     "house_age": [
-        (">", 50, "🏚️ Older homes may require renovations; buyers should budget for upgrades."),
-        ("<", 5, "🏠 Newer homes have modern features and lower maintenance costs."),
+        (">", 50, "🏚️ Older homes may require renovations or upgrades. Buyers should budget for potential repairs to modernize the property."),
+        ("<", 5, "🏠 Newer homes often come with modern features and lower maintenance costs, making them highly desirable in the market."),
     ],
     "sqft_lot": [
-        ("<", 5000, "🌳 Small lots sell faster but may have lower appreciation."),
-        (">", 15000, "🏞️ Large lots are valuable but require more upkeep."),
+        ("<", 5000, "🌳 Homes with smaller lots tend to sell faster but may have lower long-term appreciation. Ideal for buyers looking for low-maintenance properties."),
+        (">", 15000, "🏞️ Large lots offer privacy and space but require more upkeep. Highlight the potential for outdoor activities or future development."),
     ],
     "no_of_floors": [
-        ("=", 1, "🏡 Single-story homes are ideal for retirees and families with small kids."),
-        (">", 2, "🏢 Multi-level homes are harder to sell due to accessibility concerns."),
+        ("=", 1, "🏡 Single-story homes are ideal for retirees and families with small children due to their accessibility and ease of movement."),
+        (">", 2, "🏢 Multi-level homes can be harder to sell due to accessibility concerns. Consider highlighting unique features to attract buyers."),
     ]
 }
 
@@ -135,35 +134,36 @@ def generate_location_trends(start_zip=98001, end_zip=99001):
 
         # Market trend insights
         if price_trend == "up":
-            suggestions.append("📈 Home values are rising; great time to invest.")
+            suggestions.append("📈 Home values in this area are currently rising, making it a great time to invest in property for long-term growth.")
         elif price_trend == "down":
-            suggestions.append("📉 Market is declining; sellers should price aggressively.")
+            suggestions.append("📉 The market in this area is declining. Sellers should consider pricing their homes aggressively to attract buyers.")
         else:
-            suggestions.append("⚖️ Market is stable; long-term investment potential.")
+            suggestions.append("⚖️ The market is stable, offering a balanced environment for both buyers and sellers with steady long-term investment potential.")
 
         # Competition-based advice
         if competition == "high":
-            suggestions.append("🔥 Multiple offers expected; buyers must act FAST!")
+            suggestions.append("🔥 The market is highly competitive, with multiple offers expected. Buyers should be prepared to act quickly and make strong offers.")
         elif competition == "medium":
-            suggestions.append("🤝 Fair competition; negotiation is possible.")
+            suggestions.append("🤝 The market has fair competition, providing opportunities for negotiation between buyers and sellers.")
         else:
-            suggestions.append("❄️ Slow market; sellers should offer incentives.")
+            suggestions.append("❄️ The market is slow, with fewer buyers. Sellers may need to offer incentives such as closing cost assistance to attract interest.")
 
         # Luxury vs. Affordable Market
         if median_price > 600000:
-            suggestions.append("💎 High-end area! Staging & premium upgrades attract top buyers.")
+            suggestions.append("💎 This is a high-end area! Staging your home and investing in premium upgrades can help attract top-tier buyers.")
         elif median_price < 350000:
-            suggestions.append("🏠 Affordable market—great for first-time buyers.")
+            suggestions.append("🏠 This is an affordable market, making it an excellent opportunity for first-time buyers to enter the housing market.")
 
         # Location-specific insights
         if location_type == "Urban":
-            suggestions.append("🏙️ Urban area—condos & townhomes have fast resale.")
+            suggestions.append("🏙️ Urban areas are ideal for condos and townhomes, which tend to have faster resale times due to high demand.")
         elif location_type == "Suburban":
-            suggestions.append("🏡 Suburban zone—family homes with yards are highly desirable.")
+            suggestions.append("🏡 Suburban zones are highly desirable for families, with homes featuring yards and proximity to schools being particularly attractive.")
         else:
-            suggestions.append("🌄 Rural market—large lots & quiet living appeal to niche buyers.")
+            suggestions.append("🌄 Rural markets appeal to niche buyers looking for large lots and a quiet lifestyle. Highlight the tranquility and space your property offers.")
+
         # Smart Timing Advice
-        suggestions.append(f"⏳ Homes here take ~{median_days_on_market} days to sell.")
+        suggestions.append(f"⏳ On average, homes in this area take approximately {median_days_on_market} days to sell. Plan your buying or selling strategy accordingly.")
 
         location_trends[str(zip_code)] = {
             "median_price": median_price,
@@ -195,7 +195,7 @@ def get_recommendations(purpose, user_features):
                         (condition == ">=" and user_value >= value) or
                         (condition == "=" and user_value == value)
                     ):
-                        modified_suggestion = f"✅ Buyer Tip: {suggestion}" if purpose == "buy" else f"💰 Seller Tip: {suggestion} Consider staging or upgrades."
+                        modified_suggestion = f"✅ Buyer Tip: {suggestion}" if purpose == "buy" else f"💰 Seller Tip: {suggestion} Consider staging or upgrades to maximize your home's appeal."
                         recommendations.append(modified_suggestion)
 
         # Market-based recommendations (ZIP trends)

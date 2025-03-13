@@ -16,8 +16,7 @@ class Config:
     ENCODER_PATH = 'model/saved_model/encoder.pkl'
     POLY_PATH = 'model/saved_model/poly.pkl'
 
-    # Database Configuration (SQLite e)
-    DATABASE_URI = 'sqlite:///data/your_database.db'  # as per the actual DB path
+    
 
   
 
