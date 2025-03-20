@@ -81,12 +81,43 @@ Follow these steps to interact with the **Intelligent Housing Forecasting Model 
 
 7. **Dark Mode Toggle**  
    - Click the 🌙/☀️ icon at the top-right corner to switch between dark and light mode.  
-   - ![Dark Mode](app/static/images/readme/dark-mode.png)  
+   - ![Dark Mode](app/static/images/readme/dark-mode.png)
+     
+##  Technologies Used
 
-###  Enjoy Forecasting Housing Prices with AI! 🚀
+This project is built using the following technologies:
+
+- **Programming Language:** Python  
+- **Framework:** Flask (for the web application)  
+- **Machine Learning Algorithm:** LightGBM (trained with an 80% R² score)  
+- **Database:** SQLite (stores user inputs, predictions, and trends)  
+- **Front-end:** HTML, CSS, JavaScript (for the user interface)    
 
 
+##  Contributing
 
+Contributions are welcome! If you'd like to improve this project, follow these steps:
 
+1. Fork the repository  
+2. Clone your fork  
+3. Create a new branch  
+4. Make your changes  
+5. Commit your changes  
+6. Push to GitHub  
+7. Submit a pull request  
 
+   - Open a pull request on GitHub, and your changes will be reviewed.  
+   - Please follow best coding practices and ensure your changes do not break existing functionality.  
+   - If you are fixing an issue, reference the issue number in your commit message.  
+   - All contributions must comply with the [MIT License](LICENSE).
+   - 
+##  License
+
+This project is open-source under the [MIT License](LICENSE).  
+You are free to use, modify, and distribute it with proper attribution to the original authors.
+
+##  Limitations & Future Enhancements
+
+- **ZIP Code Support:**  
+ > **Note:** _Currently, the system supports ZIP codes **98001–99001 (Washington state)** as a **proof-of-concept**. Future updates will expand coverage to include more locations._ 
 
