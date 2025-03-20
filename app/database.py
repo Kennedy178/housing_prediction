@@ -163,7 +163,7 @@ def generate_location_trends(start_zip=98001, end_zip=99001):
             suggestions.append("🌄 Rural markets appeal to niche buyers looking for large lots and a quiet lifestyle. Highlight the tranquility and space your property offers.")
 
         # Smart Timing Advice
-        suggestions.append(f"⏳ On average, homes in this area take approximately {median_days_on_market} days to sell. Plan your buying or selling strategy accordingly.")
+        suggestions.append(f"⏳ On average, homes in this area take approximately {median_days_on_market} days to sell. Adjust your strategy accordingly.")
 
         location_trends[str(zip_code)] = {
             "median_price": median_price,
