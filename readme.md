@@ -57,7 +57,8 @@ Follow these steps to interact with the **Intelligent Housing Forecasting Model 
 1. **Open the Web App**  
    - Run the Flask server and open `http://127.0.0.1:5000/` in your browser.  
    - You will see the homepage with input fields for housing details.  
-   - ![Homepage](app/static/images/readme/homepage.png)  
+   - ![Homepage](app/static/images/readme/homepage.png)
+   - ![predict-btn](app/static/images/readme/predict.png)
 
 2. **Enter Property Details**
    - Select your intention: Are you looking to get a price estimate for a house you intend to buy or sell?
