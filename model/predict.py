@@ -50,7 +50,8 @@ def preprocess_features(features):
         logging.error(f"Error preprocessing features: {str(e)}")
         raise
 
-# Function to predict price and store the query in the database, along with fetching recommendations
+
+# Function to predict price and fetch recommendations (no DB insert here)
 def predict_price(features, purpose):
     try:
         logging.debug(f"Received features for prediction: {features}")
@@ -65,7 +66,7 @@ def predict_price(features, purpose):
         logging.debug(f"Predicted price (log scale): {predicted_price_log}")
 
         # Inverse log transformation to get actual price
-        predicted_price = np.expm1(predicted_price_log)  # np.expm1 is the inverse of log1p
+        predicted_price = np.expm1(predicted_price_log)
         logging.debug(f"Predicted price (actual): {predicted_price}")
 
         # Fixed margin of error of $20,000
@@ -76,26 +77,13 @@ def predict_price(features, purpose):
         ci_max = predicted_price + margin_of_error  
         logging.debug(f"Confidence interval: [{ci_min}, {ci_max}]")
 
-        # Fetch recommendations from the database based on the purpose and property features
+        # Fetch recommendations based on the purpose and property features
         recommendations = get_recommendations(purpose, features)
         logging.debug(f"Recommendations: {recommendations}")
 
-        # Store the query in the database
-        insert_query(
-            sqft_living=features['sqft_living'],
-            no_of_bedrooms=features['no_of_bedrooms'],
-            no_of_bathrooms=features['no_of_bathrooms'],
-            sqft_lot=features['sqft_lot'],
-            no_of_floors=features['no_of_floors'],
-            house_age=features['house_age'],
-            zipcode=features['zipcode'],
-            purpose=purpose,  # Store the purpose in the database as well
-            predicted_price=predicted_price[0]
-        )
-        logging.debug("Prediction stored in the database.")
-
-        # Return predicted price, confidence interval, and recommendations
+        # Return prediction results (no database write here)
         return predicted_price[0], (ci_min[0], ci_max[0]), recommendations
+
     except Exception as e:
         logging.error(f"Error in predict_price function: {str(e)}")
         raise
