@@ -291,6 +291,23 @@ html.dark-mode .admin-table tr:nth-child(even) {
     color: white;
 }
 
+
+.dashboard-description {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-left: 4px solid var(--primary-color);
+  padding: 0.75rem 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+
+
+
 </style>
 
 
@@ -300,8 +317,13 @@ html.dark-mode .admin-table tr:nth-child(even) {
 <div class="admin-container">
     <div class="header-section">
         <h1>Admin Dashboard - Predictions</h1>
+        <p class="dashboard-description">
+            View a detailed log of all property feature submissions and their predicted prices. 
+            Analyze user trends, filter data, and download entries as CSV for deeper insights.
+        </p>
         <button id="downloadCSV" class="download-button">Export Housing Data (CSV)</button>
     </div>
+
 
   <!-- Filters -->
 <div class="filters">
