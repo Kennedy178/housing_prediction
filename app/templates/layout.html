@@ -48,30 +48,31 @@
     </div>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <!-- Branding with Copyright -->
-            <div class="footer-logo">
-                <p>© Housing Price Predictor</p>
-            </div>
-    
-            <!-- Navigation Links -->
-            <div class="footer-links">
-                {% if request.endpoint == 'index' %}
-                    <a href="{{ url_for('admin_dashboard') }}" class="main-link">Admin Dashboard</a>
-                {% elif request.endpoint == 'admin_dashboard' %}
-                    <a href="{{ url_for('index') }}" class="main-link">Go to Home</a>
-                {% endif %}
-            </div>
-    
-            <!-- Developer Credit -->
-            <div class="developer-credit">
-                <a href="https://www.linkedin.com/in/kennedy-munene-dsml" target="_blank" class="dev-link">
-                    Connect with the Developer
-                </a>
-            </div>
+<footer>
+    <div class="footer-container">
+        <!-- Branding with Copyright -->
+        <div class="footer-logo">
+            <p>© Housing Price Predictor</p>
         </div>
-    </footer>
+
+        <!-- Navigation Links -->
+        <div class="footer-links">
+            {% if request.endpoint == 'index' %}
+                <a href="{{ url_for('admin_dashboard') }}" class="main-link">Admin Dashboard</a>
+            {% elif request.endpoint == 'admin_dashboard' %}
+                <a href="{{ url_for('index') }}" class="main-link">Go to Home</a>
+            {% endif %}
+        </div>
+
+        <!-- Developer Credit -->
+        <div class="developer-credit">
+            <a href="https://www.linkedin.com/in/kennedy-munene-dsml" target="_blank" class="dev-link">
+                Connect with the Developer
+            </a>
+        </div>
+    </div>
+</footer>
+
     
     
     

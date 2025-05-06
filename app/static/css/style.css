@@ -633,6 +633,7 @@ main {
    Compact & Elegant Footer
     */
   
+/* Footer Styling */
 footer {
   background: var(--glass-bg);
   backdrop-filter: blur(10px);
@@ -640,40 +641,44 @@ footer {
   border-top: 2px solid var(--golden-accent);
   box-shadow: 0 -3px 15px rgba(255, 204, 0, 0.1);
   padding: 18px 0;
+  color: var(--text-color);
+  font-size: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--text-color);
-  font-size: 1rem;
 }
 
-/*  Footer Container */
+/* Footer Container */
 .footer-container {
   display: flex;
-  justify-content: space-evenly;  /* Even spacing but tighter */
+  justify-content: space-between;
   align-items: center;
-  width: 65%; /*  Reduced width to bring elements closer */
-  max-width: 850px; /*  Controlled max width for spacing */
-  gap: 1.5cm; /*  Exact spacing between elements */
+  width: 100%;
+  max-width: 1100px;
+  gap: 1rem; /* Adjusted for a smaller gap between elements */
+  margin: 0 auto;
+  padding: 0 1rem; /* Padding on sides */
 }
 
-/*  Footer Branding */
+/* Footer Branding */
 .footer-logo p {
   font-size: 1rem;
-  font-weight: normal; /* (not bold) */
+  font-weight: normal;
   color: var(--text-color);
   letter-spacing: 0.5px;
+  margin: 0;
+  line-height: 1;
 }
 
-/*  Navigation Links */
+/* Navigation Links */
 .footer-links {
   display: flex;
-  gap: 12px; /*  Tightened spacing between buttons */
+  gap: 10px; /* Slightly smaller gap between buttons */
 }
 
-/*  Main Button Links */
+/* Main Button Links */
 .main-link {
-  padding: 6px 16px; 
+  padding: 6px 16px;
   background: var(--primary-color);
   color: white;
   font-weight: bold;
@@ -685,18 +690,17 @@ footer {
 .main-link:hover {
   background: var(--button-hover);
   transform: translateY(-3px);
-  
 }
 
-/*  Developer Credit */
+/* Developer Credit */
 .developer-credit {
   font-size: 1rem;
 }
 
 .dev-link {
-  color: var(--text-color); /*  Matched the copyright style */
-  font-size: 1rem; /*  Same as normal text */
-  font-weight: normal; /*  No bold emphasis */
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: normal;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -705,11 +709,40 @@ footer {
   color: var(--primary-color);
 }
 
-/*  Dark Mode Enhancements */
+/* Dark Mode Enhancements */
 html.dark-mode footer {
   background: rgba(0, 0, 0, 0.5);
   border-top: 2px solid #d35400;
-  box-shadow: 0 -3px 15px #d35400; /*  Darker shadow for contrast */
+  box-shadow: 0 -3px 15px #d35400; /* Darker shadow for contrast */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Stack elements vertically on smaller screens */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .footer-links {
+    margin-top: 1rem;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .footer-logo p {
+    font-size: 0.9rem; /* Slightly smaller text */
+  }
+
+  .main-link {
+    padding: 6px 12px; /* Adjust padding for smaller screens */
+  }
+
+  .dev-link {
+    font-size: 0.9rem;
+  }
 }
 
 
