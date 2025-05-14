@@ -1,9 +1,9 @@
 .venv/
 extras/
 flow.ipynb
-flow.md
 logica.md
 logic.md
 gic.ipynb
 .env
 database.log
+__pycache__/
