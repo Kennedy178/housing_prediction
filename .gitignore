@@ -7,4 +7,6 @@ gic.ipynb
 .env
 database.log
 __pycache__/
+data/raw/Housing probably better.csv
+
 
