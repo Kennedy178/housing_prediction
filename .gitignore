@@ -7,3 +7,4 @@ gic.ipynb
 .env
 database.log
 __pycache__/
+*.pyc
