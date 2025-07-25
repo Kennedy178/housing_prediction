@@ -1,6 +1,3 @@
-/* Copy the root variables from styles.css */
-
-/* Light theme variables (default) */
 :root {
     --primary-color: #005f73;
     --secondary-color: #0a9396;
@@ -11,10 +8,9 @@
     --border-color: #e0e0e0;
     --error-color: #d32f2f;
     --button-hover: #004e66;
-  }
-  
-  /* Dark mode variables */
-  html.dark-mode {
+}
+
+html.dark-mode {
     --primary-color: #00c2ff;
     --secondary-color: #d35400;
     --accent-color: #00ffcc;
@@ -26,149 +22,122 @@
     --shadow-color: rgba(0, 255, 255, 0.25);
     --glass-bg: rgba(255, 255, 255, 0.05);
     --golden-accent: #ffcc00;
-  }
-  
+}
 
-
-
-
-  /* Chatbot Container */
-  #chatbot-container {
+#chatbot-container {
     background: var(--form-bg);
-    border-radius: 15px;
-    padding: 20px;
-    width: 100%;  /* Full width of parent */
-    max-width: calc(100% - 1cm); /* Keeps a 1cm gap on each side */
-    margin: 20px auto;
+    border-radius: 10px;
+    padding: 15px 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
     box-shadow: 0px 4px 15px var(--border-color);
     overflow-y: auto;
     max-height: 400px;
-    background-color: var(--bg-color);  /* Slightly different from the page background */
-    display: block; /* Ensures proper width behavior */
-    margin-bottom: 30px; /* Adjust this value as needed */
-    margin-top: 20px; /* Adjust this value as needed */
+    background-color: var(--bg-color);
+    display: block;
+    position: relative;
+    z-index: 1;
 }
 
-
 #recommendations-container * {
-    font-size: 0.9em !important;  /* Adjust as needed */
-    line-height: 1.6 !important;  /* Ensures readability */
+    font-size: 0.9em !important;
+    line-height: 1.6 !important;
 }
 
 .recommendation-message {
-    max-width: calc(100% - 7ch); /* Ensures it extends but leaves 2cm from scrollbar */
-    width: auto; /* Allows it to adjust dynamically */
-    display: block; /* Makes sure it takes up space properly */
-    padding: 10px;
-    margin-right: 7ch; /* Pushes it away from the scrollbar */
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px 15px;
+    display: block;
 }
-
-
 
 .chatbot-title {
     font-size: 18px;
     font-weight: bold;
     text-align: center;
-    color: var(--text-color); /* Uses your theme color */
+    color: var(--text-color);
     margin-bottom: 10px;
-    padding: 10px 0;
+    padding: 0 15px;
 }
 
-
-/* Chatbot Messages */
 .chatbot-message {
-    background: #e5e5e5; /* Neutral grey background for message */
+    background: #e5e5e5;
     color: var(--text-color);
-    padding: 12px 20px; /* Standard padding for text spacing */
+    padding: 10px 15px;
     border-radius: 12px;
-    margin: 10px auto; /* Centers messages within chatbot container */
-    max-width: 80%; /* Keeps messages readable within chatbot container */
-    width: 80%; /* Ensures all messages have the same width */
+    margin: 8px 0;
+    width: 100%;
+    max-width: 100%;
     font-family: 'Arial', sans-serif;
     font-size: 14px;
     line-height: 1.5;
     animation: fadeIn 0.5s ease-in-out;
     word-wrap: break-word;
-    box-shadow: 0px 2px 10px var(--shadow-color); /* Adds slight depth */
+    box-shadow: 0px 2px 10px var(--shadow-color);
 }
 
-  
-  /* Closing Message (Special Styling) */
-  .closing-message {
-      font-weight: bold;
-      color: var(--primary-color);
-      margin-top: 15px;
-  }
-  
-  /* Typing Indicator (Blinking ...) */
-  .chatbot-loading {
-      font-size: 16px;
-      font-weight: bold;
-      color: var(--primary-color);
-      padding: 5px;
-      animation: fadeInOut 1s infinite alternate;
-  }
-  
-  /* Smooth Fade-In Animation */
-  @keyframes fadeIn {
-      from {
-          opacity: 0;
-          transform: translateY(5px);
-      }
-      to {
-          opacity: 1;
-          transform: translateY(0);
-      }
-  }
-  
-  /* Typing Indicator Animation */
-  @keyframes fadeInOut {
-      0% { opacity: 0.3; }
-      100% { opacity: 1; }
-  }
-  
- /* End of Div (Message History) */
+.closing-message {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 10px;
+}
+
+.chatbot-loading {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 5px 15px;
+    animation: fadeInOut 1s infinite alternate;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
 #end-of-div {
-    font-style: normal; /* Removed italics for a cleaner look */
+    font-style: normal;
     text-align: center;
-    color: var(--secondary-color); /* Lighter, more balanced tone from root color */
+    color: var(--secondary-color);
     margin-top: 10px;
     font-size: 14px;
-    opacity: 0.8; /* Subtle opacity for a softer appearance */
+    opacity: 0.8;
+    padding: 0 15px;
 }
 
-/* Dark mode End of Div text */
 html.dark-mode #end-of-div {
-    color: var(--accent-color); /* Use accent color for a sleek finish */
-    opacity: 0.9; /* Slightly less opacity for dark mode for better visibility */
+    color: var(--accent-color);
+    opacity: 0.9;
 }
 
-  
-  /* Dark mode specific overrides */
-  html.dark-mode #chatbot-container {
-      background: var(--form-bg);
-      box-shadow: 0px 4px 15px var(--shadow-color);
-      background-color: var(--form-bg);
-  }
-  
-  /* Dark mode chatbot message styling */
-  html.dark-mode .chatbot-message {
-      background: #333; /* Darker neutral background for messages */
-      color: var(--text-color);
-  }
-  
-  /* Dark mode closing message */
-  html.dark-mode .closing-message {
-    color: var(--primary-color);  /* Muted purple for dark mode */
+html.dark-mode #chatbot-container {
+    background: var(--form-bg);
+    box-shadow: 0px 4px 15px var(--shadow-color);
+    background-color: var(--form-bg);
 }
 
-  
-  /* Dark mode typing indicator */
-  html.dark-mode .chatbot-loading {
-      color: var(--accent-color);
-  }
-  
+html.dark-mode .chatbot-message {
+    background: #333;
+    color: var(--text-color);
+}
 
-  
+html.dark-mode .closing-message {
+    color: var(--primary-color);
+}
 
-
+html.dark-mode .chatbot-loading {
+    color: var(--accent-color);
+}

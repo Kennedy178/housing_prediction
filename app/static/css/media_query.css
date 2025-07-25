@@ -1,935 +1,637 @@
-/* ============================================
-   Media Queries for Header
-============================================ */
-
-/* Tablet: max-width: 768px */
+/* Media Queries for Header */
 @media (max-width: 768px) {
     header {
-      padding: 30px 15px; /* Reduce padding */
+      padding: 15px 0; /* Reduced vertical padding */
+      margin-bottom: 5px; /* Minimal margin */
     }
   
     header h1 {
-      font-size: 2rem; /* Smaller font size for h1 */
+      font-size: 2rem;
     }
   
     header p {
-      font-size: 1rem; /* Smaller font size for p */
+      font-size: 1rem;
     }
   
     #theme-toggle {
-      font-size: 1.3rem; /* Slightly smaller toggle button */
+      font-size: 1.3rem;
     }
   
     header::before {
-      width: 120px; /* Scale down the radial gradient overlay */
+      width: 120px;
       height: 120px;
       top: -40px;
       right: -40px;
     }
-  }
-  
-  /* Mobile: max-width: 480px */
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     header {
-      padding: 20px 10px; /* Further reduce padding */
+      padding: 10px 0;
+      margin-bottom: 5px;
     }
   
     header h1 {
-      font-size: 1.5rem; /* Even smaller font size for h1 */
+      font-size: 1.5rem;
     }
   
     header p {
-      font-size: 0.9rem; /* Even smaller font size for p */
+      font-size: 0.9rem;
     }
   
     #theme-toggle {
-      font-size: 1.1rem; /* Smaller toggle button */
-      top: 5px; /* Adjust position */
+      font-size: 1.1rem;
+      top: 5px;
       right: 5px;
     }
   
     header::before {
-      display: none; /* Hide the radial gradient overlay on mobile */
+      display: none;
     }
-  }
+}
 
+/* Media Queries for Main Container and Sections */
+@media (max-width: 768px) {
+    .container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
 
-
- 
-  /* ============================================
-   Media Queries for Main Section
-============================================ */
-@media (max-width: 768px) { 
     main {
-      max-width: 95%; /* Reduce width for tablets */
-      padding: 0 10px; /* Add some space on the sides */
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
     }
-  }
-  
-  @media (max-width: 480px) { 
-    main {
-      max-width: 100%; /* Full width for small screens */
-      padding: 0 15px;
-    }
-  }
 
-  
-  /* ============================================
-   Media Queries for Purpose Selection
-============================================ */
-@media (max-width: 768px) { 
     .purpose-selection {
-      flex-direction: column; /* Stack items vertically */
-      gap: 15px; /* Reduce spacing */
-      padding: 15px 10px; /* Adjust padding */
-      font-size: 1.1rem; /* Slightly smaller font */
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px 0;
+      margin: 5px 0 !important; /* Reduced margin */
+      width: 100% !important;
     }
-    
+
     .purpose-selection label {
-      justify-content: center; /* Align labels properly */
+      justify-content: center;
     }
-  }
-  
-  @media (max-width: 480px) { 
-    .purpose-selection {
-      font-size: 1rem; /* Make text smaller for small screens */
-      gap: 10px; /* Reduce spacing */
-      padding: 10px 5px; /* Less padding */
-    }
-    
-    .purpose-selection input[type="radio"] {
-      transform: scale(1); /* Reset radio button size */
-    }
-  
-    .purpose-selection input[type="radio"]:hover {
-      transform: scale(1.1); /* Slight hover effect */
-    }
-  }
 
-
-  
-
-  /* ============================================
-   Media Queries for Form Section
-============================================ */
-
-/* Tablet: max-width: 768px */
-@media (max-width: 768px) {
     #form-section {
-      padding: 20px; /* Reduce padding */
+      width: 100% !important;
+      margin: 5px 0 !important;
+      padding: 10px 0 !important;
+      position: relative;
+      z-index: 1;
     }
-  
+
     #form-section form {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid columns */
-      gap: 15px; /* Reduce spacing between form fields */
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      padding: 0 10px;
     }
-  
+
     .form-group input {
-      padding: 10px; /* Reduce input padding */
-      font-size: 0.95rem; /* Slightly smaller font size */
+      padding: 8px;
+      font-size: 0.95rem;
     }
-  
+
     #predict-btn {
-      padding: 12px; /* Reduce button padding */
-      font-size: 1rem; /* Slightly smaller font size */
+      padding: 10px;
+      font-size: 1rem;
+      margin: 0 10px;
     }
-  }
-  
-  /* Mobile: max-width: 480px */
-  @media (max-width: 480px) {
-    #form-section {
-      padding: 15px; /* Further reduce padding */
-    }
-  
-    #form-section form {
-      grid-template-columns: 1fr; /* Switch to single-column layout */
-      gap: 10px; /* Further reduce spacing between form fields */
-    }
-  
-    .form-group input {
-      padding: 8px; /* Further reduce input padding */
-      font-size: 0.9rem; /* Smaller font size for mobile */
-    }
-  
-    #predict-btn {
-      padding: 10px; /* Further reduce button padding */
-      font-size: 0.95rem; /* Smaller font size for mobile */
-    }
-  }
 
-
- /* ============================================
-   Media Queries for Model Insights Section
-============================================ */
-
-/* Tablets & Small Screens (768px and below) */
-@media (max-width: 768px) {
-    .insights-content {
-      flex-direction: column; /* Stack images on top of each other */
-      align-items: center;
-    }
-  
-    .insight {
-      max-width: 90%; /* Make insights take up more width */
-      min-width: unset; /* Allow full flexibility */
-    }
-  
-    .insights-explanation {
-      font-size: 1rem; /* Adjust text size */
-      padding: 18px; /* Reduce padding */
-      max-width: 95%; /* Expand for smaller screens */
-    }
-  }
-  
-  /* Mobile Devices (480px and below) */
-  @media (max-width: 480px) {
     #insights-container {
-      padding: 18px; /* Reduce padding for small screens */
+      width: 100% !important;
+      margin: 10px 0 !important; /* Consistent spacing */
+      padding: 10px 0 !important;
+      position: relative;
+      z-index: 1;
     }
-  
-    .insights-title {
-      font-size: 1.5rem; /* Reduce heading size */
-      margin-bottom: 1rem;
+
+    .insights-content {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 0 10px;
     }
-  
-    .insights-text p {
-      font-size: 0.95rem; /* Adjust paragraph font size */
-      line-height: 1.4; /* Reduce spacing */
-    }
-  
+
     .insight {
-      max-width: 100%; /* Full width for smaller screens */
-      padding: 12px; /* Reduce padding */
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: unset;
+      padding: 8px;
     }
-  
-    .insight img {
-      border-radius: 6px; /* Slightly smaller border radius */
-    }
-  
-    .insight-description {
-      font-size: 0.9rem; /* Reduce text size */
-    }
-  
+
     .insights-explanation {
-      font-size: 0.95rem; /* Reduce explanation font */
-      padding: 15px;
+      font-size: 1rem;
+      padding: 10px;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 10px 0 !important;
     }
-  }
-  
-  /* Ultra-Small Screens (350px and below) */
-  @media (max-width: 350px) {
-    .insights-title {
-      font-size: 1.3rem;
-    }
-  
-    .insights-text p {
-      font-size: 0.85rem;
-    }
-  
-    .insight-description {
-      font-size: 0.85rem;
-    }
-  }
- 
-  
 
-  /* ============================================
-   Media Queries for Prediction Result Section
-============================================ */
-
-/* Tablet: max-width: 768px */
-@media (max-width: 768px) {
     #result-section {
-      padding: 20px; /* Reduce padding */
+      width: 100% !important;
+      margin: 10px 0 !important;
+      padding: 10px 0 !important;
+      position: relative;
+      z-index: 1;
     }
-  
+
     #result-section h2 {
-      font-size: 1.6rem; /* Slightly smaller font size */
-      text-align: center; /* Center align the title */
+      font-size: 1.6rem;
+      padding: 0 10px;
     }
-  
+
     #prediction-message {
-      font-size: 1.1rem; /* Slightly smaller font size */
-      text-align: center; /* Center align the message */
+      font-size: 1.1rem;
+      padding: 0 10px;
     }
-  
+
     #realtor-link-container p {
-      font-size: 0.95rem; /* Slightly smaller font size */
+      font-size: 0.95rem;
+      padding: 0 10px;
     }
-  
+
     #back-to-form {
-      padding: 8px 16px; /* Slightly smaller button */
-      font-size: 0.95rem; /* Slightly smaller font size */
+      padding: 8px 16px;
+      font-size: 0.95rem;
+      margin: 0 10px;
     }
-  }
-  
-  /* Mobile: max-width: 480px */
-  @media (max-width: 480px) {
-    #result-section {
-      padding: 15px; /* Further reduce padding */
-    }
-  
-    #result-section h2 {
-      font-size: 1.4rem; /* Smaller font size for mobile */
-    }
-  
-    #prediction-message {
-      font-size: 1rem; /* Smaller font size for mobile */
-    }
-  
-    #realtor-link-container p {
-      font-size: 0.9rem; /* Smaller font size for mobile */
-    }
-  
-    #back-to-form {
-      padding: 6px 12px; /* Smaller button for mobile */
-      font-size: 0.9rem; /* Smaller font size for mobile */
-      width: 100%; /* Full width button for mobile */
-    }
-  }
 
-
-  /* ============================================
-   Chatbot Container
-============================================ */
-#chatbot-container {
-    background: var(--form-bg);
-    border-radius: 15px;
-    padding: 20px;
-    width: 100%; /* Full width of parent */
-    max-width: calc(100% - 1cm); /* Keeps a 1cm gap on each side */
-    margin: 20px auto;
-    box-shadow: 0px 4px 15px var(--border-color);
-    overflow-y: auto; /* Enable vertical scrolling */
-    max-height: 400px; /* Set a max height for scrolling */
-    background-color: var(--bg-color); /* Slightly different from the page background */
-    display: block; /* Ensures proper width behavior */
-    margin-bottom: 30px; /* Adjust this value as needed */
-    margin-top: 20px; /* Adjust this value as needed */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
-  }
-  
-  /* Ensure the chatbot container is scrollable on mobile */
-  @media (max-width: 768px) {
-    #chatbot-container {
-      max-width: 100% !important; /* Full width of parent container */
-      padding: 15px !important; /* Reduce padding */
-      margin: 15px auto !important; /* Adjust margin */
-      max-height: 60vh; /* Use viewport height for better mobile scrolling */
-      overflow-y: scroll; /* Ensure scrolling is enabled */
-      -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    #chatbot-container {
-      padding: 10px !important; /* Further reduce padding */
-      margin: 10px auto !important; /* Further adjust margin */
-      max-height: 50vh; /* Smaller max height for mobile */
-      overflow-y: scroll; /* Ensure scrolling is enabled */
-      -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
-    }
-  }
-  
-  /* Chatbot Messages */
-  .chatbot-message {
-    background: #e5e5e5; /* Neutral grey background for message */
-    color: var(--text-color);
-    padding: 12px 20px; /* Standard padding for text spacing */
-    border-radius: 12px;
-    margin: 10px auto; /* Centers messages within chatbot container */
-    max-width: 80%; /* Keeps messages readable within chatbot container */
-    width: 80%; /* Ensures all messages have the same width */
-    font-family: 'Arial', sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    animation: fadeIn 0.5s ease-in-out;
-    word-wrap: break-word;
-    box-shadow: 0px 2px 10px var(--shadow-color); /* Adds slight depth */
-  }
-  
-  /* Adjust message width for mobile */
-  @media (max-width: 768px) {
-    .chatbot-message {
-      max-width: 100% !important; /* Full width for messages */
-      width: 100% !important; /* Full width for messages */
-      font-size: 14px !important; /* Slightly smaller font size */
-      padding: 10px 15px !important; /* Adjust padding */
-      margin: 10px 0 !important; /* Adjust margin */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .chatbot-message {
-      font-size: 13px !important; /* Smaller font size for mobile */
-      padding: 8px 12px !important; /* Adjust padding */
-      margin: 8px 0 !important; /* Adjust margin */
-    }
-  }
-  
-  /* Chatbot Title */
-  .chatbot-title {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    color: var(--text-color); /* Uses your theme color */
-    margin-bottom: 10px;
-    padding: 10px 0;
-  }
-  
-  /* Adjust title font size for mobile */
-  @media (max-width: 768px) {
-    .chatbot-title {
-      font-size: 16px !important; /* Slightly smaller font size */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .chatbot-title {
-      font-size: 14px !important; /* Smaller font size for mobile */
-    }
-  }
-  
-  /* Recommendations Container */
-  #recommendations-container * {
-    font-size: 0.9em !important; /* Adjust as needed */
-    line-height: 1.6 !important; /* Ensures readability */
-  }
-  
-  /* Recommendation Messages */
-  .recommendation-message {
-    max-width: calc(100% - 7ch); /* Ensures it extends but leaves 2cm from scrollbar */
-    width: auto; /* Allows it to adjust dynamically */
-    display: block; /* Makes sure it takes up space properly */
-    padding: 10px;
-    margin-right: 7ch; /* Pushes it away from the scrollbar */
-  }
-  
-  /* Adjust recommendation messages for mobile */
-  @media (max-width: 768px) {
-    .recommendation-message {
-      max-width: 100% !important; /* Full width for recommendation messages */
-      margin-right: 0 !important; /* Remove right margin */
-    }
-  }
-
-
-
-
-/* ============================================
-   Prediction History Section (Responsive)
-============================================ */
-#history-section {
-    background: var(--form-bg);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    border: 1px solid var(--border-color);
-    color: var(--text-color);
-    width: 100%;
-    max-width: 100%;
-    overflow-x: auto; /*  Enables horizontal scrolling if table overflows */
-  }
-  
-  #history-section h2 {
-    margin-bottom: 15px;
-    color: var(--primary-color);
-    text-align: center;
-    font-weight: 700;
-  }
-  
-  /* Responsive Table */
-  #history-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 15px;
-    min-width: 800px; /*  Ensures table doesn't shrink too much */
-  }
-  
-  #history-table th,
-  #history-table td {
-    padding: 12px; /*  Slightly larger padding */
-    border: 1px solid var(--border-color);
-    text-align: center;
-    font-size: 16px; /*  Restored font size on PC */
-    word-wrap: break-word;
-  }
-  
-  #history-table th {
-    background: radial-gradient(circle, var(--primary-color), var(--secondary-color));
-    color: #fff;
-    font-weight: 600;
-  }
-  
-  /*  Make the table scrollable on small screens */
-  #history-section {
-    overflow-x: auto;
-  }
-  
-  /* ============================================
-     Buttons (Responsive)
-  ============================================ */
-  #toggle-history,
-  #clear-history {
-    padding: 12px 22px; /* ⬆ Slightly larger padding */
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s;
-    font-size: 1rem;
-  }
-  
-  #toggle-history {
-    background: radial-gradient(circle, var(--primary-color), var(--secondary-color));
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    margin-right: 10px;
-  }
-  
-  #toggle-history:hover {
-    background: radial-gradient(circle, var(--button-hover), var(--secondary-color));
-  }
-  
-  #clear-history {
-    background: radial-gradient(circle, #d32f2f, #c62828);
-  }
-  
-  #clear-history:hover {
-    background: radial-gradient(circle, #b71c1c, #a91a1a);
-  }
-  
-  /* ============================================
-     Responsive Media Queries
-  ============================================ */
-  
-  /*  Small screens (phones) */
-  @media (max-width: 600px) {
     #history-section {
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-  
-    /*  Make table horizontally scrollable */
-    #history-table {
-      min-width: 100%;
-      display: block;
+      width: 100% !important;
+      margin: 10px 0 !important;
+      padding: 10px 0 !important;
       overflow-x: auto;
+      position: relative;
+      z-index: 1;
     }
-  
-    /*  Reduce font size only on small screens */
+
+    #history-table {
+      width: 100% !important;
+      min-width: 100% !important;
+      font-size: 14px;
+    }
+
     #history-table th,
     #history-table td {
+      padding: 8px;
       font-size: 14px;
-      padding: 10px;
     }
-  
-    /*  Buttons should stack instead of being side-by-side */
+
     #toggle-history,
     #clear-history {
       width: 100%;
-      margin-bottom: 10px;
-      text-align: center;
+      margin: 10px;
+      font-size: 0.95rem;
     }
-  }
-  
-  /*  Medium screens (tablets) */
-  @media (max-width: 1024px) {
-    #history-section {
-      padding: 18px;
+
+    .admin-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 10px 0 !important;
+      padding: 10px 0 !important;
+      position: relative;
+      z-index: 1;
     }
-  
-    /*  Prevent table from being too small */
-    #history-table {
-      font-size: 15px;
-      min-width: 700px;
+
+    .header-section {
+      flex-direction: column;
+      gap: 10px;
+      padding: 0 10px;
     }
-  
-    #toggle-history,
-    #clear-history {
-      font-size: 14px;
+
+    .admin-container h1 {
+      font-size: 20px;
+      padding: 0 10px;
+    }
+
+    .download-button {
+      width: 100%;
       padding: 10px;
+      font-size: 14px;
+      margin: 0 10px;
     }
-  }
-  
 
+    .filters {
+      flex-direction: column;
+      gap: 8px;
+      padding: 8px 10px;
+    }
 
+    .filters div {
+      width: 100%;
+      min-width: unset;
+    }
 
-/* ============================================
-   Compact & Elegant Footer
-============================================ */
-footer {
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-top: 2px solid var(--golden-accent);
-    box-shadow: 0 -3px 15px rgba(255, 204, 0, 0.1);
-    padding: 18px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--text-color);
-    font-size: 1rem;
-    width: 100%;
-  }
-  
-  /* Footer Container */
-  .footer-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 65%;
-    max-width: 850px;
-    gap: 1.5cm;
-  }
-  
-  /* Footer Branding */
-  .footer-logo p {
-    font-size: 1rem;
-    font-weight: normal;
-    color: var(--text-color);
-    letter-spacing: 0.5px;
-  }
-  
-  /* Navigation Links */
-  .footer-links {
-    display: flex;
-    gap: 12px;
-  }
-  
-  /* Main Button Links */
-  .main-link {
-    padding: 6px 16px;
-    background: var(--primary-color);
-    color: white;
-    font-weight: bold;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .main-link:hover {
-    background: var(--button-hover);
-    transform: translateY(-3px);
-  }
-  
-  /* Developer Credit */
-  .developer-credit {
-    font-size: 1rem;
-  }
-  
-  .dev-link {
-    color: var(--text-color);
-    font-size: 1rem;
-    font-weight: normal;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .dev-link:hover {
-    color: var(--primary-color);
-  }
-  
-  /* ============================================
-     Responsive Footer - Small Screens
-  ============================================ */
-  @media (max-width: 768px) {
+    .filters label {
+      font-size: 13px;
+    }
+
+    .filters input,
+    .filters select {
+      padding: 8px;
+      font-size: 13px;
+      width: 100%;
+    }
+
+    .filters button {
+      padding: 8px 12px;
+      font-size: 13px;
+      margin: 0 10px;
+    }
+
+    .table-container {
+      width: 100% !important;
+      overflow-x: auto;
+    }
+
+    .admin-table {
+      width: 100% !important;
+      min-width: 100% !important;
+      font-size: 14px;
+    }
+
+    .admin-table th,
+    .admin-table td {
+      padding: 8px;
+      font-size: 14px;
+    }
+
+    .toggle-button {
+      padding: 6px;
+      font-size: 0.95rem;
+      margin: 0 10px;
+    }
+
     .footer-container {
-      flex-direction: column; /*  Stack items vertically */
-      align-items: center;
-      text-align: center;
-      width: 90%;
-      gap: 10px; /*  Reduce space */
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 10px 0 !important;
     }
-  
+
     .footer-links {
-      flex-direction: column; /*  Stack links on small screens */
+      flex-direction: column;
       gap: 6px;
+      padding: 0 10px;
     }
-  
+
     .main-link {
       font-size: 0.9rem;
-      padding: 6px 12px; /*  Reduce button size */
+      padding: 6px 12px;
     }
-  
+
     .developer-credit {
-      font-size: 0.9rem; /*  Reduce text size */
+      font-size: 0.9rem;
+      padding: 0 10px;
     }
-  }
-  
-
-
-
-
-/* ============================================
-   Admin Dashboard Styling
-============================================ */
-.admin-container {
-  max-width: 1200px;
-  margin: 20px auto;
-  background: var(--form-bg);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.header-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-  flex-wrap: wrap; /* ✅ Allows wrapping on smaller screens */
-}
-
-.admin-container h1 {
-  text-align: center;
-  color: var(--primary-color);
-  font-size: 24px; /* ✅ Ensures consistent readability */
-}
-
-.download-button {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 8px;
-  background-color: var(--secondary-color);
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.download-button:hover {
-  background-color: var(--button-hover);
-}
-
-/* ============================================
-   Responsive Media Queries
-============================================ */
-
-/* ✅ Small screens (phones) */
-@media (max-width: 600px) {
-  .admin-container {
-    padding: 15px;
-    margin: 10px;
-  }
-
-  .header-section {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .admin-container h1 {
-    font-size: 20px;
-  }
-
-  .download-button {
-    width: 100%; /* ✅ Makes button full width for better mobile usability */
-    padding: 12px;
-    font-size: 14px;
-  }
-}
-
-/* ✅ Medium screens (tablets) */
-@media (max-width: 1024px) {
-  .admin-container {
-    padding: 18px;
-  }
-
-  .header-section {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-  }
-
-  .admin-container h1 {
-    font-size: 22px;
-  }
-
-  .download-button {
-    font-size: 15px;
-    padding: 10px 20px;
-  }
-}
-
-
-
-/* ============================================
-   Media Queries for Filters Section
-============================================ */
-
-/* Tablet: max-width: 768px */
-@media (max-width: 768px) {
-  .filters {
-    gap: 10px; /* Reduce spacing between elements */
-    padding: 10px; /* Reduce padding */
-  }
-
-  .filters div {
-    min-width: 120px; /* Slightly smaller minimum width */
-  }
-
-  .filters label {
-    font-size: 13px; /* Slightly smaller font size */
-  }
-
-  .filters input,
-  .filters select {
-    padding: 8px; /* Slightly smaller padding */
-    font-size: 13px; /* Slightly smaller font size */
-  }
-
-  .filters button {
-    padding: 8px 12px; /* Slightly smaller padding */
-    font-size: 13px; /* Slightly smaller font size */
-  }
-}
-
-/* Mobile: max-width: 480px */
-@media (max-width: 480px) {
-  .filters {
-    flex-direction: column; /* Stack filters vertically */
-    gap: 8px; /* Further reduce spacing between elements */
-    padding: 8px; /* Further reduce padding */
-  }
-
-  .filters div {
-    width: 100%; /* Full width for inputs and selects */
-    min-width: unset; /* Remove minimum width */
-  }
-
-  .filters label {
-    font-size: 12px; /* Smaller font size for mobile */
-  }
-
-  .filters input,
-  .filters select {
-    padding: 6px; /* Smaller padding for mobile */
-    font-size: 12px; /* Smaller font size for mobile */
-    width: 100%; /* Full width for inputs and selects */
-  }
-
-  .filters button {
-    padding: 6px 10px; /* Smaller padding for mobile */
-    font-size: 12px; /* Smaller font size for mobile */
-    width: 100%; /* Full width for buttons */
-    text-align: center; /* Center align button text */
-  }
-}
-
-
-/* ============================================
-   Responsive Media Queries for Predictions Table
-============================================ */
-
-/* Responsive Table Wrapper */
-.table-container {
-  width: 100%;
-  overflow-x: auto; /* Enables horizontal scrolling */
-}
-
-/* Ensure table takes full width */
-.admin-table {
-  width: 100%;
-  border-collapse: collapse;
-  white-space: nowrap; /* Prevents text from wrapping */
-}
-
-/* Small screens (phones) */
-@media (max-width: 768px) {
-  .admin-table th,
-  .admin-table td {
-    padding: 8px;
-    font-size: 14px;
-  }
-}
-
-/* Medium screens (tablets) */
-@media (max-width: 1024px) {
-  .admin-table th,
-  .admin-table td {
-    padding: 10px;
-    font-size: 15px;
-  }
-}
-
-
-/* ============================================
-   Media Queries for Toggle Button
-============================================ */
-
-/* Tablet: max-width: 768px */
-@media (max-width: 768px) {
-  .toggle-button {
-    padding: 6px; /* Slightly smaller padding */
-    font-size: 0.95rem; /* Slightly smaller font size */
-  }
-}
-
-/* Mobile: max-width: 480px */
-@media (max-width: 480px) {
-  .toggle-button {
-    padding: 5px; /* Smaller padding for mobile */
-    font-size: 0.9rem; /* Smaller font size for mobile */
-    width: 100%; /* Full width for mobile */
-    text-align: center; /* Center align button text */
-  }
-}
-
-
-
-
-/* Media Queries for Modal */
-@media (max-width: 768px) {
-  .modal-content {
-      width: 70%; /* Slightly wider on tablets for better readability */
-      margin: 20% auto; /* Adjust margin for better centering */
-  }
-
-  .button-group {
-      flex-direction: column; /* Stack buttons vertically on smaller screens */
-      gap: 10px; /* Reduce gap between stacked buttons */
-  }
-
-  .button-group button {
-      width: 100%; /* Full-width buttons for easier tapping on mobile */
-  }
 }
 
 @media (max-width: 480px) {
-  .modal-content {
-      width: 90%; /* Wider on small mobile devices */
-      margin: 25% auto; /* Adjust margin for better centering */
-      padding: 20px; /* Reduce padding for smaller screens */
-  }
+    .container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
 
-  .modal-content p {
-      font-size: 1em; /* Slightly smaller font size for mobile */
-  }
+    main {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
 
-  .button-group button {
-      padding: 10px 15px; /* Slightly smaller padding for mobile */
-      font-size: 0.9em; /* Smaller font size for mobile */
-  }
+    .purpose-selection {
+      gap: 8px;
+      padding: 8px 0;
+      margin: 5px 0 !important;
+      font-size: 1rem;
+    }
+
+    .purpose-selection input[type="radio"] {
+      transform: scale(1);
+    }
+
+    .purpose-selection input[type="radio"]:hover {
+      transform: scale(1.1);
+    }
+
+    #form-section {
+      width: 100% !important;
+      margin: 5px 0 !important;
+      padding: 8px 0 !important;
+    }
+
+    #form-section form {
+      grid-template-columns: 1fr;
+      gap: 8px;
+      padding: 0 5px;
+    }
+
+    .form-group input {
+      padding: 6px;
+      font-size: 0.9rem;
+    }
+
+    #predict-btn {
+      padding: 8px;
+      font-size: 0.95rem;
+      margin: 0 5px;
+    }
+
+    #insights-container {
+      width: 100% !important;
+      margin: 10px 0 !important;
+      padding: 8px 0 !important;
+    }
+
+    .insights-title {
+      font-size: 1.3rem;
+      padding: 0 5px;
+    }
+
+    .insights-text p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      padding: 0 5px;
+    }
+
+    .insight {
+      width: 100% !important;
+      padding: 6px;
+    }
+
+    .insight img {
+      border-radius: 6px;
+    }
+
+    .insight-description {
+      font-size: 0.85rem;
+      padding: 0 5px;
+    }
+
+    .insights-explanation {
+      font-size: 0.9rem;
+      padding: 8px 5px;
+      margin: 10px 0 !important;
+    }
+
+    #result-section {
+      width: 100% !important;
+      margin: 10px 0 !important;
+      padding: 8px 0 !important;
+    }
+
+    #result-section h2 {
+      font-size: 1.4rem;
+      padding: 0 5px;
+    }
+
+    #prediction-message {
+      font-size: 1rem;
+      padding: 0 5px;
+    }
+
+    #realtor-link-container p {
+      font-size: 0.9rem;
+      padding: 0 5px;
+    }
+
+    #back-to-form {
+      padding: 6px 12px;
+      font-size: 0.9rem;
+      margin: 0 5px;
+    }
+
+    #history-section {
+      width: 100% !important;
+      margin: 10px 0 !important;
+      padding: 8px 0 !important;
+    }
+
+    #history-table {
+      width: 100% !important;
+      min-width: 100% !important;
+      font-size: 13px;
+    }
+
+    #history-table th,
+    #history-table td {
+      padding: 6px;
+      font-size: 13px;
+    }
+
+    #toggle-history,
+    #clear-history {
+      padding: 8px;
+      font-size: 0.9rem;
+      margin: 0 5px;
+    }
+
+    .admin-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 10px 0 !important;
+      padding: 8px 0 !important;
+    }
+
+    .admin-container h1 {
+      font-size: 18px;
+      padding: 0 5px;
+    }
+
+    .download-button {
+      padding: 8px;
+      font-size: 13px;
+      margin: 0 5px;
+    }
+
+    .filters {
+      gap: 6px;
+      padding: 6px 5px;
+    }
+
+    .filters div {
+      width: 100%;
+      min-width: unset;
+    }
+
+    .filters label {
+      font-size: 12px;
+    }
+
+    .filters input,
+    .filters select {
+      padding: 6px;
+      font-size: 12px;
+      width: 100%;
+    }
+
+    .filters button {
+      padding: 6px 10px;
+      font-size: 12px;
+      margin: 0 5px;
+    }
+
+    .admin-table {
+      width: 100% !important;
+      min-width: 100% !important;
+      font-size: 13px;
+    }
+
+    .admin-table th,
+    .admin-table td {
+      padding: 6px;
+      font-size: 13px;
+    }
+
+    .toggle-button {
+      padding: 5px;
+      font-size: 0.9rem;
+      margin: 0 5px;
+    }
+
+    .footer-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 8px 0 !important;
+    }
+
+    .footer-links {
+      gap: 6px;
+      padding: 0 5px;
+    }
+
+    .main-link {
+      font-size: 0.9rem;
+      padding: 6px 12px;
+    }
+
+    .developer-credit {
+      font-size: 0.9rem;
+      padding: 0 5px;
+    }
+}
+
+/* Chatbot Container */
+@media (max-width: 768px) {
+    #chatbot-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 10px 0 !important;
+      padding: 10px 0 !important;
+      max-height: 60vh;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      position: relative;
+      z-index: 1;
+    }
+
+    .chatbot-message {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 8px 0 !important;
+      padding: 8px 10px !important;
+      font-size: 14px !important;
+    }
+
+    .chatbot-title {
+      font-size: 16px !important;
+      padding: 0 10px;
+    }
+
+    .recommendation-message {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #chatbot-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 10px 0 !important;
+      padding: 8px 0 !important;
+      max-height: 50vh;
+    }
+
+    .chatbot-message {
+      font-size: 13px !important;
+      padding: 6px 8px !important;
+      margin: 6px 0 !important;
+    }
+
+    .chatbot-title {
+      font-size: 14px !important;
+      padding: 0 5px;
+    }
+
+    .recommendation-message {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 6px 8px;
+    }
+}
+
+/* Modal */
+@media (max-width: 768px) {
+    .modal-content {
+      width: 100% !important;
+      margin: 15% 0 !important;
+      padding: 10px 0 !important;
+    }
+
+    .button-group {
+      flex-direction: column;
+      gap: 8px;
+      padding: 0 10px;
+    }
+
+    .button-group button {
+      width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+      width: 100% !important;
+      margin: 20% 0 !important;
+      padding: 8px 0 !important;
+    }
+
+    .modal-content p {
+      font-size: 0.9em;
+      padding: 0 5px;
+    }
+
+    .button-group button {
+      padding: 8px 12px;
+      font-size: 0.9em;
+    }
 }
 
 @media (max-width: 320px) {
-  .modal-content {
-      width: 95%; /* Almost full width on very small screens */
-      margin: 30% auto; /* Adjust margin for better centering */
-  }
+    .modal-content {
+      width: 100% !important;
+      margin: 25% 0 !important;
+      padding: 6px 0 !important;
+    }
 
-  .modal-content p {
-      font-size: 0.9em; /* Smaller font size for very small screens */
-  }
+    .modal-content p {
+      font-size: 0.8em;
+    }
 
-  .button-group button {
-      padding: 8px 12px; /* Smaller padding for very small screens */
-      font-size: 0.8em; /* Smaller font size for very small screens */
-  }
+    .button-group button {
+      padding: 6px 10px;
+      font-size: 0.8em;
+    }
 }
-
-/*LAST LINE OF CODE FOR THE PILOT VERSION 1.0.0 OF THE SYSTEM*/
