@@ -1,6 +1,10 @@
 /* 
    CSS Variables (Color Tokens) to be inherited throut the entire system
  */
+ /* Scale fix: Make 100% zoom look like 80% zoom */
+html {
+  zoom: 0.8;
+}
  :root {
   /* Light theme variables (default) */
   --primary-color: #005f73;       /* Deep teal */
@@ -222,6 +226,15 @@ main {
 /* ============================================
    Form Section
 ============================================ */
+.tooltip {
+  display: inline-block;
+  margin-left: 5px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  cursor: help;
+}
 #form-section {
   position: relative;
   background: var(--form-bg);
@@ -234,7 +247,7 @@ main {
 
 #form-section form {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   grid-template-columns: repeat(4, 1fr); /* Force 4 columns instead of auto-fit */
   gap: 20px;
 }
 
